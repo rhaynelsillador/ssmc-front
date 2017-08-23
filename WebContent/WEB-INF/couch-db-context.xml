@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="protocol" class="java.lang.String">
+		<constructor-arg value="http"/>
+	</bean>
+	<bean id="host" class="java.lang.String">
+		<constructor-arg value="74.63.192.134"/>
+	</bean>
+	<bean id="port" class="java.lang.String">
+		<constructor-arg value="5984"/>
+	</bean>
+	<bean id="username" class="java.lang.String">
+		<constructor-arg value="admin"/>
+	</bean>
+	<bean id="password" class="java.lang.String">
+		<constructor-arg value="pass1234"/>
+	</bean>
+	
+	<bean id="utilDb" class="org.lightcouch.CouchDbClient">
+		<constructor-arg value="util_db"></constructor-arg>
+		<constructor-arg value="true"></constructor-arg>
+		<constructor-arg ref="protocol"></constructor-arg>
+		<constructor-arg ref="host"></constructor-arg>
+		<constructor-arg ref="port"></constructor-arg>
+		<constructor-arg ref="username"></constructor-arg>
+		<constructor-arg ref="password"></constructor-arg>
+	</bean>
+	
+	<bean id="diskDb" class="org.lightcouch.CouchDbClient">
+		<constructor-arg value="disk_db"></constructor-arg>
+		<constructor-arg value="true"></constructor-arg>
+		<constructor-arg ref="protocol"></constructor-arg>
+		<constructor-arg ref="host"></constructor-arg>
+		<constructor-arg ref="port"></constructor-arg>
+		<constructor-arg ref="username"></constructor-arg>
+		<constructor-arg ref="password"></constructor-arg>
+	</bean>
+	
+	<bean id="cpuUtilDb" class="org.lightcouch.CouchDbClient">
+		<constructor-arg value="cpu_util_db"></constructor-arg>
+		<constructor-arg value="true"></constructor-arg>
+		<constructor-arg ref="protocol"></constructor-arg>
+		<constructor-arg ref="host"></constructor-arg>
+		<constructor-arg ref="port"></constructor-arg>
+		<constructor-arg ref="username"></constructor-arg>
+		<constructor-arg ref="password"></constructor-arg>
+	</bean>
+	<bean id="connectionsDb" class="org.lightcouch.CouchDbClient">
+		<constructor-arg value="connections_db"></constructor-arg>
+		<constructor-arg value="true"></constructor-arg>
+		<constructor-arg ref="protocol"></constructor-arg>
+		<constructor-arg ref="host"></constructor-arg>
+		<constructor-arg ref="port"></constructor-arg>
+		<constructor-arg ref="username"></constructor-arg>
+		<constructor-arg ref="password"></constructor-arg>
+	</bean>
+	
+	<bean id="serverDomainsDb" class="org.lightcouch.CouchDbClient">
+		<constructor-arg value="server_domains_db"></constructor-arg>
+		<constructor-arg value="true"></constructor-arg>
+		<constructor-arg ref="protocol"></constructor-arg>
+		<constructor-arg ref="host"></constructor-arg>
+		<constructor-arg ref="port"></constructor-arg>
+		<constructor-arg ref="username"></constructor-arg>
+		<constructor-arg ref="password"></constructor-arg>
+	</bean>
+	
+	
+	<bean id="chinaProvinces" class="org.lightcouch.CouchDbClient">
+		<constructor-arg value="china_provinces_db"></constructor-arg>
+		<constructor-arg value="true"></constructor-arg>
+		<constructor-arg ref="protocol"></constructor-arg>
+		<constructor-arg ref="host"></constructor-arg>
+		<constructor-arg ref="port"></constructor-arg>
+		<constructor-arg ref="username"></constructor-arg>
+		<constructor-arg ref="password"></constructor-arg>
+	</bean>	 
+	 
+	 <bean id="java" class="org.lightcouch.CouchDbClient">
+		<constructor-arg value="java_db"></constructor-arg>
+		<constructor-arg value="true"></constructor-arg>
+		<constructor-arg ref="protocol"></constructor-arg>
+		<constructor-arg ref="host"></constructor-arg>
+		<constructor-arg ref="port"></constructor-arg>
+		<constructor-arg ref="username"></constructor-arg>
+		<constructor-arg ref="password"></constructor-arg>
+	</bean>	
+	
+	<bean id="serverTransactions" class="org.lightcouch.CouchDbClient">
+		<constructor-arg value="server_transactions"></constructor-arg>
+		<constructor-arg value="true"></constructor-arg>
+		<constructor-arg ref="protocol"></constructor-arg>
+		<constructor-arg ref="host"></constructor-arg>
+		<constructor-arg ref="port"></constructor-arg>
+		<constructor-arg ref="username"></constructor-arg>
+		<constructor-arg ref="password"></constructor-arg>
+	</bean>	
+	
+	<bean id="serverAvgTransactions" class="org.lightcouch.CouchDbClient">
+		<constructor-arg value="server_avg_transactions"></constructor-arg>
+		<constructor-arg value="true"></constructor-arg>
+		<constructor-arg ref="protocol"></constructor-arg>
+		<constructor-arg ref="host"></constructor-arg>
+		<constructor-arg ref="port"></constructor-arg>
+		<constructor-arg ref="username"></constructor-arg>
+		<constructor-arg ref="password"></constructor-arg>
+	</bean>	
+	
+	<bean id="walletDB" class="org.lightcouch.CouchDbClient">
+		<constructor-arg value="wallets"></constructor-arg>
+		<constructor-arg value="true"></constructor-arg>
+		<constructor-arg ref="protocol"></constructor-arg>
+		<constructor-arg ref="host"></constructor-arg>
+		<constructor-arg ref="port"></constructor-arg>
+		<constructor-arg ref="username"></constructor-arg>
+		<constructor-arg ref="password"></constructor-arg>
+	</bean>	
+	
+	<bean id="walletsPingResult" class="org.lightcouch.CouchDbClient">
+		<constructor-arg value="wallets_ping_result"></constructor-arg>
+		<constructor-arg value="true"></constructor-arg>
+		<constructor-arg ref="protocol"></constructor-arg>
+		<constructor-arg ref="host"></constructor-arg>
+		<constructor-arg ref="port"></constructor-arg>
+		<constructor-arg ref="username"></constructor-arg>
+		<constructor-arg ref="password"></constructor-arg>
+	</bean>	
+	
+	<bean id="gtServerEndpoints" class="org.lightcouch.CouchDbClient">
+		<constructor-arg value="gt_server_endpoints"></constructor-arg>
+		<constructor-arg value="true"></constructor-arg>
+		<constructor-arg ref="protocol"></constructor-arg>
+		<constructor-arg ref="host"></constructor-arg>
+		<constructor-arg ref="port"></constructor-arg>
+		<constructor-arg ref="username"></constructor-arg>
+		<constructor-arg ref="password"></constructor-arg>
+	</bean>	
+	
+	<bean id="gameList" class="org.lightcouch.CouchDbClient">
+		<constructor-arg value="game_list"></constructor-arg>
+		<constructor-arg value="true"></constructor-arg>
+		<constructor-arg ref="protocol"></constructor-arg>
+		<constructor-arg ref="host"></constructor-arg>
+		<constructor-arg ref="port"></constructor-arg>
+		<constructor-arg ref="username"></constructor-arg>
+		<constructor-arg ref="password"></constructor-arg>
+	</bean>	
+	<bean id="connectionSummary" class="org.lightcouch.CouchDbClient">
+		<constructor-arg value="connections_summary"></constructor-arg>
+		<constructor-arg value="true"></constructor-arg>
+		<constructor-arg ref="protocol"></constructor-arg>
+		<constructor-arg ref="host"></constructor-arg>
+		<constructor-arg ref="port"></constructor-arg>
+		<constructor-arg ref="username"></constructor-arg>
+		<constructor-arg ref="password"></constructor-arg>
+	</bean>	
+	
+</beans>
