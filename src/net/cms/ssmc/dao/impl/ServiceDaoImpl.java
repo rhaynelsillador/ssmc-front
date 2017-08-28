@@ -13,73 +13,33 @@ import net.cms.ssmc.dao.ServiceDao;
 import net.cms.ssmc.model.Header;
 import net.cms.ssmc.model.Service;
 import net.ssmc.enums.App;
+import net.ssmc.enums.Page;
+import net.ssmc.model.Image;
 import net.ssmc.utils.DataTableHelper;
 
 public class ServiceDaoImpl implements ServiceDao {
 
-	private final String SQL 				= "SELECT * FROM SERVICE ";
-	private static final String FINDONE		= "SELECT * FROM SERVICE WHERE id = ?";
-	private static final String FINDACTIVEONE = "SELECT * FROM SERVICE WHERE type = ? AND status = ?";
-	private static final String SQLCOUNT 	= "SELECT COUNT(id) FROM SERVICE ";
-	private static final String INSERT 		= "INSERT INTO SERVICE (name, title, content, type, dateadded, dateupdated) VALUES (?, ?, ?, ?, ?, ?)";
-	private static final String DELETEBYID 	= "DELETE FROM SERVICE WHERE id= ? ";
-	private static final String UPDATE	 	= "UPDATE SERVICE SET name= ?, title = ?, content = ?, type=?, dateupdated = ? WHERE id= ? ";
-	
+	private final String SQL 				= "SELECT * FROM SERVICE WHERE type = ? and status = ?";
+
+	private static final String FINDIMAGES	= "SELECT SI.* FROM SERVICEIMAGES AS SI INNER JOIN SERVICE AS S ON SI.serviceid=S.id WHERE S.type = ?";
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
 	
 	@Override
-	public long count() {
-		return jdbcTemplate.queryForObject(SQLCOUNT, Long.class);
+	public List<Service> retrieveAll(App app) {
+		return jdbcTemplate.query(SQL, new Object[]{app.toString(), true}, new BeanPropertyRowMapper<Service>(Service.class));
 	}
+
+	
+//	@Override
+//	public Service retrieveActiveService(App app) {
+//		return jdbcTemplate.queryForObject(FINDACTIVEONE, new Object[]{app.toString(), true}, new BeanPropertyRowMapper<Service>(Service.class));
+//	}
 	
 	@Override
-	public int create(Service service) {
-		return jdbcTemplate.update(INSERT, new Object[] {
-				service.getName(),
-				service.getTitle(),
-				service.getContent(),
-				service.getType().toString(),
-				new Timestamp(System.currentTimeMillis()),
-				new Timestamp(System.currentTimeMillis()),
-			});
+	public List<Image> retrieveAllImages(App app) {
+		return jdbcTemplate.query(FINDIMAGES, new Object[]{app.toString()}, new BeanPropertyRowMapper<Image>(Image.class));
 	}
-
-	@Override
-	public void update(Service service, int id) {
-		jdbcTemplate.update(UPDATE, new Object[] {
-				service.getName(),
-				service.getTitle(),
-				service.getContent(),
-				service.getType().toString(),
-				new Timestamp(System.currentTimeMillis()),
-				id
-			});
-	}
-
-	@Override
-	public List<Service> retrieveAll(Map<String, String> request) {
-		int start = Integer.parseInt(request.get("current"));
-		int end = Integer.parseInt(request.get("rowCount"));
-		String SQL = this.SQL + " " + DataTableHelper.sort(request) + " LIMIT "+((start-1)*end)+", "+(end);
-		return jdbcTemplate.query(SQL, new BeanPropertyRowMapper<Service>(Service.class));
-	}
-
-	@Override
-	public Service retrieve(int id) {
-		return jdbcTemplate.queryForObject(FINDONE, new Object[]{id}, new BeanPropertyRowMapper<Service>(Service.class));
-	}
-
-	@Override
-	public Service retrieveActiveService(App app) {
-		return jdbcTemplate.queryForObject(FINDACTIVEONE, new Object[]{app.toString(), true}, new BeanPropertyRowMapper<Service>(Service.class));
-	}
-
-	@Override
-	public void delete(int id) {
-		jdbcTemplate.update(DELETEBYID, new Object[] {id});
-	}
-
 	
 
 }

@@ -1,8 +1,10 @@
 package net.cms.ssmc.model;
 
 import java.sql.Timestamp;
+import java.util.List;
 
 import net.ssmc.enums.App;
+import net.ssmc.model.Image;
 
 public class Service {
 
@@ -14,6 +16,7 @@ public class Service {
 	private App type;
 	private Timestamp dateAdded;
 	private Timestamp dateUpdated;
+	private List<Image> images;
 	
 	public int getId() {
 		return id;
@@ -62,6 +65,18 @@ public class Service {
 	}
 	public void setTitle(String title) {
 		this.title = title;
+	}
+	public List<Image> getImages() {
+		return images;
+	}
+	public void setImages(List<Image> images) {
+		this.images = images;
+	}
+	@Override
+	public String toString() {
+		return "Service [id=" + id + ", name=" + name + ", title=" + title + ", content=" + content + ", status="
+				+ status + ", type=" + type + ", dateAdded=" + dateAdded + ", dateUpdated=" + dateUpdated + ", images="
+				+ images + "]";
 	}	
 	
 }

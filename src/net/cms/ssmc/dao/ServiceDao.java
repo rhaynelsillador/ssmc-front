@@ -6,15 +6,15 @@ import java.util.Map;
 import net.cms.ssmc.model.Header;
 import net.cms.ssmc.model.Service;
 import net.ssmc.enums.App;
+import net.ssmc.enums.Page;
+import net.ssmc.model.Image;
 
 public interface ServiceDao {
 
-	long count();
-	int create(Service service);
-	void update(Service service, int id);
-	List<Service> retrieveAll(Map<String, String> request);
-	Service retrieve(int id);
-	Service retrieveActiveService(App app);
-	void delete(int id);
+	List<Service> retrieveAll(App app);
+//	Service retrieveActiveService(App app);
+	
+	List<Image> retrieveAllImages(App app);
+
 	
 }

@@ -4,5 +4,6 @@ public enum App {
 
 	BUSINESS,
 	CLINIC,
+	HOME
 	
 }

@@ -1,0 +1,130 @@
+header{
+  text-align: center;
+  color: #4a4a4a;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  background: white;
+
+}
+
+
+header img{
+  width: 300px;
+  margin: 20px;
+}
+
+section{
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+
+.corporate{
+  height: 825px;
+  width: 60%;
+  right: 50%;
+  margin-right: -1px;
+  background: #5b7dad;
+  display: block;
+  position: absolute;
+  transform: skewX(-15deg);
+  padding-top: 127px;
+  top: 0px;
+  color: #fff;
+  overflow: hidden;
+}
+
+.corporate img:not(.icon-corp){
+  position: absolute;
+  bottom: 0;
+  right: 30px;
+  width: 330px;
+  z-index: -1;
+}
+
+.corporate::after{
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: url(../../../assets/img/bg1.png);
+  background-size: cover;
+  transform: skewX(15deg);
+  position: absolute;
+  top: 0px;
+  right: -75px;
+  z-index: -1;
+  opacity: .2;
+}
+
+.corp-content{
+  width: 300px;
+  margin: auto;
+  /* outline: 1px solid red; */
+  float: right;
+  margin-right: 330px;
+  text-align: center;
+  color: #fff;
+  margin-top: 55px;
+}
+
+.medical{
+  height: 825px;
+  width:60%;
+  left: 50%;
+  margin-left: -1px;
+  background: #c4763f;
+  display: block;
+  position: absolute;
+  transform: skewX(-15deg);
+  padding-top: 127px;
+  top: 0px;
+  color: #fff;
+  overflow: hidden;
+}
+
+.medical img:not(.icon-medical){
+  position: absolute;
+  bottom: -37px;
+  left: -30px;
+  width: 380px;
+  z-index: -1;
+}
+
+.medical::after{
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: url(../../../assets/img/bg2.png);
+  background-size: cover;
+  transform: skewX(15deg);
+  position: absolute;
+  top: 0px;
+  left: -75px;
+  z-index: -1;
+  opacity: .2;
+}
+
+.medical-content{
+  width: 300px;
+  margin: auto;
+  /* outline: 1px solid red; */
+  float: left;
+  margin-left: 330px;
+  text-align: center;
+  color: #fff;
+  margin-top: 55px;
+}
+
+.no-skew{
+  transform: skewX(15deg);
+  height: 100%;
+  width: 100%;
+}
+
+footer{
+  text-align: center;
+  color: #4a4a4a;
+  padding: 15px;
+}
