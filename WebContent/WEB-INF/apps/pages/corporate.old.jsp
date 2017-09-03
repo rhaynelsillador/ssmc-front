@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <title>SSMC</title>
     <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/custom/global.css">
     <link rel="stylesheet" href="assets/css/custom/common.css">
     <link rel="stylesheet" href="assets/css/custom/medical.css">
@@ -17,15 +16,12 @@
       <div class="header-top">
         <div class="container">
           <div class="pull-left">
-            <a href="#"><span><i class="fa fa-fw fa-phone" aria-hidden="true"></i></span>+6398863555</a>&nbsp;&nbsp;
-            <a href="#"><span style="font-size: 10px;"><i class="fa fa-fw fa-envelope" aria-hidden="true"></i></span>support@ssmc.com</a>
-            <!-- <span><i class="fa fa-fw fa-phone" aria-hidden="true"></i> +6398863555</span> &nbsp;
-            <span><i class="fa fa-fw fa-envelope" aria-hidden="true"></i> support@ssmc.com</span> -->
+            <span><i>t</i> +6398863555</span> &nbsp; <span><i>t</i> support@ssmc.com</span>
           </div>
           <div class="pull-right">
-            <a href="#"><span><i class="fa fa-facebook" aria-hidden="true"></i></span></a>
-            <a href="#"><span><i class="fa fa-twitter" aria-hidden="true"></i></span></a>
-            <a href="#"><span><i class="fa fa-youtube-play" aria-hidden="true"></i></span></a>
+            <span><a href="#"><i>f</i></a></span>
+            <span><a href="#"><i>t</i></a></span>
+            <span><a href="#"><i>y</i></a></span>
           </div>
         </div>
       </div>
@@ -34,12 +30,11 @@
           <a class="logo pull-left" href="#"><img src="assets/img/logo.png" alt=""></a>
           <div class="nav pull-right">
             <ul class="list-inline">
-              <li><a href="medical.html">HOME</a></li>
-              <li><a href="about.html">ABOUT</a></li>
-              <li><a href="services.html">SERVICES</a></li>
-              <li><a href="branches.html" class="active">HOSPITAS & CLINICS</a></li>
-              <li><a href="faq.html">FAQ</a></li>
-              <li><a href="contact.html">CONTACT US</a></li>
+              <li><a href="#" class="active">HOME</a></li>
+              <li><a href="#">ABOUT</a></li>
+              <li><a href="#">SERVICES</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">CONTACT US</a></li>
             </ul>
           </div>
           <div class="clearfix"></div>
@@ -48,7 +43,12 @@
     </header>
     <section>
       <div class="sec welcome">
+        <!-- <h3>Welcome to</h3>
+        <h1>Corporate Service</h1>
+        <span>We have the most advance medical <br /> technology and innovations</span> -->
+        
         ${ requestScope.header.content }
+        
         <br>
         <a href="#" class="btn btn-default">EXPLORE NOW</a>
         <a href="#" class="btn btn-primary">CONTACT US</a>
@@ -140,25 +140,26 @@
           </div>
           <div class="col-md-4">
             <ul  class="nav nav-pills">
+            
               <li class="active">
                 <a href="#service_1" data-toggle="tab" class="service-left">
                   <aside></aside>
-                  <h5>Gynological Services</h5>
-                  <span>Lorem ipsum dolor sit ame hiijasdt, consectetur adipisicing elit, sed do eiu sed do eiu </span>
+                  <h5>${requestScope.service1.title }</h5>
+                  <span>${requestScope.service1.content }</span>
                 </a>
               </li>
               <li>
                 <a href="#service_2" data-toggle="tab" class="service-left">
                   <aside></aside>
-                  <h5>Gynological Services</h5>
-                  <span>Lorem ipsum dolor sit ame hiijasdt, consectetur adipisicing elit, sed do eiu sed do eiu </span>
+                  <h5>${requestScope.service2.title }</h5>
+                  <span>${requestScope.service2.content }</span>
                 </a>
               </li>
               <li>
                 <a href="#service_3" data-toggle="tab" class="service-left">
                   <aside></aside>
-                  <h5>Gynological Services</h5>
-                  <span>Lorem ipsum dolor sit ame hiijasdt, consectetur adipisicing elit, sed do eiu sed do eiu </span>
+                  <h5>${requestScope.service3.title }</h5>
+                  <span>${requestScope.service3.content }</span>
                 </a>
               </li>
             </ul>
@@ -221,17 +222,7 @@
                   </div>
                 </div>
               </div>
-
-
-
-
-
-
-
-
-
-
-
+				
             </div>
           </div>
           <div class="col-md-4">
@@ -239,22 +230,22 @@
               <li>
                 <a href="#service_4" data-toggle="tab" class="service-right">
                   <aside></aside>
-                  <h5>Gynological Services</h5>
-                  <span>Lorem ipsum dolor sit ame hiijasdt, consectetur adipisicing elit, sed do eiu sed do eiu </span>
+                  <h5>${requestScope.service4.title }</h5>
+                  <span>${requestScope.service4.content }</span>
                 </a>
               </li>
               <li>
                 <a href="#service_5" data-toggle="tab" class="service-right">
                   <aside></aside>
-                  <h5>Gynological Services</h5>
-                  <span>Lorem ipsum dolor sit ame hiijasdt, consectetur adipisicing elit, sed do eiu sed do eiu </span>
+                  <h5>${requestScope.service5.title }</h5>
+                  <span>${requestScope.service5.content }</span>
                 </a>
               </li>
               <li>
                 <a href="#service_6" data-toggle="tab" class="service-right">
                   <aside></aside>
-                  <h5>Gynological Services</h5>
-                  <span>Lorem ipsum dolor sit ame hiijasdt, consectetur adipisicing elit, sed do eiu sed do eiu </span>
+                  <h5>${requestScope.service6.title }</h5>
+                  <span>${requestScope.service6.content }</span>
                 </a>
               </li>
             </ul>
@@ -403,9 +394,9 @@
                 <h5>USEFUL LINKS</h5>
                 <ul class="list-unstyled">
                   <li><a href="#">About Us</a></li>
-                  <li><a href="services.html">SERVICES</a></li>
-                  <li><a href="faq.html">FAQ</a></li>
-                  <li><a href="contact.html">CONTACT US</a></li>
+                  <li><a href="#">Services</a></li>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">Contact Us</a></li>
                 </ul>
               </div>
             </div>

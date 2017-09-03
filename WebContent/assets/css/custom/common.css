@@ -4,7 +4,8 @@ header{
 
 .header-top{
   background: #f58435;
-  height: 30px;
+  height: 35px;
+  padding: 4px 0px;
 }
 
 .header-top span{
@@ -12,15 +13,40 @@ header{
   color: #fff;
 }
 
-.header-top span i{
+.header-top .pull-left a{
+  color: white;
+  margin-top: 2px;
+  display: inline-block;
+}
+
+/*.header-top .pull-left a:hover{
+  color: #636363;
+  text-decoration: none;
+}*/
+
+.header-top a span{
   width: 20px;
   height: 20px;
   display: inline-block;
-  background: red;
-  vertical-align: baseline;
-  padding: 0px 8px;
+  vertical-align: middle;
+  text-align: center;
   border-radius: 45px;
   background: rgba(255, 255, 255, 0.35);
+  line-height: 20px;
+  font-size: 12px;
+  margin-right: 4px;
+}
+
+.header-top .pull-right a span{
+  background: rgba(0, 0, 0, 0.07);
+  line-height: 20px;
+  font-size: 12px;
+  color: white;
+  width: 25px;
+  height: 25px;
+  font-size: 16px;
+  line-height: 25px;
+  margin: 0px 5px;
 }
 
 .header-bot .nav ul{
@@ -39,6 +65,10 @@ header{
 
 .header-bot .nav ul li a.active{
   color: #f79856;
+}
+
+.logo{
+  padding: 11px 0px;
 }
 
 .logo img{
@@ -81,4 +111,80 @@ footer .footer-bot{
   background: #0d141c;
   padding: 35px;
   color: #cacaca;
+}
+
+
+
+
+
+
+
+
+
+
+/*===================== BASIC TABINATION ==================*/
+.basic-tabination .tab-content{
+  position: relative;
+}
+
+.basic-tabination .tab-content::after{
+  content: "";
+  position: absolute;
+  left: -32px;
+  top: -18px;
+  /* transform: translateY(-50%); */
+  max-height: 375px;
+  height: 106%;
+  width: 1px;
+  background: #cecece;
+}
+
+
+/*===================== BIG TABINATION ==================*/
+.big-tabination .side{
+  border: 1px solid #dedede;
+  margin-bottom: 20px;
+  padding: 10px 10px 10px 112px;
+  border-radius: 7px;
+  text-align: left;
+  height: 127px;
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: #939393;
+}
+
+.big-tabination li.active .side{
+  border: 1px solid #9bd0d9;
+  box-shadow: 0px 0px 7px rgba(155, 208, 217, 0.5);
+  background: transparent;
+  color: #939393;
+}
+
+.big-tabination li.active .side aside{
+  background: #f58435;
+}
+
+.big-tabination li.active .side h4{
+  color: #f58435;
+}
+
+.big-tabination .side aside{
+  position: absolute;
+  width: 66px;
+  height: 66px;
+  border-radius: 45px;
+  background: #7ac0cc;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 25px;
+}
+
+.big-tabination .side h4{
+  color: #4f4f4f;
+}
+
+.map-container{
+  border: 5px solid white;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
 }

@@ -2,7 +2,7 @@ header{
   text-align: center;
   color: #4a4a4a;
   position: absolute;
-  z-index: 1;
+  z-index: 500;
   width: 100%;
   background: white;
 
@@ -10,8 +10,8 @@ header{
 
 
 header img{
-  width: 300px;
-  margin: 20px;
+  width: 375px;
+  margin: 30px;
 }
 
 section{
@@ -23,10 +23,11 @@ section{
 
 .corporate{
   height: 825px;
-  width: 60%;
+  width: 100%;
   right: 50%;
   margin-right: -1px;
   background: #5b7dad;
+  z-index: 0;
   display: block;
   position: absolute;
   transform: skewX(-15deg);
@@ -69,9 +70,14 @@ section{
   margin-top: 55px;
 }
 
+.corporate:hover{
+  /*right: 40%;
+  z-index: 1;*/
+}
+
 .medical{
   height: 825px;
-  width:60%;
+  width:100%;
   left: 50%;
   margin-left: -1px;
   background: #c4763f;
@@ -101,7 +107,7 @@ section{
   transform: skewX(15deg);
   position: absolute;
   top: 0px;
-  left: -75px;
+  left: -145px;
   z-index: -1;
   opacity: .2;
 }
@@ -127,4 +133,50 @@ footer{
   text-align: center;
   color: #4a4a4a;
   padding: 15px;
+}
+
+
+
+/*========================MEDIA QUERY==========================*/
+/*========================MEDIA QUERY==========================*/
+
+
+
+@media only screen and (max-width: 1330px) {
+    .corporate {
+        /*display: none;*/
+        background: red;
+
+
+    }
+
+    .corp-content{
+      width: 250px;
+      margin-right: 310px;
+    }
+}
+
+
+@media only screen and (max-width: 1235px) {
+    .corp-content{
+      margin-right: 270px;
+
+    }
+
+    .medical-content{
+      width: 250px;
+      margin-left: 290px;
+    }
+
+    .corporate img:not(.icon-corp){
+      width: 290px;
+      right: 40px
+    }
+
+    .medical img:not(.icon-medical){
+      width: 330px;
+      left: -45px;
+    }
+
+
 }
