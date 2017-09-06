@@ -12,10 +12,13 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 
 import net.ssmc.enums.Status;
+import net.ssmc.model.Email;
 import net.ssmc.model.Helper;
+import net.ssmc.services.ContactUsServices;
 
 public class GmailUtility {
 
@@ -32,6 +35,9 @@ public class GmailUtility {
 	@Value("{mail.smtp.port}")
 	private String port;
 	private Session session;
+	@Autowired
+	private ContactUsServices contactUsServices;
+	
 	
 	public void init(){
 		Properties properties = new Properties();
@@ -51,21 +57,24 @@ public class GmailUtility {
 		this.session=session;
 	}
 	
-	public Map<String, Object> sendEmail(String to, String subject, String content){
-		Map<String, Object> response = new HashMap<>();
-		try {
-			Message message = new MimeMessage(session);
-			message.setFrom(new InternetAddress(username));
-			message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(to));
-			message.setSubject(subject);
-			message.setContent(content, "text/html");
-			Transport.send(message);
-			response.put(Helper.STATUS, Status.SUCCESS);
-			response.put(Helper.MESSAGE, "Email sent!");
-		} catch (MessagingException e) {
-			response.put(Helper.STATUS, Status.SUCCESS);
-			response.put(Helper.MESSAGE, "Email was not sent.");
-		}return response;
+	public void sendEmail(Email email){
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				try {
+					Message message = new MimeMessage(session);
+					message.setFrom(new InternetAddress(username));
+					message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(email.getEmail()));
+					message.setSubject(email.getSubject());
+					message.setContent(email.getMessage(), "text/html");
+					Transport.send(message);
+					
+				} catch (MessagingException e) {
+				}
+			}
+		}).start();
+		
+		
 	}
 	
 	

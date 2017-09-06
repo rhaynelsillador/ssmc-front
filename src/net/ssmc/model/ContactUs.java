@@ -9,6 +9,7 @@ public class ContactUs {
 	private String message;
 	private Timestamp dateAdded;
 	private String subject;
+	private String name;
 	
 	public int getId() {
 		return id;
@@ -40,4 +41,11 @@ public class ContactUs {
 	public void setSubject(String subject) {
 		this.subject = subject;
 	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	
 }

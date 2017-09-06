@@ -12,6 +12,7 @@ public class Service {
 	private String name;
 	private String title;
 	private String content;
+	private String content2;
 	private boolean status;
 	private App type;
 	private Timestamp dateAdded;
@@ -72,11 +73,17 @@ public class Service {
 	public void setImages(List<Image> images) {
 		this.images = images;
 	}
+	public String getContent2() {
+		return content2;
+	}
+	public void setContent2(String content2) {
+		this.content2 = content2;
+	}
 	@Override
 	public String toString() {
-		return "Service [id=" + id + ", name=" + name + ", title=" + title + ", content=" + content + ", status="
-				+ status + ", type=" + type + ", dateAdded=" + dateAdded + ", dateUpdated=" + dateUpdated + ", images="
-				+ images + "]";
-	}	
+		return "Service [id=" + id + ", name=" + name + ", title=" + title + ", content=" + content + ", content2="
+				+ content2 + ", status=" + status + ", type=" + type + ", dateAdded=" + dateAdded + ", dateUpdated="
+				+ dateUpdated + ", images=" + images + "]";
+	}
 	
 }

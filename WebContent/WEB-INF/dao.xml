@@ -13,6 +13,7 @@
 	
 	<!-- CMS DAO BEAN -->
 	<bean id="faqDao" 				class="net.cms.ssmc.dao.impl.FaqDaoImpl" />
+	<bean id="imageDao" 			class="net.cms.ssmc.dao.impl.ImageDaoImpl" />
 	<bean id="aboutUsDao" 			class="net.cms.ssmc.dao.impl.AboutUsDaoImpl" />
 	<bean id="controlDao" 			class="net.cms.ssmc.dao.impl.ControlDaoImpl" />
 	<bean id="headerDao" 			class="net.cms.ssmc.dao.impl.HeaderDaoImpl" />

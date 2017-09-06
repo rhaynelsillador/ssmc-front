@@ -12,9 +12,6 @@ import net.ssmc.model.Image;
 public interface ServiceDao {
 
 	List<Service> retrieveAll(App app);
-//	Service retrieveActiveService(App app);
-	
-	List<Image> retrieveAllImages(App app);
 
 	
 }

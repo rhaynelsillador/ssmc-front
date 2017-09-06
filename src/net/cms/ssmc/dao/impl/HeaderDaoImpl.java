@@ -34,7 +34,6 @@ public class HeaderDaoImpl implements HeaderDao {
 	
 	@Override
 	public Header retrieve(App app, Page page) {
-		System.out.println(app.toString()+" :: "+page);
 		return jdbcTemplate.queryForObject(FINDONE, new Object[]{app.toString(), page.toString()}, new BeanPropertyRowMapper<Header>(Header.class));
 	}
 	

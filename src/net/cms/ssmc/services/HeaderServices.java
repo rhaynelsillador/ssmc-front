@@ -1,38 +1,55 @@
 package net.cms.ssmc.services;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
 import net.cms.ssmc.dao.HeaderDao;
+import net.cms.ssmc.dao.ImageDao;
 import net.cms.ssmc.model.Header;
 import net.ssmc.enums.App;
+import net.ssmc.enums.Module;
 import net.ssmc.enums.Page;
 
 public class HeaderServices {
 
 	@Autowired
 	private HeaderDao headerDao;
+	@Autowired
+	private ImageDao imageDao;
 	
 	public HeaderServices(){
 		
 	}
 	
-	public void getHeaders(HttpServletRequest httpServletRequest){
+	public Map<String, Object> getMainHeadersInfo(HttpServletRequest httpServletRequest){
+		long start = System.currentTimeMillis();
 		List<Header> headers = headerDao.retrieve(Page.Main);
-		for (Header header : headers) {
-			if(header.getType().equals(App.BUSINESS)){
-				httpServletRequest.setAttribute("business", header);
-			}else if(header.getType().equals(App.CLINIC)){
-				httpServletRequest.setAttribute("clinic", header);
-			}
-		}
+		Map<String, Object> response = new HashMap<>();
+		response.put("info", headers);
+		long end = System.currentTimeMillis();
 		
+		System.out.println(end - start);
+		
+		return response;
 	}
 	
-	public Header getBusinessHeader(){
+	public Map<String, Object> getMainHeadersImages(HttpServletRequest httpServletRequest){
+		long start = System.currentTimeMillis();
+		Map<String, Object> response = new HashMap<>();
+		response.put("images", imageDao.retrieveImage(Page.Main, Module.HEADER));
+		long end = System.currentTimeMillis();
+		
+		System.out.println(end - start);
+		
+		return response;
+	}
+	
+	public Header getCorporateHeader(){
 		return headerDao.retrieve(App.BUSINESS, Page.Corporate);
 	}
 	public Header getMedicalHeader(){
