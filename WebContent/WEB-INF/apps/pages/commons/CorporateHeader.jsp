@@ -19,12 +19,12 @@
           <a class="logo pull-left" href="#"><img src="assets/img/logo.png" alt=""></a>
           <div class="nav pull-right">
             <ul class="list-inline">
-              <li><a href="Corporate">HOME</a></li>
-              <li><a href="about.html">ABOUT</a></li>
-              <li><a href="services.html">SERVICES</a></li>
-              <li><a href="branches.html" class="active">HOSPITAS & CLINICS</a></li>
-              <li><a href="faq.html">FAQ</a></li>
-              <li><a href="contact.html">CONTACT US</a></li>
+              <li id="menuCorporate"><a href="Corporate">HOME</a></li>
+              <li id="menuAbout"><a href="About">ABOUT</a></li>
+              <li id="menuAServices"><a href="Services">SERVICES</a></li>
+              <li id="menuBranches"><a href="branches.html">HOSPITAS & CLINICS</a></li>
+              <li id="menuFaq"><a href="faq.html">FAQ</a></li>
+              <li id="menuContact"><a href="contact.html">CONTACT US</a></li>
             </ul>
           </div>
           <div class="clearfix"></div>

@@ -10,6 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import net.cms.ssmc.model.Header;
 import net.cms.ssmc.model.Service;
+import net.ssmc.enums.App;
+import net.ssmc.enums.Page;
 
 public class CorporateServices {
 
@@ -24,7 +26,7 @@ public class CorporateServices {
 	}
 	
 	public Map<String, Object> getCorporateServices(HttpServletRequest httpServletRequest){
-		List<Service> services = serviceServices.getServices();
+		List<Service> services = serviceServices.getServices(App.BUSINESS, Page.Corporate);
 		Map<String, Object> response = new HashMap<>();
 		int count = 1;
 		for (Service service : services) {

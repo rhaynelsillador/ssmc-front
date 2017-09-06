@@ -1,3 +1,5 @@
+var fileServer = "http://localhost/FileServer/";
+
 function objectifyForm(formArray) {
   var returnArray = {};
   for (var i = 0; i < formArray.length; i++){

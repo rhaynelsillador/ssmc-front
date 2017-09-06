@@ -12,6 +12,7 @@ public class AboutUs {
 	private Timestamp dateAdded;
 	private Timestamp dateUpdated;
 	private App type;
+	private String image;
 	
 	public int getId() {
 		return id;
@@ -52,10 +53,16 @@ public class AboutUs {
 	public Timestamp getDateUpdated() {
 		return dateUpdated;
 	}
+	public String getImage() {
+		return image;
+	}
+	public void setImage(String image) {
+		this.image = image;
+	}
 	@Override
 	public String toString() {
 		return "AboutUs [id=" + id + ", name=" + name + ", content=" + content + ", dateAdded=" + dateAdded
-				+ ", dateUpdated=" + dateUpdated + ", type=" + type + "]";
+				+ ", dateUpdated=" + dateUpdated + ", type=" + type + ", image=" + image + "]";
 	}
 	
 }

@@ -8,7 +8,7 @@ import net.ssmc.enums.App;
 
 public interface AboutUsDao {
 
-	AboutUs retrieve(App app);
+	List<AboutUs> retrieve(App app);
 	
 	
 }

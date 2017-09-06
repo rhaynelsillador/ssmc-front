@@ -11,7 +11,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import net.cms.ssmc.model.AboutUs;
 import net.cms.ssmc.model.Header;
+import net.cms.ssmc.services.AboutUsServices;
 import net.cms.ssmc.services.CorporateServices;
 import net.cms.ssmc.services.HeaderServices;
 
@@ -24,6 +26,8 @@ public class SsmcRestFrontController {
 	private HeaderServices headerServices;
 	@Autowired
 	private CorporateServices corporateServices;
+	@Autowired
+	private AboutUsServices aboutUsServices;
 	
 	@RequestMapping(path="/MainHeaderInfo", method = RequestMethod.POST, produces={"application/json"})
 	public Map<String, Object> mainHeaderInfo(){
@@ -43,5 +47,15 @@ public class SsmcRestFrontController {
 	@RequestMapping(path="/CorporateServices", method = {RequestMethod.POST, RequestMethod.GET}, produces={"application/json"})
 	public Map<String, Object> corporateServices(){
 		return corporateServices.getCorporateServices(httpServletRequest);
+	}
+	
+	@RequestMapping(path="/AboutUsHeaderInfo", method = {RequestMethod.POST, RequestMethod.GET}, produces={"application/json"})
+	public Header aboutUsHeaderInfo(){
+		return aboutUsServices.getAboutUsHeader();
+	}
+	
+	@RequestMapping(path="/AboutUsInfo", method = {RequestMethod.POST, RequestMethod.GET}, produces={"application/json"})
+	public List<AboutUs> aboutUsInfo(){
+		return aboutUsServices.getBusinessAboutUs();
 	}
 }

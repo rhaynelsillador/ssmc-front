@@ -321,6 +321,9 @@
         		
         		$("#service_"+index+" .service-content h4").html(value.title);
         		$("#service_"+index+" .service-content span").html(value.content2);
+        		
+        		$("#service_"+index+" .service-img img").attr("src", fileServer+value.image);
+        		
         	})
         })
         
