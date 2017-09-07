@@ -76,7 +76,6 @@ var POST = function POST(url, form, cb){
       	url: url,
       	data: JSON.stringify(form),
       	success: function( data ) {
-      		console.log("data :: ", data)
       		cb(data);
       	}
 	});

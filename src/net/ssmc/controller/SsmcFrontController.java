@@ -30,4 +30,16 @@ public class SsmcFrontController {
 	public String about(ModelMap map){
 		return "pages/about";
 	}
+	
+	@RequestMapping(path="/Services", method = RequestMethod.GET, produces="text/html")
+	public String services(ModelMap map){
+		return "pages/services";
+	}
+	
+	@RequestMapping(path="/Branches", method = RequestMethod.GET, produces="text/html")
+	public String branches(ModelMap map){
+		return "pages/branches";
+	}
+	
+	
 }

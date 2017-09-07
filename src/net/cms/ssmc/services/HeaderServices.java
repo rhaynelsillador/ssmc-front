@@ -50,9 +50,36 @@ public class HeaderServices {
 	}
 	
 	public Header getCorporateHeader(){
-		return headerDao.retrieve(App.BUSINESS, Page.Corporate);
+		try {
+			return headerDao.retrieve(App.BUSINESS, Page.Corporate);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}return new Header();
 	}
 	public Header getMedicalHeader(){
-		return headerDao.retrieve(App.CLINIC, Page.Medical);
+		try {
+			return headerDao.retrieve(App.CLINIC, Page.Medical);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return new Header();
+	}
+	
+	public Header getServicesHeader(){
+		try {
+			return headerDao.retrieve(App.BUSINESS, Page.Service);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return new Header();
+	}
+	
+	public Header getClinicHeader(){
+		try {
+			return headerDao.retrieve(App.BUSINESS, Page.HospitalAndClinic);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return new Header();
 	}
 }

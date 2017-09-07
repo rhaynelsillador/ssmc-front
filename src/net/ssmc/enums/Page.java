@@ -13,5 +13,6 @@ public enum Page {
 	Service,
 	Faq,
 	ContactUs,
+	HospitalAndClinic
 	
 }

@@ -36,7 +36,11 @@ public class AboutUsServices {
 	}
 	
 	public Header getAboutUsHeader(){
-		return headerDao.retrieve(App.BUSINESS, Page.About);
+		try {
+			return headerDao.retrieve(App.BUSINESS, Page.About);
+		} catch (Exception e) {
+			return null;
+		}
 	}
 	
 }

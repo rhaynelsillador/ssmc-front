@@ -10,7 +10,7 @@ import net.ssmc.enums.Page;
 public interface HeaderDao {
 
 	List<Header> retrieve(Page page);
-	Header retrieve(App app, Page page);
+	Header retrieve(App app, Page page) throws Exception;
 	
 	
 }

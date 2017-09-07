@@ -22,9 +22,9 @@
               <li id="menuCorporate"><a href="Corporate">HOME</a></li>
               <li id="menuAbout"><a href="About">ABOUT</a></li>
               <li id="menuAServices"><a href="Services">SERVICES</a></li>
-              <li id="menuBranches"><a href="branches.html">HOSPITAS & CLINICS</a></li>
-              <li id="menuFaq"><a href="faq.html">FAQ</a></li>
-              <li id="menuContact"><a href="contact.html">CONTACT US</a></li>
+              <li id="menuBranches"><a href="Branches">HOSPITAS & CLINICS</a></li>
+              <li id="menuFaq"><a href="Faq">FAQ</a></li>
+              <li id="menuContact"><a href="ContactUs">CONTACT US</a></li>
             </ul>
           </div>
           <div class="clearfix"></div>

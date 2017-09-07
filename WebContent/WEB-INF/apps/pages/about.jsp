@@ -6,8 +6,8 @@
     <%@ include file="commons/CorporateHeader.jsp"%>
     <section>
       <div class="sec welcome">
-        <h1 id="aboutUsTitle">About us</h1>
-        <span id="aboutUsContent">We have the most advance medical <br /> technology and innovations</span>
+        <h1 id="aboutUsHeaderTitle">About us</h1>
+        <span id="aboutUsHeaderContent">We have the most advance medical <br /> technology and innovations</span>
         <br>
         <!-- <a href="#" class="btn btn-default">EXPLORE NOW</a>
         <a href="#" class="btn btn-primary">CONTACT US</a> -->
@@ -85,8 +85,8 @@
       });
      
 	POST("AboutUsHeaderInfo", {}, function(data){
-	 	$("#aboutUsTitle").html(data.title);
-	 	$("#aboutUsContent").html(data.content);
+	 	$("#aboutUsHeaderTitle").html(data.title);
+	 	$("#aboutUsHeaderContent").html(data.content);
 	})
       
 	POST("AboutUsInfo", {}, function(data){
