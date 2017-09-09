@@ -302,29 +302,33 @@
     <%@ include file="commons/CorporateFooter.jsp"%>
 	
     <script type="text/javascript">
-      $(document).ready(function(){
-        console.log("G!");
-        $(".blue .nav li a").click(function(){
-          console.log("gg");
-          $(".blue .nav li").removeClass("active");
-        });
+    	$("#menuCorporate a").addClass("active");
+     	$(document).ready(function(){
+	        console.log("G!");
+	        $(".blue .nav li a").click(function(){
+	          console.log("gg");
+	          $(".blue .nav li").removeClass("active");
+	        });
+	        
+	        POST("CorporateHeaderInfo", {}, function(data){
+	        	$("#headerInfo").html(data.content);
+	        })
+	        
+	        POST("CorporateServices", {}, function(data){
+	        	$.each(data, function(index, value){
+	        		console.log(index, value);
+	        		$("#service"+index+" h5").html(value.title);
+	        		$("#service"+index+" span").html(value.content);
+	        		
+	        		$("#service_"+index+" .service-content h4").html(value.title);
+	        		$("#service_"+index+" .service-content span").html(value.content2);
+	        		
+	        		$("#service_"+index+" .service-img img").attr("src", fileServer+value.image);
+	        		
+	        	})
+	        })
         
-        POST("CorporateHeaderInfo", {}, function(data){
-        	$("#headerInfo").html(data.content);
-        })
-        
-        POST("CorporateServices", {}, function(data){
-        	$.each(data, function(index, value){
-        		console.log(index, value);
-        		$("#service"+index+" h5").html(value.title);
-        		$("#service"+index+" span").html(value.content);
-        		
-        		$("#service_"+index+" .service-content h4").html(value.title);
-        		$("#service_"+index+" .service-content span").html(value.content2);
-        	})
-        })
-        
-      });
+      	});
     </script>
   </body>
 </html>

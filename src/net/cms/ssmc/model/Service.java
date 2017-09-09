@@ -17,7 +17,7 @@ public class Service {
 	private App type;
 	private Timestamp dateAdded;
 	private Timestamp dateUpdated;
-	private List<Image> images;
+	private String image;
 	
 	public int getId() {
 		return id;
@@ -67,23 +67,17 @@ public class Service {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	public List<Image> getImages() {
-		return images;
-	}
-	public void setImages(List<Image> images) {
-		this.images = images;
-	}
 	public String getContent2() {
 		return content2;
 	}
 	public void setContent2(String content2) {
 		this.content2 = content2;
 	}
-	@Override
-	public String toString() {
-		return "Service [id=" + id + ", name=" + name + ", title=" + title + ", content=" + content + ", content2="
-				+ content2 + ", status=" + status + ", type=" + type + ", dateAdded=" + dateAdded + ", dateUpdated="
-				+ dateUpdated + ", images=" + images + "]";
+	public String getImage() {
+		return image;
+	}
+	public void setImage(String image) {
+		this.image = image;
 	}
 	
 }
