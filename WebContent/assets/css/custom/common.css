@@ -250,7 +250,17 @@ footer .footer-bot{
   z-index: 3;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  /*background: rgba(0, 0, 0, 0.5);*/
   text-align: center;
   padding: 100px 30px;
+}
+
+.welcome-carousel::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
 }

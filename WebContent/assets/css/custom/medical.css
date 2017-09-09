@@ -238,13 +238,17 @@
   box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   overflow: hidden;
+  position: relative;
+  height: 395px;
 }
+
 .service-center .service-img {
   position: relative;
   margin-bottom: 30px;
   height: 240px;
+  width: 100%;
   overflow: hidden;
-  animation: slide-left 200ms ease-in-out;
+  animation: slide-up 300ms ease-in-out;
 }
 
 .service-center .service-img img{
@@ -431,13 +435,14 @@
 
 
 
-@keyframes slide-left {
+@keyframes slide-up {
     from {
-      /*right: 100%;*/
+      /*transform: translateY(-100%);*/
+
       opacity: 0;
     }
     to {
-      /*right: 0%;*/
+      /*transform: translateY(0%);*/
       opacity: 1;
     }
 }

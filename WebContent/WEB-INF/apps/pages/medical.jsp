@@ -56,8 +56,8 @@
       </div>
     </header>
     <section>
-      <div class="sec welcome fadeIn">
-        <div class="welcome-content">
+      <div class="sec welcome">
+        <div class="welcome-content wow fadeIn">
           <h3>Welcome to</h3>
           <h1>Medical Hospital</h1>
           <span>We have the most advance medical <br /> technology and innovations</span>
@@ -76,8 +76,8 @@
       <div class="sec info">
         <div class="container">
           <div class="row">
-            <div class="col-sm-4">
-              <div class="info-box wow bounceInUp free-checkup">
+            <div class="col-sm-4 wow bounceInUp">
+              <div class="info-box free-checkup">
                 <img src="assets/img/icon-info1.png" class="icon-info" alt="">
                 <h4>FREE CHECKUP</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dui </p>
@@ -85,8 +85,8 @@
               </div>
 
             </div>
-            <div class="col-sm-4">
-              <div class="info-box wow bounceInUp emergency-care">
+            <div class="col-sm-4 wow bounceInUp">
+              <div class="info-box emergency-care">
                 <h4>EMERGENCY CARE</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dui </p>
                 <a href="#" class="btn">CONTACT US</a>
@@ -94,8 +94,8 @@
               </div>
 
             </div>
-            <div class="col-sm-4">
-              <div class="info-box wow bounceInUp qualified-doctors">
+            <div class="col-sm-4 wow bounceInUp">
+              <div class="info-box qualified-doctors">
                 <img src="assets/img/icon-info2.png" class="icon-info" alt="">
                 <h4>QUALIFIED DOCTORS</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dui </p>
@@ -163,7 +163,7 @@
             <br>
           </div>
           <div class="col-md-4 col-sm-3">
-            <ul  class="nav nav-pills">
+            <ul  class="nav nav-pills wow fadeInRightBig">
               <li class="active">
                 <a href="#service_1" data-toggle="tab" class="service-left">
                   <aside></aside>
@@ -188,7 +188,7 @@
             </ul>
           </div>
           <div class="col-md-4 col-sm-6">
-            <div class="service-center">
+            <div class="service-center wow fadeInUpBig">
               <div class="tab-content">
                 <div id="service_1" class="tab-pane active">
                   <div class="service-img">
@@ -265,7 +265,7 @@
             </div>
           </div>
           <div class="col-md-4 col-sm-3">
-            <ul  class="nav nav-pills">
+            <ul  class="nav nav-pills wow fadeInLeftBig">
               <li>
                 <a href="#service_4" data-toggle="tab" class="service-right">
                   <aside></aside>
@@ -299,7 +299,7 @@
             <br>
             <div class="basic-tabination">
               <div class="col-md-3 col-sm-4">
-                <ul class="nav nav-pills nav-stacked">
+                <ul class="nav nav-pills nav-stacked wow fadeInLeft">
                   <li class="active"><a href="#branch_1" data-toggle="tab">Quezon City</a></li>
                   <li><a href="#branch_2" data-toggle="tab">Makati City</a></li>
                   <li><a href="#branch_3" data-toggle="tab">Mandaluyong City</a></li>
