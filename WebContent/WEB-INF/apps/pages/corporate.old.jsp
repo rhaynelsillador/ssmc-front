@@ -374,7 +374,7 @@
           <div class="row">
             <div class="col-md-3">
               <div class="footer-box">
-                <img src="assets/img/footer-logo.png" style="width: 200px;margin-bottom: 15px;" alt="">
+                <img src="assets/img/logo.png" style="width: 200px;margin-bottom: 15px;" alt="">
                 <br>
                 <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore mtesingsd ijid asdhhuds</span>
             </div>

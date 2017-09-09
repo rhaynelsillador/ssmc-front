@@ -5,6 +5,7 @@
     <title>SSMC</title>
     <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
     <link rel="stylesheet" href="assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/css/custom/global.css">
     <link rel="stylesheet" href="assets/css/custom/common.css">
     <link rel="stylesheet" href="assets/css/custom/medical.css">
@@ -47,19 +48,29 @@
     </header>
     <section>
       <div class="sec welcome">
-        <h3>Welcome to</h3>
-        <h1>Medical Hospital</h1>
-        <span>We have the most advance medical <br /> technology and innovations</span>
-        <br>
-        <a href="#" class="btn btn-default">EXPLORE NOW</a>
-        <a href="#" class="btn btn-primary">CONTACT US</a>
+        <div class="welcome-content">
+          <h3>Welcome to</h3>
+          <h1>Medical Hospital</h1>
+          <span>We have the most advance medical <br /> technology and innovations</span>
+          <br>
+          <a href="#" class="btn btn-default">EXPLORE NOW</a>
+          <a href="#" class="btn btn-primary">CONTACT US</a>
+        </div>
+        <%-- <div class="welcome-carousel"> --%>
+          <div class="welcome-carousel owl-carousel owl-theme">
+              <div class="item"><img src="assets/img/banner.png" alt=""></div>
+              <div class="item"><img src="assets/img/banner.png" alt=""></div>
+              <div class="item"><img src="assets/img/banner.png" alt=""></div>
+          </div>
+        <%-- </div> --%>
       </div>
       <div class="sec info">
         <div class="container">
           <div class="row">
             <div class="col-sm-4">
               <div class="info-box free-checkup">
-                <h3>FREE CHECKUP</h3>
+                <img src="assets/img/icon-info1.png" class="icon-info" alt="">
+                <h4>FREE CHECKUP</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dui </p>
 
               </div>
@@ -67,7 +78,7 @@
             </div>
             <div class="col-sm-4">
               <div class="info-box emergency-care">
-                <h3>EMERGENCY CARE</h3>
+                <h4>EMERGENCY CARE</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dui </p>
                 <a href="#" class="btn">CONTACT US</a>
 
@@ -76,7 +87,8 @@
             </div>
             <div class="col-sm-4">
               <div class="info-box qualified-doctors">
-                <h3>QUALIFIED DOCTORS</h3>
+                <img src="assets/img/icon-info2.png" class="icon-info" alt="">
+                <h4>QUALIFIED DOCTORS</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dui </p>
 
               </div>
@@ -97,13 +109,13 @@
                   <li class="active">
                     <a href="#choose_1" class="side" data-toggle="tab">
                       <aside></aside>
-                      <h4>RESPIRATORY SERVICE</h4>
+                      <h5>RESPIRATORY SERVICE</h5>
                       <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod  </span>
                     </a>
                   <li>
                     <a href="#choose_2" class="side" data-toggle="tab">
                       <aside></aside>
-                      <h4>INFUSION THERAPY</h4>
+                      <h5>INFUSION THERAPY</h5>
                       <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod  </span>
                     </a>
                   </li>
@@ -111,7 +123,7 @@
                 <li>
                   <a href="#choose_3" class="side" data-toggle="tab">
                     <aside></aside>
-                    <h4>PEDIATRICIAN</h4>
+                    <h5>PEDIATRICIAN</h5>
                     <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod  </span>
                   </a>
                 </li>
@@ -392,7 +404,7 @@
           <div class="row">
             <div class="col-md-3">
               <div class="footer-box">
-                <img src="assets/img/footer-logo.png" style="width: 200px;margin-bottom: 15px;" alt="">
+                <img src="assets/img/logo.png" style="width: 200px;margin-bottom: 15px;" alt="">
                 <br>
                 <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore mtesingsd ijid asdhhuds</span>
             </div>
@@ -436,12 +448,20 @@
 
     <script  type="text/javascript" src="assets/js/jquery.min.js"></script>
     <script  type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script  type="text/javascript" src="assets/js/owl.carousel.min.js"></script>
     <script type="text/javascript">
       $(document).ready(function(){
-        console.log("G!");
         $(".blue .nav li a").click(function(){
-          console.log("gg");
           $(".blue .nav li").removeClass("active");
+        });
+
+        $('.owl-carousel').owlCarousel({
+            loop:true,
+            nav:true,
+            items:1,
+            autoplay:true,
+            autoplayTimeout:5000,
+            autoplayHoverPause: true,
         });
       });
     </script>
