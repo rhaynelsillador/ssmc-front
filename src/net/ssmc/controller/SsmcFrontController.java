@@ -41,5 +41,10 @@ public class SsmcFrontController {
 		return "pages/branches";
 	}
 	
+	@RequestMapping(path="/ContactUs", method = RequestMethod.GET, produces="text/html")
+	public String contactUs(ModelMap map){
+		return "pages/contact";
+	}
+	
 	
 }

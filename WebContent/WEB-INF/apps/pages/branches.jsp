@@ -154,7 +154,8 @@
 	                      '<span>'+details.description+'</span>'+
 	                      '<br>'+
 	                      '<br>'+
-	                      '<span>Phone: '+details.phone+' <br>Email: '+details.email+'</span>'+
+	                      '<span>Phone: '+details.phone+' '+
+	                      '<br>Email: '+details.email+'</span>'+
 	                    '</div>'+
 	                    '<div class="branch-img">'+
 	                      '<img src="'+details.logo+'" style="width: 250px;" alt="">'+
@@ -162,7 +163,7 @@
 	                    '<div class="clearfix"></div>'+
 	                    '<br>'+
 	                    '<div class="map-container">'+
-	                      '<div id="map" style="width:100%;height:300px"></div>'+
+	                      '<div id="map" style="width:100%;height:300px"><iframe width="100%" height="300" frameborder="0" style="border:0" src="'+details.map+'" allowfullscreen></iframe></div>'+
 	                  	'</div></li>';
 	        		})
 	        		cityListContent += '</ul></div>';

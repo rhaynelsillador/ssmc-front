@@ -1,7 +1,5 @@
 package net.ssmc.utils;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Properties;
 
 import javax.mail.Message;
@@ -12,13 +10,9 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 
-import net.ssmc.enums.Status;
 import net.ssmc.model.Email;
-import net.ssmc.model.Helper;
-import net.ssmc.services.ContactUsServices;
 
 public class GmailUtility {
 
@@ -35,8 +29,6 @@ public class GmailUtility {
 	@Value("{mail.smtp.port}")
 	private String port;
 	private Session session;
-	@Autowired
-	private ContactUsServices contactUsServices;
 	
 	
 	public void init(){
@@ -44,7 +36,9 @@ public class GmailUtility {
 		properties.put("mail.smtp.auth", auth);
 		properties.put("mail.smtp.starttls.enable", enable);
 		properties.put("mail.smtp.host", host);
-		properties.put("mail.smtp.port", port);
+		properties.put("mail.smtp.port", 587);
+		
+		System.out.println(port);
 		
 		Session session = Session.getInstance(properties,
 		  new javax.mail.Authenticator() {
