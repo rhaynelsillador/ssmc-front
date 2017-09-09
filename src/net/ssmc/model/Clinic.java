@@ -3,7 +3,6 @@ package net.ssmc.model;
 import java.sql.Timestamp;
 import java.util.List;
 
-import net.ssmc.enums.City;
 import net.ssmc.exception.EmptyStringException;
 
 public class Clinic {

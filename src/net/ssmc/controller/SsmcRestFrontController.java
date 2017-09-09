@@ -6,7 +6,6 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,6 +19,9 @@ import net.cms.ssmc.services.HeaderServices;
 import net.cms.ssmc.services.ServiceServices;
 import net.ssmc.enums.App;
 import net.ssmc.enums.Page;
+import net.ssmc.model.City;
+import net.ssmc.model.Clinic;
+import net.ssmc.services.CityServices;
 import net.ssmc.services.ClinicServices;
 
 @RestController
@@ -37,6 +39,8 @@ public class SsmcRestFrontController {
 	private ServiceServices serviceServices;
 	@Autowired
 	private ClinicServices clinicServices;
+	@Autowired
+	private CityServices cityServices;
 	
 	@RequestMapping(path="/MainHeaderInfo", method = RequestMethod.POST, produces={"application/json"})
 	public Map<String, Object> mainHeaderInfo(){
@@ -81,5 +85,16 @@ public class SsmcRestFrontController {
 	@RequestMapping(path="/ClinicsHeaderInfo", method = {RequestMethod.POST, RequestMethod.GET}, produces={"application/json"})
 	public Header clinicsHeaderInfo(){
 		return clinicServices.getClinicHeader();
+	}
+	
+	@RequestMapping(path="/ClinicsAndHospitals", method = {RequestMethod.POST, RequestMethod.GET}, produces={"application/json"})
+	public Map<String, List<Clinic>> clinicsAndHospitals(){
+		System.out.println(">>>>>>>>>>>>>>>>>>");
+		return clinicServices.getClinicsAndHospitals();
+	}
+	
+	@RequestMapping(path="/Cities", method = {RequestMethod.POST, RequestMethod.GET}, produces={"application/json"})
+	public List<City> cities(){
+		return cityServices.getAllCities();
 	}
 }

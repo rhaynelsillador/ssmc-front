@@ -18,5 +18,6 @@
 	<bean id="controlDao" 			class="net.cms.ssmc.dao.impl.ControlDaoImpl" />
 	<bean id="headerDao" 			class="net.cms.ssmc.dao.impl.HeaderDaoImpl" />
 	<bean id="serviceDao" 			class="net.cms.ssmc.dao.impl.ServiceDaoImpl" />
+	<bean id="cityDao" 				class="net.ssmc.dao.impl.CityDaoImpl" />
 	
 </beans>
