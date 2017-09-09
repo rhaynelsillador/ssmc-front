@@ -15,7 +15,7 @@
             <br>
             <div class="basic-tabination">
               <div class="col-md-3">
-                <ul class="nav nav-pills nav-stacked" id="cityList">
+                <ul class="nav nav-pills nav-stacked" id="clinicCities">
                   <li class="active"><a href="#loc_1" data-toggle="tab">Quezon City</a></li>
                   <li><a href="#loc_2" data-toggle="tab">Makati City</a></li>
                   <li><a href="#loc_3" data-toggle="tab">Mandaluyong City</a></li>
@@ -23,7 +23,7 @@
                 </ul>
               </div>
               <div class="col-md-9">
-                <div class="tab-content tab-about">
+                <div class="tab-content tab-about" id="clinicCitiesContent">
                   <div id="loc_1" class="tab-pane active">
                     <div class="branch-info">
                       <h4>General Medicine</h4>
@@ -129,7 +129,47 @@
 	        	    	cityList += '<li><a href="#'+data[index].cityKey+'" data-toggle="tab">'+data[index].name+'</a></li>';
 	        	    }
 	        	}
-	        	$('#cityList').html(cityList)
+	        	$('#clinicCities').html(cityList)
+	        })
+	        
+	        POST("ClinicsAndHospitals", {}, function(data){
+	        	
+	        	var cityListContent = "";
+	        	var cityList = "";
+	        	var counter = 0;
+	        	$.each(data, function(key, value){
+	        		console.log(key);
+	        		var active = "";
+	        		if(counter == 0){
+	        			active = "active";
+	        		}
+	        		
+	        		cityListContent += '<div id="'+key.split(" ").join("")+'" class="tab-pane '+active+'"><ul>';
+	        		cityList += '<li class="'+active+'"><a href="#'+key.split(" ").join("")+'" data-toggle="tab">'+key+'</a></li>';
+	        		
+	        		
+	        		$.each(value, function(index, details){
+	        			cityListContent +=  '<li><div class="branch-info">'+
+	                      '<h4>'+details.name+'</h4>'+
+	                      '<span>'+details.description+'</span>'+
+	                      '<br>'+
+	                      '<br>'+
+	                      '<span>Phone: '+details.phone+' <br>Email: '+details.email+'</span>'+
+	                    '</div>'+
+	                    '<div class="branch-img">'+
+	                      '<img src="'+details.logo+'" style="width: 250px;" alt="">'+
+	                    '</div>'+
+	                    '<div class="clearfix"></div>'+
+	                    '<br>'+
+	                    '<div class="map-container">'+
+	                      '<div id="map" style="width:100%;height:300px"></div>'+
+	                  	'</div></li>';
+	        		})
+	        		cityListContent += '</ul></div>';
+	        		counter++;
+	        	})
+	        	$('#clinicCities').html(cityList)
+	        	$('#clinicCitiesContent').html(cityListContent)
 	        })
 	        
 	        

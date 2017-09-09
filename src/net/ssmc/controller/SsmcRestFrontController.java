@@ -89,7 +89,6 @@ public class SsmcRestFrontController {
 	
 	@RequestMapping(path="/ClinicsAndHospitals", method = {RequestMethod.POST, RequestMethod.GET}, produces={"application/json"})
 	public Map<String, List<Clinic>> clinicsAndHospitals(){
-		System.out.println(">>>>>>>>>>>>>>>>>>");
 		return clinicServices.getClinicsAndHospitals();
 	}
 	

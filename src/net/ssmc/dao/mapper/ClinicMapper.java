@@ -32,13 +32,15 @@ public class ClinicMapper implements RowMapper<Clinic>{
 		clinic.setAddress2(rs.getString("address2"));
 		clinic.setType(rs.getString("type"));
 		try {
-			
-			clinic.setCity(new City(rs.getString("cityname"), rs.getString("citykey")));
+			clinic.setCity(new City(rs.getLong("cityid"),
+					rs.getString("cityname"),
+					rs.getString("citykey")));
 		} catch (Exception e) {
-			e.printStackTrace();
 		}
+		clinic.setEmail(rs.getString("email"));
+		clinic.setPhone(rs.getString("phone"));
+		clinic.setMobile(rs.getString("mobile"));
 		clinic.setMap(rs.getString("map"));
-		System.out.println(clinic);
 		return clinic;
 	}
 

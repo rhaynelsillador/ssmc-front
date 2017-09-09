@@ -16,7 +16,9 @@ public class Clinic {
 	private String address1;
 	private String address2;
 	private City city;
-	private List<ClinicContact> clinicContacts;
+	private String mobile;
+	private String phone;
+	private String email;
 	private String map;
 	private String type;
 	
@@ -62,13 +64,24 @@ public class Clinic {
 	public void setLogo(String logo) {
 		this.logo = logo;
 	}
-	public List<ClinicContact> getClinicContacts() {
-		return clinicContacts;
+	public String getMobile() {
+		return mobile;
 	}
-	public void setClinicContacts(List<ClinicContact> clinicContacts) {
-		this.clinicContacts = clinicContacts;
+	public void setMobile(String mobile) {
+		this.mobile = mobile;
 	}
-	
+	public String getPhone() {
+		return phone;
+	}
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
 	public String getAddress1() {
 		return address1;
 	}
@@ -99,5 +112,14 @@ public class Clinic {
 	public void setType(String type) {
 		this.type = type;
 	}
+	@Override
+	public String toString() {
+		return "Clinic [id=" + id + ", name=" + name + ", dateUpdated=" + dateUpdated + ", dateAdded=" + dateAdded
+				+ ", description=" + description + ", logo=" + logo + ", address1=" + address1 + ", address2="
+				+ address2 + ", city=" + city + ", mobile=" + mobile + ", phone=" + phone + ", email=" + email
+				+ ", map=" + map + ", type=" + type + "]";
+	}
+	
+	
 	
 }
