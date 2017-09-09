@@ -47,7 +47,7 @@
     </header> -->
     <%@ include file="commons/CorporateHeader.jsp"%>
     <section>
-      <div class="sec welcome">
+      <div class="sec welcome welcome-common">
         <h1 id="servicesTitle">Services</h1>
         <span id="servicesContent">We have the most advance medical <br /> technology and innovations</span>
         <br>
@@ -75,7 +75,7 @@
                       <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod  </span>
                     </a>
                   </li>
-                
+
                 <li>
                   <a href="#service_3" class="side" data-toggle="tab">
                     <aside></aside>
@@ -112,7 +112,7 @@
         </div>
       </div>
     </section>
-    
+
     <%@ include file="commons/CorporateFooter.jsp"%>
     <!-- <footer>
       <div class="footer-top">
@@ -172,12 +172,12 @@
 	          console.log("gg");
 	          $(".blue .nav li").removeClass("active");
 	        });
-	        
+
 	        POST("ServiceHeaderInfo", {}, function(data){
 	        	$("#servicesTitle").html(data.title);
 	        	$("#servicesContent").html(data.content);
 	        });
-	        
+
 	        POST("ServicesList", {}, function(data){
 	        	var servicesDataTitle = "";
 	        	var servicesDataContent = "";
@@ -193,7 +193,7 @@
 	                    '<span>'+value.content+'</span>'+
 	                  '</a>'+
 	                 '</li>';
-	        		
+
 	        		servicesDataContent += '<div id="service_'+index+'" class="tab-pane '+isActive+'">'+
 	                    '<img src="'+fileServer+value.image+'" alt="">'+
 	                    '<div>'+value.content2+'</div>'+

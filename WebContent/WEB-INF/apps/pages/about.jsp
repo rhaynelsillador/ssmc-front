@@ -5,12 +5,10 @@
   <body>
     <%@ include file="commons/CorporateHeader.jsp"%>
     <section>
-      <div class="sec welcome">
+      <div class="sec welcome welcome-common">
         <h1 id="aboutUsHeaderTitle">About us</h1>
         <span id="aboutUsHeaderContent">We have the most advance medical <br /> technology and innovations</span>
-        <br>
-        <!-- <a href="#" class="btn btn-default">EXPLORE NOW</a>
-        <a href="#" class="btn btn-primary">CONTACT US</a> -->
+        
       </div>
       <div class="sec branch">
         <div class="container">
@@ -73,7 +71,7 @@
       </div>
     </section>
     <%@ include file="commons/CorporateFooter.jsp"%>
-	
+
     <script type="text/javascript">
     $("#menuAbout a").addClass("active");
       $(document).ready(function(){
@@ -83,12 +81,12 @@
           $(".blue .nav li").removeClass("active");
         });
       });
-     
+
 	POST("AboutUsHeaderInfo", {}, function(data){
 	 	$("#aboutUsHeaderTitle").html(data.title);
 	 	$("#aboutUsHeaderContent").html(data.content);
 	})
-      
+
 	POST("AboutUsInfo", {}, function(data){
 		var aboutUsMenus  = "";
 		var aboutUsContent = "";
@@ -121,12 +119,12 @@
 	                '</div>'+
 	              '</div>';
     		  }
-    		  
+
 		}
    		$("#aboutUsMenus").html(aboutUsMenus);
    		$("#aboutUsContent").html(aboutUsContent);
 	})
-      
+
     </script>
   </body>
 </html>

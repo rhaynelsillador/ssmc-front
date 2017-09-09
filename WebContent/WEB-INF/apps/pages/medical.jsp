@@ -3,9 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>SSMC</title>
+    <%-- Bootstrap --%>
     <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+    <%-- Font Awesome --%>
     <link rel="stylesheet" href="assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <%-- Owl Carousel --%>
     <link rel="stylesheet" href="assets/css/vendor/owl.carousel.min.css">
+    <%-- Wow js --%>
+    <link rel="stylesheet" href="assets/css/vendor/animate.css">
+    <%-- Hover css --%>
+    <link rel="stylesheet" href="assets/css/vendor/hover-min.css">
+
+    <%-- Custom --%>
     <link rel="stylesheet" href="assets/css/custom/global.css">
     <link rel="stylesheet" href="assets/css/custom/common.css">
     <link rel="stylesheet" href="assets/css/custom/medical.css">
@@ -23,9 +32,9 @@
             <span><i class="fa fa-fw fa-envelope" aria-hidden="true"></i> support@ssmc.com</span> -->
           </div>
           <div class="pull-right">
-            <a href="#"><span><i class="fa fa-facebook" aria-hidden="true"></i></span></a>
-            <a href="#"><span><i class="fa fa-twitter" aria-hidden="true"></i></span></a>
-            <a href="#"><span><i class="fa fa-youtube-play" aria-hidden="true"></i></span></a>
+            <a href="#"><span class="hvr-radial-out"><i class="fa fa-facebook" aria-hidden="true"></i></span></a>
+            <a href="#"><span class="hvr-radial-out"><i class="fa fa-twitter" aria-hidden="true"></i></span></a>
+            <a href="#"><span class="hvr-radial-out"><i class="fa fa-youtube-play" aria-hidden="true"></i></span></a>
           </div>
         </div>
       </div>
@@ -47,14 +56,14 @@
       </div>
     </header>
     <section>
-      <div class="sec welcome">
+      <div class="sec welcome fadeIn">
         <div class="welcome-content">
           <h3>Welcome to</h3>
           <h1>Medical Hospital</h1>
           <span>We have the most advance medical <br /> technology and innovations</span>
           <br>
-          <a href="#" class="btn btn-default">EXPLORE NOW</a>
-          <a href="#" class="btn btn-primary">CONTACT US</a>
+          <a href="#" class="btn btn-default hvr-grow">EXPLORE NOW</a>
+          <a href="#" class="btn btn-primary hvr-grow">CONTACT US</a>
         </div>
         <%-- <div class="welcome-carousel"> --%>
           <div class="welcome-carousel owl-carousel owl-theme">
@@ -68,7 +77,7 @@
         <div class="container">
           <div class="row">
             <div class="col-sm-4">
-              <div class="info-box free-checkup">
+              <div class="info-box wow bounceInUp free-checkup">
                 <img src="assets/img/icon-info1.png" class="icon-info" alt="">
                 <h4>FREE CHECKUP</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dui </p>
@@ -77,7 +86,7 @@
 
             </div>
             <div class="col-sm-4">
-              <div class="info-box emergency-care">
+              <div class="info-box wow bounceInUp emergency-care">
                 <h4>EMERGENCY CARE</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dui </p>
                 <a href="#" class="btn">CONTACT US</a>
@@ -86,7 +95,7 @@
 
             </div>
             <div class="col-sm-4">
-              <div class="info-box qualified-doctors">
+              <div class="info-box wow bounceInUp qualified-doctors">
                 <img src="assets/img/icon-info2.png" class="icon-info" alt="">
                 <h4>QUALIFIED DOCTORS</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dui </p>
@@ -105,7 +114,7 @@
             <br>
             <div class="big-tabination">
               <div class="col-md-4 col-sm-5">
-                <ul class="nav nav-pills nav-stacked">
+                <ul class="nav nav-pills nav-stacked wow fadeInRight">
                   <li class="active">
                     <a href="#choose_1" class="side" data-toggle="tab">
                       <aside></aside>
@@ -130,7 +139,7 @@
                 </ul>
               </div>
               <div class="col-md-8 col-sm-7">
-                <div class="tab-content choose-content">
+                <div class="tab-content choose-content wow fadeInLeft">
                   <div id="choose_1" class="tab-pane active">
                     <img src="assets/img/banner.png" alt="">
                   </div>
@@ -185,6 +194,7 @@
                   <div class="service-img">
                     <img src="assets/img/service1.png" alt="">
                   </div>
+                  <span class="service-circle"></span>
                   <div class="service-content">
                     <h4>Medical Checkup</h4>
                     <span>1Lorem ipsum dolor sit amet,tetur adipisicing elit, s consecteturu </span>
@@ -194,6 +204,7 @@
                   <div class="service-img">
                     <img src="assets/img/service1.png" alt="">
                   </div>
+                  <span class="service-circle"></span>
                   <div class="service-content">
                     <h4>Medical Checkup</h4>
                     <span>2Lorem ipsum dolor sit amet,tetur adipisicing elit, s consecteturu </span>
@@ -203,6 +214,7 @@
                   <div class="service-img">
                     <img src="assets/img/service1.png" alt="">
                   </div>
+                  <span class="service-circle"></span>
                   <div class="service-content">
                     <h4>Medical Checkup</h4>
                     <span>3Lorem ipsum dolor sit amet,tetur adipisicing elit, s consecteturu </span>
@@ -212,6 +224,7 @@
                   <div class="service-img">
                     <img src="assets/img/service1.png" alt="">
                   </div>
+                  <span class="service-circle"></span>
                   <div class="service-content">
                     <h4>Medical Checkup</h4>
                     <span>4Lorem ipsum dolor sit amet,tetur adipisicing elit, s consecteturu </span>
@@ -221,6 +234,7 @@
                   <div class="service-img">
                     <img src="assets/img/service1.png" alt="">
                   </div>
+                  <span class="service-circle"></span>
                   <div class="service-content">
                     <h4>Medical Checkup</h4>
                     <span>5Lorem ipsum dolor sit amet,tetur adipisicing elit, s consecteturu </span>
@@ -230,6 +244,7 @@
                   <div class="service-img">
                     <img src="assets/img/service1.png" alt="">
                   </div>
+                  <span class="service-circle"></span>
                   <div class="service-content">
                     <h4>Medical Checkup</h4>
                     <span>6Lorem ipsum dolor sit amet,tetur adipisicing elit, s consecteturu </span>
@@ -293,7 +308,7 @@
               </div>
               <div class="col-md-9 col-sm-8">
                 <div class="tab-content">
-                  <div id="branch_1" class="tab-pane active">
+                  <div id="branch_1" class="tab-pane fade in active">
                     <div class="branch-info">
                       <h4>General Medicine</h4>
                       <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
@@ -306,7 +321,7 @@
                     </div>
                     <div class="clearfix"></div>
                   </div>
-                  <div id="branch_2" class="tab-pane">
+                  <div id="branch_2" class="tab-pane fade">
                     <div class="branch-info">
                       <h4>General Medicine2</h4>
                       <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
@@ -319,7 +334,7 @@
                     </div>
                     <div class="clearfix"></div>
                   </div>
-                  <div id="branch_3" class="tab-pane">
+                  <div id="branch_3" class="tab-pane fade">
                     <div class="branch-info">
                       <h4>General Medicin3e</h4>
                       <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
@@ -332,7 +347,7 @@
                     </div>
                     <div class="clearfix"></div>
                   </div>
-                  <div id="branch_4" class="tab-pane">
+                  <div id="branch_4" class="tab-pane fade">
                     <div class="branch-info">
                       <h4>General Medicin4e</h4>
                       <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
@@ -369,7 +384,7 @@
         <div class="container">
           <div class="row">
             <div class="col-md-8 col-md-offset-2">
-              <div class="contact-box">
+              <div class="contact-box wow bounceInUp">
                 <h2>CONTACT US NOW!</h2>
                 <form class="contact-form">
                   <div class="row">
@@ -446,11 +461,18 @@
       <div class="footer-bot">Copyright (c) 2017. All Rights Reserved SSMC</div>
     </footer>
 
+    <%-- Jquery --%>
     <script  type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <%-- Bootstrap --%>
     <script  type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <%-- Owl Carousel --%>
     <script  type="text/javascript" src="assets/js/owl.carousel.min.js"></script>
+    <%-- Wow js --%>
+    <script src="assets/js/wow.min.js"></script>
+
     <script type="text/javascript">
       $(document).ready(function(){
+        new WOW().init();
         $(".blue .nav li a").click(function(){
           $(".blue .nav li").removeClass("active");
         });
