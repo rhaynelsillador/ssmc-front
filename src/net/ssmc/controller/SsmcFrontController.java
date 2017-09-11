@@ -46,5 +46,8 @@ public class SsmcFrontController {
 		return "pages/contact";
 	}
 	
-	
+	@RequestMapping(path="/Faq", method = RequestMethod.GET, produces="text/html")
+	public String faq(ModelMap map){
+		return "pages/faq";
+	}
 }

@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import net.cms.ssmc.model.AboutUs;
@@ -16,6 +17,7 @@ import net.cms.ssmc.model.Service;
 import net.cms.ssmc.services.AboutUsServices;
 import net.cms.ssmc.services.CorporateServices;
 import net.cms.ssmc.services.HeaderServices;
+import net.cms.ssmc.services.ImageServices;
 import net.cms.ssmc.services.ServiceServices;
 import net.ssmc.enums.App;
 import net.ssmc.enums.Page;
@@ -41,6 +43,8 @@ public class SsmcRestFrontController {
 	private ClinicServices clinicServices;
 	@Autowired
 	private CityServices cityServices;
+	@Autowired
+	private ImageServices imageServices;
 	
 	@RequestMapping(path="/MainHeaderInfo", method = RequestMethod.POST, produces={"application/json"})
 	public Map<String, Object> mainHeaderInfo(){
@@ -96,4 +100,15 @@ public class SsmcRestFrontController {
 	public List<City> cities(){
 		return cityServices.getAllCities();
 	}
+	
+	@RequestMapping(path="/HeadersInformation", method = {RequestMethod.POST, RequestMethod.GET}, produces={"application/json"})
+	public Map<String, Object> headersInfo(@RequestParam Map<String, String> request){
+		return headerServices.getHeaderInformation(request);
+	}
+	
+	@RequestMapping(path="/SystemImages", method = {RequestMethod.POST, RequestMethod.GET}, produces={"application/json"})
+	public Map<String, Object> imageServices(@RequestParam Map<String, String> request){
+		return imageServices.getImages(request);
+	}
+	
 }

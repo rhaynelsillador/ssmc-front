@@ -9,6 +9,7 @@ import net.ssmc.model.Image;
 
 public interface ImageDao {
 
+	List<Image> retrieveImage(App app, Page page, Module module);
 	List<Image> retrieveImage(Page page, Module module);
 	
 }

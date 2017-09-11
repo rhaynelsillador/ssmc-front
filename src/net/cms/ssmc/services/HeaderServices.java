@@ -68,4 +68,26 @@ public class HeaderServices {
 		}
 		return new Header();
 	}
+	
+	public Map<String, Object> getHeaderInformation(Map<String, String> request){
+		Map<String, Object> response = new HashMap<>();
+		App app = null;
+		Page page = null;
+		try {
+			app = App.valueOf(request.get("app"));
+		} catch (Exception e) {
+			response.put("error", "Invalid app");
+		}
+		try {
+			page = Page.valueOf(request.get("page"));
+		} catch (Exception e) {
+			response.put("error", "Invalid page");
+		}
+		try {
+			response.put("data", headerDao.retrieve(app, page));
+		} catch (Exception e) {
+			response.put("error", "No data retrieve");
+		}
+		return response;
+	}
 }

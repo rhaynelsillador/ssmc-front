@@ -22,4 +22,6 @@
 	
 	<bean id="corporateServices" 			class="net.cms.ssmc.services.CorporateServices" />
 	
+	<bean id="imageServices" 			class="net.cms.ssmc.services.ImageServices" />
+	
 </beans>
