@@ -4,13 +4,11 @@
           <div class="pull-left">
             <a href="#"><span><i class="fa fa-fw fa-phone" aria-hidden="true"></i></span>+6398863555</a>&nbsp;&nbsp;
             <a href="#"><span style="font-size: 10px;"><i class="fa fa-fw fa-envelope" aria-hidden="true"></i></span>support@ssmc.com</a>
-            <!-- <span><i class="fa fa-fw fa-phone" aria-hidden="true"></i> +6398863555</span> &nbsp;
-            <span><i class="fa fa-fw fa-envelope" aria-hidden="true"></i> support@ssmc.com</span> -->
           </div>
           <div class="pull-right">
-            <a href="#"><span><i class="fa fa-facebook" aria-hidden="true"></i></span></a>
-            <a href="#"><span><i class="fa fa-twitter" aria-hidden="true"></i></span></a>
-            <a href="#"><span><i class="fa fa-youtube-play" aria-hidden="true"></i></span></a>
+            <a href="#"><span class="hvr-radial-out"><i class="fa fa-facebook" aria-hidden="true"></i></span></a>
+            <a href="#"><span class="hvr-radial-out"><i class="fa fa-twitter" aria-hidden="true"></i></span></a>
+            <a href="#"><span class="hvr-radial-out"><i class="fa fa-youtube-play" aria-hidden="true"></i></span></a>
           </div>
         </div>
       </div>

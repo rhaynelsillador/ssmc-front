@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
-        <div class="contact-box">
+        <div class="contact-box wow bounceInUp">
           <h2>CONTACT US NOW!</h2>
           <form class="contact-form">
             <div class="row">
@@ -21,7 +21,7 @@
                 <input type="text" class="form-control" name="message" value="" placeholder="Message">
               </div>
               <div class="col-md-12">
-                <button type="submit" class="contact-submit" name="button">S</button>
+                <button type="submit" class="contact-submit" name="button"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
               </div>
             </div>
           </form>
@@ -41,7 +41,7 @@
 			POST("sendEmail", form, function(data){
 		  		btn.removeAttr("disabled");
 			})
-			
+
 			console.log(form);
 			e.preventDefault();
 		})

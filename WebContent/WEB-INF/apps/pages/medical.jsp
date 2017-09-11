@@ -28,8 +28,6 @@
           <div class="pull-left">
             <a href="#"><span><i class="fa fa-fw fa-phone" aria-hidden="true"></i></span>+6398863555</a>&nbsp;&nbsp;
             <a href="#"><span style="font-size: 10px;"><i class="fa fa-fw fa-envelope" aria-hidden="true"></i></span>support@ssmc.com</a>
-            <!-- <span><i class="fa fa-fw fa-phone" aria-hidden="true"></i> +6398863555</span> &nbsp;
-            <span><i class="fa fa-fw fa-envelope" aria-hidden="true"></i> support@ssmc.com</span> -->
           </div>
           <div class="pull-right">
             <a href="#"><span class="hvr-radial-out"><i class="fa fa-facebook" aria-hidden="true"></i></span></a>
@@ -65,13 +63,11 @@
           <a href="#" class="btn btn-default hvr-grow">EXPLORE NOW</a>
           <a href="#" class="btn btn-primary hvr-grow">CONTACT US</a>
         </div>
-        <%-- <div class="welcome-carousel"> --%>
           <div class="welcome-carousel owl-carousel owl-theme">
               <div class="item"><img src="assets/img/banner.png" alt=""></div>
               <div class="item"><img src="assets/img/banner.png" alt=""></div>
               <div class="item"><img src="assets/img/banner.png" alt=""></div>
           </div>
-        <%-- </div> --%>
       </div>
       <div class="sec info">
         <div class="container">
@@ -251,17 +247,6 @@
                   </div>
                 </div>
               </div>
-
-
-
-
-
-
-
-
-
-
-
             </div>
           </div>
           <div class="col-md-4 col-sm-3">
@@ -307,7 +292,7 @@
                 </ul>
               </div>
               <div class="col-md-9 col-sm-8">
-                <div class="tab-content">
+                <div class="tab-content wow fadeInRight">
                   <div id="branch_1" class="tab-pane fade in active">
                     <div class="branch-info">
                       <h4>General Medicine</h4>
@@ -371,11 +356,15 @@
         <div class="container">
           <div class="row">
             <div class="col-md-6">
-              <h1>Need a medicine on the go?</h1>
-              <span>You have a partner with us in affordable and effective medicine <br /> Call us <span style="color: #f57e2b;">(02) 234-2345</span> and let us help you.</span>
-            </div>
+              <div class="wow fadeInUp">
+                <h1>Need a medicine on the go?</h1>
+                <span>You have a partner with us in affordable and effective medicine <br /> Call us <span style="color: #f57e2b;">(02) 234-2345</span> and let us help you.</span>
+              </div>
+              </div>
             <div class="col-md-6">
-              <img src="assets/img/medicine.png" style="width: 380px; "alt="">
+              <div class="wow fadeInDown">
+                <img src="assets/img/medicine.png" style="width: 380px; "alt="">
+              </div>
             </div>
           </div>
         </div>
@@ -403,7 +392,7 @@
                       <input type="text" class="form-control" name="" value="" placeholder="Message">
                     </div>
                     <div class="col-md-12">
-                      <button type="button" class="contact-submit" name="button">S</button>
+                      <button type="button" class="contact-submit" name="button"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
                     </div>
                   </div>
                 </form>
