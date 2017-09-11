@@ -449,6 +449,7 @@
       </div>
       <div class="footer-bot">Copyright (c) 2017. All Rights Reserved SSMC</div>
     </footer>
+    <div id="preloader"></div>
 
     <%-- Jquery --%>
     <script  type="text/javascript" src="assets/js/jquery.min.js"></script>
@@ -460,7 +461,9 @@
     <script src="assets/js/wow.min.js"></script>
 
     <script type="text/javascript">
+
       $(document).ready(function(){
+        preloader();
         new WOW().init();
         $(".blue .nav li a").click(function(){
           $(".blue .nav li").removeClass("active");
@@ -474,7 +477,19 @@
             autoplayTimeout:5000,
             autoplayHoverPause: true,
         });
+        console.log("owl");
       });
+
+      function preloader() {
+        $("header,section,footer").hide()
+
+        $(window).load(function(){
+          $("header,section,footer").fadeIn();
+          setTimeout(function(){ $('#preloader').fadeOut('slow'); }, 500);
+          console.log("peace out");
+        });
+
+      }
     </script>
   </body>
 </html>

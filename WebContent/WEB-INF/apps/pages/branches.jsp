@@ -4,7 +4,7 @@
   <body>
     <%@ include file="commons/CorporateHeader.jsp"%>
     <section>
-      <div class="sec welcome">
+      <div class="sec welcome welcome-common">
         <h1 id="hospitalClinicHeaderTitle">Hospitals and Clinics</h1>
         <span id="hospitalClinicHeaderContent">We have the most advance medical <br /> technology and innovations</span>
         <br>
@@ -99,25 +99,25 @@
         </div>
       </div>
     </section>
-    
+
     <%@ include file="commons/CorporateFooter.jsp"%>
-	
+
     <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
     <script type="text/javascript">
     	$("#menuBranches a").addClass("active");
       	$(document).ready(function(){
 	        console.log("G!");
-	    	
+
 	        $(".blue .nav li a").click(function(){
 	          console.log("gg");
 	          $(".blue .nav li").removeClass("active");
 	        });
-	        
+
 	        POST("ClinicsHeaderInfo", {}, function(data){
 	        	$("#hospitalClinicHeaderTitle").html(data.title);
 	        	$("#hospitalClinicHeaderContent").html(data.content);
 	        })
-	        
+
 	        POST("Cities", {}, function(data){
 	        	console.log(data);
 	        	var cityList = "";
@@ -131,9 +131,9 @@
 	        	}
 	        	$('#clinicCities').html(cityList)
 	        })
-	        
+
 	        POST("ClinicsAndHospitals", {}, function(data){
-	        	
+
 	        	var cityListContent = "";
 	        	var cityList = "";
 	        	var counter = 0;
@@ -143,11 +143,11 @@
 	        		if(counter == 0){
 	        			active = "active";
 	        		}
-	        		
+
 	        		cityListContent += '<div id="'+key.split(" ").join("")+'" class="tab-pane '+active+'"><ul>';
 	        		cityList += '<li class="'+active+'"><a href="#'+key.split(" ").join("")+'" data-toggle="tab">'+key+'</a></li>';
-	        		
-	        		
+
+
 	        		$.each(value, function(index, details){
 	        			cityListContent +=  '<li><div class="branch-info">'+
 	                      '<h4>'+details.name+'</h4>'+
@@ -172,18 +172,18 @@
 	        	$('#clinicCities').html(cityList)
 	        	$('#clinicCitiesContent').html(cityListContent)
 	        })
-	        
-	        
-	        
+
+
+
       	});
-		
+
       	/* function myMap() {
           	var mapOptions = {
               center: new google.maps.LatLng(51.5, -0.12),
               zoom: 10,
               mapTypeId: google.maps.MapTypeId.ROADMAP
           	}
-          
+
 	      	var map = new google.maps.Map(document.getElementById("map"), mapOptions);
 	      	var map2 = new google.maps.Map(document.getElementById("ma2p"), mapOptions);
 	      	var map3 = new google.maps.Map(document.getElementById("map3"), mapOptions);
