@@ -84,6 +84,7 @@ public class HeaderServices {
 			response.put("error", "Invalid page");
 		}
 		try {
+			System.out.println(app + " :: " +page);
 			response.put("data", headerDao.retrieve(app, page));
 		} catch (Exception e) {
 			response.put("error", "No data retrieve");
