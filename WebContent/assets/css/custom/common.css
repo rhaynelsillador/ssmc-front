@@ -84,7 +84,7 @@
 }
 
 .welcome.welcome-common {
-  height: 400px;
+  height: 350px;
   background: rgba(0, 0, 0, 0.5);
   text-align: center;
   padding-top: 30px;
@@ -101,6 +101,11 @@
   z-index: -1;
   height: 100%;
 
+}
+
+#about .welcome.welcome-common::before {
+  background: url(../../img/banner-about.jpg) no-repeat;
+  background-size: cover;
 }
 
 .welcome.welcome-common::after {
