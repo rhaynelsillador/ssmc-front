@@ -6,14 +6,14 @@
   <body>
     <%@ include file="commons/CorporateHeader.jsp"%>
     <section>
-      <div class="sec welcome">
+      <div class="sec welcome welcome-common">
         <h1>Contact us</h1>
         <span>We have the most advance medical <br /> technology and innovations</span>
       </div>
       <%@ include file="ContactUsForm.jsp"%>
     </section>
     <%@ include file="commons/CorporateFooter.jsp"%>
-	
+
     <script type="text/javascript">
       $(document).ready(function(){
         console.log("G!");

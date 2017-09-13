@@ -8,7 +8,7 @@
       <div class="sec welcome welcome-common">
         <h1 id="aboutUsHeaderTitle">About us</h1>
         <span id="aboutUsHeaderContent">We have the most advance medical <br /> technology and innovations</span>
-        
+
       </div>
       <div class="sec branch">
         <div class="container">
@@ -71,6 +71,7 @@
       </div>
     </section>
     <%@ include file="commons/CorporateFooter.jsp"%>
+    <div id="preloader"></div>
 
     <script type="text/javascript">
     $("#menuAbout a").addClass("active");
