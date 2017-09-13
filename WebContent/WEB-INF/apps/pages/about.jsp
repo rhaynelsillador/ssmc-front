@@ -88,7 +88,9 @@
 	 	$("#aboutUsHeaderContent").html(data.content);
 	})
 
-	POST("AboutUsInfo", {}, function(data){
+	POST("AboutUsInformation?app=BUSINESS", {}, function(data){
+		data = data.data
+		console.log(data);
 		var aboutUsMenus  = "";
 		var aboutUsContent = "";
    		for (var i = 0; i < data.length; i++) {

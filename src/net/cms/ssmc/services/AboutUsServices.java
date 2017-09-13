@@ -27,8 +27,17 @@ public class AboutUsServices {
 	@Autowired
 	private HeaderDao headerDao;
 	
-	public List<AboutUs> getBusinessAboutUs(){
-		return aboutUsDao.retrieve(App.BUSINESS);
+	public Map<String, Object> getBusinessAboutUs(Map<String, String> request){
+		Map<String, Object> response = new HashMap<>();
+		App app = null;
+		try {
+			app = App.valueOf(request.get("app"));
+		} catch (Exception e) {
+			response.put("error", "Invalid App");
+			return response;
+		}
+		response.put("data", aboutUsDao.retrieve(app));
+		return response;
 	}
 	
 	public List<AboutUs> getClinicAboutUs(){

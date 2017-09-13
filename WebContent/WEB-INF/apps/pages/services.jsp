@@ -1,50 +1,7 @@
 <!DOCTYPE html>
 <html>
-  <!-- <head>
-    <meta charset="utf-8">
-    <title>SSMC</title>
-    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/custom/global.css">
-    <link rel="stylesheet" href="assets/css/custom/common.css">
-    <link rel="stylesheet" href="assets/css/custom/medical.css">
-    <link rel="stylesheet" href="assets/css/custom/about.css">
-  </head> -->
   <%@ include file="commons/Assets.jsp"%>
   <body>
-    <!-- <header>
-      <div class="header-top">
-        <div class="container">
-          <div class="pull-left">
-            <a href="#"><span><i class="fa fa-fw fa-phone" aria-hidden="true"></i></span>+6398863555</a>&nbsp;&nbsp;
-            <a href="#"><span style="font-size: 10px;"><i class="fa fa-fw fa-envelope" aria-hidden="true"></i></span>support@ssmc.com</a>
-            <span><i class="fa fa-fw fa-phone" aria-hidden="true"></i> +6398863555</span> &nbsp;
-            <span><i class="fa fa-fw fa-envelope" aria-hidden="true"></i> support@ssmc.com</span>
-          </div>
-          <div class="pull-right">
-            <a href="#"><span><i class="fa fa-facebook" aria-hidden="true"></i></span></a>
-            <a href="#"><span><i class="fa fa-twitter" aria-hidden="true"></i></span></a>
-            <a href="#"><span><i class="fa fa-youtube-play" aria-hidden="true"></i></span></a>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="header-bot">
-          <a class="logo pull-left" href="#"><img src="assets/img/logo.png" alt=""></a>
-          <div class="nav pull-right">
-            <ul class="list-inline">
-              <li><a href="medical.html">HOME</a></li>
-              <li><a href="about.html">ABOUT</a></li>
-              <li><a href="services.html" class="active">SERVICES</a></li>
-              <li><a href="branches.html">HOSPITAS & CLINICS</a></li>
-              <li><a href="faq.html">FAQ</a></li>
-              <li><a href="contact.html">CONTACT US</a></li>
-            </ul>
-          </div>
-          <div class="clearfix"></div>
-        </div>
-      </div>
-    </header> -->
     <%@ include file="commons/CorporateHeader.jsp"%>
     <section>
       <div class="sec welcome welcome-common">
@@ -114,53 +71,6 @@
     </section>
 
     <%@ include file="commons/CorporateFooter.jsp"%>
-    <!-- <footer>
-      <div class="footer-top">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-3">
-              <div class="footer-box">
-                <img src="assets/img/footer-logo.png" style="width: 200px;margin-bottom: 15px;" alt="">
-                <br>
-                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore mtesingsd ijid asdhhuds</span>
-            </div>
-            </div>
-            <div class="col-md-3">
-              <div class="footer-box">
-                <h5>CONTACT INFORMATION</h5>
-                <ul class="list-unstyled">
-                  <li>Phone: +639176588492</li>
-                  <li>E-mail: support@ssmc.com</li>
-                  <li>Office: Km 17 W Service Rd, Paranaque, 1715 Metro Manila</li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="footer-box">
-                <h5>USEFUL LINKS</h5>
-                <ul class="list-unstyled">
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="services.html">SERVICES</a></li>
-                  <li><a href="faq.html">FAQ</a></li>
-                  <li><a href="contact.html">CONTACT US</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="footer-box">
-                <h5>SOCIAL MEDIA</h5>
-                <ul class="list-unstyled">
-                  <li><a href="#">twitter.com/ssmchealth</a></li>
-                  <li><a href="#">facebook.com/ssmchealth</a></li>
-                  <li><a href="#">youtube.com/ssmchealth</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bot">Copyright (c) 2017. All Rights Reserved SSMC</div>
-    </footer> -->
 
     <script  type="text/javascript" src="assets/js/jquery.min.js"></script>
     <script  type="text/javascript" src="assets/js/bootstrap.min.js"></script>
@@ -178,7 +88,8 @@
 	        	$("#servicesContent").html(data.content);
 	        });
 
-	        POST("ServicesList", {}, function(data){
+	        POST("ServicesInformation?app=BUSINESS", {}, function(data){
+	        	data = data.data;
 	        	var servicesDataTitle = "";
 	        	var servicesDataContent = "";
 	        	$.each(data, function(index, value){

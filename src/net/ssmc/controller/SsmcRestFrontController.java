@@ -71,11 +71,6 @@ public class SsmcRestFrontController {
 		return aboutUsServices.getAboutUsHeader();
 	}
 	
-	@RequestMapping(path="/AboutUsInfo", method = {RequestMethod.POST, RequestMethod.GET}, produces={"application/json"})
-	public List<AboutUs> aboutUsInfo(){
-		return aboutUsServices.getBusinessAboutUs();
-	}
-	
 	@RequestMapping(path="/ServiceHeaderInfo", method = {RequestMethod.POST, RequestMethod.GET}, produces={"application/json"})
 	public Header serviceHeaderInfo(){
 		return serviceServices.getServicesHeader();
@@ -101,9 +96,23 @@ public class SsmcRestFrontController {
 		return cityServices.getAllCities();
 	}
 	
+	
+	
+	
+//	with parameters
+	
+	@RequestMapping(path="/AboutUsInformation", method = {RequestMethod.POST, RequestMethod.GET}, produces={"application/json"})
+	public Map<String, Object> aboutUsInfo(@RequestParam Map<String, String> request){
+		return aboutUsServices.getBusinessAboutUs(request);
+	}
+	
 	@RequestMapping(path="/HeadersInformation", method = {RequestMethod.POST, RequestMethod.GET}, produces={"application/json"})
 	public Map<String, Object> headersInfo(@RequestParam Map<String, String> request){
 		return headerServices.getHeaderInformation(request);
+	}
+	@RequestMapping(path="/ServicesInformation", method = {RequestMethod.POST, RequestMethod.GET}, produces={"application/json"})
+	public Map<String, Object> servicesInformation(@RequestParam Map<String, String> request){
+		return serviceServices.getServices(request);
 	}
 	
 	@RequestMapping(path="/SystemImages", method = {RequestMethod.POST, RequestMethod.GET}, produces={"application/json"})
