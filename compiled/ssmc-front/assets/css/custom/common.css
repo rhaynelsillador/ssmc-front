@@ -1,0 +1,266 @@
+.container{
+  max-width: 970px;
+}
+
+.header-top{
+  background: #f58435;
+  height: 35px;
+  padding: 4px 0px;
+}
+
+.header-top span{
+  vertical-align: sub;
+  color: #fff;
+}
+
+.header-top .pull-left a{
+  color: white;
+  margin-top: 2px;
+  display: inline-block;
+}
+
+/*.header-top .pull-left a:hover{
+  color: #636363;
+  text-decoration: none;
+}*/
+
+.header-top a span{
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  border-radius: 45px;
+  background: rgba(255, 255, 255, 0.35);
+  line-height: 20px;
+  font-size: 12px;
+  margin-right: 4px;
+}
+
+.header-top .pull-right a span{
+  background: rgba(0, 0, 0, 0.07);
+  line-height: 20px;
+  font-size: 12px;
+  color: white;
+  width: 25px;
+  height: 25px;
+  font-size: 16px;
+  line-height: 25px;
+  margin: 0px 5px;
+}
+
+.header-top .pull-right a:first-child span::before{
+  background: #3B5996;
+}
+
+.header-top .pull-right a:last-child span::before{
+  background: #FF0000;
+}
+
+.header-bot .nav ul{
+  list-style: none;
+  margin-bottom: 0px;
+}
+
+.header-bot .nav ul li a{
+  padding: 0px 6px;
+  display: block;
+  height: 56px;
+  line-height: 56px;
+  color: #636363;
+  font-weight: 600;
+}
+
+.header-bot .nav ul li a.active{
+  color: #f79856;
+}
+
+.logo{
+  padding: 11px 0px;
+}
+
+.logo img{
+  width: 200px
+}
+
+.welcome.welcome-common {
+  height: 400px;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  padding-top: 30px;
+}
+
+.welcome.welcome-common::before {
+  content: "";
+  position: absolute;
+  background: url(../../img/banner.png) no-repeat;
+  background-size: cover;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  height: 100%;
+
+}
+
+.welcome.welcome-common::after {
+  content: "";
+  width: 100%;
+  bottom: -260px;
+}
+
+footer{
+  text-align: center;
+}
+
+footer .footer-top{
+  background: #1a1f25;
+  padding: 25px;
+  text-align: left;
+  color: #6c6e6f;
+}
+
+footer .footer-box{
+  padding: 0px 35px;
+}
+
+footer .footer-box h5{
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+footer .footer-box ul{
+  margin: 0px;
+}
+
+footer .footer-box ul li{
+  margin-bottom: 10px;
+}
+
+footer .footer-box ul li a{
+  color: #6c6e6f;
+}
+
+footer .footer-bot{
+  background: #0d141c;
+  padding: 35px;
+  color: #cacaca;
+}
+
+
+
+
+
+
+
+
+
+
+/*===================== BASIC TABINATION ==================*/
+.basic-tabination .tab-content{
+  position: relative;
+}
+
+.basic-tabination .tab-content::after{
+  content: "";
+  position: absolute;
+  left: -32px;
+  top: -18px;
+  /* transform: translateY(-50%); */
+  max-height: 375px;
+  height: 106%;
+  width: 1px;
+  background: #cecece;
+}
+
+
+/*===================== BIG TABINATION ==================*/
+.big-tabination .side{
+  border: 1px solid #dedede;
+  margin-bottom: 20px;
+  padding: 10px 10px 10px 100px;
+  border-radius: 7px;
+  text-align: left;
+  height: 105px;
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: #939393;
+}
+
+.big-tabination li.active .side{
+  border: 1px solid #9bd0d9;
+  box-shadow: 0px 0px 7px rgba(155, 208, 217, 0.5);
+  background: transparent;
+  color: #939393;
+}
+
+.big-tabination li.active .side aside{
+  background: #f58435;
+}
+
+.big-tabination li.active .side h5{
+  color: #f58435;
+}
+
+.big-tabination li .side span{
+  display: block;
+  height: 56px;
+  overflow: hidden;
+
+}
+
+.big-tabination .side aside{
+  position: absolute;
+  width: 66px;
+  height: 66px;
+  border-radius: 45px;
+  background: #7ac0cc;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+}
+
+.big-tabination .side aside::after{
+  content: "";
+  background: url(../../img/icon-hand.png) no-repeat;
+  background-size: contain;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 50%;
+  margin-top: -18px;
+}
+
+.big-tabination .side h5{
+  color: #4f4f4f;
+  margin-top: 0px;
+}
+
+.map-container{
+  border: 5px solid white;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
+}
+
+.welcome-content {
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  /*background: rgba(0, 0, 0, 0.5);*/
+  text-align: center;
+  padding: 100px 30px;
+}
+
+.welcome-carousel::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+}
