@@ -16,6 +16,9 @@
   <link rel="stylesheet" href="assets/css/vendor/animate.css">
   <%-- Hover css --%>
   <link rel="stylesheet" href="assets/css/vendor/hover-min.css">
+  <%-- Wow js --%>
+  <link rel="stylesheet" href="assets/css/vendor/animate.css">
+
 
   <%-- Custom --%>
   <link rel="stylesheet" href="assets/css/custom/global.css">
