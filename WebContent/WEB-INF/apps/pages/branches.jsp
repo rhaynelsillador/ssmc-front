@@ -5,8 +5,8 @@
     <%@ include file="commons/CorporateHeader.jsp"%>
     <section>
       <div class="sec welcome welcome-common">
-        <h1 id="hospitalClinicHeaderTitle">Hospitals and Clinics</h1>
-        <span id="hospitalClinicHeaderContent">We have the most advance medical <br /> technology and innovations</span>
+        <h1 id="headerTitle">Hospitals and Clinics</h1>
+        <span id="headerContent">We have the most advance medical <br /> technology and innovations</span>
         <br>
       </div>
       <div class="sec branch">
@@ -22,7 +22,7 @@
                   <li><a href="#loc_3" data-toggle="tab">Taguig City</a></li>
                 </ul>
               </div>
-              <div class="col-md-9">
+              <div class="col-md-9">              	
                 <div class="tab-content tab-about" id="clinicCitiesContent">
                   <div id="loc_1" class="tab-pane active">
                     <div class="branch-info">
@@ -41,57 +41,7 @@
                       <div id="map" style="width:100%;height:300px"></div>
                     </div>
                   </div>
-                  <div id="loc_2" class="tab-pane">
-                    <div class="branch-info">
-                      <h4>General Medicine</h4>
-                      <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
-                      <br>
-                      <br>
-                      <span>Phone: 234-2223 <br>Email: ssmc@gmail.com</span>
-                    </div>
-                    <div class="branch-img">
-                      <img src="assets/img/cross.png" style="width: 250px;" alt="">
-                    </div>
-                    <div class="clearfix"></div>
-                    <br>
-                    <div class="map-container">
-                      <div id="map2" style="width:100%;height:300px"></div>
-                    </div>
-                  </div>
-                  <div id="loc_3" class="tab-pane">
-                    <div class="branch-info">
-                      <h4>General Medicine</h4>
-                      <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
-                      <br>
-                      <br>
-                      <span>Phone: 234-2223 <br>Email: ssmc@gmail.com</span>
-                    </div>
-                    <div class="branch-img">
-                      <img src="assets/img/cross.png" style="width: 250px;" alt="">
-                    </div>
-                    <div class="clearfix"></div>
-                    <br>
-                    <div class="map-container">
-                      <div id="map3" style="width:100%;height:300px"></div>
-                    </div>
-                  </div>
-                  <div id="loc_4" class="tab-pane">
-                    <div class="branch-info">
-                      <h4>General Medicine</h4>
-                      <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
-                      <br>
-                      <br>
-                      <span>Phone: 234-2223 <br>Email: ssmc@gmail.com</span>
-                    </div>
-                    <div class="branch-img">
-                      <img src="assets/img/cross.png" style="width: 250px;" alt="">
-                    </div>
-                    <div class="clearfix"></div>
-                    <br>
-                    <div class="map-container">
-                      <div id="map4" style="width:100%;height:300px"></div>
-                    </div>
-                  </div>
+                  
                 </div>
               </div>
             </div>
@@ -102,7 +52,7 @@
 
     <%@ include file="commons/CorporateFooter.jsp"%>
 
-    <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+   <!--  <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script> -->
     <script type="text/javascript">
     	$("#menuBranches a").addClass("active");
       	$(document).ready(function(){
@@ -113,9 +63,10 @@
 	          $(".blue .nav li").removeClass("active");
 	        });
 
-	        POST("ClinicsHeaderInfo", {}, function(data){
-	        	$("#hospitalClinicHeaderTitle").html(data.title);
-	        	$("#hospitalClinicHeaderContent").html(data.content);
+	        POST("HeadersInformation", {"app" : "BUSINESS", "page" : "HospitalAndClinic"}, function(data){
+	        	data = data.data;
+	        	$("#headerTitle").html(data.title);
+	        	$("#headerContent").html(data.content);
 	        })
 
 	        POST("Cities", {}, function(data){
@@ -144,7 +95,7 @@
 	        			active = "active";
 	        		}
 
-	        		cityListContent += '<div id="'+key.split(" ").join("")+'" class="tab-pane '+active+'"><ul>';
+	        		cityListContent += '<div id="'+key.split(" ").join("")+'" class="tab-pane '+active+'"><ul id="pagination_'+key.split(" ").join("")+'">';
 	        		cityList += '<li class="'+active+'"><a href="#'+key.split(" ").join("")+'" data-toggle="tab">'+key+'</a></li>';
 
 
@@ -171,6 +122,21 @@
 	        	})
 	        	$('#clinicCities').html(cityList)
 	        	$('#clinicCitiesContent').html(cityListContent)
+	        	
+	        	$('.sync-pagination').twbsPagination({
+	                items: 20,
+	                itemOnPage: 8,
+	                currentPage: 1,
+	                cssStyle: '',
+	                prevText: '<span aria-hidden="true">&laquo;</span>',
+	                nextText: '<span aria-hidden="true">&raquo;</span>',
+	                onInit: function () {
+	                    // fire first page loading
+	                },
+	                onPageClick: function (page, evt) {
+	                    // some code
+	                }
+	            });
 	        })
 
 

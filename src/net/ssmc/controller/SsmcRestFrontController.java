@@ -6,16 +6,19 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import net.cms.ssmc.model.AboutUs;
+import net.cms.ssmc.model.Faq;
 import net.cms.ssmc.model.Header;
 import net.cms.ssmc.model.Service;
 import net.cms.ssmc.services.AboutUsServices;
 import net.cms.ssmc.services.CorporateServices;
+import net.cms.ssmc.services.FaqServices;
 import net.cms.ssmc.services.HeaderServices;
 import net.cms.ssmc.services.ImageServices;
 import net.cms.ssmc.services.ServiceServices;
@@ -23,6 +26,7 @@ import net.ssmc.enums.App;
 import net.ssmc.enums.Page;
 import net.ssmc.model.City;
 import net.ssmc.model.Clinic;
+import net.ssmc.model.form.Form;
 import net.ssmc.services.CityServices;
 import net.ssmc.services.ClinicServices;
 
@@ -45,6 +49,8 @@ public class SsmcRestFrontController {
 	private CityServices cityServices;
 	@Autowired
 	private ImageServices imageServices;
+	@Autowired
+	private FaqServices faqServices;
 	
 	@RequestMapping(path="/MainHeaderInfo", method = RequestMethod.POST, produces={"application/json"})
 	public Map<String, Object> mainHeaderInfo(){
@@ -107,12 +113,17 @@ public class SsmcRestFrontController {
 	}
 	
 	@RequestMapping(path="/HeadersInformation", method = {RequestMethod.POST, RequestMethod.GET}, produces={"application/json"})
-	public Map<String, Object> headersInfo(@RequestParam Map<String, String> request){
+	public Map<String, Object> headersInfo(@RequestBody Map<String, String> request){
 		return headerServices.getHeaderInformation(request);
 	}
 	@RequestMapping(path="/ServicesInformation", method = {RequestMethod.POST, RequestMethod.GET}, produces={"application/json"})
 	public Map<String, Object> servicesInformation(@RequestParam Map<String, String> request){
 		return serviceServices.getServices(request);
+	}
+	
+	@RequestMapping(path="/FaqInformation", method = {RequestMethod.POST, RequestMethod.GET}, produces={"application/json"})
+	public List<Faq> faqInformation(@RequestBody Form form){
+		return faqServices.getAllFaq(form.getApp());
 	}
 	
 	@RequestMapping(path="/SystemImages", method = {RequestMethod.POST, RequestMethod.GET}, produces={"application/json"})

@@ -13,10 +13,8 @@ public class FaqServices {
 	@Autowired
 	private FaqDao faqDao;
 	
-	List<Faq> getBusinessFaq(){
-		return faqDao.retrieve(App.BUSINESS);
+	public List<Faq> getAllFaq(App app){
+		return faqDao.retrieve(app);
 	}
-	List<Faq> getClinicFaq(){
-		return faqDao.retrieve(App.CLINIC);
-	}
+
 }

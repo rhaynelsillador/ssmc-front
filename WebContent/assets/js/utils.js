@@ -176,3 +176,7 @@ $(document).on("click", ".approved-fn", function(e){
 var datetimeformat = function datetimeformat(datetime){
 	return moment(datetime).format("YYYY-MM-DD HH:mm:ss");
 }
+
+var dateformat = function dateformat(datetime){
+	return moment(datetime).format("MMMM DD, YYYY");
+}
