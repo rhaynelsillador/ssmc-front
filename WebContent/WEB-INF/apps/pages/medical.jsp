@@ -9,8 +9,6 @@
     <link rel="stylesheet" href="assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
     <%-- Owl Carousel --%>
     <link rel="stylesheet" href="assets/css/vendor/owl.carousel.min.css">
-    <%-- Wow js --%>
-    <link rel="stylesheet" href="assets/css/vendor/animate.css">
     <%-- Hover css --%>
     <link rel="stylesheet" href="assets/css/vendor/hover-min.css">
 
@@ -457,8 +455,6 @@
     <script  type="text/javascript" src="assets/js/bootstrap.min.js"></script>
     <%-- Owl Carousel --%>
     <script  type="text/javascript" src="assets/js/owl.carousel.min.js"></script>
-    <%-- Wow js --%>
-    <script src="assets/js/wow.min.js"></script>
 
     <script type="text/javascript">
 
