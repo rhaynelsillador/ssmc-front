@@ -13,7 +13,7 @@ import net.ssmc.model.Image;
 public interface ServiceDao {
 
 	List<Service> retrieveAll(App app);
-	List<Service> retrieveAllWithImages(App app, Module module);
+	List<Service> retrieveAllWithImages(App app, int num, int limit, Module module);
 
 	
 }

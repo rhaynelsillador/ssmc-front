@@ -14,6 +14,7 @@ import net.cms.ssmc.model.Header;
 import net.ssmc.enums.App;
 import net.ssmc.enums.Module;
 import net.ssmc.enums.Page;
+import net.ssmc.model.form.Form;
 
 public class HeaderServices {
 
@@ -69,26 +70,32 @@ public class HeaderServices {
 		return new Header();
 	}
 	
-	public Map<String, Object> getHeaderInformation(Map<String, String> request){
+	public Map<String, Object> getHeaderInformation(Form form){
 		Map<String, Object> response = new HashMap<>();
-		App app = null;
-		Page page = null;
-		try {
-			app = App.valueOf(request.get("app"));
-		} catch (Exception e) {
+//		App app = null;
+//		Page page = null;
+//		try {
+//			app = App.valueOf(request.get("app"));
+//		} catch (Exception e) {
+//			response.put("error", "Invalid app");
+//		}
+//		try {
+//			page = Page.valueOf(request.get("page"));
+//		} catch (Exception e) {
+//			response.put("error", "Invalid page");
+//		}
+		if(form.getApp() == null){
 			response.put("error", "Invalid app");
-		}
-		try {
-			page = Page.valueOf(request.get("page"));
-		} catch (Exception e) {
+		}else if(form.getPage() == null){
 			response.put("error", "Invalid page");
+		}else{
+			try {
+				response.put("data", headerDao.retrieve(form.getApp(), form.getPage()));
+			} catch (Exception e) {
+				response.put("error", "No data retrieve");
+			}
 		}
-		try {
-			System.out.println(app + " :: " +page);
-			response.put("data", headerDao.retrieve(app, page));
-		} catch (Exception e) {
-			response.put("error", "No data retrieve");
-		}
+		
 		return response;
 	}
 }

@@ -6,10 +6,8 @@
   	<%@ include file="commons/CorporateHeader.jsp"%>
     <section id="faq">
       <div class="sec welcome welcome-common">
-        <h1 id="headerTitle">Contact us</h1>
-        <span id="headerContent">We have the most advance medical <br /> technology and innovations</span>
-        <div class="welcome-background">
-          <img src="assets/img/banner-faq.jpg" alt="">
+        <div id="headerInfo"></div>
+        <div class="welcome-background" id="imageCarousel">
         </div>
       </div>
       <div class="sec">
@@ -42,10 +40,17 @@
           $(".blue .nav li").removeClass("active");
         });
 
+        POST("SystemImages", {"app":"BUSINESS", "page":"Faq", "module":"HEADER"}, function(data){
+        	var imageCarousel = "";
+        	$.each(data.data, function(index, value){
+        		imageCarousel += '<div class="item"><img src="'+fileServer+value.image+'" alt=""></div>';
+        	})
+        	$("#imageCarousel").html(imageCarousel);
+        	initCarousel();
+        })
+        
         POST("HeadersInformation", {"app" : "BUSINESS", "page" : "Faq"}, function(data){
-        	data = data.data;
-        	$("#headerTitle").html(data.title);
-        	$("#headerContent").html(data.content);
+        	$("#headerInfo").html(data.data.content);
         })
 
         POST("FaqInformation", {"app" : "BUSINESS"}, function(data){

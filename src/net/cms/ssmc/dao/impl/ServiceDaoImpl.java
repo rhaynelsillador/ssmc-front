@@ -15,20 +15,23 @@ import net.ssmc.model.Image;
 
 public class ServiceDaoImpl implements ServiceDao {
 
-	private final String SQL 				= "SELECT * FROM SERVICE WHERE type = ? and status = ?";
-	private final String SQLWITHIMAGES 		= "SELECT S.*, I.image as image FROM SERVICE AS S LEFT JOIN IMAGES AS I ON S.id = I.serviceid WHERE S.type = ? AND I.type=? and I.status = ?";
-
+	private final String SQL 				= "SELECT * FROM SERVICE WHERE type = ?";
+	
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
 	
 	@Override
 	public List<Service> retrieveAll(App app) {
-		return jdbcTemplate.query(SQL, new Object[]{app.toString(), true}, new BeanPropertyRowMapper<Service>(Service.class));
+		return jdbcTemplate.query(SQL, new Object[]{app.toString()}, new BeanPropertyRowMapper<Service>(Service.class));
 	}
 	
 	@Override
-	public List<Service> retrieveAllWithImages(App app, Module module) {
-		return jdbcTemplate.query(SQLWITHIMAGES, new Object[]{app.toString(), module.toString(), true}, new BeanPropertyRowMapper<Service>(Service.class));
+	public List<Service> retrieveAllWithImages(App app, int num, int limit, Module module) {
+		String SQLWITHIMAGES = "SELECT S.*, I.image as image FROM SERVICE AS S LEFT JOIN IMAGES AS I ON S.id = I.serviceid WHERE S.type = ? AND I.type=? and S.num = ? AND I.status = ?";
+		if(limit > 0){
+			SQLWITHIMAGES += " LIMIT "+limit;
+		}
+		return jdbcTemplate.query(SQLWITHIMAGES, new Object[]{app.toString(), module.toString(), num, true}, new BeanPropertyRowMapper<Service>(Service.class));
 	}	
 
 }

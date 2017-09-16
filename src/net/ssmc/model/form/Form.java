@@ -9,6 +9,8 @@ public class Form {
 	private App app;
 	private Page page;
 	private Module module;
+	private int num;
+	private int limit;
 	
 	public App getApp() {
 		return app;
@@ -28,8 +30,21 @@ public class Form {
 	public void setModule(Module module) {
 		this.module = module;
 	}
+	public int getNum() {
+		return num;
+	}
+	public void setNum(int num) {
+		this.num = num;
+	}
+	public int getLimit() {
+		return limit;
+	}
+	public void setLimit(int limit) {
+		this.limit = limit;
+	}
 	@Override
 	public String toString() {
-		return "Form [app=" + app + ", page=" + page + ", module=" + module + "]";
-	}	
+		return "Form [app=" + app + ", page=" + page + ", module=" + module + ", num=" + num + ", limit=" + limit + "]";
+	}
+		
 }

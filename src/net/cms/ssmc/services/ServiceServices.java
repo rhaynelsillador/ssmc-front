@@ -1,20 +1,17 @@
 package net.cms.ssmc.services;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import net.cms.ssmc.dao.HeaderDao;
 import net.cms.ssmc.dao.ServiceDao;
 import net.cms.ssmc.model.Header;
 import net.cms.ssmc.model.Service;
-import net.ssmc.enums.App;
 import net.ssmc.enums.Module;
-import net.ssmc.enums.Page;
+import net.ssmc.model.form.Form;
 
 public class ServiceServices {
 
@@ -29,23 +26,21 @@ public class ServiceServices {
 		return headerServices.getServicesHeader();
 	}
 
-	public Map<String, Object> getServices(Map<String, String> request){
+	public Map<String, Object> getServices(Form form){
 		Map<String, Object> response = new HashMap<>();
-		App app = null;
-		try {
-			app = App.valueOf(request.get("app"));
-		} catch (Exception e) {
+		if(form.getApp() == null){
 			response.put("error", "Invalid App");
 			return response;
 		}
-		response.put("data", serviceDao.retrieveAllWithImages(app, Module.SERVICE));
+		System.out.println(form);
+		response.put("data", serviceDao.retrieveAllWithImages(form.getApp(), form.getNum(),form.getLimit(), Module.SERVICE));
 		return response;
 	}
 	
-	public List<Service> getServices(App app, Page page){
-		List<Service> services = serviceDao.retrieveAllWithImages(app, Module.SERVICE);
-		return services;
-	}
+//	public List<Service> getServices(Form form){
+//		List<Service> services = serviceDao.retrieveAllWithImages(form.getApp(), Module.SERVICE);
+//		return services;
+//	}
 	
 	public Service getActiveService(HttpSession session, int id){
 		if(controlServices.hasApproved(session, Module.SERVICE, id)){

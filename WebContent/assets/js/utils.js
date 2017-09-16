@@ -180,3 +180,14 @@ var datetimeformat = function datetimeformat(datetime){
 var dateformat = function dateformat(datetime){
 	return moment(datetime).format("MMMM DD, YYYY");
 }
+
+var initCarousel = function initCarousel(){
+	$('.owl-carousel').owlCarousel({
+        loop:true,
+        nav:true,
+        items:1,
+        autoplay:true,
+        autoplayTimeout:5000,
+        autoplayHoverPause: true,
+    });
+}
