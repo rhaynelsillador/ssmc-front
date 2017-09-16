@@ -127,8 +127,8 @@ public class SsmcRestFrontController {
 	}
 	
 	@RequestMapping(path="/SystemImages", method = {RequestMethod.POST, RequestMethod.GET}, produces={"application/json"})
-	public Map<String, Object> imageServices(@RequestParam Map<String, String> request){
-		return imageServices.getImages(request);
+	public Map<String, Object> imageServices(@RequestBody Form form){
+		return imageServices.getImages(form);
 	}
 	
 }

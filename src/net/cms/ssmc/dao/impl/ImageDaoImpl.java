@@ -20,8 +20,8 @@ public class ImageDaoImpl implements ImageDao{
 	
 	@Override
 	public List<Image> retrieveImage(App app, Page page, Module module) {
-		final String SQL = "SELECT I.id, I.image, I.status, I.serviceid, H.type as type FROM IMAGES AS I INNER JOIN HEADER AS H ON H.id=I.serviceid WHERE H.page = ? AND I.type = ?";
-		return jdbcTemplate.query(SQL, new Object[]{page.toString(), module.toString()}, new BeanPropertyRowMapper<Image>(Image.class));
+		final String SQL = "SELECT I.id, I.image, I.status, I.serviceid, H.type as type FROM IMAGES AS I INNER JOIN HEADER AS H ON H.id=I.serviceid WHERE H.type = ? AND H.page = ? AND I.type = ?";
+		return jdbcTemplate.query(SQL, new Object[]{app.toString(), page.toString(), module.toString()}, new BeanPropertyRowMapper<Image>(Image.class));
 	}
 	
 	@Override
