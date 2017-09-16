@@ -4,10 +4,13 @@
   <link rel="stylesheet" href="assets/css/custom/about.css">
   <body>
     <%@ include file="commons/CorporateHeader.jsp"%>
-    <section>
+    <section id="about">
       <div class="sec welcome welcome-common">
         <h1 id="aboutUsHeaderTitle">About us</h1>
         <span id="aboutUsHeaderContent">We have the most advance medical <br /> technology and innovations</span>
+        <div class="welcome-background">
+          <img src="assets/img/banner-about.jpg" alt="">
+        </div>
 
       </div>
       <div class="sec branch">
@@ -16,14 +19,14 @@
             <br>
             <div class="basic-tabination">
               <div class="col-md-3">
-                <ul class="nav nav-pills nav-stacked" id="aboutUsMenus">
+                <ul class="nav nav-pills nav-stacked wow fadeInLeft" id="aboutUsMenus">
                   <li class="active"><a href="#about_1" data-toggle="tab">Introduction</a></li>
                   <li><a href="#about_2" data-toggle="tab">Mission & Vision</a></li>
                   <li><a href="#about_3" data-toggle="tab">Certifications</a></li>
                 </ul>
               </div>
               <div class="col-md-9">
-                <div class="tab-content tab-about" id="aboutUsContent">
+                <div class="tab-content tab-about wow fadeInRight" id="aboutUsContent">
                   <div id="about_1" class="tab-pane active">
                       <h3>Introduction</h3>
                       <br>
@@ -71,12 +74,13 @@
       </div>
     </section>
     <%@ include file="commons/CorporateFooter.jsp"%>
-    <div id="preloader"></div>
 
     <script type="text/javascript">
     $("#menuAbout a").addClass("active");
       $(document).ready(function(){
         console.log("G!");
+        preloader();
+        new WOW().init();
         $(".blue .nav li a").click(function(){
           console.log("gg");
           $(".blue .nav li").removeClass("active");
@@ -127,6 +131,17 @@
    		$("#aboutUsMenus").html(aboutUsMenus);
    		$("#aboutUsContent").html(aboutUsContent);
 	})
+
+  function preloader() {
+    $("header,section,footer").hide()
+
+    $(window).load(function(){
+      $("header,section,footer").fadeIn();
+      setTimeout(function(){ $('#preloader').fadeOut('slow'); }, 500);
+      console.log("peace out");
+    });
+
+  }
 
     </script>
   </body>

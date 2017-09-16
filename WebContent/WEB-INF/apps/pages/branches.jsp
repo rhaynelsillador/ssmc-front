@@ -7,7 +7,9 @@
       <div class="sec welcome welcome-common">
         <h1 id="headerTitle">Hospitals and Clinics</h1>
         <span id="headerContent">We have the most advance medical <br /> technology and innovations</span>
-        <br>
+        <div class="welcome-background">
+          <img src="assets/img/banner-branch.jpg" alt="">
+        </div>
       </div>
       <div class="sec branch">
         <div class="container">
@@ -15,15 +17,15 @@
             <br>
             <div class="basic-tabination">
               <div class="col-md-3">
-                <ul class="nav nav-pills nav-stacked" id="clinicCities">
+                <ul class="nav nav-pills nav-stacked wow fadeInLeft" id="clinicCities">
                   <li class="active"><a href="#loc_1" data-toggle="tab">Quezon City</a></li>
                   <li><a href="#loc_2" data-toggle="tab">Makati City</a></li>
                   <li><a href="#loc_3" data-toggle="tab">Mandaluyong City</a></li>
                   <li><a href="#loc_3" data-toggle="tab">Taguig City</a></li>
                 </ul>
               </div>
-              <div class="col-md-9">              	
-                <div class="tab-content tab-about" id="clinicCitiesContent">
+              <div class="col-md-9">
+                <div class="tab-content tab-about wow fadeInRight" id="clinicCitiesContent">
                   <div id="loc_1" class="tab-pane active">
                     <div class="branch-info">
                       <h4>General Medicine</h4>
@@ -41,7 +43,7 @@
                       <div id="map" style="width:100%;height:300px"></div>
                     </div>
                   </div>
-                  
+
                 </div>
               </div>
             </div>
@@ -57,6 +59,8 @@
     	$("#menuBranches a").addClass("active");
       	$(document).ready(function(){
 	        console.log("G!");
+          preloader();
+          new WOW().init();
 
 	        $(".blue .nav li a").click(function(){
 	          console.log("gg");
@@ -122,7 +126,7 @@
 	        	})
 	        	$('#clinicCities').html(cityList)
 	        	$('#clinicCitiesContent').html(cityListContent)
-	        	
+
 	        	$('.sync-pagination').twbsPagination({
 	                items: 20,
 	                itemOnPage: 8,
@@ -155,6 +159,17 @@
 	      	var map3 = new google.maps.Map(document.getElementById("map3"), mapOptions);
 	      	var map4 = new google.maps.Map(document.getElementById("map4"), mapOptions);
       	} */
+
+        function preloader() {
+          $("header,section,footer").hide()
+
+          $(window).load(function(){
+            $("header,section,footer").fadeIn();
+            setTimeout(function(){ $('#preloader').fadeOut('slow'); }, 500);
+            console.log("peace out");
+          });
+
+        }
     </script>
   </body>
 </html>
