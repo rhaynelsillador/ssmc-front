@@ -32,15 +32,17 @@
   <script  type="text/javascript" src="assets/js/bootstrap.min.js"></script>
   <script  type="text/javascript" src="assets/js/utils.js"></script>
   <script  type="text/javascript" src="assets/js/wow.min.js"></script> --%>
-	
+
   <%-- Jquery --%>
   <script  type="text/javascript" src="assets/js/jquery.min.js"></script>
   <%-- Bootstrap --%>
   <script  type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+  <script  type="text/javascript" src="assets/js/owl.carousel.min.js"></script>
   <%-- Utility --%>
   <script  type="text/javascript" src="assets/js/utils.js"></script>
   <%-- Wow js --%>
   <script src="assets/js/wow.min.js"></script>
+  
   <script src="assets/js/moment.min.js"></script>
   <script src="assets/js/jquery.twbsPagination.min.js"></script>
 </head>
