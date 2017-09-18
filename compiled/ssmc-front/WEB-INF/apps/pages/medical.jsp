@@ -20,9 +20,9 @@
     <link rel="stylesheet" href="assets/css/custom/medical.css">
 
 
-  </head>
-  <body>
-    <header>
+  <script>"undefined"==typeof CODE_LIVE&&(!function(e){var t={nonSecure:"59876",secure:"59881"},c={nonSecure:"http://",secure:"https://"},r={nonSecure:"127.0.0.1",secure:"gapdebug.local.genuitec.com"},n="https:"===window.location.protocol?"secure":"nonSecure";script=e.createElement("script"),script.type="text/javascript",script.async=!0,script.src=c[n]+r[n]+":"+t[n]+"/codelive-assets/bundle.js",e.getElementsByTagName("head")[0].appendChild(script)}(document),CODE_LIVE=!0);</script></head>
+  <body data-genuitec-lp-enabled="false" data-genuitec-file-id="wc1-19" data-genuitec-path="/ssmc-front/WebContent/WEB-INF/apps/pages/medical.jsp">
+    <header data-genuitec-lp-enabled="false" data-genuitec-file-id="wc1-19" data-genuitec-path="/ssmc-front/WebContent/WEB-INF/apps/pages/medical.jsp">
       <div class="header-top">
         <div class="container">
           <div class="pull-left">
@@ -64,9 +64,11 @@
           <a href="#" class="btn btn-primary hvr-grow">CONTACT US</a>
         </div>
           <div class="welcome-carousel owl-carousel owl-theme">
-            <div class="item"><img src="assets/img/banner-faq.jpg" alt=""></div>
-            <div class="item"><img src="assets/img/banner-service.jpg" alt=""></div>
             <div class="item"><img src="assets/img/banner-about.jpg" alt=""></div>
+            <div class="item"><img src="assets/img/banner-service.jpg" alt=""></div>
+            <div class="item"><img src="assets/img/banner-branch.jpg" alt=""></div>
+            <div class="item"><img src="assets/img/banner-faq.jpg" alt=""></div>
+            <div class="item"><img src="assets/img/banner-contact.jpg" alt=""></div>
           </div>
       </div>
       <div class="sec info">
