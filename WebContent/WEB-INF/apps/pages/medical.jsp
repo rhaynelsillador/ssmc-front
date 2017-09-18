@@ -64,9 +64,11 @@
           <a href="#" class="btn btn-primary hvr-grow">CONTACT US</a>
         </div>
           <div class="welcome-carousel owl-carousel owl-theme">
-            <div class="item"><img src="assets/img/banner-faq.jpg" alt=""></div>
-            <div class="item"><img src="assets/img/banner-service.jpg" alt=""></div>
             <div class="item"><img src="assets/img/banner-about.jpg" alt=""></div>
+            <div class="item"><img src="assets/img/banner-service.jpg" alt=""></div>
+            <div class="item"><img src="assets/img/banner-branch.jpg" alt=""></div>
+            <div class="item"><img src="assets/img/banner-faq.jpg" alt=""></div>
+            <div class="item"><img src="assets/img/banner-contact.jpg" alt=""></div>
           </div>
       </div>
       <div class="sec info">
