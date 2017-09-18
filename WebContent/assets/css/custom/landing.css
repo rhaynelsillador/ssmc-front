@@ -8,7 +8,6 @@ header{
 
 }
 
-
 header img{
   width: 375px;
   margin: 30px;
@@ -19,7 +18,6 @@ section{
   width: 100%;
   overflow: hidden;
 }
-
 
 .corporate{
   height: 825px;
@@ -35,6 +33,7 @@ section{
   top: 0px;
   color: #fff;
   overflow: hidden;
+  transition: right 300ms ease-in-out, z-index 300ms ease-in-out;
 }
 
 .corporate img:not(.icon-corp){
@@ -70,10 +69,18 @@ section{
   margin-top: 55px;
 }
 
-.corporate:hover{
-  /*right: 40%;
-  z-index: 1;*/
+/*.corporate:hover{
+  right: 20%;
+  z-index: 1;
+}*/
+
+/*.corporate.hvr-reverse{
+  right: 80%
 }
+
+.corporate.hvr-reverse img:not(.icon-medical){
+
+}*/
 
 .medical{
   height: 825px;
@@ -88,7 +95,14 @@ section{
   top: 0px;
   color: #fff;
   overflow: hidden;
+  /*transition: left 300ms ease-in-out, z-index 300ms ease-in-out;*/
 }
+
+
+/*.medical:hover{
+  left: 20%;
+  z-index: 1;
+}*/
 
 .medical img:not(.icon-medical){
   position: absolute;
@@ -96,6 +110,7 @@ section{
   left: -30px;
   width: 380px;
   z-index: -1;
+  /*transition: all 300ms ease-in-out;*/
 }
 
 .medical::after{
@@ -123,6 +138,15 @@ section{
   margin-top: 55px;
 }
 
+
+/*.medical.hvr-reverse{
+  left: 80%
+}*/
+
+/*.medical.hvr-reverse img:not(.icon-medical){
+  width: 300px;
+  left: 60px;
+}*/
 .no-skew{
   transform: skewX(15deg);
   height: 100%;
