@@ -199,6 +199,15 @@ footer .footer-bot{
   background: #cecece;
 }
 
+.basic-tabination .tab-content .tab-pane{
+  transform: translateX(100%);
+  transition: transform 500ms ease-in-out, display 500ms ease-in-out;
+}
+
+.basic-tabination .tab-content .tab-pane.active{
+  transform: translateX(0%);
+}
+
 
 /*===================== BIG TABINATION ==================*/
 .big-tabination .side{

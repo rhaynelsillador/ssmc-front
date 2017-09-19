@@ -301,7 +301,7 @@
               </div>
               <div class="col-md-9 col-sm-8">
                 <div class="tab-content wow fadeInRight">
-                  <div id="branch_1" class="tab-pane fade in active">
+                  <div id="branch_1" class="tab-pane active">
                     <div class="branch-info">
                       <h4>General Medicine</h4>
                       <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
@@ -314,7 +314,7 @@
                     </div>
                     <div class="clearfix"></div>
                   </div>
-                  <div id="branch_2" class="tab-pane fade">
+                  <div id="branch_2" class="tab-pane">
                     <div class="branch-info">
                       <h4>General Medicine2</h4>
                       <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
@@ -327,7 +327,7 @@
                     </div>
                     <div class="clearfix"></div>
                   </div>
-                  <div id="branch_3" class="tab-pane fade">
+                  <div id="branch_3" class="tab-pane">
                     <div class="branch-info">
                       <h4>General Medicin3e</h4>
                       <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
@@ -340,7 +340,7 @@
                     </div>
                     <div class="clearfix"></div>
                   </div>
-                  <div id="branch_4" class="tab-pane fade">
+                  <div id="branch_4" class="tab-pane">
                     <div class="branch-info">
                       <h4>General Medicin4e</h4>
                       <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>

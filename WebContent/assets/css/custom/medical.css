@@ -226,11 +226,11 @@
   height: 240px;
   width: 100%;
   overflow: hidden;
-  animation: slide-up 300ms ease-in-out;
 }
 
 .service-center .service-img img{
-  width: 100%;
+  width: 284px;
+  animation: slide-up 500ms ease-in-out;
 }
 
 .service-center .service-circle{
@@ -249,6 +249,7 @@
 .service-center .service-content{
   text-align: center;
   padding: 10px 40px 15px;
+  animation: slide-down 500ms ease-in-out;
 }
 
 .service-center .service-content h4{
@@ -398,6 +399,7 @@
   .service-right{
     padding: 10px 10px 10px 45px !important;
   }
+
   .service-right aside{
     left: 8px;
   }
@@ -415,12 +417,22 @@
 
 @keyframes slide-up {
     from {
-      /*transform: translateY(-100%);*/
-
+      transform: translateY(100%);
       opacity: 0;
     }
     to {
-      /*transform: translateY(0%);*/
+      transform: translateY(0%);
+      opacity: 1;
+    }
+}
+
+@keyframes slide-down {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0%);
       opacity: 1;
     }
 }
