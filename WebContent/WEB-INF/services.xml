@@ -20,8 +20,9 @@
 	<bean id="headerServices" 		class="net.cms.ssmc.services.HeaderServices" />
 	<bean id="serviceServices" 		class="net.cms.ssmc.services.ServiceServices" />
 	
-	<bean id="corporateServices" 			class="net.cms.ssmc.services.CorporateServices" />
+	<bean id="corporateServices" 	class="net.cms.ssmc.services.CorporateServices" />
 	
-	<bean id="imageServices" 			class="net.cms.ssmc.services.ImageServices" />
+	<bean id="imageServices" 		class="net.cms.ssmc.services.ImageServices" />
+	<bean id="analyticsServices" 	class="net.ssmc.services.AnalyticsServices" />
 	
 </beans>

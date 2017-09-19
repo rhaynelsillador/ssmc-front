@@ -10,6 +10,7 @@
 	<bean id="userRoleAccessDao" 	class="net.ssmc.dao.impl.UserRoleAccessDaoImpl" />
 	<bean id="roleAccessDao" 		class="net.ssmc.dao.impl.RoleAccessDaoImpl" />
 	<bean id="contactUsDao" 		class="net.ssmc.dao.impl.ContactUsDaoImpl" />
+	<bean id="analyticsDao" 		class="net.ssmc.dao.impl.AnalyticsDaoImpl" />
 	
 	<!-- CMS DAO BEAN -->
 	<bean id="faqDao" 				class="net.cms.ssmc.dao.impl.FaqDaoImpl" />
