@@ -1,3 +1,7 @@
+[genuitec-file-id="wc1-28"],[genuitec-lp-path="/ssmc-front/WebContent/assets/css/custom/medical.css"],[genuitec-lp-enabled=false]{
+  /* for codelive */
+}
+
 .welcome{
   /*text-align: center;*/
   /*min-height: 700px;*/
@@ -103,6 +107,7 @@
 
 .info-bg img{
   width: 100%;
+  height: 100%;
 }
 
 .info-box .btn{

@@ -1,4 +1,4 @@
-<div class="sec blue">
+<div class="sec blue" data-genuitec-lp-enabled="false" data-genuitec-file-id="wc1-2" data-genuitec-path="/ssmc-front/WebContent/WEB-INF/apps/pages/CorporateServices2.jsp">
   <div class="container">
     <div class="row text-center">
       <span class="header-span">How We <strong>WORK</strong></span>

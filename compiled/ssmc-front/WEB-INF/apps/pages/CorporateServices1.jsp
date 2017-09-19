@@ -1,4 +1,4 @@
-<div class="sec choose">
+<div class="sec choose" data-genuitec-lp-enabled="false" data-genuitec-file-id="wc1-1" data-genuitec-path="/ssmc-front/WebContent/WEB-INF/apps/pages/CorporateServices1.jsp">
   <div class="container">
     <div class="choose row text-center">
       <span class="header-span">Why choose <strong>SSMC</strong></span>

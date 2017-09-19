@@ -1,4 +1,4 @@
-<header>
+<header data-genuitec-lp-enabled="false" data-genuitec-file-id="wc1-10" data-genuitec-path="/ssmc-front/WebContent/WEB-INF/apps/pages/commons/CorporateHeader.jsp">
       <div class="header-top">
         <div class="container">
           <div class="pull-left">

@@ -1,4 +1,4 @@
-<div class="sec branch">
+<div class="sec branch" data-genuitec-lp-enabled="false" data-genuitec-file-id="wc1-7" data-genuitec-path="/ssmc-front/WebContent/WEB-INF/apps/pages/branchesList.jsp">
   <div class="container">
     <div class="row text-center">
       <span class="header-span">Find <strong>SSMC</strong></span>

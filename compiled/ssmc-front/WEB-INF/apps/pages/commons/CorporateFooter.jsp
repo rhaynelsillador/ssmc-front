@@ -1,4 +1,4 @@
-<footer>
+<footer data-genuitec-lp-enabled="false" data-genuitec-file-id="wc1-9" data-genuitec-path="/ssmc-front/WebContent/WEB-INF/apps/pages/commons/CorporateFooter.jsp">
 	  <div class="footer-top">
 	    <div class="container">
 	      <div class="row">
