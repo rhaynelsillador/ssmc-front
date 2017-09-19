@@ -57,11 +57,12 @@
     <script type="text/javascript">
       $(document).ready(function(){
         console.log("G!");
-        preloader();
-        new WOW().init();
 
         var viewportHeight = $(window).height();
-        $("section").css("height",viewportHeight);
+        $("section,.corporate,.medical").css("height",viewportHeight);
+
+        preloader();
+        new WOW().init();
 
         POST("MainHeaderInfo", {}, function(data){
         	console.log("MainHeaderInfo : ", data);
@@ -92,19 +93,19 @@
 
       }
 
-      $(".corporate").hover(
-        function(){
-          $(this).css("z-index","1");
-          $(".medical").toggleClass("hvr-reverse").css("z-index","0");
-        }
-      );
-
-      $(".medical").hover(
-        function(){
-          $(this).css("z-index","1");
-          $(".corporate").toggleClass("hvr-reverse").css("z-index","0");
-        }
-      );
+      // $(".corporate").hover(
+      //   function(){
+      //     $(this).css("z-index","1");
+      //     $(".medical").toggleClass("hvr-reverse").css("z-index","0");
+      //   }
+      // );
+      //
+      // $(".medical").hover(
+      //   function(){
+      //     $(this).css("z-index","1");
+      //     $(".corporate").toggleClass("hvr-reverse").css("z-index","0");
+      //   }
+      // );
     </script>
   </body>
 </html>
