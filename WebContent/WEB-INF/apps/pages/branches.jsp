@@ -34,22 +34,6 @@
 	        	$("#headerTitle").html(data.title);
 	        	$("#headerContent").html(data.content);
 	        })
-
-	        POST("Cities", {}, function(data){
-	        	console.log(data);
-	        	var cityList = "";
-	        	for (index = 0; index < data.length; ++index) {
-	        	    console.log(data[index]);
-	        	    if(index == 0){
-	        	    	cityList += '<li class="active"><a href="#'+data[index].cityKey+'" data-toggle="tab">'+data[index].name+'</a></li>';
-	        	    }else{
-	        	    	cityList += '<li><a href="#'+data[index].cityKey+'" data-toggle="tab">'+data[index].name+'</a></li>';
-	        	    }
-	        	}
-	        	$('#clinicCities').html(cityList)
-	        })
-
-
       	});
 		
         function preloader() {

@@ -18,6 +18,9 @@
   <link rel="stylesheet" href="assets/css/vendor/hover-min.css">
   <%-- Wow js --%>
   <link rel="stylesheet" href="assets/css/vendor/animate.css">
+  <link rel="stylesheet" href="assets/js/jPages-master/css/animate.css">
+  <link rel="stylesheet" href="assets/js/jPages-master/css/jPages.css">
+  <link rel="stylesheet" href="assets/js/jPages-master/css/style.css">
 
 
   <%-- Custom --%>
@@ -44,5 +47,8 @@
   <script src="assets/js/wow.min.js"></script>
   
   <script src="assets/js/moment.min.js"></script>
-  <script src="assets/js/jquery.twbsPagination.min.js"></script>
+  <script src="assets/js/jPages-master/js/highlight.pack.js"></script>
+  <script type="text/javascript" src="assets/js/jPages-master/js/tabifier.js"></script>
+  <script src="assets/js/jPages-master/js/js.js"></script>
+  <script src="assets/js/jPages-master/js/jPages.js"></script>
 </head>
