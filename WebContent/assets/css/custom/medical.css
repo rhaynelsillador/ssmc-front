@@ -46,7 +46,7 @@
   color: #e3e3e2;
 }
 
-.welcome span{
+.welcome > span{
   font-size: 20px;
   color: #e3dfdb;
   display: block;
@@ -359,6 +359,7 @@
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
   float: right;
   font-size: 32px;
+  color: #fff;
 }
 
 
