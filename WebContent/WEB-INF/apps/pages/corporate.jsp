@@ -102,7 +102,7 @@
 	          $(".blue .nav li").removeClass("active");
 	        });
 			
-	        POST("SystemImages", {"app":"BUSINESS", "page":"Main", "module":"HEADER"}, function(data){
+	        POST("SystemImages", {"app":"BUSINESS", "page":"Corporate", "module":"HEADER"}, function(data){
 	        	var imageCarousel = "";
 	        	$.each(data.data, function(index, value){
 	        		imageCarousel += '<div class="item"><img src="'+fileServer+value.image+'" alt=""></div>';

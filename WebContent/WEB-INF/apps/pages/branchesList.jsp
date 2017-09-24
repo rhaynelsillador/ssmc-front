@@ -65,7 +65,7 @@
 			
 			
 			setTimeout(() => {
-				initPagination("pagination_"+key.split(" ").join(""), 'pagination_holder_'+key.split(" ").join(""));
+				//initPagination("pagination_"+key.split(" ").join(""), 'pagination_holder_'+key.split(" ").join(""));
 			}, 2000);
 		
 			
