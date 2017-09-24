@@ -14,6 +14,8 @@
     <section>
       <div class="sec welcome">
         <div class="welcome-content wow fadeIn">
+          <h3>Welcome to</h3>
+		  <h1>Corporate Service</h1>
           <div id="headerInfo"></div>
           <br>
           <a href="#" class="btn btn-default hvr-grow">EXPLORE NOW</a>

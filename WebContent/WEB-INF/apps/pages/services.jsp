@@ -5,6 +5,7 @@
     <%@ include file="commons/CorporateHeader.jsp"%>
     <section>
       <div class="sec welcome welcome-common">
+        <h1>Service</h1>
         <div id="headerInfo"></div>
         <div class="welcome-background" id="imageCarousel">
         </div>

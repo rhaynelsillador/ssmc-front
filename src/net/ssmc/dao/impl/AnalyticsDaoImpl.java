@@ -19,7 +19,7 @@ public class AnalyticsDaoImpl implements AnalyticsDao{
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
 	
-	private final String INSERT = "INSERT INTO analitycs (country, ip, date, url) VALUES (?,?,?,?)";
+	private final String INSERT = "INSERT INTO analytics (country, ip, date, url) VALUES (?,?,?,?)";
 	
 	@Override
 	public long create(Analytics analytics) throws Exception {
