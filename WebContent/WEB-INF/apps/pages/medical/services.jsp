@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <%@ include file="commons/Assets.jsp"%>
-  <link rel="stylesheet" href="assets/css/custom/corporate.css">
   <body>
     <%@ include file="commons/CorporateHeader.jsp"%>
     <section>

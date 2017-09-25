@@ -2,7 +2,6 @@
 <html>
   <%@ include file="commons/Assets.jsp"%>
   <link rel="stylesheet" href="assets/css/custom/about.css">
-  <link rel="stylesheet" href="assets/css/custom/corporate.css">
   <body>
     <%@ include file="commons/CorporateHeader.jsp"%>
     <section id="about">
