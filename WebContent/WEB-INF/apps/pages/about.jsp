@@ -4,6 +4,7 @@
   <link rel="stylesheet" href="assets/css/custom/corporate.css">
   <body>
     <%@ include file="commons/CorporateHeader.jsp"%>
+    <%@ include file="commons/Preloader.jsp"%>
     <section id="about">
       <div class="sec welcome welcome-common">
         <h1 id="aboutUsHeaderTitle">About us</h1>
@@ -79,7 +80,7 @@
     $("#menuAbout a").addClass("active");
       $(document).ready(function(){
         console.log("G!");
-        preloader();
+        // preloader();
         wow = new WOW({offset: 300});
         wow.init();
         $(".blue .nav li a").click(function(){
@@ -133,16 +134,16 @@
    		$("#aboutUsContent").html(aboutUsContent);
 	})
 
-  function preloader() {
-    $("header,section,footer").hide()
-
-    $(window).load(function(){
-      $("header,section,footer").fadeIn();
-      setTimeout(function(){ $('#preloader').fadeOut('slow'); }, 500);
-      console.log("peace out");
-    });
-
-  }
+  // function preloader() {
+  //   $("header,section,footer").hide()
+  //
+  //   $(window).load(function(){
+  //     $("header,section,footer").fadeIn();
+  //     setTimeout(function(){ $('#preloader').fadeOut('slow'); }, 500);
+  //     console.log("peace out");
+  //   });
+  //
+  // }
 
     </script>
   </body>

@@ -5,6 +5,7 @@
 
   <body>
   	<%@ include file="commons/CorporateHeader.jsp"%>
+    <%@ include file="commons/Preloader.jsp"%>
     <section id="faq">
       <div class="sec welcome welcome-common">
         <div id="headerInfo"></div>
@@ -34,7 +35,7 @@
     	$("#menuFaq a").addClass("active");
       $(document).ready(function(){
         console.log("G!");
-        preloader();
+        // preloader();
         wow = new WOW({offset: 300});
         wow.init();
         $(".blue .nav li a").click(function(){
@@ -78,16 +79,16 @@
 
       });
 
-      function preloader() {
-        $("header,section,footer").hide()
-
-        $(window).load(function(){
-          $("header,section,footer").fadeIn();
-          setTimeout(function(){ $('#preloader').fadeOut('slow'); }, 500);
-          console.log("peace out");
-        });
-
-      }
+      // function preloader() {
+      //   $("header,section,footer").hide()
+      //
+      //   $(window).load(function(){
+      //     $("header,section,footer").fadeIn();
+      //     setTimeout(function(){ $('#preloader').fadeOut('slow'); }, 500);
+      //     console.log("peace out");
+      //   });
+      //
+      // }
     </script>
   </body>
 </html>

@@ -26,12 +26,9 @@
     <!-- Page Loader -->
     <div id="page-loader">
         <div class="preloader preloader--xl preloader--light">
-            <%-- <div class="preloader-img">
+            <div class="preloader-img">
               <img class="animated infinite bounce" src="assets/img/cross.png" alt="">
-            </div> --%>
-            <svg viewBox="25 25 50 50">
-                <circle cx="50" cy="50" r="20" />
-            </svg>
+            </div>
         </div>
     </div>
 

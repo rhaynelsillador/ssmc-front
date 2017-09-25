@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="assets/css/custom/corporate.css">
   <body>
   	<%@ include file="commons/CorporateHeader.jsp"%>
+    <%@ include file="commons/Preloader.jsp"%>
 
     <section>
       <div class="sec welcome">
@@ -98,7 +99,7 @@
     <script type="text/javascript">
     	$("#menuCorporate a").addClass("active");
      	$(document).ready(function(){
-	        preloader();
+	        // preloader();
           wow = new WOW({offset: 300});
           wow.init();
 	        $(".blue .nav li a").click(function(){
@@ -119,15 +120,15 @@
 	        });
     	});
 
-      function preloader() {
-        $("header,section,footer").hide()
-
-        $(window).load(function(){
-          $("header,section,footer").fadeIn();
-          setTimeout(function(){ $('#preloader').fadeOut('slow'); }, 500);
-        });
-
-      }
+      // function preloader() {
+      //   $("header,section,footer").hide()
+      //
+      //   $(window).load(function(){
+      //     $("header,section,footer").fadeIn();
+      //     setTimeout(function(){ $('#preloader').fadeOut('slow'); }, 500);
+      //   });
+      //
+      // }
     </script>
   </body>
 </html>
