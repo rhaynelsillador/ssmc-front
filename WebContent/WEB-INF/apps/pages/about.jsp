@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <%@ include file="commons/Assets.jsp"%>
-  <link rel="stylesheet" href="assets/css/custom/about.css">
   <link rel="stylesheet" href="assets/css/custom/corporate.css">
   <body>
     <%@ include file="commons/CorporateHeader.jsp"%>
@@ -81,7 +80,8 @@
       $(document).ready(function(){
         console.log("G!");
         preloader();
-        new WOW().init();
+        wow = new WOW({offset: 300});
+        wow.init();
         $(".blue .nav li a").click(function(){
           console.log("gg");
           $(".blue .nav li").removeClass("active");

@@ -487,7 +487,8 @@
 
       $(document).ready(function(){
         // preloader();
-        new WOW().init();
+        wow = new WOW({offset: 300});
+        wow.init();
         $(".blue .nav li a").click(function(){
           $(".blue .nav li").removeClass("active");
         });

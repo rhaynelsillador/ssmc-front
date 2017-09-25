@@ -38,7 +38,8 @@
     	$(document).ready(function(){
 	        console.log("G!");
           preloader();
-          new WOW().init();
+          wow = new WOW({offset: 300});
+          wow.init();
 	        $(".blue .nav li a").click(function(){
 	          console.log("gg");
 	          $(".blue .nav li").removeClass("active");

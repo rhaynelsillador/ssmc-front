@@ -63,12 +63,12 @@
           </div>
         </div>
       </div>
-      
-      
+
+
       <%@ include file="CorporateServices1.jsp"%>
 	  <%@ include file="CorporateServices2.jsp"%>
 	  <%@ include file="branchesList.jsp"%>
-      
+
       <div class="sec med-go">
         <div class="container">
           <div class="row">
@@ -93,17 +93,18 @@
 
     <%@ include file="commons/CorporateFooter.jsp"%>
 
-    
+
 
     <script type="text/javascript">
     	$("#menuCorporate a").addClass("active");
      	$(document).ready(function(){
 	        preloader();
-	        new WOW().init();
+          wow = new WOW({offset: 300});
+          wow.init();
 	        $(".blue .nav li a").click(function(){
 	          $(".blue .nav li").removeClass("active");
 	        });
-			
+
 	        POST("SystemImages", {"app":"BUSINESS", "page":"Corporate", "module":"HEADER"}, function(data){
 	        	var imageCarousel = "";
 	        	$.each(data.data, function(index, value){
@@ -112,7 +113,7 @@
 	        	$("#imageCarousel").html(imageCarousel);
 	        	initCarousel();
 	        })
-	        
+
 	        POST("HeadersInformation", {"app":"BUSINESS", "page":"Corporate"}, function(data){
 	        	$("#headerInfo").html(data.data.content);
 	        });
