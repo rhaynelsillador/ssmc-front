@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
   <%@ include file="commons/Assets.jsp"%>
+  <%-- <link rel="stylesheet" href="assets/css/custom/corporate.css"> --%>
 
   <body>
   	<%@ include file="commons/CorporateHeader.jsp"%>
+    <%@ include file="commons/Preloader.jsp"%>
     <section id="faq">
       <div class="sec welcome welcome-common">
         <div id="headerInfo"></div>
@@ -33,8 +35,9 @@
     	$("#menuFaq a").addClass("active");
       $(document).ready(function(){
         console.log("G!");
-        preloader();
-        new WOW().init();
+        // preloader();
+        wow = new WOW({offset: 300});
+        wow.init();
         $(".blue .nav li a").click(function(){
           console.log("gg");
           $(".blue .nav li").removeClass("active");
@@ -76,16 +79,16 @@
 
       });
 
-      function preloader() {
-        $("header,section,footer").hide()
-
-        $(window).load(function(){
-          $("header,section,footer").fadeIn();
-          setTimeout(function(){ $('#preloader').fadeOut('slow'); }, 500);
-          console.log("peace out");
-        });
-
-      }
+      // function preloader() {
+      //   $("header,section,footer").hide()
+      //
+      //   $(window).load(function(){
+      //     $("header,section,footer").fadeIn();
+      //     setTimeout(function(){ $('#preloader').fadeOut('slow'); }, 500);
+      //     console.log("peace out");
+      //   });
+      //
+      // }
     </script>
   </body>
 </html>
