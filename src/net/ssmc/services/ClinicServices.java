@@ -39,4 +39,11 @@ public class ClinicServices {
 		}
 		return clinics;
 	}
+	
+	public Map<String, List<Clinic>> getClinicsAndHospitalList(){
+		List<Clinic> clinicList = clinicDao.retrieveAll();
+		Map<String, List<Clinic>> clinics = new HashMap<>();
+		clinics.put("data", clinicList);
+		return clinics;
+	}
 }

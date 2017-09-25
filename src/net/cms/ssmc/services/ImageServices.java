@@ -20,7 +20,7 @@ public class ImageServices {
 	
 	
 	public Map<String, Object> getImages(Form form){
-		System.out.println(form);
+		System.err.println(form);
 		Map<String, Object> response = new HashMap<>();
 //		try {
 //			app = App.valueOf(request.get("app"));

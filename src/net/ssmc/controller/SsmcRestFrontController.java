@@ -131,4 +131,8 @@ public class SsmcRestFrontController {
 		return imageServices.getImages(form);
 	}
 	
+	@RequestMapping(path="/ClinicsAndHospitalList", method = {RequestMethod.POST, RequestMethod.GET}, produces={"application/json"})
+	public Map<String, List<Clinic>> clinicsAndHospitalList(){
+		return clinicServices.getClinicsAndHospitalList();
+	}
 }

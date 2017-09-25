@@ -48,6 +48,7 @@
 	
 	         corporateServicesContent1 += '<div id="service_'+index+'" class="tab-pane '+isActive+'">'+
 	            '<img src="'+fileServer+value.image+'" alt="">'+
+	            '<div>'+value.content2+'</div>'+
 	            '</div>';
 		})
 		$("#corporateServicesTitle1").html(corporateServicesTitle1);

@@ -14,6 +14,8 @@
     <section>
       <div class="sec welcome">
         <div class="welcome-content wow fadeIn">
+          <h3>Welcome to</h3>
+		  <h1>Corporate Service</h1>
           <div id="headerInfo"></div>
           <br>
           <a href="#" class="btn btn-default hvr-grow">EXPLORE NOW</a>
@@ -102,7 +104,7 @@
 	          $(".blue .nav li").removeClass("active");
 	        });
 			
-	        POST("SystemImages", {"app":"BUSINESS", "page":"Main", "module":"HEADER"}, function(data){
+	        POST("SystemImages", {"app":"BUSINESS", "page":"Corporate", "module":"HEADER"}, function(data){
 	        	var imageCarousel = "";
 	        	$.each(data.data, function(index, value){
 	        		imageCarousel += '<div class="item"><img src="'+fileServer+value.image+'" alt=""></div>';
