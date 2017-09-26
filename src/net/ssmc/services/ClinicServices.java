@@ -26,17 +26,18 @@ public class ClinicServices {
 	public Map<String, List<Clinic>> getClinicsAndHospitals(){
 		List<Clinic> clinicList = clinicDao.retrieveAll();
 		Map<String, List<Clinic>> clinics = new HashMap<>();
-		for (Clinic clinic : clinicList) {
-			List<Clinic> tmp = clinics.get(clinic.getCity().getName());
-			if(tmp == null){
-				tmp = new ArrayList<>();
-				tmp.add(clinic);
-				clinics.put(clinic.getCity().getName(), tmp);
-			}else{
-				tmp.add(clinic);
-				clinics.put(clinic.getCity().getName(), tmp);
-			}
-		}
+		clinics.put("data", clinicList);
+//		for (Clinic clinic : clinicList) {
+//			List<Clinic> tmp = clinics.get(clinic.getCity().getName());
+//			if(tmp == null){
+//				tmp = new ArrayList<>();
+//				tmp.add(clinic);
+//				clinics.put(clinic.getCity().getName(), tmp);
+//			}else{
+//				tmp.add(clinic);
+//				clinics.put(clinic.getCity().getName(), tmp);
+//			}
+//		}
 		return clinics;
 	}
 	

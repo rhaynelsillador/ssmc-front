@@ -26,11 +26,44 @@
 <script>
 	
 	POST("ClinicsAndHospitals", {}, function(data){
-	
+		var clinics = ""; 
+		var clinicCitiesContent="";
+		$.each(data.data, function(key, value){
+			 console.log(value);
+			 if(key == 0){
+				 clinics += '<li class="active"><a href="#'+(value.dateAdded+""+value.id)+'" data-toggle="tab">'+value.name+'</a></li>';
+				 clinicCitiesContent += '<div id="'+(value.dateAdded+""+value.id)+'" class="tab-pane active">';
+			 }else{
+				 clinics += '<li class=""><a href="#'+(value.dateAdded+""+value.id)+'" data-toggle="tab">'+value.name+'</a></li>';
+				 clinicCitiesContent += '<div id="'+(value.dateAdded+""+value.id)+'" class="tab-pane">';
+			 }
+			 clinicCitiesContent += '<li><div class="branch-info">'+
+             '<h4>'+value.name+'</h4>'+
+             '<span>'+value.description+'</span>'+
+             '<br>'+
+             '<br>'+
+             '<span>Phone: '+value.phone+' '+
+             '<br>Email: '+value.email+'</span>'+
+           '</div>'+
+           '<div class="branch-img">'+
+             '<img src="'+fileServer+value.logo+'" style="width: 250px;" alt="">'+
+           '</div>'+
+           '<div class="clearfix"></div>'+
+           '<br>'+
+           '<div class="map-container">'+
+             '<div id="map" style="width:100%;height:300px"><iframe width="100%" height="300" frameborder="0" style="border:0" src="'+value.map+'" allowfullscreen></iframe></div>'+
+         	'</div></li>';
+			 clinicCitiesContent += '</div>';
+		});
+		
+		$("#clinicCities").html(clinics);
+		$('#clinicCitiesContent').html(clinicCitiesContent)
+		
+		
 		var cityListContent = "";
 		var cityList = "";
 		var counter = 0;
-		$.each(data, function(key, value){
+		/* $.each(data, function(key, value){
 			console.log(key);
 			var active = "";
 			if(counter == 0){
@@ -69,9 +102,9 @@
 			}, 2000);
 		
 			
-		})
-		$('#clinicCities').html(cityList)
-		$('#clinicCitiesContent').html(cityListContent)
+		}) */
+		//$('#clinicCities').html(cityList)
+		
 		
 		
 	})
