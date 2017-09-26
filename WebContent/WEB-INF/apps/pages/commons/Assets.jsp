@@ -45,7 +45,9 @@
   <script  type="text/javascript" src="assets/js/utils.js"></script>
   <%-- Wow js --%>
   <script src="assets/js/wow.min.js"></script>
-  
+  <!-- Page loader -->
+  <script src="assets/js/page-loader.min.js"></script>
+
   <script src="assets/js/moment.min.js"></script>
   <!-- <script src="assets/js/jPages-master/js/highlight.pack.js"></script>
   <script type="text/javascript" src="assets/js/jPages-master/js/tabifier.js"></script>

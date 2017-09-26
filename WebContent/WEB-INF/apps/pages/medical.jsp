@@ -19,9 +19,19 @@
     <link rel="stylesheet" href="assets/css/custom/common.css">
     <link rel="stylesheet" href="assets/css/custom/medical.css">
 
+</head>
 
-  </head>
-  <body>
+<body>
+
+    <!-- Page Loader -->
+    <div id="page-loader">
+        <div class="preloader preloader--xl preloader--light">
+            <div class="preloader-img">
+              <img class="animated infinite bounce" src="assets/img/cross.png" alt="">
+            </div>
+        </div>
+    </div>
+
     <header>
       <div class="header-top">
         <div class="container">
@@ -457,7 +467,7 @@
       </div>
       <div class="footer-bot">Copyright (c) 2017. All Rights Reserved SSMC</div>
     </footer>
-    <div id="preloader"></div>
+    <%-- <div id="preloader"></div> --%>
 
     <%-- Jquery --%>
     <script  type="text/javascript" src="assets/js/jquery.min.js"></script>
@@ -467,12 +477,15 @@
     <script  type="text/javascript" src="assets/js/owl.carousel.min.js"></script>
     <%-- Wow js --%>
     <script src="assets/js/wow.min.js"></script>
+    <!-- Page loader -->
+    <script src="assets/js/page-loader.min.js"></script>
 
     <script type="text/javascript">
 
       $(document).ready(function(){
-        preloader();
-        new WOW().init();
+        // preloader();
+        wow = new WOW({offset: 300});
+        wow.init();
         $(".blue .nav li a").click(function(){
           $(".blue .nav li").removeClass("active");
         });
@@ -488,15 +501,15 @@
         console.log("owl");
       });
 
-      function preloader() {
-        $("header,section,footer").hide()
-
-        $(window).load(function(){
-          $("header,section,footer").fadeIn();
-          setTimeout(function(){ $('#preloader').fadeOut('slow'); }, 500);
-          console.log("peace out");
-        });
-      }
+      // function preloader() {
+      //   $("header,section,footer").hide()
+      //
+      //   $(window).load(function(){
+      //     $("header,section,footer").fadeIn();
+      //     setTimeout(function(){ $('#preloader').fadeOut('slow'); }, 500);
+      //     console.log("peace out");
+      //   });
+      // }
     </script>
   </body>
 </html>

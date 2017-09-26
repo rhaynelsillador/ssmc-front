@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="assets/css/custom/corporate.css">
   <body>
   	<%@ include file="commons/CorporateHeader.jsp"%>
+    <%@ include file="commons/Preloader.jsp"%>
 
     <section>
       <div class="sec welcome">
@@ -63,12 +64,12 @@
           </div>
         </div>
       </div>
-      
-      
+
+
       <%@ include file="CorporateServices1.jsp"%>
 	  <%@ include file="CorporateServices2.jsp"%>
 	  <%@ include file="branchesList.jsp"%>
-      
+
       <div class="sec med-go">
         <div class="container">
           <div class="row">
@@ -93,17 +94,18 @@
 
     <%@ include file="commons/CorporateFooter.jsp"%>
 
-    
+
 
     <script type="text/javascript">
     	$("#menuCorporate a").addClass("active");
      	$(document).ready(function(){
-	        preloader();
-	        new WOW().init();
+	        // preloader();
+          wow = new WOW({offset: 300});
+          wow.init();
 	        $(".blue .nav li a").click(function(){
 	          $(".blue .nav li").removeClass("active");
 	        });
-			
+
 	        POST("SystemImages", {"app":"BUSINESS", "page":"Corporate", "module":"HEADER"}, function(data){
 	        	var imageCarousel = "";
 	        	$.each(data.data, function(index, value){
@@ -112,21 +114,21 @@
 	        	$("#imageCarousel").html(imageCarousel);
 	        	initCarousel();
 	        })
-	        
+
 	        POST("HeadersInformation", {"app":"BUSINESS", "page":"Corporate"}, function(data){
 	        	$("#headerInfo").html(data.data.content);
 	        });
     	});
 
-      function preloader() {
-        $("header,section,footer").hide()
-
-        $(window).load(function(){
-          $("header,section,footer").fadeIn();
-          setTimeout(function(){ $('#preloader').fadeOut('slow'); }, 500);
-        });
-
-      }
+      // function preloader() {
+      //   $("header,section,footer").hide()
+      //
+      //   $(window).load(function(){
+      //     $("header,section,footer").fadeIn();
+      //     setTimeout(function(){ $('#preloader').fadeOut('slow'); }, 500);
+      //   });
+      //
+      // }
     </script>
   </body>
 </html>

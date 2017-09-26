@@ -1,3 +1,7 @@
+html:not(.ismobile) #page-loader {
+  background-color: #3465aa;
+}
+
 .header-top{
   background: #3465aa;
 }
