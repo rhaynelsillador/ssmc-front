@@ -1,16 +1,16 @@
 package net.ssmc.interceptor;
 
-import java.lang.reflect.Method;
+import java.io.IOException;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
-import net.ssmc.dao.AnalyticsDao;
+import com.maxmind.geoip2.exception.GeoIp2Exception;
+
 import net.ssmc.services.AnalyticsServices;
 
 
@@ -32,7 +32,10 @@ public class AuditInterceptor implements HandlerInterceptor {
 			new Thread(new Runnable() {
 				@Override
 				public void run() {
-					analyticsServices.saveHistory(request);
+					try {
+						analyticsServices.saveHistory(request);
+					} catch (IOException | GeoIp2Exception e) {
+					}
 				}
 			}).start();
 		}

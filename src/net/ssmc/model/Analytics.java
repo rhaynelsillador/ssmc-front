@@ -9,6 +9,9 @@ public class Analytics {
 	private String ip;
 	private Timestamp date;
 	private String url;
+	private String city;
+	private double latitude;
+	private double longhitude;
 	
 	public int getId() {
 		return id;
@@ -40,9 +43,28 @@ public class Analytics {
 	public void setUrl(String url) {
 		this.url = url;
 	}
+	public String getCity() {
+		return city;
+	}
+	public void setCity(String city) {
+		this.city = city;
+	}
+	public double getLatitude() {
+		return latitude;
+	}
+	public void setLatitude(double latitude) {
+		this.latitude = latitude;
+	}
+	public double getLonghitude() {
+		return longhitude;
+	}
+	public void setLonghitude(double longhitude) {
+		this.longhitude = longhitude;
+	}
 	@Override
 	public String toString() {
-		return "Analytics [id=" + id + ", country=" + country + ", ip=" + ip + ", date=" + date + ", url=" + url + "]";
+		return "Analytics [id=" + id + ", country=" + country + ", ip=" + ip + ", date=" + date + ", url=" + url
+				+ ", city=" + city + ", latitude=" + latitude + ", longhitude=" + longhitude + "]";
 	}
-	
+		
 }

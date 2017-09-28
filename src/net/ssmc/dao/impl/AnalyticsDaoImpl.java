@@ -19,7 +19,7 @@ public class AnalyticsDaoImpl implements AnalyticsDao{
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
 	
-	private final String INSERT = "INSERT INTO analytics (country, ip, date, url) VALUES (?,?,?,?)";
+	private final String INSERT = "INSERT INTO analytics (country, ip, date, url, city, latitude, longhitude) VALUES (?,?,?,?,?,?,?)";
 	
 	@Override
 	public long create(Analytics analytics) throws Exception {
@@ -32,6 +32,9 @@ public class AnalyticsDaoImpl implements AnalyticsDao{
 		        statement.setString(2, analytics.getIp());
 		        statement.setTimestamp(3, new Timestamp(System.currentTimeMillis()));
 		        statement.setString(4, analytics.getUrl());
+		        statement.setString(5, analytics.getCity());
+		        statement.setDouble(6, analytics.getLatitude());
+		        statement.setDouble(7, analytics.getLonghitude());
 		        return statement;
 		    }
 		}, holder);
