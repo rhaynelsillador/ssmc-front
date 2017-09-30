@@ -93,6 +93,7 @@
     </section>
 
     <%@ include file="commons/CorporateFooter.jsp"%>
+    <%@ include file="commons/LoginModal.jsp"%>
 
 
 
