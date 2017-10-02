@@ -430,12 +430,12 @@ footer .footer-bot{
 }
 
 
-#login_modal .form-group{
+.mc-form .form-group{
   position: relative;
   margin: 40px 0px 0px;
 }
 
-#login_modal .form-group label{
+.mc-form .form-group label{
   position: absolute;
   bottom: -4px;
   line-height: 40px;
@@ -447,7 +447,7 @@ footer .footer-bot{
   height: 40px;
   transition: height 200ms ease-in-out, color 200ms ease-in-out;
 }
-#login_modal .form-group label::after{
+.mc-form .form-group label::after{
   content: "";
   position: absolute;
   bottom: -2px;
@@ -461,27 +461,28 @@ footer .footer-bot{
   transition: width 200ms ease-in-out;
 }
 
-#login_modal .form-group .form-control:focus +label{
+.mc-form .form-group .form-control:focus +label,.mc-form .form-group .form-control.mc-filled +label{
   color: #f78525;
   height: 70px;
 }
 
-#login_modal .form-group .form-control:focus +label::after{
+.mc-form .form-group .form-control:focus +label::after,.mc-form .form-group .form-control.mc-filled +label::after{
   width: 100%
 }
 
-#login_modal .form-group .form-control{
+.mc-form .form-group .form-control{
   border: 0px;
   border-bottom: 1px solid #bdbdbd;
   border-radius: 0px;
   box-shadow: none;
   height: 40px;
   position: relative;
+  z-index: 10;
   background: transparent;
 
 }
 
-#login_modal .form-group .form-control::after{
+.mc-form .form-group .form-control::after{
   content: "";
   position: absolute;
   width: 100%;
@@ -537,4 +538,45 @@ footer .footer-bot{
   display: inline-block;
   text-align: left;
   vertical-align: middle;
+}
+
+.register{
+  width: 420px;
+  height: 600px;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  padding: 40px 55px;
+  margin-top: -300px;
+  z-index: 20;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+.register img{
+  width: 240px;
+  margin: 15px auto 0px;
+  display: block;
+}
+
+
+.reg-bg{
+  background: #2d66b1;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  overflow: hidden;
+}
+
+.reg-bg .welcome-carousel::after {
+  background: linear-gradient(-45deg, rgba(45, 102, 177, 0.5) 0%, rgba(116, 192, 204, 0.5) 100%);
+}
+
+.owl-nav, .owl-dots{
+  display: none;
 }

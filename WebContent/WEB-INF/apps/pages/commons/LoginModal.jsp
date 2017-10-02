@@ -14,7 +14,7 @@
 
       	<div class="login-right">
           <h3>Login</h3>
-          <form>
+          <form class="mc-form">
             <div class="form-group">
               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
               <label for="exampleInputEmail1">Email address</label>

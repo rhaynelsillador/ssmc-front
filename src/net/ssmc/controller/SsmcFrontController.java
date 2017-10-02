@@ -59,4 +59,10 @@ public class SsmcFrontController {
 	public String faq(ModelMap map){
 		return "pages/faq";
 	}
+	
+	@AppicationAudit(module = Module.ALL, access = Access.ALL)
+	@RequestMapping(path="/Registration", method = RequestMethod.GET, produces="text/html")
+	public String registration(ModelMap map){
+		return "pages/Registration";
+	}
 }
