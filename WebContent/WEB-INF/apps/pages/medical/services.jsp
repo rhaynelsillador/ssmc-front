@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-  <%@ include file="commons/Assets.jsp"%>
+  <%@ include file="../commons/Assets.jsp"%>
   <%-- <link rel="stylesheet" href="assets/css/custom/corporate.css"> --%>
   <body>
-    <%@ include file="commons/CorporateHeader.jsp"%>
-    <%@ include file="commons/Preloader.jsp"%>
+    <%@ include file="../commons/CorporateHeader.jsp"%>
+    <%@ include file="../commons/Preloader.jsp"%>
     <section>
       <div class="sec welcome welcome-common">
         <h1>Service</h1>
@@ -12,8 +12,8 @@
         <div class="welcome-background" id="imageCarousel">
         </div>
       </div>
-      <%@ include file="CorporateServices1.jsp"%>
-      <%@ include file="CorporateServices2.jsp"%>
+      <%@ include file="../CorporateServices1.jsp"%>
+      <%@ include file="../CorporateServices2.jsp"%>
       <!-- <div class="sec">
         <div class="container">
           <div class="row text-center">
@@ -33,7 +33,7 @@
       </div> -->
     </section>
 
-    <%@ include file="commons/CorporateFooter.jsp"%>
+    <%@ include file="../commons/CorporateFooter.jsp"%>
     <script type="text/javascript">
     	$("#menuAServices a").addClass("active");
     	$(document).ready(function(){

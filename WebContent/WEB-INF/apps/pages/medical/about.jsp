@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-  <%@ include file="commons/Assets.jsp"%>
+  <%@ include file="../commons/Assets.jsp"%>
   <%-- <link rel="stylesheet" href="assets/css/custom/corporate.css"> --%>
   <body>
-    <%@ include file="commons/CorporateHeader.jsp"%>
-    <%@ include file="commons/Preloader.jsp"%>
+    <%@ include file="../commons/CorporateHeader.jsp"%>
+    <%@ include file="../commons/Preloader.jsp"%>
     <section id="about">
       <div class="sec welcome welcome-common">
         <h1 id="aboutUsHeaderTitle">About us</h1>
@@ -74,7 +74,7 @@
         </div>
       </div>
     </section>
-    <%@ include file="commons/CorporateFooter.jsp"%>
+    <%@ include file="../commons/CorporateFooter.jsp"%>
 
     <script type="text/javascript">
     $("#menuAbout a").addClass("active");

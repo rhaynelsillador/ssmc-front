@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-  <%@ include file="commons/Assets.jsp"%>
+  <%@ include file="../commons/Assets.jsp"%>
   <%-- <link rel="stylesheet" href="assets/css/custom/corporate.css"> --%>
   <body>
-    <%@ include file="commons/CorporateHeader.jsp"%>
-    <%@ include file="commons/Preloader.jsp"%>
+    <%@ include file="../commons/CorporateHeader.jsp"%>
+    <%@ include file="../commons/Preloader.jsp"%>
     <section>
       <div class="sec welcome welcome-common">
         <h1 id="headerTitle">Hospitals and Clinics</h1>
@@ -13,10 +13,10 @@
           <img src="assets/img/banner-branch.jpg" alt="">
         </div>
       </div>
-      <%@ include file="branchesList.jsp"%>
+      <%@ include file="../branchesList.jsp"%>
     </section>
 
-    <%@ include file="commons/CorporateFooter.jsp"%>
+    <%@ include file="../commons/CorporateFooter.jsp"%>
 
    <!--  <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script> -->
     <script type="text/javascript">

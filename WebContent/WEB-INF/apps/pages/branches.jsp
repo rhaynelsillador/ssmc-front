@@ -8,8 +8,9 @@
     <section>
       <div class="sec welcome welcome-common">
         <h1 id="headerTitle">Hospitals and Clinics</h1>
-        <span id="headerContent">We have the most advance medical <br /> technology and innovations</span>
-        <div class="welcome-background">
+        <span id="headerContent"></span>
+        <!-- <div class="welcome-background"> -->
+        <div class="welcome-background" id="imageCarousel">
           <img src="assets/img/banner-branch.jpg" alt="">
         </div>
       </div>
@@ -26,16 +27,26 @@
           // preloader();
           wow = new WOW({offset: 300});
           wow.init();
-
+			
 	        $(".blue .nav li a").click(function(){
 	          console.log("gg");
 	          $(".blue .nav li").removeClass("active");
 	        });
-
+			
+	        POST("SystemImages", {"app":"BUSINESS", "page":"HospitalAndClinic", "module":"HEADER"}, function(data){
+	        	var imageCarousel = "";
+	        	$.each(data.data, function(index, value){
+	        		imageCarousel += '<div class="item"><img src="'+fileServer+value.image+'" alt=""></div>';
+	        	})
+	        	$("#imageCarousel").html(imageCarousel);
+	        	//initCarousel();
+	        })
+	        
 	        POST("HeadersInformation", {"app" : "BUSINESS", "page" : "HospitalAndClinic"}, function(data){
-	        	data = data.data;
-	        	$("#headerTitle").html(data.title);
-	        	$("#headerContent").html(data.content);
+	        	if(data.data){
+	        		data = data.data;
+		        	$("#headerContent").html(data.content);
+	        	}
 	        })
       	});
 
