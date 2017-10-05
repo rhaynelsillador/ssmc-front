@@ -6,9 +6,9 @@ html:not(.ismobile) #page-loader {
   left: 0;
   z-index: 100000;
   background-color: #f58435;
+  /*opacity: 1!important;
+  display: block!important;*/
 }
-
-
 
 html:not(.ismobile) #page-loader .preloader {
     position: absolute;
@@ -19,6 +19,12 @@ html:not(.ismobile) #page-loader .preloader {
     margin: auto;
 }
 
+.preloader-img .animated {
+  animation-duration: 1800ms;
+  animation-delay: 1200ms;
+  animation-fill-mode: both;
+}
+
 .preloader-img{
   width: 80px;
   height: 80px;
@@ -27,17 +33,16 @@ html:not(.ismobile) #page-loader .preloader {
   top: 50%;
   margin-top: -40px;
   margin-left: -40px;
+  animation: loadScale 1200ms ease-in-out;
 }
 
 .preloader-img img{
   width: 100%;
+  animation: fadeInOut 3000ms 1200ms ease-in-out infinite;
 }
 
-.preloader-img  {
-  animation: test 1200ms ease-in-out
-}
 
-@keyframes test {
+@keyframes loadScale {
   0%{
     transform: scale(0,0);
     opacity: 0;
@@ -46,19 +51,23 @@ html:not(.ismobile) #page-loader .preloader {
     transform: scale(1,1);
     opacity: 1;
   }
-
 }
 
-.preloader-img .animated {
-  animation-duration: 1800ms;
-  animation-delay: 1200ms;
-  animation-fill-mode: both;
+@keyframes fadeInOut {
+  0%{
+    opacity: 1;
+  }
+  50%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
 }
 
-/*#page-loader{
-  display: block!important;
-  opacity: 1!important;
-}*/
+body{
+  font-family: 'Roboto', sans-serif!important;
+}
 
 .container{
   max-width: 970px;
@@ -202,10 +211,11 @@ footer{
 }
 
 footer .footer-top{
-  background: #1a1f25;
+  /*background: #1a1f25;*/
+  background: #132c4e;
   padding: 25px;
   text-align: left;
-  color: #6c6e6f;
+  color: #a5a5a5;
 }
 
 footer .footer-box{
@@ -230,8 +240,8 @@ footer .footer-box ul li a{
 }
 
 footer .footer-bot{
-  background: #0d141c;
-  padding: 35px;
+  background: #2b64b0;
+  padding: 20px;
   color: #cacaca;
 }
 
@@ -351,6 +361,11 @@ footer .footer-bot{
   /*background: rgba(0, 0, 0, 0.5);*/
   text-align: center;
   padding: 100px 30px;
+  margin-top: 0px!important;
+}
+
+.welcome-carousel{
+  margin: 0px!important;
 }
 
 .welcome-carousel::after{
