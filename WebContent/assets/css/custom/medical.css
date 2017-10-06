@@ -56,7 +56,7 @@
 .welcome .btn{
   width: 185px;
   padding: 15px 5px;
-  margin: 0px 15px;
+  margin: 15px 15px 0px;
 }
 
 .welcome .btn-primary{
@@ -78,7 +78,7 @@
   text-align: center;
   padding: 20px;
   background: rgba(56, 102, 156, 0.85);
-  min-height: 350px;
+  height: 365px;
   color: #fff;
   position: relative;
   border-radius: 5px;
@@ -88,6 +88,12 @@
 .info-box .icon-info{
   width: 45px;
   margin: 50px 0px 20px;
+}
+
+.info-box p{
+  margin: 0px;
+  height: 153px;
+  overflow: hidden;
 }
 
 .info-bg{
@@ -188,7 +194,7 @@
   left: 0;
   right: 0;
   top: 50%;
-  margin-top: -18px;
+  transform: translateY(-50%);
 }
 
 .service-left h5,.service-right h5{
@@ -229,7 +235,7 @@
 }
 
 .service-center .service-img img{
-  width: 284px;
+  width: 100%;
   animation: slide-up 500ms ease-in-out;
 }
 
@@ -395,6 +401,11 @@
     width: 30px;
     height: 30px;
     right: 8px;
+  }
+
+  .service-left aside::after, .service-right aside::after{
+    width: 24px;
+    height: 24px;
   }
 
   .service-right{
