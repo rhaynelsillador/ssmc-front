@@ -94,7 +94,7 @@
 	 	$("#aboutUsHeaderContent").html(data.content);
 	})
 
-	POST("AboutUsInformation?app=BUSINESS", {}, function(data){
+	POST("AboutUsInformation?app=CLINIC", {}, function(data){
 		data = data.data
 		console.log(data);
 		var aboutUsMenus  = "";

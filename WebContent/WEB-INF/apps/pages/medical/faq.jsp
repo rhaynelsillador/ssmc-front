@@ -43,7 +43,7 @@
           $(".blue .nav li").removeClass("active");
         });
 
-        POST("SystemImages", {"app":"BUSINESS", "page":"Faq", "module":"HEADER"}, function(data){
+        POST("SystemImages", {"app":"CLINIC", "page":"Faq", "module":"HEADER"}, function(data){
         	var imageCarousel = "";
         	$.each(data.data, function(index, value){
         		imageCarousel += '<div class="item"><img src="'+fileServer+value.image+'" alt=""></div>';
@@ -52,11 +52,11 @@
         	initCarousel();
         })
 
-        POST("HeadersInformation", {"app" : "BUSINESS", "page" : "Faq"}, function(data){
+        POST("HeadersInformation", {"app" : "CLINIC", "page" : "Faq"}, function(data){
         	$("#headerInfo").html(data.data.content);
         })
 
-        POST("FaqInformation", {"app" : "BUSINESS"}, function(data){
+        POST("FaqInformation", {"app" : "CLINIC"}, function(data){
         	console.log(data);
         	var faqBodyTitle = "";
         	var faqBodyContent = "";

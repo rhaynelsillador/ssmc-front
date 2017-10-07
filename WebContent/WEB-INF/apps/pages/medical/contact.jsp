@@ -30,7 +30,7 @@
           $(".blue .nav li").removeClass("active");
         });
 
-        POST("SystemImages", {"app":"BUSINESS", "page":"ContactUs", "module":"HEADER"}, function(data){
+        POST("SystemImages", {"app":"CLINIC", "page":"ContactUs", "module":"HEADER"}, function(data){
         	var imageCarousel = "";
         	$.each(data.data, function(index, value){
         		imageCarousel += '<div class="item"><img src="'+fileServer+value.image+'" alt=""></div>';
@@ -39,13 +39,13 @@
         	initCarousel();
         })
 
-        POST("HeadersInformation", {"app":"BUSINESS", "page":"ContactUs"}, function(data){
+        POST("HeadersInformation", {"app":"CLINIC", "page":"ContactUs"}, function(data){
         	$("#headerInfo").html(data.data.content);
         });
 
 
 
-        /* POST("HeadersInformation", {"app" : "BUSINESS", "page" : "ContactUs"}, function(data){
+        /* POST("HeadersInformation", {"app" : "CLINIC", "page" : "ContactUs"}, function(data){
         	data = data.data;
         	$("#headerTitle").html(data.title);
         	$("#headerContent").html(data.content);
