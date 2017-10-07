@@ -1,0 +1,81 @@
+.mobile-menu
+  display: none
+  float: left
+  width: 32px
+  height: 55px
+  font-size: 22px
+  padding: 13px 2px
+  position: absolute
+  z-index: 601
+
+html.ismobile
+
+  header
+    position: fixed
+    top: 0
+    z-index: 600
+    width: 100%
+
+  .mobile-menu
+    display: block
+
+  .header-top
+    a
+      span:not(.h-icon)
+        display: none
+
+    .pull-right
+      a
+        span
+          background: #2098D1
+
+        &:first-child span
+          background: #3B5996
+
+        &:last-child span
+          background: #FF0000
+
+  .header-bot
+    text-align: center
+
+    .logo
+      float: none !important
+      display: block
+      box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3)
+      z-index: 600
+      position: relative
+      margin: 0px -15px
+      background: #fff
+
+    .nav.pull-right
+      display: block
+      position: absolute
+      z-index: 500
+      background: #fff
+      width: 100%
+      left: 0
+
+      ul li
+        width: 100%
+        border-bottom: 1px solid #e8e8e8
+
+  .welcome
+    &::after
+      bottom: -110px
+
+    .welcome-content
+      padding: 0px 30px
+      height: initial
+      z-index: 150
+
+    h1
+      font-size: 32px
+
+
+    .welcome-carousel
+      width: 200%
+      // margin: 0px -200px!important
+
+
+    // .owl-stage-outer
+    //   margin: 0px -200px

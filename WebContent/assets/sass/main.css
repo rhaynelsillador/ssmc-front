@@ -92,7 +92,9 @@ body {
 .header-top {
   background: #f58435;
   height: 35px;
-  padding: 4px 0px; }
+  padding: 4px 0px;
+  z-index: 600;
+  position: relative; }
   .header-top span {
     vertical-align: sub;
     color: #fff; }
@@ -100,7 +102,7 @@ body {
     color: white;
     margin-top: 2px;
     display: inline-block; }
-  .header-top a span {
+  .header-top a .h-icon {
     width: 20px;
     height: 20px;
     display: inline-block;
@@ -126,10 +128,6 @@ body {
   .header-top .pull-right a:last-child span::before {
     background: #FF0000; }
 
-/*.header-top .pull-left a:hover{
- *  color: #636363;
- *  text-decoration: none;
- *} */
 .header-bot .nav ul {
   list-style: none;
   margin-bottom: 0px; }
@@ -164,30 +162,6 @@ body {
   .welcome-background img {
     width: 100%; }
 
-/*.welcome.welcome-common::before {
- *  content: "";
- *  position: absolute;
- *  background: url(../../img/banner.png) no-repeat;
- *  background-size: cover;
- *  width: 100%;
- *  left: 0;
- *  top: 0;
- *  z-index: -1;
- *  height: 100%;
- *
- *}
- *
- *#about .welcome.welcome-common::before {
- *  background: url(../../img/banner-about.jpg) no-repeat;
- *  background-size: cover;
- *  background-position: top;
- *}
- *
- *#faq .welcome.welcome-common::before {
- *  background: url(../../img/banner-faq.jpg) no-repeat;
- *  background-size: cover;
- *  background-position: center;
- *} */
 .welcome.welcome-common::after {
   content: "";
   width: 100%;
@@ -272,7 +246,7 @@ footer {
   left: 20px; }
   .big-tabination .side aside::after {
     content: "";
-    background: url(../../img/icon-hand.png) no-repeat;
+    background: url(../../assets/img/icon-hand.png) no-repeat;
     background-size: contain;
     width: 40px;
     height: 40px;
@@ -611,7 +585,7 @@ footer {
 
 .service-left aside::after, .service-right aside::after {
   content: "";
-  background: url(../../img/icon-hand.png) no-repeat;
+  background: url(../../assets/img/icon-hand.png) no-repeat;
   background-size: contain;
   width: 40px;
   height: 40px;
@@ -712,7 +686,8 @@ footer {
 
 .med-go {
   background: #faf8ee;
-  text-align: center; }
+  text-align: center;
+  overflow: hidden; }
   .med-go h1 {
     color: #7dc5cf;
     margin-top: 50px; }
@@ -844,5 +819,61 @@ footer {
   font-style: italic; }
   .answer-container .answer-position {
     font-size: 12px; }
+
+.mobile-menu {
+  display: none;
+  float: left;
+  width: 32px;
+  height: 55px;
+  font-size: 22px;
+  padding: 13px 2px;
+  position: absolute;
+  z-index: 601; }
+
+html.ismobile header {
+  position: fixed;
+  top: 0;
+  z-index: 600;
+  width: 100%; }
+html.ismobile .mobile-menu {
+  display: block; }
+html.ismobile .header-top a span:not(.h-icon) {
+  display: none; }
+html.ismobile .header-top .pull-right a span {
+  background: #2098D1; }
+html.ismobile .header-top .pull-right a:first-child span {
+  background: #3B5996; }
+html.ismobile .header-top .pull-right a:last-child span {
+  background: #FF0000; }
+html.ismobile .header-bot {
+  text-align: center; }
+  html.ismobile .header-bot .logo {
+    float: none !important;
+    display: block;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+    z-index: 600;
+    position: relative;
+    margin: 0px -15px;
+    background: #fff; }
+  html.ismobile .header-bot .nav.pull-right {
+    display: block;
+    position: absolute;
+    z-index: 500;
+    background: #fff;
+    width: 100%;
+    left: 0; }
+    html.ismobile .header-bot .nav.pull-right ul li {
+      width: 100%;
+      border-bottom: 1px solid #e8e8e8; }
+html.ismobile .welcome::after {
+  bottom: -110px; }
+html.ismobile .welcome .welcome-content {
+  padding: 0px 30px;
+  height: initial;
+  z-index: 150; }
+html.ismobile .welcome h1 {
+  font-size: 32px; }
+html.ismobile .welcome .welcome-carousel {
+  width: 200%; }
 
 /*# sourceMappingURL=main.css.map */

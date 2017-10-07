@@ -15,6 +15,7 @@
       </div>
       <div class="container">
         <div class="header-bot">
+          <a class="mobile-menu" href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
           <a class="logo pull-left" href="Home"><img src="assets/img/logo.png" alt=""></a>
           <div class="nav pull-right">
             <ul class="list-inline">
