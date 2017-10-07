@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import net.ssmc.model.Email;
 import net.ssmc.services.ContactUsServices;
-import net.ssmc.utils.GmailUtility;
 
 @RestController
 public class UtilityRestController {

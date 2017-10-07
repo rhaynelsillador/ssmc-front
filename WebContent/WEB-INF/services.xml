@@ -25,4 +25,9 @@
 	<bean id="imageServices" 		class="net.cms.ssmc.services.ImageServices" />
 	<bean id="analyticsServices" 	class="net.ssmc.services.AnalyticsServices" />
 	
+	<bean id="registrationServices" class="net.ssmc.services.RegistrationServices" />
+	
+	<bean id="appUtils" 			class="net.ssmc.utils.AppUtils" />
+	<bean id="ObjectMapper" class="com.fasterxml.jackson.databind.ObjectMapper"/>
+	
 </beans>

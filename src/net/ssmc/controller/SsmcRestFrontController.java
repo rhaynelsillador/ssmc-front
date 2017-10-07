@@ -12,18 +12,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import net.cms.ssmc.model.AboutUs;
 import net.cms.ssmc.model.Faq;
 import net.cms.ssmc.model.Header;
-import net.cms.ssmc.model.Service;
 import net.cms.ssmc.services.AboutUsServices;
 import net.cms.ssmc.services.CorporateServices;
 import net.cms.ssmc.services.FaqServices;
 import net.cms.ssmc.services.HeaderServices;
 import net.cms.ssmc.services.ImageServices;
 import net.cms.ssmc.services.ServiceServices;
-import net.ssmc.enums.App;
-import net.ssmc.enums.Page;
 import net.ssmc.model.City;
 import net.ssmc.model.Clinic;
 import net.ssmc.model.form.Form;
