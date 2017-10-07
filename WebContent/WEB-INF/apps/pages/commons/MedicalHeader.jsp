@@ -15,7 +15,7 @@
       </div>
       <div class="container">
         <div class="header-bot">
-          <a class="logo pull-left" href="#"><img src="assets/img/logo.png" alt=""></a>
+          <a class="logo pull-left" href="Home"><img src="assets/img/logo.png" alt=""></a>
           <div class="nav pull-right">
             <ul class="list-inline">
               <li id="menuCorporate"><a href="Medical">HOME</a></li>

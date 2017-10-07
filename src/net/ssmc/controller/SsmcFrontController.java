@@ -13,7 +13,7 @@ import net.ssmc.interceptor.AppicationAudit;
 public class SsmcFrontController {
 	
 	@AppicationAudit(module = Module.ALL, access = Access.ALL)
-	@RequestMapping(path="/", method = RequestMethod.GET)
+	@RequestMapping(path={"/", "Home"}, method = RequestMethod.GET)
 	public String dashboard(ModelMap map){
 		return "pages/index";
 	}
