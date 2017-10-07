@@ -1,0 +1,126 @@
+.btn
+	-webkit-transition: all 100ms ease-in-out
+	-moz-transition: all 100ms ease-in-out
+	-o-transition: all 100ms ease-in-out
+	transition: all 100ms ease-in-out
+	font-weight: 900
+
+.btn-primary
+	background: $hk-green
+	border-color: $hk-green
+
+	&:hover
+		background: $hk-light-green
+		border-color: $hk-light-green
+
+.btn-warning,.btn-warning:focus
+	background: linear-gradient(to bottom, rgba(220,216,141,1) 0%, rgba(243,244,179,1) 46%, rgba(135,97,9,1) 100%)
+	border-color: $hk-yellow
+	border-radius: 5px
+	color: $hk-black
+
+	&:hover
+		background: linear-gradient(to bottom, rgba(135,97,9,1) 0%, rgba(243,244,179,1) 54%, rgba(220,216,141,1) 100%)
+		border-color: $hk-yellow
+		color: $hk-black
+
+.btn-hero
+	border-radius: 45px
+
+.btn-lg
+	width: 200px
+	padding: 12px 0px
+	// border-radius: 45px
+	font-size: 20px
+
+.btn-default
+	background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(119,119,119,1) 100%)
+	border: 1px solid #ffffff
+	border-radius: 5px
+	color: $hk-black
+
+	&:hover
+		background: linear-gradient(to bottom, rgba(119,119,119,1) 0%, rgba(255,255,255,1) 100%)
+		border-color: #ffffff
+
+.btn-primary
+	border: 1px solid #248266
+	background: linear-gradient(to bottom, #41ad8d 0%, #085a42 100%)
+	color: #ffffff
+
+	&:hover
+		border: 1px solid #248266
+		background: linear-gradient(to top, #41ad8d 0%, #085a42 100%)
+		color: #333
+
+.btn-green
+	background: linear-gradient(to bottom, rgba(0,77,64,1) 0%, rgba(2,41,34,1) 100%)
+	border: 1px solid #004d40
+	color: #e3bb64!important
+	padding: 6px 12px!important
+
+.btn-whtglow
+	h4
+		color: #333
+
+.btn-dl
+	background: linear-gradient(to bottom, #30b98d 0%, #000000 100%)
+	border: 1px solid $hk-yellow
+	color: #eceaa8
+	border-radius: 6px
+	text-align: left
+	padding-left: 48px
+
+	&:hover
+		color: white
+
+	i.fa
+		background: url(http://74.63.197.174:8885/ky/assets/img/bg-dl.png) no-repeat
+		background-size: 45px
+		width: 50px
+		height: 100%
+		position: absolute
+		left: 0px
+		top: 0px
+		color: #333
+		line-height: 34px
+		text-align: left
+		padding-left: 12px
+
+	i.fa-mobile
+		font-size: 22px
+		padding-left: 16px
+
+.btn-brown
+	background: linear-gradient(to bottom, #a0833d 0%, #665733 100%)
+	color: #fff
+	border: 1px solid #665733
+
+	&:hover, &:focus
+		background: linear-gradient(to top, #a0833d 0%, #665733 100%)
+
+.btn-sort
+	color: white
+
+	img
+		width: 30px
+		height: 30px
+		border: 2px solid #f3f4b3
+		padding: 4px
+		border-radius: 45px
+		background: #086247
+		margin-right: 7px
+
+	&:hover
+		color: $hk-light-yellow
+
+.btn-pagination
+	border: 1px solid #28bb8f
+	background: linear-gradient(to bottom, #41ad8d 0%, #085a42 100%)
+	color: #ffffff
+
+.btn-pagination + .btn-pagination
+	margin-left: 2px
+
+.hvr-sweep-to-bottom:before
+	content: initial

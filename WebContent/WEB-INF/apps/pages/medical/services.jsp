@@ -3,7 +3,7 @@
   <%@ include file="../commons/Assets.jsp"%>
   <%-- <link rel="stylesheet" href="assets/css/custom/corporate.css"> --%>
   <body>
-    <%@ include file="../commons/CorporateHeader.jsp"%>
+    <%@ include file="../commons/MedicalHeader.jsp"%>
     <%@ include file="../commons/Preloader.jsp"%>
     <section>
       <div class="sec welcome welcome-common">
@@ -46,12 +46,12 @@
 	          $(".blue .nav li").removeClass("active");
 	        });
 
-	        POST("HeadersInformation", {"app":"BUSINESS", "page":"Service"}, function(data){
+	        POST("HeadersInformation", {"app":"CLINIC", "page":"Service"}, function(data){
 	        	console.log(data);
 	        	$("#headerInfo").html(data.data.content);
 	        });
 
-	        POST("SystemImages", {"app":"BUSINESS", "page":"Service", "module":"HEADER"}, function(data){
+	        POST("SystemImages", {"app":"CLINIC", "page":"Service", "module":"HEADER"}, function(data){
 	        	var imageCarousel = "";
 	        	$.each(data.data, function(index, value){
 	        		imageCarousel += '<div class="item"><img src="'+fileServer+value.image+'" alt=""></div>';
@@ -60,7 +60,7 @@
 	        	//initCarousel();
 	        })
 
-	        POST("ServicesInformation", {"app": "BUSINESS"}, function(data){
+	        POST("ServicesInformation", {"app": "CLINIC"}, function(data){
 	        	data = data.data;
 	        	var servicesDataTitle = "";
 	        	var servicesDataContent = "";

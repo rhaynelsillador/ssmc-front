@@ -3,7 +3,7 @@
   <%@ include file="../commons/Assets.jsp"%>
   <%-- <link rel="stylesheet" href="assets/css/custom/corporate.css"> --%>
   <body>
-    <%@ include file="../commons/CorporateHeader.jsp"%>
+    <%@ include file="../commons/MedicalHeader.jsp"%>
     <%@ include file="../commons/Preloader.jsp"%>
     <section id="about">
       <div class="sec welcome welcome-common">
@@ -94,7 +94,7 @@
 	 	$("#aboutUsHeaderContent").html(data.content);
 	})
 
-	POST("AboutUsInformation?app=BUSINESS", {}, function(data){
+	POST("AboutUsInformation?app=CLINIC", {}, function(data){
 		data = data.data
 		console.log(data);
 		var aboutUsMenus  = "";
