@@ -51,12 +51,12 @@
           <a class="logo pull-left" href="#"><img src="assets/img/logo.png" alt=""></a>
           <div class="nav pull-right">
             <ul class="list-inline">
-              <li><a href="medical.html" class="active">HOME</a></li>
-              <li><a href="about.html">ABOUT</a></li>
-              <li><a href="services.html">SERVICES</a></li>
-              <li><a href="branches.html">HOSPITAS & CLINICS</a></li>
-              <li><a href="faq.html">FAQ</a></li>
-              <li><a href="contact.html">CONTACT US</a></li>
+              <li id="menuCorporate"><a href="Medical">HOME</a></li>
+              <li id="menuAbout"><a href="Medical-About">ABOUT</a></li>
+              <li id="menuAServices"><a href="Medical-Services">SERVICES</a></li>
+              <li id="menuBranches"><a href="Medical-Branches">HOSPITAS & CLINICS</a></li>
+              <li id="menuFaq"><a href="Medical-Faq">FAQ</a></li>
+              <li id="menuContact"><a href="Medical-ContactUs">CONTACT US</a></li>
             </ul>
           </div>
           <div class="clearfix"></div>
