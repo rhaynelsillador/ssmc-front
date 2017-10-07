@@ -1,5 +1,9 @@
 package net.ssmc.controller;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,6 +16,11 @@ import net.ssmc.interceptor.AppicationAudit;
 @Controller
 public class SsmcFrontController {
 	
+	@Autowired
+	private HttpServletRequest httpServletRequest;
+	@Autowired
+	private HttpServletResponse httpServletResponse;
+		
 	@AppicationAudit(module = Module.ALL, access = Access.ALL)
 	@RequestMapping(path={"/", "Home"}, method = RequestMethod.GET)
 	public String dashboard(ModelMap map){

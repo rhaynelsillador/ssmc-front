@@ -15,20 +15,26 @@ import net.ssmc.services.RegistrationServices;
 
 @RestController
 public class SsmcRestApiController {
-
-	@Autowired
-	private HttpServletRequest httpServletRequest;
+	
 	@Autowired
 	private RegistrationServices registrationServices;
+	@Autowired
+	private HttpServletRequest httpServletRequest;
 	
 	@RequestMapping(path="/AccountLogin", method = RequestMethod.POST, produces={"application/json"})
 	public ObjectNode accountLogin(@RequestBody RegisteredAccount registeredAccount){
-		return registrationServices.accountLogin(httpServletRequest, registeredAccount);
+		return registrationServices.accountLogin(registeredAccount);
+	}
+	
+	@RequestMapping(path="/AccountLogout", method = {RequestMethod.POST, RequestMethod.GET}, produces={"application/json"})
+	public String accountLogout(){
+		httpServletRequest.getSession().invalidate();
+		return "{\"ACTION\" : \"LOGOUT\"}";
 	}
 	
 	@RequestMapping(path="/RegistrationSave", method = RequestMethod.POST, produces={"application/json"})
 	public ObjectNode registrationSave(@RequestBody RegisteredAccount registeredAccount){
-		return registrationServices.registerAccount(httpServletRequest, registeredAccount);
+		return registrationServices.registerAccount(registeredAccount);
 	}
 	
 }

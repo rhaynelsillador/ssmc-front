@@ -23,16 +23,16 @@ public class RegistrationServices {
 	private AppUtils appUtils;
 	@Autowired
 	private RegisteredAccountDao registeredAccountDao;
+	@Autowired
+	private HttpServletRequest httpServletRequest;
 	
 	private static final String REGISTRATIONSUCCESS = "You have successfully registered your account!";
 	private static final String REGISTRATIONERROR  	= "You have unsuccessfully registered your account!";
 	private static final String EMAILEXIST  		= "Email already registered.";
 	private static final String INVALIDUSERPASS		= "Invalid username and password!";
 	
-	public ObjectNode accountLogin(HttpServletRequest httpServletRequest, RegisteredAccount registeredAccount){
+	public ObjectNode accountLogin(RegisteredAccount registeredAccount){
 		ObjectNode node = objectMapper.createObjectNode();
-		
-		System.out.println(registeredAccount);
 		
 		node.put(MessageKey.STATUS.getName(), Status.ERROR.toString());
 		if(registeredAccount.getEmail().isEmpty() || !AppUtils.isValidEmailAddress(registeredAccount.getEmail())){
@@ -59,9 +59,8 @@ public class RegistrationServices {
 		}
 	}
 	
-	public ObjectNode registerAccount(HttpServletRequest httpServletRequest, RegisteredAccount registeredAccount){
+	public ObjectNode registerAccount(RegisteredAccount registeredAccount){
 		ObjectNode node = objectMapper.createObjectNode();
-		System.out.println(registeredAccount);
 		node.put(MessageKey.STATUS.getName(), Status.ERROR.toString());
 		if(registeredAccount.getEmail().isEmpty() || !AppUtils.isValidEmailAddress(registeredAccount.getEmail())){
 			node.put(MessageKey.MESSAGE.getName(), Code.INVALIDEMAIL.getName());
