@@ -19,7 +19,7 @@
   <%-- <link rel="stylesheet" href="assets/css/vendor/hover-min.css"> --%>
   <%-- Wow js --%>
   <%-- <link rel="stylesheet" href="assets/css/vendor/animate.css"> --%>
-
+  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon"/>
   <link rel="stylesheet" href="assets/sass/main.css">
   <!-- <link rel="stylesheet" href="assets/js/jPages-master/css/animate.css">
   <link rel="stylesheet" href="assets/js/jPages-master/css/jPages.css">
