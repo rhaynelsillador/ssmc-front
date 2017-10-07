@@ -1,0 +1,463 @@
+html
+  &:not(.ismobile) #page-loader
+    position: fixed
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    z-index: 100000
+    background-color: #f58435
+    /*opacity: 1!important;
+     *display: block!important;
+    .preloader
+      position: absolute
+      left: 0
+      top: 0
+      right: 0
+      bottom: 0
+      margin: auto
+  &.ismobile #page-loader
+    display: none
+
+.preloader-img
+  .animated
+    animation-duration: 1800ms
+    animation-delay: 1200ms
+    animation-fill-mode: both
+  width: 80px
+  height: 80px
+  position: absolute
+  left: 50%
+  top: 50%
+  margin-top: -40px
+  margin-left: -40px
+  animation: loadScale 1200ms ease-in-out
+  img
+    width: 100%
+    animation: fadeInOut 3000ms 1200ms ease-in-out infinite
+
+@keyframes loadScale
+  0%
+    transform: scale(0, 0)
+    opacity: 0
+
+  100%
+    transform: scale(1, 1)
+    opacity: 1
+
+
+@keyframes fadeInOut
+  0%
+    opacity: 1
+
+  50%
+    opacity: 0
+
+  100%
+    opacity: 1
+
+
+body
+  font-family: "Roboto", sans-serif !important
+
+.container
+  max-width: 970px
+
+.header-top
+  background: #f58435
+  height: 35px
+  padding: 4px 0px
+  span
+    vertical-align: sub
+    color: #fff
+  .pull-left a
+    color: white
+    margin-top: 2px
+    display: inline-block
+  a span
+    width: 20px
+    height: 20px
+    display: inline-block
+    vertical-align: middle
+    text-align: center
+    border-radius: 45px
+    background: rgba(255, 255, 255, 0.35)
+    line-height: 20px
+    font-size: 12px
+    margin-right: 4px
+  .pull-right a
+    span
+      background: rgba(0, 0, 0, 0.07)
+      line-height: 20px
+      font-size: 12px
+      color: white
+      width: 25px
+      height: 25px
+      font-size: 16px
+      line-height: 25px
+      margin: 0px 5px
+    &:first-child span::before
+      background: #3B5996
+    &:last-child span::before
+      background: #FF0000
+
+/*.header-top .pull-left a:hover{
+ *  color: #636363;
+ *  text-decoration: none;
+ *}
+
+.header-bot .nav ul
+  list-style: none
+  margin-bottom: 0px
+  li a
+    padding: 0px 6px
+    display: block
+    height: 56px
+    line-height: 56px
+    color: #636363
+    font-weight: 600
+    &.active
+      color: #f79856
+
+.logo
+  padding: 11px 0px
+  img
+    width: 200px
+
+.welcome.welcome-common
+  height: 350px
+  background: rgba(0, 0, 0, 0.5)
+  text-align: center
+  padding-top: 30px
+
+.welcome-background
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: -1
+  img
+    width: 100%
+
+/*.welcome.welcome-common::before {
+ *  content: "";
+ *  position: absolute;
+ *  background: url(../../img/banner.png) no-repeat;
+ *  background-size: cover;
+ *  width: 100%;
+ *  left: 0;
+ *  top: 0;
+ *  z-index: -1;
+ *  height: 100%;
+ *
+ *}
+ *
+ *#about .welcome.welcome-common::before {
+ *  background: url(../../img/banner-about.jpg) no-repeat;
+ *  background-size: cover;
+ *  background-position: top;
+ *}
+ *
+ *#faq .welcome.welcome-common::before {
+ *  background: url(../../img/banner-faq.jpg) no-repeat;
+ *  background-size: cover;
+ *  background-position: center;
+ *}
+
+.welcome.welcome-common::after
+  content: ""
+  width: 100%
+  bottom: -260px
+
+footer
+  text-align: center
+  .footer-top
+    /*background: #1a1f25;
+    background: #132c4e
+    padding: 25px
+    text-align: left
+    color: #a5a5a5
+  .footer-box
+    padding: 0px 35px
+    h5
+      margin-bottom: 30px
+      color: #fff
+    ul
+      margin: 0px
+      li
+        margin-bottom: 10px
+        a
+          color: #6c6e6f
+  .footer-bot
+    background: #2b64b0
+    padding: 20px
+    color: #cacaca
+
+/*===================== BASIC TABINATION ==================
+
+.basic-tabination .tab-content
+  position: relative
+  &::after
+    content: ""
+    position: absolute
+    left: -32px
+    top: -18px
+    /* transform: translateY(-50%);
+    max-height: 375px
+    height: 106%
+    width: 1px
+    background: #cecece
+  .tab-pane
+    transform: translateX(100%)
+    transition: transform 500ms ease-in-out, display 500ms ease-in-out
+    &.active
+      transform: translateX(0%)
+
+/*===================== BIG TABINATION ==================
+
+.big-tabination
+  .side
+    border: 1px solid #dedede
+    margin-bottom: 20px
+    padding: 10px 10px 10px 100px
+    border-radius: 7px
+    text-align: left
+    height: 105px
+    position: relative
+    display: block
+    text-decoration: none
+    color: #939393
+  li
+    &.active .side
+      border: 1px solid #9bd0d9
+      box-shadow: 0px 0px 7px rgba(155, 208, 217, 0.5)
+      background: transparent
+      color: #939393
+      aside
+        background: #f58435
+      h5
+        color: #f58435
+    .side span
+      display: block
+      height: 56px
+      overflow: hidden
+  .side
+    aside
+      position: absolute
+      width: 66px
+      height: 66px
+      border-radius: 45px
+      background: #7ac0cc
+      top: 50%
+      transform: translateY(-50%)
+      left: 20px
+      &::after
+        content: ""
+        background: url(../../img/icon-hand.png) no-repeat
+        background-size: contain
+        width: 40px
+        height: 40px
+        position: absolute
+        margin: auto
+        left: 0
+        right: 0
+        top: 50%
+        margin-top: -18px
+    h5
+      color: #4f4f4f
+      margin-top: 0px
+      font-weight: 600
+
+.map-container
+  border: 5px solid white
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5)
+
+.welcome-content
+  position: absolute
+  z-index: 3
+  width: 100%
+  height: 100%
+  /*background: rgba(0, 0, 0, 0.5);
+  text-align: center
+  padding: 100px 30px
+  margin-top: 0px !important
+
+.welcome-carousel
+  margin: 0px !important
+  &::after
+    content: ""
+    position: absolute
+    width: 100%
+    height: 100%
+    background: rgba(0, 0, 0, 0.5)
+    top: 0
+    left: 0
+
+.tab-about h3
+  text-align: left
+  color: #81c4d0
+  margin-top: 0
+
+.about-img
+  overflow: hidden
+  height: 300px
+  border: 5px solid white
+  border-radius: 5px
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.3)
+  img
+    width: 100%
+
+.about-info
+  text-align: left
+
+.service-content
+  img
+    width: 100%
+    margin-bottom: 20px
+  span
+    text-align: left
+    display: block
+
+#login_modal
+  .modal-content
+    height: 550px
+    position: relative
+  .modal-dialog
+    width: 680px
+  .login-right
+    width: 55%
+    float: right
+    padding: 0px 25px 0px 40px
+  .login-left
+    position: absolute
+    width: 52%
+    height: 106%
+    top: -3%
+    left: -2%
+    img
+      position: absolute
+      top: -8px
+      left: -8px
+  .modal-header
+    border-bottom: 0px
+
+.mc-form .form-group
+  position: relative
+  margin: 40px 0px 0px
+  label
+    position: absolute
+    bottom: -4px
+    line-height: 40px
+    left: 0px
+    color: #333
+    z-index: 1
+    width: 100%
+    display: block
+    height: 40px
+    transition: height 200ms ease-in-out, color 200ms ease-in-out
+    &::after
+      content: ""
+      position: absolute
+      bottom: -2px
+      left: 0px
+      right: 0px
+      margin: auto
+      width: 0%
+      height: 2px
+      background: #f78525
+      display: block
+      transition: width 200ms ease-in-out
+  .form-control
+    &:focus + label, &.mc-filled + label
+      color: #f78525
+      height: 70px
+    &:focus + label::after, &.mc-filled + label::after
+      width: 100%
+    border: 0px
+    border-bottom: 1px solid #bdbdbd
+    border-radius: 0px
+    box-shadow: none
+    height: 40px
+    position: relative
+    z-index: 10
+    background: transparent
+    &::after
+      content: ""
+      position: absolute
+      width: 100%
+      height: 1px
+      background: red
+
+#login_modal h2
+  margin-bottom: 70px
+
+.btn-submit
+  width: 100%
+  margin-top: 50px
+  background: linear-gradient(45deg, #e6ba17 0%, #f48436 100%)
+  border: 1px solid #f48436
+  border-radius: 45px
+  color: #fff
+  height: 50px
+  outline: 0px
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5)
+  font-size: 22px
+  transition: background 200ms ease-in-out
+  &:hover
+    color: #fff
+    text-decoration: none
+    background: linear-gradient(to bottom, #e6ba17 0%, #f48436 100%)
+  &.active, &:active, &:focus
+    background: linear-gradient(-45deg, #e6ba17 0%, #f48436 100%)
+    box-shadow: inset 0 2px 4px 1px rgba(0, 0, 0, 0.23)
+    outline: 0px
+    color: #fff
+
+.modal
+  text-align: center
+  padding: 0 !important
+  &:before
+    content: ''
+    display: inline-block
+    height: 100%
+    vertical-align: middle
+    margin-right: -4px
+
+.modal-dialog
+  display: inline-block
+  text-align: left
+  vertical-align: middle
+
+.register
+  width: 420px
+  height: 600px
+  margin: auto
+  position: absolute
+  left: 0
+  right: 0
+  top: 50%
+  padding: 40px 55px
+  margin-top: -300px
+  z-index: 20
+  background: #fff
+  border-radius: 20px
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.5)
+  img
+    width: 240px
+    margin: 15px auto 0px
+    display: block
+
+.reg-bg
+  background: #2d66b1
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
+  position: absolute
+  overflow: hidden
+  .welcome-carousel::after
+    background: linear-gradient(-45deg, rgba(45, 102, 177, 0.5) 0%, rgba(116, 192, 204, 0.5) 100%)
+
+.owl-nav, .owl-dots
+  display: none

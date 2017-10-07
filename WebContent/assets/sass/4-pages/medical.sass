@@ -1,0 +1,343 @@
+.welcome
+  position: relative
+  height: 700px
+  overflow: hidden
+  padding: 0px
+  &::after
+    content: ""
+    position: absolute
+    width: 90%
+    min-width: 1200px
+    max-width: 1600px
+    height: 300px
+    background: white
+    bottom: -269px
+    z-index: 3
+    transform: skewY(-3deg)
+    right: 0px
+  h1
+    font-weight: 900
+    font-size: 62px
+    color: #fff
+  h3
+    font-size: 34px
+    color: #e3e3e2
+  > span, .welcome-content div
+    font-size: 20px
+    color: #e3dfdb
+    display: block
+    margin: 25px auto 80px
+
+  .btn
+    width: 185px
+    padding: 15px 5px
+    margin: 15px 15px 0px
+  .btn-primary
+    background: #7ac0cd
+    border: 1px solid #7ac0cd
+  .btn-default
+    color: #4975b3
+
+.info
+  margin-top: -140px
+  position: relative
+  z-index: 10
+
+.info-box
+  text-align: center
+  padding: 20px
+  background: rgba(56, 102, 156, 0.85)
+  height: 365px
+  color: #fff
+  position: relative
+  border-radius: 5px
+  overflow: hidden
+  .icon-info
+    width: 45px
+    margin: 50px 0px 20px
+  p
+    margin: 0px
+    height: 153px
+    overflow: hidden
+
+.info-bg
+  content: ""
+  position: absolute
+  width: 100%
+  height: 100%
+  top: 0px
+  left: 0px
+  overflow: hidden
+  z-index: -1
+  img
+    width: 100%
+    height: 100%
+
+.info-box .btn
+  color: #fff
+  border: 2px solid #fff
+  border-radius: 4px
+  position: absolute
+  bottom: 30px
+  left: 0
+  right: 0
+  width: 120px
+  margin: auto
+
+.info .col-sm-4:nth-child(even) .info-box
+  background: rgba(127, 178, 184, 0.85)
+  padding-top: 40px
+
+.choose .choose-content img
+  width: 100%
+
+.blue
+  background: #f3fdfe
+  .header-span
+    color: #275ba4
+    strong
+      color: #f57f2d
+  .nav-pills > li.active > a
+    background: transparent
+    color: #939393
+    &:focus, &:hover
+      background: transparent
+      color: #939393
+    h5
+      color: #7ac0cc
+    aside
+      background: #f58435
+
+.service-left, .service-right
+  margin-bottom: 20px
+  padding: 10px 112px 10px 10px !important
+  border-radius: 7px !important
+  text-align: right
+  height: 120px
+  position: relative
+  display: block
+  text-decoration: none
+  color: #939393
+
+.service-left aside, .service-right aside
+  position: absolute
+  width: 66px
+  height: 66px
+  border-radius: 45px
+  background: #7ac0cc
+  top: 50%
+  /*margin-top: -33px;
+  transform: translateY(-50%)
+  right: 25px
+
+.service-left aside::after, .service-right aside::after
+  content: ""
+  background: url(../../img/icon-hand.png) no-repeat
+  background-size: contain
+  width: 40px
+  height: 40px
+  position: absolute
+  margin: auto
+  left: 0
+  right: 0
+  top: 50%
+  transform: translateY(-50%)
+
+.service-left h5, .service-right h5
+  font-weight: 600
+  color: #545454
+
+.service-left span
+  display: block
+  height: 56px
+  overflow: hidden
+
+.service-right
+  span
+    display: block
+    height: 56px
+    overflow: hidden
+  text-align: left
+  padding: 10px 10px 10px 112px !important
+  aside
+    left: 25px
+    right: initial
+
+.service-center
+  box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.5)
+  border-radius: 10px
+  overflow: hidden
+  position: relative
+  height: 395px
+  .service-img
+    position: relative
+    margin-bottom: 30px
+    height: 240px
+    width: 100%
+    overflow: hidden
+    img
+      width: 100%
+      animation: slide-up 500ms ease-in-out
+  .service-circle
+    content: ""
+    width: 56px
+    height: 56px
+    position: absolute
+    left: 0
+    right: 0
+    top: 210px
+    margin: auto
+    background: #7ac0cc
+    border-radius: 45px
+  .service-content
+    text-align: center
+    padding: 10px 40px 15px
+    animation: slide-down 500ms ease-in-out
+    h4
+      color: #7ac0cc
+    span
+      color: #939393
+
+.branch .nav-pills > li.active > a
+  background: transparent
+  color: #81c4d0
+
+.nav-pills > li.active > a
+  &:focus, &:hover
+    background: transparent
+    color: #81c4d0
+
+.branch
+  .nav-pills > li
+    &.active > a::after
+      content: ""
+      position: absolute
+      right: 0px
+      top: 0px
+      height: 100%
+      width: 3px
+      background: #f58334
+      z-index: 1
+    > a
+      color: #5c5c5c
+      text-align: left
+      font-weight: 600
+      position: relative
+      padding: 7px 15px
+  .branch-info
+    width: 60%
+    text-align: left
+    float: left
+    h4
+      color: #81c4d0
+  .branch-img
+    width: 40%
+    float: right
+
+.med-go
+  background: #faf8ee
+  text-align: center
+  h1
+    color: #7dc5cf
+    margin-top: 50px
+  div > div > div > span
+    line-height: 25px
+    margin-top: 20px
+    display: block
+
+.contact-box
+  background: #74c1cc
+  min-height: 415px
+  text-align: center
+  border-radius: 20px
+  overflow: hidden
+  color: #fff
+  h2
+    background: #f48e46
+    margin: 0px
+    padding: 20px
+  .contact-form
+    padding: 25px
+    .form-control
+      background: transparent
+      border: 0px
+      border-bottom: 1px solid #fff
+      border-radius: 0px
+      box-shadow: none
+      color: #fff
+      margin-bottom: 20px
+      option
+        color: #333
+    &::placeholder
+      color: #fff
+
+.contact-submit
+  width: 70px
+  height: 70px
+  border-radius: 45px
+  border-style: initial
+  background: #f48e46
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3)
+  float: right
+  font-size: 32px
+  color: #fff
+
+@media (min-width: 768px) and (max-width: 992px)
+  .big-tabination .side
+    padding: 10px 10px 10px 45px
+    height: 95px
+    aside
+      width: 30px
+      height: 30px
+      left: 8px
+    span
+      display: block
+      height: 37px
+      overflow: hidden
+  .service-left, .service-right
+    padding: 10px 45px 10px 10px !important
+    text-align: center
+    height: 120px
+  .service-left aside, .service-right aside
+    width: 30px
+    height: 30px
+    right: 8px
+  .service-left aside::after
+    width: 24px
+    height: 24px
+  .service-right
+    aside
+      &::after
+        width: 24px
+        height: 24px
+      left: 8px
+    padding: 10px 10px 10px 45px !important
+  .service-left span, .service-right span
+    overflow: hidden
+    display: block
+    height: 50px
+    font-size: 12px
+
+@keyframes slide-up
+  from
+    transform: translateY(100%)
+    opacity: 0
+
+  to
+    transform: translateY(0%)
+    opacity: 1
+
+
+@keyframes slide-down
+  from
+    transform: translateY(-100%)
+    opacity: 0
+
+  to
+    transform: translateY(0%)
+    opacity: 1
+
+
+@media (max-width: 767px)
+  .info-box
+    margin-bottom: 40px

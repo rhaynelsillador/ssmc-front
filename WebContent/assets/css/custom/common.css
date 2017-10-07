@@ -11,12 +11,16 @@ html:not(.ismobile) #page-loader {
 }
 
 html:not(.ismobile) #page-loader .preloader {
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+html.ismobile #page-loader {
+  display: none;
 }
 
 .preloader-img .animated {
