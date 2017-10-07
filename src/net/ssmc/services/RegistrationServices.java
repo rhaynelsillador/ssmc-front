@@ -12,6 +12,7 @@ import net.ssmc.enums.Code;
 import net.ssmc.enums.MessageKey;
 import net.ssmc.enums.Status;
 import net.ssmc.model.RegisteredAccount;
+import net.ssmc.utils.AES;
 import net.ssmc.utils.AppUtils;
 
 public class RegistrationServices {
@@ -26,6 +27,29 @@ public class RegistrationServices {
 	private static final String REGISTRATIONSUCCESS = "You have successfully registered your account!";
 	private static final String REGISTRATIONERROR  	= "You have unsuccessfully registered your account!";
 	private static final String EMAILEXIST  		= "Email already registered.";
+	private static final String INVALIDUSERPASS		= "Invalid username and password!";
+	
+	public ObjectNode accountLogin(HttpServletRequest httpServletRequest, RegisteredAccount registeredAccount){
+		ObjectNode node = objectMapper.createObjectNode();
+		
+		System.out.println(registeredAccount);
+		
+		node.put(MessageKey.STATUS.getName(), Status.ERROR.toString());
+		if(registeredAccount.getEmail().isEmpty() || !AppUtils.isValidEmailAddress(registeredAccount.getEmail())){
+			node.put(MessageKey.MESSAGE.getName(), Code.INVALIDEMAIL.getName());
+			node.put(MessageKey.CODE.getName(), Code.INVALIDEMAIL.getCode());
+		}
+		try {
+			registeredAccount = registeredAccountDao.findOne(registeredAccount.getEmail(), AES.encrypt(registeredAccount.getPassword()));
+			httpServletRequest.getSession().setAttribute("accountLoggedIn", registeredAccount);
+			node.put(MessageKey.STATUS.getName(), Status.SUCCESS.toString());
+		} catch (Exception e) {
+			e.printStackTrace();
+			node.put(MessageKey.MESSAGE.getName(), INVALIDUSERPASS);
+			node.put(MessageKey.CODE.getName(), Code.ERROR.getCode());
+		}
+		return node;
+	}
 	
 	private RegisteredAccount getRegistreredAccountByEmail(String email){
 		try {
@@ -63,16 +87,10 @@ public class RegistrationServices {
 				node.put(MessageKey.MESSAGE.getName(), REGISTRATIONERROR);
 				node.put(MessageKey.CODE.getName(), Code.ERROR.getCode());
 			}
-		}
-				
-			
-		
-		
-		System.out.println(appUtils.passwordConfirmValidations(registeredAccount.getPassword(), registeredAccount.getPassword1()));
-		
-		
-		
+		}		
 		return node;
 	}
+	
+	
 	
 }

@@ -22,6 +22,7 @@ public class RegisteredAccountDaoImpl implements RegisteredAccountDao {
 	private JdbcTemplate jdbcTemplate;
 		
 	private static final String FINDONEBYEMAIL = "SELECT * FROM registered_account WHERE EMAIL=? LIMIT 1";
+	private static final String FINDONEBYEMAILANPASS = "SELECT * FROM registered_account WHERE EMAIL=? AND PASSWORD = ? LIMIT 1";
 	private static final String INSERT = "INSERT INTO registered_account (email, password, number, datecreated, status) VALUES (?,?,?,?,?)";
 	private static final String FINDONE = "SELECT * FROM registered_account WHERE ID=?";
 	
@@ -46,13 +47,18 @@ public class RegisteredAccountDaoImpl implements RegisteredAccountDao {
 	}
 
 	@Override
-	public RegisteredAccount findOne(int id) {
+	public RegisteredAccount findOne(int id)  throws Exception{
 		return jdbcTemplate.queryForObject(FINDONE, new Object[]{id}, new BeanPropertyRowMapper<RegisteredAccount>(RegisteredAccount.class));
 	}
 
 	@Override
-	public RegisteredAccount findOne(String email) {
+	public RegisteredAccount findOne(String email)  throws Exception{
 		return jdbcTemplate.queryForObject(FINDONEBYEMAIL, new Object[]{email}, new BeanPropertyRowMapper<RegisteredAccount>(RegisteredAccount.class));
+	}
+
+	@Override
+	public RegisteredAccount findOne(String email, String password) throws Exception{
+		return jdbcTemplate.queryForObject(FINDONEBYEMAILANPASS, new Object[]{email, password}, new BeanPropertyRowMapper<RegisteredAccount>(RegisteredAccount.class));
 	}
 
 }

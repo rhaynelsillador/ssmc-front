@@ -191,3 +191,42 @@ var initCarousel = function initCarousel(){
         autoplayHoverPause: true,
     });
 }
+
+
+
+
+// LOGIN FUNCTIONS //
+
+$(document).ready(function(e){
+	$(".mc-form .form-control").blur(function() {
+        console.log("ftgyh");
+        console.log($(this).val());
+        if($(this).val() == ''){
+          $(this).removeClass("mc-filled");
+        }else {
+          $(this).addClass("mc-filled");
+        }
+
+  	});
+	
+	$("#loginForm").submit(function(e){
+		var form = objectifyForm($( this ).serializeArray());
+		var btn = $( "#loginForm button");
+  		btn.attr("disabled", "disabled");
+  		
+  		console.log(form);
+  		
+		POST("AccountLogin", form, function(data){
+	  		btn.removeAttr("disabled");
+	  		if(data.status == "ERROR"){
+	  			$("#loginErrorMessage > div").html(data.message);
+	  		}else{
+	  			location.href = "Corporate";
+	  		}
+		})
+		e.preventDefault();
+	})
+
+})
+
+

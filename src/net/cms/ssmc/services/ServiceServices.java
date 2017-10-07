@@ -18,8 +18,6 @@ public class ServiceServices {
 	@Autowired
 	private ServiceDao serviceDao;
 	@Autowired
-	private ControlServices controlServices;
-	@Autowired
 	private HeaderServices headerServices;
 
 	public Header getServicesHeader(){
@@ -37,14 +35,4 @@ public class ServiceServices {
 		return response;
 	}
 	
-//	public List<Service> getServices(Form form){
-//		List<Service> services = serviceDao.retrieveAllWithImages(form.getApp(), Module.SERVICE);
-//		return services;
-//	}
-	
-	public Service getActiveService(HttpSession session, int id){
-		if(controlServices.hasApproved(session, Module.SERVICE, id)){
-//			return serviceDao.retrieveActiveService(App.BUSINESS);
-		}return null;
-	}	
 }
