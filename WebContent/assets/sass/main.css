@@ -830,6 +830,8 @@ footer {
   position: absolute;
   z-index: 601; }
 
+html.ismobile body {
+  padding-top: 90px; }
 html.ismobile header {
   position: fixed;
   top: 0;
@@ -856,7 +858,7 @@ html.ismobile .header-bot {
     margin: 0px -15px;
     background: #fff; }
   html.ismobile .header-bot .nav.pull-right {
-    display: block;
+    display: none;
     position: absolute;
     z-index: 500;
     background: #fff;

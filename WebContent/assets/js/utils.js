@@ -131,7 +131,7 @@ function checkIfCheckedAll(){
 	$(".roles").each(function(){
 		if(!($(this).is(':checked'))){
 			isCheckedAll = false;
-		}				
+		}
 	})
 	if(isCheckedAll){
 		$("#controlStatusBtn").prop({
@@ -162,9 +162,9 @@ $(document).on("click", ".approved-fn", function(e){
 		"module" : $this.data("module"),
 		"moduleId" : $this.data("moduleid"),
 	}
-	
+
 	console.log($this.data("reload"));
-	
+
 	POST("approved", form, function(data){
 		$this.remove();
 		if($this.data("reload") == true){
@@ -192,7 +192,11 @@ var initCarousel = function initCarousel(){
     });
 }
 
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+ console.log("QQQ2Q3");
+ $("html").addClass("ismobile");
 
+}
 
 
 // LOGIN FUNCTIONS //
@@ -208,14 +212,14 @@ $(document).ready(function(e){
         }
 
   	});
-	
+
 	$("#loginForm").submit(function(e){
 		var form = objectifyForm($( this ).serializeArray());
 		var btn = $( "#loginForm button");
   		btn.attr("disabled", "disabled");
-  		
+
   		console.log(form);
-  		
+
 		POST("AccountLogin", form, function(data){
 	  		btn.removeAttr("disabled");
 	  		if(data.status == "ERROR"){
@@ -227,6 +231,28 @@ $(document).ready(function(e){
 		e.preventDefault();
 	})
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  console.log("john cena2");
+
+  $(".mobile-menu").click(function(){
+    $(".nav.pull-right").slideToggle();
+  });
+
 })
-
-
