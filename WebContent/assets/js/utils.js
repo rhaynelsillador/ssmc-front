@@ -230,7 +230,14 @@ $(document).ready(function(e){
 		})
 		e.preventDefault();
 	})
-
+	
+	
+	$("#logoutMenu").click(function(e){
+		POST("AccountLogout", {}, function(data){
+	  		location.href = "Corporate";
+		})
+		e.preventDefault();
+	})
 
 
 

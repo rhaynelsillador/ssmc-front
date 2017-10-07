@@ -5,7 +5,7 @@
         <a href="#"><span><i class="fa fa-fw fa-phone" aria-hidden="true"></i></span>+6398863555</a>&nbsp;&nbsp;
         <a href="#"><span style="font-size: 10px;"><i class="fa fa-fw fa-envelope" aria-hidden="true"></i></span>support@ssmc.com</a>&nbsp;&nbsp;
         <a href="#" data-toggle="modal" data-target="#login_modal" id="loginMenu" class="hidden"><span><i class="fa fa-fw fa-phone" aria-hidden="true"></i></span>Login</a>
-        <a href="AccountLogout" id="logoutMenu" class="hidden"><span><i class="fa fa-fw fa-phone" aria-hidden="true"></i></span>Logout</a>
+        <a href="#" id="logoutMenu" class="hidden"><span><i class="fa fa-fw fa-phone" aria-hidden="true"></i></span>Logout</a>
       </div>
       <div class="pull-right">
         <a href="#"><span class="hvr-radial-out"><i class="fa fa-facebook" aria-hidden="true"></i></span></a>
