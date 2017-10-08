@@ -2,25 +2,25 @@
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
-  <%@ include file="commons/Assets.jsp"%>
+  <%@ include file="../commons/Assets.jsp"%>
 
   <%-- Owl Carousel --%>
   <link rel="stylesheet" href="assets/css/vendor/owl.carousel.min.css">
 
   <link rel="stylesheet" href="assets/css/custom/corporate.css">
   <body>
-  	<%@ include file="commons/CorporateHeader.jsp"%>
-    <%@ include file="commons/Preloader.jsp"%>
+  	<%@ include file="../commons/MedicalHeader.jsp"%>
+    <%@ include file="../commons/Preloader.jsp"%>
 
     <section>
       <div class="sec welcome">
         <div class="welcome-content wow fadeIn">
           <h3>Welcome to</h3>
-		  <h1>Corporate Service</h1>
+		  <h1>SSMC Health</h1>
           <div id="headerInfo"></div>
           <br>
           <a href="#" class="btn btn-default hvr-grow">EXPLORE NOW</a>
-          <a href="#" class="btn btn-primary hvr-grow">CONTACT US</a>
+          <a href="Medical-ContactUs" class="btn btn-primary hvr-grow">CONTACT US</a>
         </div>
           <div class="welcome-carousel owl-carousel owl-theme" id="imageCarousel">
           </div>
@@ -66,9 +66,9 @@
       </div>
 
 
-      <%@ include file="CorporateServices1.jsp"%>
-	  <%@ include file="CorporateServices2.jsp"%>
-	  <%@ include file="branchesList.jsp"%>
+      <%@ include file="../CorporateServices1.jsp"%>
+	  <%@ include file="../CorporateServices2.jsp"%>
+	  <%@ include file="../branchesList.jsp"%>
 
       <div class="sec med-go">
         <div class="container">
@@ -88,12 +88,11 @@
         </div>
       </div>
 
-      <%@ include file="ContactUsForm.jsp"%>
+      <%@ include file="../ContactUsForm.jsp"%>
 
     </section>
 
-    <%@ include file="commons/CorporateFooter.jsp"%>
-    <%@ include file="commons/LoginModal.jsp"%>
+    <%@ include file="../commons/CorporateFooter.jsp"%>
 
 
 
@@ -107,7 +106,7 @@
 	          $(".blue .nav li").removeClass("active");
 	        });
 
-	        POST("SystemImages", {"app":"BUSINESS", "page":"Corporate", "module":"HEADER"}, function(data){
+	        POST("SystemImages", {"app":"CLINIC", "page":"Medical", "module":"HEADER"}, function(data){
 	        	var imageCarousel = "";
 	        	$.each(data.data, function(index, value){
 	        		imageCarousel += '<div class="item"><img src="'+fileServer+value.image+'" alt=""></div>';
@@ -116,20 +115,11 @@
 	        	initCarousel();
 	        })
 
-	        POST("HeadersInformation", {"app":"BUSINESS", "page":"Corporate"}, function(data){
+	        POST("HeadersInformation", {"app":"CLINIC", "page":"Medical"}, function(data){
 	        	$("#headerInfo").html(data.data.content);
 	        });
     	});
-
-      // function preloader() {
-      //   $("header,section,footer").hide()
-      //
-      //   $(window).load(function(){
-      //     $("header,section,footer").fadeIn();
-      //     setTimeout(function(){ $('#preloader').fadeOut('slow'); }, 500);
-      //   });
-      //
-      // }
+	
     </script>
   </body>
 </html>

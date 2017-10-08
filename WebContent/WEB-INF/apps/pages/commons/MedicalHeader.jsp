@@ -16,10 +16,10 @@
       <div class="container">
         <div class="header-bot">
           <a class="mobile-menu" href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
-          <a class="logo pull-left" href="Home"><img src="assets/img/logo.png" alt=""></a>
+          <a class="logo pull-left" href="Welcome"><img src="assets/img/logo.png" alt=""></a>
           <div class="nav pull-right">
             <ul class="list-inline">
-              <li id="menuCorporate"><a href="Medical">HOME</a></li>
+              <li id="menuCorporate"><a href="SSMCHealth">HOME</a></li>
               <li id="menuAbout"><a href="Medical-About">ABOUT</a></li>
               <li id="menuAServices"><a href="Medical-Services">SERVICES</a></li>
               <li id="menuBranches"><a href="Medical-Branches">HOSPITAS & CLINICS</a></li>
@@ -31,3 +31,7 @@
         </div>
       </div>
     </header>
+
+    
+    
+    <%@ include file="../commons/LoginModal.jsp"%>

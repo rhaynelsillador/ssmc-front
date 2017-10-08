@@ -22,22 +22,18 @@ public class SsmcFrontController {
 	private HttpServletResponse httpServletResponse;
 		
 	@AppicationAudit(module = Module.ALL, access = Access.ALL)
-	@RequestMapping(path={"/", "Home"}, method = RequestMethod.GET)
+	@RequestMapping(path={"/", "Welcome"}, method = RequestMethod.GET)
 	public String dashboard(ModelMap map){
-		return "pages/index";
+		return "pages/LandingPage";
 	}
 	
 	@AppicationAudit(module = Module.ALL, access = Access.ALL)
-	@RequestMapping(path="/Corporate", method = RequestMethod.GET, produces="text/html")
+	@RequestMapping(path="/SSMCGroup", method = RequestMethod.GET, produces="text/html")
 	public String updateAccounts(ModelMap map){
-		return "pages/corporate";
+		return "pages/SsmcHealthHospitals";
 	}
 	
-	@AppicationAudit(module = Module.ALL, access = Access.ALL)
-	@RequestMapping(path="/Medical", method = RequestMethod.GET, produces="text/html")
-	public String medical(ModelMap map){
-		return "pages/medical";
-	}
+	
 	
 	@AppicationAudit(module = Module.ALL, access = Access.ALL)
 	@RequestMapping(path="/About", method = RequestMethod.GET, produces="text/html")

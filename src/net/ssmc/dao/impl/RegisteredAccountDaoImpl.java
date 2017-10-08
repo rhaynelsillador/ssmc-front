@@ -25,6 +25,7 @@ public class RegisteredAccountDaoImpl implements RegisteredAccountDao {
 	private static final String FINDONEBYEMAILANPASS = "SELECT * FROM registered_account WHERE EMAIL=? AND PASSWORD = ? LIMIT 1";
 	private static final String INSERT = "INSERT INTO registered_account (email, password, number, datecreated, status) VALUES (?,?,?,?,?)";
 	private static final String FINDONE = "SELECT * FROM registered_account WHERE ID=?";
+	private static final String UPDATELASTLOGIN = "UPDATE registered_account SET datelastlogin = ? WHERE ID=?";
 	
 	@Override
 	public long create(RegisteredAccount account) throws Exception{
@@ -47,7 +48,7 @@ public class RegisteredAccountDaoImpl implements RegisteredAccountDao {
 	}
 
 	@Override
-	public RegisteredAccount findOne(int id)  throws Exception{
+	public RegisteredAccount findOne(long id)  throws Exception{
 		return jdbcTemplate.queryForObject(FINDONE, new Object[]{id}, new BeanPropertyRowMapper<RegisteredAccount>(RegisteredAccount.class));
 	}
 
@@ -59,6 +60,11 @@ public class RegisteredAccountDaoImpl implements RegisteredAccountDao {
 	@Override
 	public RegisteredAccount findOne(String email, String password) throws Exception{
 		return jdbcTemplate.queryForObject(FINDONEBYEMAILANPASS, new Object[]{email, password}, new BeanPropertyRowMapper<RegisteredAccount>(RegisteredAccount.class));
+	}
+
+	@Override
+	public void update(long id) throws Exception {
+		jdbcTemplate.update(UPDATELASTLOGIN, new Object[]{System.currentTimeMillis(), id});
 	}
 
 }

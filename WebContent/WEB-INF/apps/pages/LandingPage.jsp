@@ -19,7 +19,7 @@
     </header>
     <section>
       <div class="wow fadeInLeftBig">
-        <a class="corporate" href="Corporate">
+        <a class="corporate" href="SSMCGroup">
           <div class="no-skew">
             <img src="assets/img/business-man.png" alt="">
             <div class="corp-content">
@@ -31,7 +31,7 @@
         </a>
       </div>
       <div class="wow fadeInRightBig">
-        <a class="medical" href="Medical">
+        <a class="medical" href="SSMCHealth">
           <div class="no-skew">
             <img src="assets/img/male-doctor.png" alt="">
             <div class="medical-content">

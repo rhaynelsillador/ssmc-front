@@ -46,3 +46,6 @@
 	  <div class="footer-bot">Copyright (c) 2017. All Rights Reserved SSMC</div>
 	</footer>
 	<%-- <div id="preloader"></div> --%>
+	
+	
+    <%@ include file="../commons/LoginModal.jsp"%>
