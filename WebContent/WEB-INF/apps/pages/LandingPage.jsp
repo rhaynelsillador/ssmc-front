@@ -3,22 +3,28 @@
   <head>
     <meta charset="utf-8">
     <title>SSMC</title>
-    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+
+    <link rel="stylesheet" href="assets/sass/main.css">
+
+    <%-- <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
     <link rel="stylesheet" href="assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/vendor/animate.css">
     <link rel="stylesheet" href="assets/css/custom/global.css">
-    <link rel="stylesheet" href="assets/css/custom/landing.css">
+    <link rel="stylesheet" href="assets/css/custom/landing.css"> --%>
 
 
 
 
   </head>
-  <body>
+  <body class="landing">
     <header>
-      <img class="wow bounceInDown" src="assets/img/logo.png" alt="">
+      <div class="wow bounceInDown">
+        <img class="logo-anim" src="assets/img/logo.png" alt="">
+        <img class="logo-anim2" src="assets/img/logo.png" alt="">
+      </div>
     </header>
     <section>
-      <div class="wow fadeInLeftBig">
+      <%-- <div class="wow fadeInLeftBig">
         <a class="corporate" href="SSMCGroup">
           <div class="no-skew">
             <img src="assets/img/business-man.png" alt="">
@@ -42,7 +48,30 @@
           </div>
         </a>
       </div>
-      <div class="clearfix"></div>
+      <div class="clearfix"></div> --%>
+
+      <div class="landing-container">
+        <a href="Corporate" id="hospitals">
+          <div class="landing-content">
+            <img src="assets/img/landing4.png" alt="">
+            <div>
+              <h2>Hospitals</h2>
+              <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</span>
+            </div>
+          </div>
+          <div class="image"></div>
+        </a>
+        <a href="Medical" id="clinics">
+          <div class="landing-content">
+            <img src="assets/img/landing3.png" alt="">
+            <div>
+              <h2>Clinics</h2>
+              <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</span>
+            </div>
+          </div>
+          <div class="image"></div>
+        </a>
+      </div>
     </section>
     <footer>
       <span>Copyright (c) 2017. All Rights Reserved SSMC</span>
@@ -59,7 +88,7 @@
         console.log("G!");
 
         var viewportHeight = $(window).height();
-        $("section,.corporate,.medical").css("height",viewportHeight);
+        $("section,.corporate,.medical").css("height",viewportHeight-50);
 
         preloader();
         new WOW().init();

@@ -878,4 +878,126 @@ html.ismobile .welcome h1 {
 html.ismobile .welcome .welcome-carousel {
   width: 200%; }
 
+.landing header {
+  text-align: center;
+  color: #4a4a4a;
+  position: absolute;
+  z-index: 500;
+  width: 100%;
+  background: white; }
+  .landing header img {
+    width: 350px;
+    position: absolute;
+    margin: 20px auto;
+    opacity: 0;
+    left: 0;
+    right: 0; }
+.landing section {
+  position: relative;
+  padding-top: 100px;
+  width: 100%;
+  overflow: hidden; }
+.landing footer {
+  text-align: center;
+  color: #4a4a4a;
+  padding: 15px; }
+.landing .landing-content {
+  position: absolute;
+  z-index: 10;
+  -webkit-transform: skew(14deg);
+  -moz-transform: skew(14deg);
+  -o-transform: skew(14deg);
+  width: 260px;
+  right: 50%;
+  color: #fff;
+  bottom: 80px;
+  margin-right: -130px;
+  text-align: center; }
+  .landing .landing-content > div {
+    background: rgba(74, 144, 226, 0.85);
+    padding: 10px;
+    margin: -10px;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0px 0px 0px 8px rgba(255, 255, 255, 0.3); }
+    .landing .landing-content > div h2 {
+      margin-top: 5px; }
+  .landing .landing-content img {
+    display: block;
+    margin: 0px auto 25px;
+    width: 100px; }
+.landing .landing-container {
+  overflow: hidden;
+  height: 100%;
+  width: 100%; }
+.landing #hospitals {
+  width: 57%;
+  height: 100%;
+  margin: 0px;
+  -webkit-transform: skew(-14deg);
+  -moz-transform: skew(-14deg);
+  -o-transform: skew(-14deg);
+  background: red;
+  overflow: hidden;
+  position: relative;
+  display: block;
+  float: left;
+  margin-left: -7%; }
+  .landing #hospitals .image {
+    background: url(../../assets/img/landing1.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: -15%;
+    bottom: 0px;
+    -webkit-transform: skew(14deg);
+    -moz-transform: skew(14deg);
+    -o-transform: skew(14deg); }
+.landing #clinics {
+  width: 57%;
+  height: 100%;
+  margin: 0px;
+  -webkit-transform: skew(-14deg);
+  -moz-transform: skew(-14deg);
+  -o-transform: skew(-14deg);
+  background: red;
+  overflow: hidden;
+  position: relative;
+  display: block;
+  float: right;
+  margin-right: -7%; }
+  .landing #clinics .image {
+    background: url(../../assets/img/landing2.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: -8px;
+    left: -24%;
+    right: 0px;
+    bottom: 0px;
+    -webkit-transform: skew(14deg);
+    -moz-transform: skew(14deg);
+    -o-transform: skew(14deg); }
+  .landing #clinics .landing-content {
+    left: 50%;
+    margin-left: -130px; }
+    .landing #clinics .landing-content > div {
+      background: rgba(245, 135, 59, 0.85); }
+
+.logo-anim {
+  animation: logoFade 6200ms infinite ease-in-out; }
+
+.logo-anim2 {
+  animation: logoFade 6200ms 6200ms infinite ease-in-out; }
+
+@keyframes logoFade {
+  0% {
+    opacity: 0; }
+  15% {
+    opacity: 1; }
+  85% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
 /*# sourceMappingURL=main.css.map */
