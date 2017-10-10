@@ -18,59 +18,37 @@
   </head>
   <body class="landing">
     <header>
-      <div class="wow bounceInDown">
+      <div class="wow bounceInDown" data-wow-duration="1500ms" data-wow-delay="500ms">
         <img class="logo-anim" src="assets/img/logo.png" alt="">
         <img class="logo-anim2" src="assets/img/logo.png" alt="">
       </div>
     </header>
     <section>
-      <%-- <div class="wow fadeInLeftBig">
-        <a class="corporate" href="SSMCGroup">
-          <div class="no-skew">
-            <img src="assets/img/business-man.png" alt="">
-            <div class="corp-content">
-              <img class="icon-corp" src="assets/img/icon-corp.png" alt="">
-              <h1 id="businessTitle"></h1>
-              <p id="businessContent"></p>
-            </div>
-            </div>
-        </a>
-      </div>
-      <div class="wow fadeInRightBig">
-        <a class="medical" href="SSMCHealth">
-          <div class="no-skew">
-            <img src="assets/img/male-doctor.png" alt="">
-            <div class="medical-content">
-              <img src="assets/img/icon-medical.png" alt="" class="icon-medical">
-              <h1 id="clinicTitle"></h1>
-              <p id="clinicContent"></p>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="clearfix"></div> --%>
-
       <div class="landing-container">
-        <a href="Corporate" id="hospitals">
-          <div class="landing-content">
-            <img src="assets/img/landing4.png" alt="">
-            <div>
-              <h2>Hospitals</h2>
-              <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</span>
+        <div class="corp-container wow bounceInLeft" data-wow-duration="1500ms" data-wow-delay="500ms">
+          <a href="Corporate" id="hospitals">
+            <div class="landing-content">
+              <img src="assets/img/landing4.png" alt="">
+              <div>
+                <h2>Hospitals</h2>
+                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</span>
+              </div>
             </div>
-          </div>
-          <div class="image"></div>
-        </a>
-        <a href="Medical" id="clinics">
-          <div class="landing-content">
-            <img src="assets/img/landing3.png" alt="">
-            <div>
-              <h2>Clinics</h2>
-              <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</span>
+            <div class="image"></div>
+          </a>
+        </div>
+        <div class="med-conntainer wow bounceInRight" data-wow-duration="1500ms" data-wow-delay="500ms">
+          <a href="Medical" id="clinics">
+            <div class="landing-content">
+              <img src="assets/img/landing3.png" alt="">
+              <div>
+                <h2>Clinics</h2>
+                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</span>
+              </div>
             </div>
-          </div>
-          <div class="image"></div>
-        </a>
+            <div class="image"></div>
+          </a>
+        </div>
       </div>
     </section>
     <footer>
@@ -87,10 +65,8 @@
       $(document).ready(function(){
         console.log("G!");
 
-        var viewportHeight = $(window).height();
-        $("section,.corporate,.medical").css("height",viewportHeight-50);
-
         preloader();
+        resHeight();
         new WOW().init();
 
         POST("MainHeaderInfo", {}, function(data){
@@ -122,19 +98,15 @@
 
       }
 
-      // $(".corporate").hover(
-      //   function(){
-      //     $(this).css("z-index","1");
-      //     $(".medical").toggleClass("hvr-reverse").css("z-index","0");
-      //   }
-      // );
-      //
-      // $(".medical").hover(
-      //   function(){
-      //     $(this).css("z-index","1");
-      //     $(".corporate").toggleClass("hvr-reverse").css("z-index","0");
-      //   }
-      // );
+
+      function resHeight(){
+        var viewportHeight = $(window).height();
+        $("section,.corporate,.medical").css("height",viewportHeight-50);
+      }
+
+      $( window ).resize(function() {
+        resHeight();
+      });
     </script>
   </body>
 </html>
