@@ -913,15 +913,6 @@ html.ismobile .welcome .welcome-carousel {
   bottom: 80px;
   margin-right: -130px;
   text-align: center; }
-  .landing .landing-content > div {
-    background: rgba(74, 144, 226, 0.85);
-    padding: 10px;
-    margin: -10px;
-    display: block;
-    border-radius: 10px;
-    box-shadow: 0px 0px 0px 8px rgba(255, 255, 255, 0.3); }
-    .landing .landing-content > div h2 {
-      margin-top: 5px; }
   .landing .landing-content img {
     display: block;
     margin: 0px auto 25px;
@@ -937,7 +928,7 @@ html.ismobile .welcome .welcome-carousel {
   -webkit-transform: skew(-14deg);
   -moz-transform: skew(-14deg);
   -o-transform: skew(-14deg);
-  background: red;
+  background: #4a90e2;
   overflow: hidden;
   position: relative;
   display: block;
@@ -945,7 +936,8 @@ html.ismobile .welcome .welcome-carousel {
   margin-left: -7%; }
   .landing #hospitals .image {
     background: url(../../assets/img/landing1.png) no-repeat;
-    background-size: cover;
+    background-size: auto 100%;
+    background-position: right top;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -961,7 +953,7 @@ html.ismobile .welcome .welcome-carousel {
   -webkit-transform: skew(-14deg);
   -moz-transform: skew(-14deg);
   -o-transform: skew(-14deg);
-  background: red;
+  background: #f5873b;
   overflow: hidden;
   position: relative;
   display: block;
@@ -970,9 +962,12 @@ html.ismobile .welcome .welcome-carousel {
   .landing #clinics .image {
     background: url(../../assets/img/landing2.png) no-repeat;
     background-size: cover;
+    background-size: auto 100%;
+    background-position: left top;
+    position: absolute;
     position: absolute;
     top: -8px;
-    left: -24%;
+    left: -15%;
     right: 0px;
     bottom: 0px;
     -webkit-transform: skew(14deg);
@@ -981,8 +976,6 @@ html.ismobile .welcome .welcome-carousel {
   .landing #clinics .landing-content {
     left: 50%;
     margin-left: -130px; }
-    .landing #clinics .landing-content > div {
-      background: rgba(245, 135, 59, 0.85); }
 
 .logo-anim {
   animation: logoFade 6200ms infinite ease-in-out; }
