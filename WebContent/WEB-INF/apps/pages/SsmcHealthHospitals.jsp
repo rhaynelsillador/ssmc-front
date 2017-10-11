@@ -9,14 +9,14 @@
 
   <link rel="stylesheet" href="assets/css/custom/corporate.css">
   <body>
-  	<%@ include file="commons/CorporateHeader.jsp"%>
+  	<%@ include file="commons/SSMCHospitalsHeader.jsp"%>
     <%@ include file="commons/Preloader.jsp"%>
 
     <section>
       <div class="sec welcome">
         <div class="welcome-content wow fadeIn">
           <h3>Welcome to</h3>
-		  <h1>SSMC Group</h1>
+		  <h1>SSMC Hospitals</h1>
           <div id="headerInfo"></div>
           <br>
           <a href="#" class="btn btn-default hvr-grow">EXPLORE NOW</a>

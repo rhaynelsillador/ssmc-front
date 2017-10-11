@@ -26,24 +26,24 @@
     <section>
       <div class="landing-container">
         <div class="corp-container wow bounceInLeft" data-wow-duration="1500ms" data-wow-delay="500ms">
-          <a href="Corporate" id="hospitals">
+          <a href="SsmcHealthHospitals" id="hospitals">
             <div class="landing-content">
               <img src="assets/img/landing4.png" alt="">
               <div>
                 <h2>Hospitals</h2>
-                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</span>
+                <span id="businessContent"></span>
               </div>
             </div>
             <div class="image"></div>
           </a>
         </div>
         <div class="med-conntainer wow bounceInRight" data-wow-duration="1500ms" data-wow-delay="500ms">
-          <a href="Medical" id="clinics">
+          <a href="SsmcHealthClinics" id="clinics">
             <div class="landing-content">
               <img src="assets/img/landing3.png" alt="">
               <div>
                 <h2>Clinics</h2>
-                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</span>
+                <span id="clinicContent"></span>
               </div>
             </div>
             <div class="image"></div>
@@ -73,7 +73,7 @@
         	console.log("MainHeaderInfo : ", data);
         	for (var i = 0; i < data.info.length; i++) {
 				console.log(data.info[i]);
-				$("#"+data.info[i].type.toLowerCase()+"Title").html(data.info[i].title);
+				/* $("#"+data.info[i].type.toLowerCase()+"Title").html(data.info[i].title); */
 				$("#"+data.info[i].type.toLowerCase()+"Content").html(data.info[i].content);
 			}
         })

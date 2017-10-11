@@ -19,7 +19,7 @@
           <a class="logo pull-left" href="Welcome"><img src="assets/img/logo.png" alt=""></a>
           <div class="nav pull-right">
             <ul class="list-inline">
-              <li id="menuCorporate"><a href="SSMCHealth">HOME</a></li>
+              <li id="menuCorporate"><a href="SsmcHealthClinics">HOME</a></li>
               <li id="menuAbout"><a href="Medical-About">ABOUT</a></li>
               <li id="menuAServices"><a href="Medical-Services">SERVICES</a></li>
               <li id="menuBranches"><a href="Medical-Branches">HOSPITAS & CLINICS</a></li>

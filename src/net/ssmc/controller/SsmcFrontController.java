@@ -28,7 +28,7 @@ public class SsmcFrontController {
 	}
 	
 	@AppicationAudit(module = Module.ALL, access = Access.ALL)
-	@RequestMapping(path="/SSMCGroup", method = RequestMethod.GET, produces="text/html")
+	@RequestMapping(path="/SsmcHealthHospitals", method = RequestMethod.GET, produces="text/html")
 	public String updateAccounts(ModelMap map){
 		return "pages/SsmcHealthHospitals";
 	}

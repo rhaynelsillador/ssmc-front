@@ -3,7 +3,7 @@
   <%@ include file="commons/Assets.jsp"%>
   <link rel="stylesheet" href="assets/css/custom/corporate.css">
   <body>
-    <%@ include file="commons/CorporateHeader.jsp"%>
+    <%@ include file="commons/SSMCHospitalsHeader.jsp"%>
     <%@ include file="commons/Preloader.jsp"%>
     <section>
       <div class="sec welcome welcome-common">

@@ -4,7 +4,7 @@
   <%-- <link rel="stylesheet" href="assets/css/custom/corporate.css"> --%>
 
   <body>
-  	<%@ include file="../commons/MedicalHeader.jsp"%>
+  	<%@ include file="../commons/SSMCHealthClinicsHeader.jsp"%>
     <%@ include file="../commons/Preloader.jsp"%>
     <section id="faq">
       <div class="sec welcome welcome-common">

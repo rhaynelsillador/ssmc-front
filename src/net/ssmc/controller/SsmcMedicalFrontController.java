@@ -13,7 +13,7 @@ import net.ssmc.interceptor.AppicationAudit;
 public class SsmcMedicalFrontController {
 	
 	@AppicationAudit(module = Module.ALL, access = Access.ALL)
-	@RequestMapping(path="/SSMCHealth", method = RequestMethod.GET, produces="text/html")
+	@RequestMapping(path="/SsmcHealthClinics", method = RequestMethod.GET, produces="text/html")
 	public String medical(ModelMap map){
 		return "pages/medical/SsmcHealthCLinics";
 	}

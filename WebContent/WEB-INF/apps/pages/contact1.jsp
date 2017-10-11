@@ -2,7 +2,7 @@
 <html>
   <%@ include file="commons/Assets.jsp"%>
   <body>
-    <%@ include file="commons/CorporateHeader.jsp"%>
+    <%@ include file="commons/SSMCHospitalsHeader.jsp"%>
     <section>
       <div class="sec welcome">
         <h1>Contact us</h1>
@@ -11,7 +11,7 @@
         <!-- <a href="#" class="btn btn-default">EXPLORE NOW</a>
         <a href="#" class="btn btn-primary">CONTACT US</a> -->
       </div>
-      <%@ include file="commons/CorporateHeader.jsp"%>
+      <%@ include file="commons/SSMCHospitalsHeader.jsp"%>
     </section>
     <%@ include file="commons/CorporateFooter.jsp"%>
 
