@@ -75,8 +75,8 @@
           <div class="row">
             <div class="col-md-6">
               <div class="wow fadeInUp">
-                <h1>Need a medicine on the go?</h1>
-                <span>You have a partner with us in affordable and effective medicine <br /> Call us <span style="color: #f57e2b;">(02) 234-2345</span> and let us help you.</span>
+                <h1>Need a medicine on asdasthe go?</h1>
+                <span>You have a partner withasdasd us in affordable and effective medicine <br /> Call us <span style="color: #f57e2b;">(02) 234-2345</span> and let us help you.</span>
               </div>
               </div>
             <div class="col-md-6">

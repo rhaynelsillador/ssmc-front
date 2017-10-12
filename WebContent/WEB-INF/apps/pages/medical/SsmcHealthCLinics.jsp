@@ -119,7 +119,7 @@
 	        	$("#headerInfo").html(data.data.content);
 	        });
     	});
-	
+
     </script>
   </body>
 </html>

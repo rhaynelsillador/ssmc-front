@@ -177,7 +177,7 @@
             <br>
           </div>
           <div class="col-md-4 col-sm-3">
-            <ul  class="nav nav-pills wow fadeInRightBig">
+            <ul  class="nav nav-pills nav-service wow fadeInRightBig">
               <li class="active">
                 <a href="#service_1" data-toggle="tab" class="service-left">
                   <aside></aside>
@@ -268,7 +268,7 @@
             </div>
           </div>
           <div class="col-md-4 col-sm-3">
-            <ul  class="nav nav-pills wow fadeInLeftBig">
+            <ul  class="nav nav-pills nav-service wow fadeInLeftBig">
               <li>
                 <a href="#service_4" data-toggle="tab" class="service-right">
                   <aside></aside>

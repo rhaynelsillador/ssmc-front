@@ -235,6 +235,8 @@ footer {
   display: block;
   height: 56px;
   overflow: hidden; }
+  .big-tabination li .side span p {
+    margin: 0px !important; }
 .big-tabination .side aside {
   position: absolute;
   width: 66px;
@@ -560,6 +562,9 @@ footer {
       color: #7ac0cc; }
     .blue .nav-pills > li.active > a aside {
       background: #f58435; }
+
+.nav-service li {
+  width: 100%; }
 
 .service-left, .service-right {
   margin-bottom: 20px;
