@@ -2,19 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>SSMC</title>
-
     <link rel="stylesheet" href="assets/sass/main.css">
-
-    <%-- <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/vendor/animate.css">
-    <link rel="stylesheet" href="assets/css/custom/global.css">
-    <link rel="stylesheet" href="assets/css/custom/landing.css"> --%>
-
-
-
-
   </head>
   <body class="landing">
     <header>
@@ -37,7 +27,7 @@
             <div class="image"></div>
           </a>
         </div>
-        <div class="med-conntainer wow bounceInRight" data-wow-duration="1500ms" data-wow-delay="500ms">
+        <div class="med-container wow bounceInRight" data-wow-duration="1500ms" data-wow-delay="500ms">
           <a href="SsmcHealthClinics" id="clinics">
             <div class="landing-content">
               <img src="assets/img/landing3.png" alt="">
