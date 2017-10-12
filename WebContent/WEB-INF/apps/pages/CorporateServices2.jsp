@@ -15,14 +15,14 @@
           </a>
         </li>
         <li class="hidden">
-          <a href="#service_1_2" data-toggle="tab" class="service-left" id="service1_2">
+          <a href="#service_1_2" data-toggle="tab" class="service-left" id="service2_2">
             <aside></aside>
             <h5></h5>
             <span></span>
           </a>
         </li>
         <li class="hidden">
-          <a href="#service_2_2" data-toggle="tab" class="service-left" id="service2_2">
+          <a href="#service_2_2" data-toggle="tab" class="service-left" id="service4_2">
             <aside></aside>
             <h5></h5>
             <span></span>
@@ -101,14 +101,14 @@
     <div class="col-md-4 col-sm-3">
       <ul  class="nav nav-pills wow fadeInLeftBig">
       	<li class="hidden">
-          <a href="#service_3_2" data-toggle="tab" class="service-left" id="service3_2">
+          <a href="#service_3_2" data-toggle="tab" class="service-right" id="service1_2">
             <aside></aside>
             <h5></h5>
             <span></span>
           </a>
         </li>
         <li class="hidden">
-          <a href="#service_4_2" data-toggle="tab" class="service-right" id="service4_2">
+          <a href="#service_4_2" data-toggle="tab" class="service-right" id="service3_2">
             <aside></aside>
             <h5></h5>
             <span></span>
