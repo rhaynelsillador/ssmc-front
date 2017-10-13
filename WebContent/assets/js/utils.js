@@ -182,14 +182,25 @@ var dateformat = function dateformat(datetime){
 }
 
 var initCarousel = function initCarousel(){
-	$('.owl-carousel').owlCarousel({
+	$('.welcome .owl-carousel').owlCarousel({
         loop:true,
         nav:true,
         items:1,
         autoplay:true,
         autoplayTimeout:5000,
-        autoplayHoverPause: true,
+        // autoplayHoverPause:true
     });
+
+    $('.med-promo .owl-carousel').owlCarousel({
+          loop:true,
+          nav:true,
+          items:1,
+          autoplay:true,
+          autoplayTimeout:8000,
+          animateOut: 'fadeOutLeft',
+          animateIn: 'fadeInRight',
+          // autoplayHoverPause:true
+      });
 }
 
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
@@ -230,8 +241,8 @@ $(document).ready(function(e){
 		})
 		e.preventDefault();
 	})
-	
-	
+
+
 	$("#logoutMenu").click(function(e){
 		POST("AccountLogout", {}, function(data){
 	  		location.href = "Corporate";
@@ -240,23 +251,7 @@ $(document).ready(function(e){
 	})
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  console.log("john cena2");
+  // console.log("john cena2");
 
   $(".mobile-menu").click(function(){
     $(".nav.pull-right").slideToggle();

@@ -18,7 +18,9 @@
         <div class="corp-container wow bounceInLeft" data-wow-duration="1500ms" data-wow-delay="500ms">
           <a href="SsmcHealthHospitals" id="hospitals">
             <div class="landing-content">
-              <img src="assets/img/landing4.png" alt="">
+              <div class="landing-logo">
+                <img src="assets/img/landing4.png" alt="">
+              </div>
               <div>
                 <h2>Hospitals</h2>
                 <span id="businessContent"></span>
@@ -30,7 +32,9 @@
         <div class="med-container wow bounceInRight" data-wow-duration="1500ms" data-wow-delay="500ms">
           <a href="SsmcHealthClinics" id="clinics">
             <div class="landing-content">
-              <img src="assets/img/landing3.png" alt="">
+              <div class="landing-logo">
+                <img src="assets/img/landing3.png" alt="">
+              </div>
               <div>
                 <h2>Clinics</h2>
                 <span id="clinicContent"></span>

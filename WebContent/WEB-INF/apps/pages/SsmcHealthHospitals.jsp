@@ -70,8 +70,13 @@
 	  <%@ include file="CorporateServices2.jsp"%>
 	  <%@ include file="branchesList.jsp"%>
 
-      <div class="sec med-go">
-        <div class="container">
+      <div class="sec med-promo">
+        <div class="welcome-carousel owl-carousel" id="imageCarousel">
+          <div class="item"><img src="assets/img/promo-1.jpg" alt=""></div>
+          <div class="item"><img src="assets/img/promo-2.jpg" alt=""></div>
+          <div class="item"><img src="assets/img/promo-3.jpg" alt=""></div>
+        </div>
+        <%-- <div class="container">
           <div class="row">
             <div class="col-md-6">
               <div class="wow fadeInUp">
@@ -85,7 +90,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> --%>
       </div>
 
       <%@ include file="ContactUsForm.jsp"%>

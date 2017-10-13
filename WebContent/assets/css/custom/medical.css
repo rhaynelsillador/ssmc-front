@@ -304,17 +304,17 @@
   float: right;
 }
 
-.med-go{
+.med-promo{
   background: #faf8ee;
   text-align: center;
 }
 
-.med-go h1{
+.med-promo h1{
   color: #7dc5cf;
   margin-top: 50px;
 }
 
-.med-go div > div> div > span{
+.med-promo div > div> div > span{
   line-height: 25px;
   margin-top: 20px;
   display: block;
