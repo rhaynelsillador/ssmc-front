@@ -327,7 +327,7 @@
           </div>
         </div>
       </div>
-      <div class="sec med-go">
+      <div class="sec med-promo">
         <div class="container">
           <div class="row">
             <div class="col-md-6">

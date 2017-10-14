@@ -70,13 +70,18 @@
 	  <%@ include file="CorporateServices2.jsp"%>
 	  <%@ include file="branchesList.jsp"%>
 
-      <div class="sec med-go">
-        <div class="container">
+      <div class="sec med-promo">
+        <div class="welcome-carousel owl-carousel" id="imageCarousel">
+          <div class="item"><img src="assets/img/promo-1.jpg" alt=""></div>
+          <div class="item"><img src="assets/img/promo-2.jpg" alt=""></div>
+          <div class="item"><img src="assets/img/promo-3.jpg" alt=""></div>
+        </div>
+        <%-- <div class="container">
           <div class="row">
             <div class="col-md-6">
               <div class="wow fadeInUp">
-                <h1>Need a medicine on the go?</h1>
-                <span>You have a partner with us in affordable and effective medicine <br /> Call us <span style="color: #f57e2b;">(02) 234-2345</span> and let us help you.</span>
+                <h1>Need a medicine on asdasthe go?</h1>
+                <span>You have a partner withasdasd us in affordable and effective medicine <br /> Call us <span style="color: #f57e2b;">(02) 234-2345</span> and let us help you.</span>
               </div>
               </div>
             <div class="col-md-6">
@@ -85,7 +90,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> --%>
       </div>
 
       <%@ include file="ContactUsForm.jsp"%>

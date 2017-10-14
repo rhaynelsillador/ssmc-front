@@ -53,7 +53,7 @@
     <script type="text/javascript">
     	$("#menuFaq a").addClass("active");
     	var registrationErrorMessage = $("#registrationErrorMessage");
-    	
+
       	$(document).ready(function(){
         	console.log("G!");
         	// preloader();
@@ -70,7 +70,7 @@
 	        });
 
       	});
-		
+
       	$(".mc-form .form-control").blur(function() {
 	        console.log("ftgyh");
 	        console.log($(this).val());
@@ -81,7 +81,7 @@
 	        }
 
       	});
-      	
+
       	$("#registrationForm").submit(function(e){
 			var form = objectifyForm($( this ).serializeArray());
 			var btn = $( "#registrationForm button");

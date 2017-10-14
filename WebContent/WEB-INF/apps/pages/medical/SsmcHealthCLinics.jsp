@@ -7,7 +7,7 @@
   <%-- Owl Carousel --%>
   <link rel="stylesheet" href="assets/css/vendor/owl.carousel.min.css">
 
-  <link rel="stylesheet" href="assets/css/custom/corporate.css">
+  <%-- <link rel="stylesheet" href="assets/css/custom/corporate.css"> --%>
   <body>
   	<%@ include file="../commons/SSMCHealthClinicsHeader.jsp"%>
     <%@ include file="../commons/Preloader.jsp"%>
@@ -70,7 +70,7 @@
 	  <%@ include file="../CorporateServices2.jsp"%>
 	  <%@ include file="../branchesList.jsp"%>
 
-      <div class="sec med-go">
+      <div class="sec med-promo">
         <div class="container">
           <div class="row">
             <div class="col-md-6">
@@ -119,7 +119,7 @@
 	        	$("#headerInfo").html(data.data.content);
 	        });
     	});
-	
+
     </script>
   </body>
 </html>
