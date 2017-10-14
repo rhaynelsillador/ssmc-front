@@ -32,7 +32,7 @@
 	          $(".blue .nav li").removeClass("active");
 	        });
 
-	        POST("HeadersInformation", {"app" : "BUSINESS", "page" : "HospitalAndClinic"}, function(data){
+	        POST("HeadersInformation", {"app" : "CLINIC", "page" : "HospitalAndClinic"}, function(data){
 	        	data = data.data;
 	        	$("#headerTitle").html(data.title);
 	        	$("#headerContent").html(data.content);

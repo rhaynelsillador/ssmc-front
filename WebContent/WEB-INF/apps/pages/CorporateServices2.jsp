@@ -129,7 +129,7 @@
 
 <script>
 
-	POST("ServicesInformation", {"app": "BUSINESS", "num":2, "limit" : 6}, function(data){
+	POST("ServicesInformation", {"app": "HOSPITALS", "num":2, "limit" : 6}, function(data){
 		$.each(data.data, function(index, value){
 			$("#service"+index+"_2").parent().removeClass("hidden");
 			$("#service"+index+"_2 h5").html(value.title);

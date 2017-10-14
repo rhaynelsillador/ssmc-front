@@ -48,7 +48,9 @@
 
 	        POST("HeadersInformation", {"app":"CLINIC", "page":"Service"}, function(data){
 	        	console.log(data);
-	        	$("#headerInfo").html(data.data.content);
+	        	if(data.data){
+	        		$("#headerInfo").html(data.data.content);
+	        	}
 	        });
 
 	        POST("SystemImages", {"app":"CLINIC", "page":"Service", "module":"HEADER"}, function(data){
