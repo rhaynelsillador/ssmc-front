@@ -11,6 +11,7 @@
 	<bean id="contactUsDao" 		class="net.ssmc.dao.impl.ContactUsDaoImpl" />
 	<bean id="analyticsDao" 		class="net.ssmc.dao.impl.AnalyticsDaoImpl" />
 	<bean id="registeredAccountDao" class="net.ssmc.dao.impl.RegisteredAccountDaoImpl" />
+	<bean id="cityDao" 				class="net.ssmc.dao.impl.CityDaoImpl" />
 	
 	<!-- CMS DAO BEAN -->
 	<bean id="faqDao" 				class="net.cms.ssmc.dao.impl.FaqDaoImpl" />
@@ -18,6 +19,6 @@
 	<bean id="aboutUsDao" 			class="net.cms.ssmc.dao.impl.AboutUsDaoImpl" />
 	<bean id="headerDao" 			class="net.cms.ssmc.dao.impl.HeaderDaoImpl" />
 	<bean id="serviceDao" 			class="net.cms.ssmc.dao.impl.ServiceDaoImpl" />
-	<bean id="cityDao" 				class="net.ssmc.dao.impl.CityDaoImpl" />
+	<bean id="contactInformationDao" class="net.cms.ssmc.dao.impl.ContactInformationDaoImpl" />
 	
 </beans>

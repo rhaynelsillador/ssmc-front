@@ -13,9 +13,9 @@
 	          <div class="footer-box">
 	            <h5>CONTACT INFORMATION</h5>
 	            <ul class="list-unstyled">
-	              <li>Phone: +639176588492</li>
-	              <li>E-mail: support@ssmc.com</li>
-	              <li>Office: Km 17 W Service Rd, Paranaque, 1715 Metro Manila</li>
+	              <li>Phone: <span class="phone-contact"></span></li>
+	              <li>E-mail: <span class="email-contact"></span></li>
+	              <li>Office: <span class="address-contact"></span></li>
 	            </ul>
 	          </div>
 	        </div>
@@ -34,9 +34,9 @@
 	          <div class="footer-box">
 	            <h5>SOCIAL MEDIA</h5>
 	            <ul class="list-unstyled">
-	              <li><a href="#">twitter.com/ssmchealth</a></li>
-	              <li><a href="#">facebook.com/ssmchealth</a></li>
-	              <li><a href="#">youtube.com/ssmchealth</a></li>
+	              <li><a href="#" class="twitter-contact-footer"></a></li>
+	              <li><a href="#" class="facebook-contact-footer"></a></li>
+	              <li><a href="#" class="youtube-contact-footer"></a></li>
 	            </ul>
 	          </div>
 	        </div>
