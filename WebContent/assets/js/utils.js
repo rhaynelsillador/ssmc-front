@@ -197,8 +197,8 @@ var initCarousel = function initCarousel(){
           items:1,
           autoplay:true,
           autoplayTimeout:8000,
-          animateOut: 'fadeOutLeft',
-          animateIn: 'fadeInRight',
+          animateOut: 'fadeOut',
+          animateIn: 'fadeIn',
           // autoplayHoverPause:true
       });
 }
