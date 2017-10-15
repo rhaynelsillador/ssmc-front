@@ -1,16 +1,14 @@
 package net.cms.ssmc.services;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
-
-import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
 import net.cms.ssmc.dao.ImageDao;
-import net.ssmc.enums.App;
+import net.cms.ssmc.model.Advertisement;
 import net.ssmc.enums.Module;
-import net.ssmc.enums.Page;
 import net.ssmc.model.form.Form;
 
 public class ImageServices {
@@ -22,24 +20,6 @@ public class ImageServices {
 	public Map<String, Object> getImages(Form form){
 		System.err.println(form);
 		Map<String, Object> response = new HashMap<>();
-//		try {
-//			app = App.valueOf(request.get("app"));
-//		} catch (Exception e) {
-//			response.put("error", "Invalid App");
-//			return response;
-//		}
-//		try {
-//			page = Page.valueOf(request.get("page"));
-//		} catch (Exception e) {
-//			response.put("error", "Invalid Page");
-//			return response;
-//		}
-//		try {
-//			module = Module.valueOf(request.get("module"));
-//		} catch (Exception e) {
-//			response.put("error", "Invalid Module");
-//			return response;
-//		}
 		if(form.getApp() == null){
 			response.put("error", "Invalid App");
 			return response;
@@ -54,4 +34,7 @@ public class ImageServices {
 		return response;
 	}
 	
+	public List<Advertisement> getAllAdvertiseImages(){
+		return imageDao.retrieveImage(Module.ADVERTISEMENT);
+	}
 }

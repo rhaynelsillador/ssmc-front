@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import net.cms.ssmc.model.Advertisement;
 import net.cms.ssmc.model.Faq;
 import net.cms.ssmc.model.Header;
 import net.cms.ssmc.services.AboutUsServices;
@@ -130,5 +131,10 @@ public class SsmcRestFrontController {
 	@RequestMapping(path="/ClinicsAndHospitalList", method = {RequestMethod.POST, RequestMethod.GET}, produces={"application/json"})
 	public Map<String, List<Clinic>> clinicsAndHospitalList(){
 		return clinicServices.getClinicsAndHospitalList();
+	}
+	
+	@RequestMapping(path="/AdvertisementList", method = {RequestMethod.POST, RequestMethod.GET}, produces={"application/json"})
+	public List<Advertisement> advertisement(){
+		return imageServices.getAllAdvertiseImages();
 	}
 }

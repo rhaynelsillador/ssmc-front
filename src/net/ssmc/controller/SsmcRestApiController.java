@@ -14,6 +14,8 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import net.cms.ssmc.model.ContactInformation;
 import net.cms.ssmc.services.ContactInformationServices;
+import net.cms.ssmc.services.ImageServices;
+import net.ssmc.model.Image;
 import net.ssmc.model.RegisteredAccount;
 import net.ssmc.services.RegistrationServices;
 
@@ -47,5 +49,7 @@ public class SsmcRestApiController {
 	public List<ContactInformation> contactInformationList(){
 		return contactInformationServices.getAllContactInformation();
 	}
+	
+	
 	
 }
