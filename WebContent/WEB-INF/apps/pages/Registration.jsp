@@ -42,7 +42,7 @@
         <button type="submit" class="btn btn-submit">Submit</button>
         <br><br>
         <div class="text-center">
-          <a href="#" style="color: #3465aa; font-size: 16px;">Already a member?</a>
+          <a href="#" class="btn-member" style="color: #3465aa; font-size: 16px;">Already a member?</a>
         </div>
       </form>
     </div>
@@ -99,6 +99,11 @@
 			})
 			e.preventDefault();
 		})
+
+    $(".btn-member").click(function(){
+      event.preventDefault();
+      history.back(1);
+    });
 
     </script>
   </body>

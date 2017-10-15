@@ -4,7 +4,8 @@
           <div class="pull-left">
             <a href="#" class="phone-contact"><span class="h-icon"><i class="fa fa-fw fa-phone" aria-hidden="true"></i></span></a>&nbsp;&nbsp;
             <a href="#" class="email-contact"><span class="h-icon" style="font-size: 10px;"><i class="fa fa-fw fa-envelope" aria-hidden="true"></i></span></a>&nbsp;&nbsp;
-            <a href="#" data-toggle="modal" data-target="#login_modal" id="loginMenu" class="hidden"><span class="h-icon"><i class="fa fa-fw fa-sign-in" aria-hidden="true"></i></span>Login</a>
+            <a href="#" data-toggle="modal" data-target="#login_modal" id="loginMenu" class="hidden"><span class="h-icon"><i class="fa fa-fw fa-sign-in" aria-hidden="true"></i></span>Login</a>&nbsp;&nbsp;
+            <a href="#"><span class="h-icon" style="font-size: 10px;"><i class="fa fa-fw fa-envelope" aria-hidden="true"></i></span>Register</a>&nbsp;&nbsp;
             <a href="#" id="logoutMenu" class="hidden"><span class="h-icon"><i class="fa fa-fw fa-power-off" aria-hidden="true"></i></span>Logout</a>
           </div>
           <div class="pull-right">
@@ -36,7 +37,7 @@
 
 
     <%@ include file="../commons/LoginModal.jsp"%>
-    
+
     <script>
     $(document).ready(function(){
     	POST("ContactInformationList", {}, function(data){
@@ -48,15 +49,14 @@
     				$("."+value.name+"-contact-footer").html(value.value);
     				$("."+value.name+"-contact-footer").attr("href", value.value);
     				$("."+value.name+"-contact-footer").attr("target", "_blank");
-    				
+
     			}else{
     				$("."+value.name+"-contact").append(value.value);
     			}
     		})
     	})
     })
-    
-    
-    
+
+
+
     </script>
-    
