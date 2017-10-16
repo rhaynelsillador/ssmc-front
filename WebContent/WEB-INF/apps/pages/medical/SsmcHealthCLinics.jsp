@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
-<html>
+<html class="home">
   <%@ include file="../commons/Assets.jsp"%>
 
   <%-- Owl Carousel --%>
@@ -70,7 +70,7 @@
 	  <%@ include file="../CorporateServices2.jsp"%>
 	  <%@ include file="../branchesList.jsp"%>
 	  <%@ include file="../Advertisement.jsp"%>
-      
+
       <%@ include file="../ContactUsForm.jsp"%>
 
     </section>
