@@ -761,8 +761,8 @@ footer {
       margin-bottom: 20px; }
       .contact-box .contact-form .form-control option {
         color: #333; }
-    .contact-box .contact-form::placeholder {
-      color: #fff; }
+      .contact-box .contact-form .form-control::placeholder {
+        color: #fff; }
 
 .contact-submit {
   width: 70px;
