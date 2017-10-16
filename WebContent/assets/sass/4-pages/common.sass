@@ -19,19 +19,31 @@ html
   &.ismobile #page-loader
     display: none
 
+  header
+    top: 0
+    position: fixed
+    width: 100%
+    z-index: 999
+    background: #fff
+    box-shadow: rgba(0,0,0,0.2) 0 2px 6px 0
+    height: 90px
+
+  section
+    padding-top: 90px
+
 .preloader-img
   .animated
     animation-duration: 1800ms
     animation-delay: 1200ms
     animation-fill-mode: both
-  width: 80px
-  height: 80px
-  position: absolute
-  left: 50%
-  top: 50%
-  margin-top: -40px
-  margin-left: -40px
-  animation: loadScale 1200ms ease-in-out
+    width: 80px
+    height: 80px
+    position: absolute
+    left: 50%
+    top: 50%
+    margin-top: -40px
+    margin-left: -40px
+    animation: loadScale 1200ms ease-in-out
   img
     width: 100%
     animation: fadeInOut 3000ms 1200ms ease-in-out infinite
@@ -112,10 +124,14 @@ body
     display: block
     height: 56px
     line-height: 56px
-    color: #636363
-    font-weight: 600
+    color: #111
+    font-weight: 300
+    font-size: 12px
+    letter-spacing: 1px
+
     &.active
       color: #f79856
+      font-weight: 900
 
 .logo
   padding: 11px 0px
