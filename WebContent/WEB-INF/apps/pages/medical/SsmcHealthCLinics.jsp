@@ -1,14 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
-<html class="home">
+<html>
   <%@ include file="../commons/Assets.jsp"%>
 
   <%-- Owl Carousel --%>
   <link rel="stylesheet" href="assets/css/vendor/owl.carousel.min.css">
 
   <%-- <link rel="stylesheet" href="assets/css/custom/corporate.css"> --%>
-  <body>
+  <body class="home">
   	<%@ include file="../commons/SSMCHealthClinicsHeader.jsp"%>
     <%@ include file="../commons/Preloader.jsp"%>
 
