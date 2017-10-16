@@ -15,7 +15,7 @@
     </header>
     <section>
       <div class="landing-container">
-        <div class="corp-container wow bounceInLeft" data-wow-duration="1500ms" data-wow-delay="500ms">
+        <div class="corp-container wow slideInLeft" data-wow-duration="1500ms" data-wow-delay="500ms">
           <a href="SsmcHealthHospitals" id="hospitals">
             <div class="landing-content">
               <div class="landing-logo">
@@ -34,7 +34,7 @@
             <div class="image"></div>
           </a>
         </div>
-        <div class="med-container wow bounceInRight" data-wow-duration="1500ms" data-wow-delay="500ms">
+        <div class="med-container wow slideInRight" data-wow-duration="1500ms" data-wow-delay="500ms">
           <a href="SsmcHealthClinics" id="clinics">
             <div class="landing-content">
               <div class="landing-logo">
@@ -52,7 +52,7 @@
       </div>
     </section>
     <footer>
-      <span>Copyright (c) 2017. All Rights Reserved SSMC</span>
+      <span>&reg; 2017, South Super Highway Medical Center. km. 17, West Service Rd. Bgy. Marcelo, Parañaque City. Email: bestofcare@ssmciphil.com</span>
     </footer>
     <div id="preloader"></div>
 

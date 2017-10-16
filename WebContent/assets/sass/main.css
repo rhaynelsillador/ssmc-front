@@ -480,7 +480,7 @@ footer {
     transform: skewY(-3deg);
     right: 0px; }
   .welcome h1 {
-    font-weight: 900;
+    font-weight: 300;
     font-size: 62px;
     color: #fff; }
   .welcome h3 {
@@ -928,7 +928,7 @@ html.ismobile .welcome .welcome-carousel {
   width: 260px;
   right: 50%;
   color: #fff;
-  bottom: 80px;
+  bottom: 100px;
   margin-right: -130px;
   text-align: center; }
   .landing .landing-content .landing-logo {
