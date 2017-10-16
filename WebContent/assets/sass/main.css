@@ -321,8 +321,10 @@ footer {
   width: 100%;
   margin-bottom: 20px; }
 .service-content span {
-  text-align: left;
-  display: block; }
+  text-align: center;
+  display: block;
+  height: 60px;
+  overflow: hidden; }
 
 #login_modal .modal-content {
   height: 550px;
@@ -473,6 +475,9 @@ footer {
   margin: 20px 0px;
   border-radius: 10px;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2); }
+
+.home .choose-content p {
+  display: none; }
 
 .welcome {
   position: relative;
@@ -627,16 +632,18 @@ footer {
 
 .service-left span {
   display: block;
-  height: 56px;
-  overflow: hidden; }
+  height: 65px;
+  overflow: hidden;
+  font-size: 12px; }
 
 .service-right {
   text-align: left;
   padding: 10px 10px 10px 112px !important; }
   .service-right span {
     display: block;
-    height: 56px;
-    overflow: hidden; }
+    height: 65px;
+    overflow: hidden;
+    font-size: 12px; }
   .service-right aside {
     left: 25px;
     right: initial; }
@@ -669,7 +676,7 @@ footer {
     border-radius: 45px; }
   .service-center .service-content {
     text-align: center;
-    padding: 10px 40px 15px;
+    padding: 10px 15px 15px;
     animation: slide-down 500ms ease-in-out; }
     .service-center .service-content h4 {
       color: #7ac0cc; }
