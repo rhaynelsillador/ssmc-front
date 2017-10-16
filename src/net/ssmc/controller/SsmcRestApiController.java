@@ -45,6 +45,21 @@ public class SsmcRestApiController {
 		return registrationServices.registerAccount(registeredAccount);
 	}
 	
+	@RequestMapping(path="/LoginAccountInformation", method = RequestMethod.POST, produces={"application/json"})
+	public RegisteredAccount loginAccountInformation(){
+		RegisteredAccount registeredAccount = (RegisteredAccount) httpServletRequest.getSession().getAttribute("accountLoggedIn");
+		if(registeredAccount != null){
+			return registrationServices.getRegistreredAccountByEmail(registeredAccount.getEmail());
+		}
+		return registeredAccount;
+	}
+	
+	@RequestMapping(path="/AccountInformationUpdate", method = RequestMethod.POST, produces={"application/json"})
+	public ObjectNode accountInformationUpdate(@RequestBody RegisteredAccount registeredAccount){
+		System.out.println(registeredAccount);
+		return registrationServices.updateAccountInformation(registeredAccount);
+	}
+	
 	@RequestMapping(path="/ContactInformationList", method = {RequestMethod.POST, RequestMethod.GET}, produces={"application/json"})
 	public List<ContactInformation> contactInformationList(){
 		return contactInformationServices.getAllContactInformation();

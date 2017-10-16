@@ -9,5 +9,7 @@ public interface RegisteredAccountDao {
 	RegisteredAccount findOne(String email) throws Exception;
 	RegisteredAccount findOne(String email, String password) throws Exception;
 	void update(long id) throws Exception;
+	void update(long id, RegisteredAccount registeredAccount) throws Exception;
+	
 	
 }

@@ -27,6 +27,8 @@ public class RegisteredAccountDaoImpl implements RegisteredAccountDao {
 	private static final String INSERT = "INSERT INTO registered_account (email, password, number, datecreated, status, date) VALUES (?,?,?,?,?,?)";
 	private static final String FINDONE = "SELECT * FROM registered_account WHERE ID=?";
 	private static final String UPDATELASTLOGIN = "UPDATE registered_account SET datelastlogin = ? WHERE ID=?";
+	private static final String UPDATEINFO = "UPDATE registered_account SET email = ?, number=?, firstName=?, lastName=?, middleName=?, birthday=?, gender=?, address=? WHERE ID=?";
+	
 	
 	@Override
 	public long create(RegisteredAccount account) throws Exception{
@@ -67,6 +69,20 @@ public class RegisteredAccountDaoImpl implements RegisteredAccountDao {
 	@Override
 	public void update(long id) throws Exception {
 		jdbcTemplate.update(UPDATELASTLOGIN, new Object[]{System.currentTimeMillis(), id});
+	}
+
+	@Override
+	public void update(long id, RegisteredAccount registeredAccount) throws Exception {
+		jdbcTemplate.update(UPDATEINFO, new Object[]{
+				registeredAccount.getEmail(),
+				registeredAccount.getNumber(),
+				registeredAccount.getFirstName(),
+				registeredAccount.getLastName(),
+				registeredAccount.getMiddleName(),
+				registeredAccount.getBirthday(),
+				registeredAccount.getGender().toString(),
+				registeredAccount.getAddress(),
+				id});
 	}
 
 }

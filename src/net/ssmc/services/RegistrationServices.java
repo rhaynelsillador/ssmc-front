@@ -66,10 +66,19 @@ public class RegistrationServices {
 		return node;
 	}
 	
-	private RegisteredAccount getRegistreredAccountByEmail(String email){
+	public RegisteredAccount getRegistreredAccountByEmail(String email){
 		try {
 			return registeredAccountDao.findOne(email);
 		} catch (Exception e) {
+			return null;
+		}
+	}
+	
+	public RegisteredAccount getRegistreredAccountById(long id){
+		try {
+			return registeredAccountDao.findOne(id);
+		} catch (Exception e) {
+			e.printStackTrace();
 			return null;
 		}
 	}
@@ -105,6 +114,31 @@ public class RegistrationServices {
 		return node;
 	}
 	
-	
+	public ObjectNode updateAccountInformation(RegisteredAccount registeredAccount){
+		ObjectNode node = objectMapper.createObjectNode();
+		node.put(MessageKey.STATUS.getName(), Status.ERROR.toString());
+		if(registeredAccount.getFirstName().isEmpty()){
+			node.put(MessageKey.MESSAGE.getName(), "First name is required!");
+		}else if(registeredAccount.getLastName().isEmpty()){
+			node.put(MessageKey.MESSAGE.getName(), "Last name is required!");
+		}else if(registeredAccount.getBirthday().isEmpty()){
+			node.put(MessageKey.MESSAGE.getName(), "Birthday is required!");
+		}else if(registeredAccount.getEmail().isEmpty()){
+			node.put(MessageKey.MESSAGE.getName(), "Email is required!");
+		}else if(registeredAccount.getNumber() == 0){
+			node.put(MessageKey.MESSAGE.getName(), "Phone is required!");
+		}else{
+			try {
+				registeredAccountDao.update(registeredAccount.getId(), registeredAccount);
+				node.put(MessageKey.STATUS.getName(), Status.SUCCESS.toString());
+				node.put(MessageKey.MESSAGE.getName(), "Account information successfully updayed!");
+			} catch (Exception e) {
+				e.printStackTrace();
+				node.put(MessageKey.MESSAGE.getName(), "Account information unsuccessfully updayed!");
+			}
+		}
+		System.out.println(registeredAccount);
+		return node;
+	}
 	
 }

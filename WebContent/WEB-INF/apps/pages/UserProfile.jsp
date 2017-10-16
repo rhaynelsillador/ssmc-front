@@ -10,20 +10,20 @@
       <div class="container">
           <h3>Personal Information</h3>
             <div class="user-container">
-            <form>
+            <form id="loginAccountInformationForm">
               <div class="form-group">
                 <div class="row">
                   <div class="col-sm-4 col-xs-12">
                     <label for="exampleInputEmail1">Full name</label>
-                    <input type="text" class="form-control" id="" aria-describedby="" placeholder="First Name">
+                    <input type="text" class="form-control" id="firstName" name="firstName" aria-describedby="" placeholder="First Name">
                   </div>
                   <div class="col-sm-4 col-xs-12">
                     <label for="exampleInputEmail1">&nbsp;</label>
-                    <input type="text" class="form-control" id="" aria-describedby="" placeholder="Middle Name">
+                    <input type="text" class="form-control" id="middleName" name="middleName" aria-describedby="" placeholder="Middle Name">
                   </div>
                   <div class="col-sm-4 col-xs-12">
                     <label for="exampleInputEmail1">&nbsp;</label>
-                    <input type="text" class="form-control" id="" aria-describedby="" placeholder="Last Name">
+                    <input type="text" class="form-control" id="lastName" name="lastName" aria-describedby="" placeholder="Last Name">
                   </div>
                 </div>
               </div>
@@ -31,26 +31,37 @@
                 <div class="row">
                   <div class="col-sm-4 col-xs-12">
                     <label for="exampleInputEmail1">Birthday</label>
-                    <input type="date" class="form-control" id="" aria-describedby="" placeholder="">
+                    <input type="date" class="form-control" id="birthday" name="birthday" aria-describedby="" placeholder="Birthday">
                   </div>
                   <div class="col-sm-4 col-xs-12">
-                    <label for="exampleInputEmail1">Age</label>
-                    <input type="number" class="form-control" id="" aria-describedby="" placeholder="">
+                    <label for="exampleInputEmail1">Email</label>
+                    <input type="text" class="form-control" id="email" name="email" aria-describedby="" placeholder="Email">
                   </div>
+                  <div class="col-sm-4 col-xs-12">
+                    <label for="exampleInputEmail1">Phone</label>
+                    <input type="number" class="form-control" id="number" name="number" aria-describedby="" placeholder="Phone" maxlength="11">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="row">
                   <div class="col-sm-4 col-xs-12">
                     <label for="exampleInputEmail1">Gender</label>
                     <div style="margin-top: 6px;">
-                      <input type="radio" name="gender" value="male"> Male &nbsp;&nbsp;
-                      <input type="radio" name="gender" value="female"> Female
+                      <input type="radio" name="gender" value="MALE"> Male &nbsp;&nbsp;
+                      <input type="radio" name="gender" value="FEMALE"> Female
                     </div>
                   </div>
                 </div>
               </div>
               <div class="form-group">
                 <label for="exampleInputPassword1">Address</label>
-                <input type="text" class="form-control" id="" placeholder="">
+                <input type="text" class="form-control" id="address" name="address" placeholder="Address">
               </div>
               <br>
+              <div class="form-group hidden" id="informationMessage">
+		          <div class="alert" role="alert"></div>
+		      </div>
               <div class="form-group text-center">
                   <button type="submit" class="btn btn-primary">Save</button>
               </div>
@@ -75,7 +86,7 @@
                       <td><a href="#" class="btn btn-primary"><i class="fa fa-download" aria-hidden="true"></i>&nbsp;Download</a></td>
                     </tr>
                     <tr>
-                      <td>Sample test</td>
+                      <td>Sample test1</td>
                       <td>10/10/2017 5:00 am</td>
                       <td><a href="#" class="btn btn-primary"><i class="fa fa-download" aria-hidden="true"></i>&nbsp;Download</a></td>
                     </tr>
@@ -95,66 +106,64 @@
 
     </section>
     <%@ include file="commons/CorporateFooter.jsp"%>
-    <script type="text/javascript">
-    	$("#menuFaq a").addClass("active");
-      $(document).ready(function(){
-        console.log("G!");
-        // preloader();
-        wow = new WOW({offset: 300});
-        wow.init();
-        $(".blue .nav li a").click(function(){
-          console.log("gg");
-          $(".blue .nav li").removeClass("active");
-        });
-
-        POST("SystemImages", {"app":"HOSPITALS", "page":"Faq", "module":"HEADER"}, function(data){
-        	var imageCarousel = "";
-        	$.each(data.data, function(index, value){
-        		imageCarousel += '<div class="item"><img src="'+fileServer+value.image+'" alt=""></div>';
-        	})
-        	$("#imageCarousel").html(imageCarousel);
-        	initCarousel();
-        })
-
-        POST("HeadersInformation", {"app" : "HOSPITALS", "page" : "Faq"}, function(data){
-        	if(data.data){
-        		$("#headerContent").html("<p>"+data.data.content+"</p>");
-        	}
-        })
-
-        POST("FaqInformation", {"app" : "HOSPITALS"}, function(data){
-        	console.log(data);
-        	var faqBodyTitle = "";
-        	var faqBodyContent = "";
-        	$.each(data, function(index, value){
-        		var isActive = "";
-        		if(index == 0){
-        			isActive = "active";
-        		}
-
-        		faqBodyTitle += '<li '+isActive+'><a href="#faq_'+index+'" class="side" data-toggle="tab"><aside></aside><h4>'+value.title+'</h4></a></li>';
-
-        		faqBodyContent += '<div id="faq_'+index+'" class="tab-pane '+isActive+'"><h3>'+value.title+'</h3><h6>QUESTION</h6><div class="question-container"><span>'+value.question+'</span>'+
-                      '<br><br><span class="question-ask"></span><br><span class="question-date"></span></div><br><h6>ANSWERS</h6>'+
-                    	'<div class="answer-container"><span>'+value.answer+'</span>'+
-                      '<br><br><span class="answer-by"></span><br><span class="answer-position"></span></div></div>';
-        	});
-        	$("#faqBodyTitle").html(faqBodyTitle);
-        	$("#faqBodyContent").html(faqBodyContent);
-        })
-
-      });
-
-      // function preloader() {
-      //   $("header,section,footer").hide()
-      //
-      //   $(window).load(function(){
-      //     $("header,section,footer").fadeIn();
-      //     setTimeout(function(){ $('#preloader').fadeOut('slow'); }, 500);
-      //     console.log("peace out");
-      //   });
-      //
-      // }
+    <script type="text/javascript">  
+    	var loginAccountInformationForm = $('#loginAccountInformationForm');
+    	var accountid = '';
+    	POST("LoginAccountInformation", {}, function(data){
+    		console.log("LoginAccountInformation", data);
+    		$.each(data, function(index, value){
+  				if(index == "gender"){
+  					$("input[value='"+value+"']").attr('checked', true);
+  				}else if(index == "id"){
+  					accountid = value;
+  				}else
+	  				$("#"+index).val(value);
+    			
+    		})
+      	});
+    	
+      	$(document).ready(function(){
+	        console.log("G!");
+	        // preloader();
+	        wow = new WOW({offset: 300});
+	        wow.init();
+	        $(".blue .nav li a").click(function(){
+	          console.log("gg");
+	          $(".blue .nav li").removeClass("active");
+	        });
+			
+	       
+	        loginAccountInformationForm.submit(function(e){
+	        	var form = objectifyForm($( this ).serializeArray());
+	        	form.id = accountid;
+				var btn = $( "#loginAccountInformationForm button");
+				console.log("form", form);
+				POST("AccountInformationUpdate", form, function(data){
+		    		console.log("LoginAccountInformation", data);
+		    		var informationMessage = $("#informationMessage");
+		    		if(data.status == "SUCCESS"){
+		    			informationMessage.find(".alert").addClass("alert-success");
+		    			informationMessage.find(".alert").removeClass("alert-danger");
+		    		}else{
+		    			informationMessage.find(".alert").addClass("alert-danger");
+		    			informationMessage.find(".alert").removeClass("alert-success");
+		    		}
+		    		informationMessage.removeClass("hidden");
+		    		informationMessage.find(".alert").html(data.message);
+		      	});
+	        	e.preventDefault();
+	        })
+      	});
+      	
+      /* 	function Solution(test){
+        	var temp=0;
+	        for (i = 0; i < test.length; i++) {
+	        	if((test[i] > 9 && test[i] < 100) || (test[i] < -9 && test[i] > -100))
+	        		temp += test[i];
+	        }
+	        return temp;
+        } */
+		
     </script>
   </body>
 </html>

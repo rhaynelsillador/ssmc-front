@@ -68,7 +68,7 @@
 	            autoplayTimeout:5000,
 	            autoplayHoverPause: true,
 	        });
-
+	        
       	});
 
       	$(".mc-form .form-control").blur(function() {
@@ -81,7 +81,9 @@
 	        }
 
       	});
-
+	
+      	
+      	
       	$("#registrationForm").submit(function(e){
 			var form = objectifyForm($( this ).serializeArray());
 			var btn = $( "#registrationForm button");
