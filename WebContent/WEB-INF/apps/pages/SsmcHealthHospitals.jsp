@@ -28,7 +28,7 @@
       <div class="sec info">
         <div class="container">
           <div class="row">
-            <div class="col-sm-4 wow bounceInUp">
+            <div class="col-sm-4 wow slideInUp">
               <div class="info-box free-checkup">
                 <img src="assets/img/icon-info1.png" class="icon-info" alt="">
                 <h4>FREE CHECKUP</h4>
@@ -39,7 +39,7 @@
               </div>
 
             </div>
-            <div class="col-sm-4 wow bounceInUp">
+            <div class="col-sm-4 wow slideInUp">
               <div class="info-box emergency-care">
                 <h4>EMERGENCY CARE</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dui </p>
@@ -50,7 +50,7 @@
               </div>
 
             </div>
-            <div class="col-sm-4 wow bounceInUp">
+            <div class="col-sm-4 wow slideInUp">
               <div class="info-box qualified-doctors">
                 <img src="assets/img/icon-info2.png" class="icon-info" alt="">
                 <h4>QUALIFIED DOCTORS</h4>
