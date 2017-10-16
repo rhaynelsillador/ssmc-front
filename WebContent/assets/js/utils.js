@@ -1,4 +1,4 @@
-var fileServer = 'http://ssmcgroup.ph/FileServer/'
+var fileServer = 'http://localhost/FileServer/';
 
 function objectifyForm(formArray) {
   var returnArray = {};
@@ -236,7 +236,7 @@ $(document).ready(function(e){
 	  		if(data.status == "ERROR"){
 	  			$("#loginErrorMessage > div").html(data.message);
 	  		}else{
-	  			location.href = "Corporate";
+	  			location.href = "UserProfile";
 	  		}
 		})
 		e.preventDefault();
@@ -245,13 +245,10 @@ $(document).ready(function(e){
 
 	$("#logoutMenu").click(function(e){
 		POST("AccountLogout", {}, function(data){
-	  		location.href = "Corporate";
+	  		location.href = "SsmcHealthHospitals";
 		})
 		e.preventDefault();
 	})
-
-
-  // console.log("john cena2");
 
   $(".mobile-menu").click(function(){
     $(".nav.pull-right").slideToggle();

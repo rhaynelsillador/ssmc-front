@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.Timestamp;
+import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
@@ -23,7 +24,7 @@ public class RegisteredAccountDaoImpl implements RegisteredAccountDao {
 		
 	private static final String FINDONEBYEMAIL = "SELECT * FROM registered_account WHERE EMAIL=? LIMIT 1";
 	private static final String FINDONEBYEMAILANPASS = "SELECT * FROM registered_account WHERE EMAIL=? AND PASSWORD = ? LIMIT 1";
-	private static final String INSERT = "INSERT INTO registered_account (email, password, number, datecreated, status) VALUES (?,?,?,?,?)";
+	private static final String INSERT = "INSERT INTO registered_account (email, password, number, datecreated, status, date) VALUES (?,?,?,?,?,?)";
 	private static final String FINDONE = "SELECT * FROM registered_account WHERE ID=?";
 	private static final String UPDATELASTLOGIN = "UPDATE registered_account SET datelastlogin = ? WHERE ID=?";
 	
@@ -39,7 +40,8 @@ public class RegisteredAccountDaoImpl implements RegisteredAccountDao {
 		        statement.setString(2, AES.encrypt(account.getPassword()));
 		        statement.setLong(3, account.getNumber());
 		        statement.setTimestamp(4, new Timestamp(System.currentTimeMillis()));
-		        statement.setBoolean(5, account.isStatus());
+		        statement.setBoolean(5, true);
+		        statement.setDate(6, new java.sql.Date(System.currentTimeMillis()));
 		        return statement;
 		    }
 		}, holder);

@@ -25,7 +25,7 @@
           <label for="exampleInputEmail1">Email address</label>
         </div>
         <div class="form-group">
-          <input type="text" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="" name="number" maxlength="">
+          <input type="text" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="" name="number" maxlength="11">
           <label for="exampleInputEmail2">Number</label>
         </div>
         <div class="form-group">
@@ -94,7 +94,7 @@
 		  			registrationErrorMessage.removeClass("hidden");
 		  			$("#registrationErrorMessage > div").html(data.message);
 		  		}else{
-		  			location.href="Corporate";
+		  			location.href="SsmcHealthHospitals";
 		  		}
 			})
 			e.preventDefault();

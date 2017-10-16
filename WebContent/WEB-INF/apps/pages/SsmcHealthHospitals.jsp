@@ -101,7 +101,9 @@
 	        })
 
 	        POST("HeadersInformation", {"app":"HOSPITALS", "page":"Hospital"}, function(data){
-	        	$("#headerInfo").html(data.data.content);
+	        	if(data.data){
+	        		$("#headerInfo").html(data.data.content);
+	        	}
 	        });
     	});
 

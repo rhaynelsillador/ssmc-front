@@ -2,17 +2,17 @@
   <div class="header-top">
     <div class="container">
       <div class="pull-left">
-        <a href="#"><span class="h-icon"><i class="fa fa-fw fa-phone" aria-hidden="true"></i></span>+6398863555</a>&nbsp;&nbsp;
-        <a href="#"><span class="h-icon" style="font-size: 10px;"><i class="fa fa-fw fa-envelope" aria-hidden="true"></i></span>support@ssmc.com</a>&nbsp;&nbsp;
+        <a href="#" class="phone-contact"><span class="h-icon"><i class="fa fa-fw fa-phone" aria-hidden="true"></i></span></a>&nbsp;&nbsp;
+        <a href="#" class="email-contact"><span class="h-icon" style="font-size: 10px;"><i class="fa fa-fw fa-envelope" aria-hidden="true"></i></span></a>&nbsp;&nbsp;
         <a href="#" data-toggle="modal" data-target="#login_modal" id="loginMenu" class="hidden"><span class="h-icon"><i class="fa fa-fw fa-sign-in" aria-hidden="true"></i></span>Login</a>&nbsp;&nbsp;
-        <a href="Registration"><span class="h-icon"><i class="fa fa-fw fa-pencil" aria-hidden="true"></i></span>Register</a>&nbsp;&nbsp;
+        <a href="Registration" id="registrationMenu" class="hidden"><span class="h-icon"><i class="fa fa-fw fa-pencil" aria-hidden="true"></i></span>Register</a>&nbsp;&nbsp;
         <a href="#" id="logoutMenu" class="hidden"><span class="h-icon"><i class="fa fa-fw fa-power-off" aria-hidden="true"></i></span>Logout</a>
       </div>
       <div class="pull-right">
-        <a href="UserProfile"><span>Username</span></a>&nbsp;&nbsp;
-        <a href="#"><span class="h-icon hvr-radial-out"><i class="fa fa-facebook" aria-hidden="true"></i></span></a>
-        <a href="#"><span class="h-icon hvr-radial-out"><i class="fa fa-twitter" aria-hidden="true"></i></span></a>
-        <a href="#"><span class="h-icon hvr-radial-out"><i class="fa fa-youtube-play" aria-hidden="true"></i></span></a>
+      	<a href="UserProfile" id="loginUsername"><span></span></a>&nbsp;&nbsp;
+        <a href="#" class="facebook-contact"><span class="h-icon hvr-radial-out"><i class="fa fa-facebook" aria-hidden="true"></i></span></a>
+        <a href="#" class="twitter-contact"><span class="h-icon hvr-radial-out"><i class="fa fa-twitter" aria-hidden="true"></i></span></a>
+        <a href="#" class="youtube-contact"><span class="h-icon hvr-radial-out"><i class="fa fa-youtube-play" aria-hidden="true"></i></span></a>
       </div>
     </div>
   </div>
@@ -39,11 +39,27 @@
 	var email = '${sessionScope.accountLoggedIn.email}';
 	if(email == ""){
 		$("#loginMenu").removeClass("hidden");
+		$("#registrationMenu").removeClass("hidden");
 	}else{
 		$("#logoutMenu").removeClass("hidden");
+		$("#loginUsername > span").html('${sessionScope.accountLoggedIn.email}');
+		
 	}
+	$(document).ready(function(){
+    	POST("ContactInformationList", {}, function(data){
+    		console.log(data);
+    		$.each(data, function(index, value){
+    			if(value.name == "facebook" || value.name == "youtube" || value.name == "twitter"){
+    				$("."+value.name+"-contact").attr("href", value.value);
+    				$("."+value.name+"-contact").attr("target", "_blank");
+    				$("."+value.name+"-contact-footer").html(value.value);
+    				$("."+value.name+"-contact-footer").attr("href", value.value);
+    				$("."+value.name+"-contact-footer").attr("target", "_blank");
 
-
-	console.log(email == "" , email == undefined);
-
+    			}else{
+    				$("."+value.name+"-contact").append(value.value);
+    			}
+    		})
+    	})
+    })
 </script>
