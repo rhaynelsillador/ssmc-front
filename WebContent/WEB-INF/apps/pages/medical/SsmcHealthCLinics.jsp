@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="assets/css/vendor/owl.carousel.min.css">
 
   <%-- <link rel="stylesheet" href="assets/css/custom/corporate.css"> --%>
-  <body>
+  <body class="home">
   	<%@ include file="../commons/SSMCHealthClinicsHeader.jsp"%>
     <%@ include file="../commons/Preloader.jsp"%>
 
@@ -70,7 +70,7 @@
 	  <%@ include file="../CorporateServices2.jsp"%>
 	  <%@ include file="../branchesList.jsp"%>
 	  <%@ include file="../Advertisement.jsp"%>
-      
+
       <%@ include file="../ContactUsForm.jsp"%>
 
     </section>

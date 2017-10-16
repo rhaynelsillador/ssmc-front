@@ -15,7 +15,7 @@
         </div>
         <div class="col-md-9">
           <div class="tab-content tab-about wow fadeInRight" id="clinicCitiesContent">
-            
+
           </div>
         </div>
       </div>
@@ -24,9 +24,9 @@
 </div>
 
 <script>
-	
+
 	POST("ClinicsAndHospitals", {}, function(data){
-		var clinics = ""; 
+		var clinics = "";
 		var clinicCitiesContent="";
 		$.each(data.data, function(key, value){
 			 console.log(value);
@@ -37,7 +37,7 @@
 				 clinics += '<li class=""><a href="#'+(value.dateAdded+""+value.id)+'" data-toggle="tab">'+value.name+'</a></li>';
 				 clinicCitiesContent += '<div id="'+(value.dateAdded+""+value.id)+'" class="tab-pane">';
 			 }
-			 clinicCitiesContent += '<li><div class="branch-info">'+
+			 clinicCitiesContent += '<div><div class="branch-info">'+
              '<h4>'+value.name+'</h4>'+
              '<span>'+value.description+'</span>'+
              '<br>'+
@@ -52,14 +52,14 @@
            '<br>'+
            '<div class="map-container">'+
              '<div id="map" style="width:100%;height:300px"><iframe width="100%" height="300" frameborder="0" style="border:0" src="'+value.map+'" allowfullscreen></iframe></div>'+
-         	'</div></li>';
+         	'</div></div>';
 			 clinicCitiesContent += '</div>';
 		});
-		
+
 		$("#clinicCities").html(clinics);
 		$('#clinicCitiesContent').html(clinicCitiesContent)
-		
-		
+
+
 		var cityListContent = "";
 		var cityList = "";
 		var counter = 0;
@@ -69,12 +69,12 @@
 			if(counter == 0){
 				active = "active";
 			}
-	
+
 			cityListContent += '<div id="'+key.split(" ").join("")+'" class="tab-pane '+active+'"><ul id="pagination_'+key.split(" ").join("")+'">';
 			cityList += '<li class="'+active+'"><a href="#'+key.split(" ").join("")+'" data-toggle="tab">'+key+'</a></li>';
-			
-			
-	
+
+
+
 			$.each(value, function(index, details){
 				cityListContent +=  '<li><div class="branch-info">'+
 	              '<h4>'+details.name+'</h4>'+
@@ -95,20 +95,22 @@
 			})
 			cityListContent += '</ul></div><div class="pagination_holder_'+key.split(" ").join("")+'"></div> ';
 			counter++;
-			
-			
+
+
 			setTimeout(() => {
 				//initPagination("pagination_"+key.split(" ").join(""), 'pagination_holder_'+key.split(" ").join(""));
 			}, 2000);
-		
-			
+
+
 		}) */
 		//$('#clinicCities').html(cityList)
-		
-		
-		
+
+    if ($("body").hasClass("home")) {
+      $(".map-container").remove();
+    }
+
 	})
-	
+
 	function initPagination(containerID, holder){
 		$(function() {
 			$("div.pagination_holder_MakatiCity").jPages({
@@ -121,5 +123,10 @@
 			});
 	    });
 	}
+
+
+
+
+
 
 </script>
