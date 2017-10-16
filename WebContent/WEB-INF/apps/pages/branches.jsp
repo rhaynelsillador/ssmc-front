@@ -33,7 +33,7 @@
 	          $(".blue .nav li").removeClass("active");
 	        });
 			
-	        POST("SystemImages", {"app":"BUSINESS", "page":"HospitalAndClinic", "module":"HEADER"}, function(data){
+	        POST("SystemImages", {"app":"HOSPITALS", "page":"HospitalAndClinic", "module":"HEADER"}, function(data){
 	        	var imageCarousel = "";
 	        	$.each(data.data, function(index, value){
 	        		imageCarousel += '<div class="item"><img src="'+fileServer+value.image+'" alt=""></div>';
@@ -42,7 +42,7 @@
 	        	//initCarousel();
 	        })
 	        
-	        POST("HeadersInformation", {"app" : "BUSINESS", "page" : "HospitalAndClinic"}, function(data){
+	        POST("HeadersInformation", {"app" : "HOSPITALS", "page" : "HospitalAndClinic"}, function(data){
 	        	if(data.data){
 	        		data = data.data;
 		        	$("#headerContent").html(data.content);

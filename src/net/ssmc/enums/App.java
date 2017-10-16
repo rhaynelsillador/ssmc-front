@@ -2,7 +2,7 @@ package net.ssmc.enums;
 
 public enum App {
 
-	BUSINESS,
+	HOSPITALS,
 	CLINIC,
 	HOME
 	

@@ -29,7 +29,7 @@
 
 <script>
 
-	POST("ServicesInformation", {"app": "BUSINESS", "num":1, "limit" : 3}, function(data){
+	POST("ServicesInformation", {"app": "HOSPITALS", "num":1, "limit" : 3}, function(data){
 		data = data.data;
 		var corporateServicesTitle1 = "";
 		var corporateServicesContent1 = "";

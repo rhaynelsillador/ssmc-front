@@ -8,7 +8,8 @@
     <%@ include file="commons/Preloader.jsp"%>
     <section id="faq">
       <div class="sec welcome welcome-common">
-        <div id="headerInfo"></div>
+        <h1 id="headerTitle">FAQ Services</h1>
+        <span id="headerContent"></span>
         <div class="welcome-background" id="imageCarousel">
         </div>
       </div>
@@ -43,7 +44,7 @@
           $(".blue .nav li").removeClass("active");
         });
 
-        POST("SystemImages", {"app":"BUSINESS", "page":"Faq", "module":"HEADER"}, function(data){
+        POST("SystemImages", {"app":"HOSPITALS", "page":"Faq", "module":"HEADER"}, function(data){
         	var imageCarousel = "";
         	$.each(data.data, function(index, value){
         		imageCarousel += '<div class="item"><img src="'+fileServer+value.image+'" alt=""></div>';
@@ -52,11 +53,13 @@
         	initCarousel();
         })
 
-        POST("HeadersInformation", {"app" : "BUSINESS", "page" : "Faq"}, function(data){
-        	$("#headerInfo").html(data.data.content);
+        POST("HeadersInformation", {"app" : "HOSPITALS", "page" : "Faq"}, function(data){
+        	if(data.data){
+        		$("#headerContent").html("<p>"+data.data.content+"</p>");
+        	}
         })
 
-        POST("FaqInformation", {"app" : "BUSINESS"}, function(data){
+        POST("FaqInformation", {"app" : "HOSPITALS"}, function(data){
         	console.log(data);
         	var faqBodyTitle = "";
         	var faqBodyContent = "";

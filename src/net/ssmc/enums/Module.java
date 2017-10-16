@@ -12,5 +12,6 @@ public enum Module {
 	ABOUTUS,
 	HEADER, 
 	SERVICE,
+	ADVERTISEMENT;
 	
 }

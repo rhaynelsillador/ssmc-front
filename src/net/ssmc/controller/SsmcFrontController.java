@@ -70,4 +70,10 @@ public class SsmcFrontController {
 	public String registration(ModelMap map){
 		return "pages/Registration";
 	}
+	
+	@AppicationAudit(module = Module.ALL, access = Access.ALL)
+	@RequestMapping(path="/UserProfile", method = RequestMethod.GET, produces="text/html")
+	public String userProfile(ModelMap map){
+		return "pages/UserProfile";
+	}
 }

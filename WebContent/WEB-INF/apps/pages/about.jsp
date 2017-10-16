@@ -9,8 +9,7 @@
       <div class="sec welcome welcome-common">
         <h1 id="aboutUsHeaderTitle">About us</h1>
         <span id="aboutUsHeaderContent">We have the most advance medical <br /> technology and innovations</span>
-        <div class="welcome-background">
-          <img src="assets/img/banner-about.jpg" alt="">
+        <div class="welcome-background" id="imageCarousel">
         </div>
 
       </div>
@@ -28,45 +27,8 @@
               </div>
               <div class="col-md-9">
                 <div class="tab-content tab-about wow fadeInRight" id="aboutUsContent">
-                  <div id="about_1" class="tab-pane active">
-                      <h3>Introduction</h3>
-                      <br>
-                      <div class="about-img">
-                        <img src="assets/img/banner.png" alt="">
-                      </div>
-                      <br>
-                      <div class="about-info">
-                      <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <br><br> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+                  
 
-                    </div>
-
-                  </div>
-                  <div id="about_2" class="tab-pane">
-                      <h3>Mission & Vision</h3>
-                      <br>
-                      <div class="about-img">
-                        <img src="assets/img/banner.png" alt="">
-                      </div>
-                      <br>
-                      <div class="about-info">
-                      <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
-
-                    </div>
-
-                  </div>
-                  <div id="about_3" class="tab-pane">
-                      <h3>Certifications</h3>
-                      <br>
-                      <div class="about-img">
-                        <img src="assets/img/banner.png" alt="">
-                      </div>
-                      <br>
-                      <div class="about-info">
-                      <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
-
-                    </div>
-
-                  </div>
                 </div>
               </div>
             </div>
@@ -93,8 +55,16 @@
 	 	$("#aboutUsHeaderTitle").html(data.title);
 	 	$("#aboutUsHeaderContent").html(data.content);
 	})
-
-	POST("AboutUsInformation?app=BUSINESS", {}, function(data){
+	
+	POST("SystemImages", {"app":"HOSPITALS", "page":"About", "module":"HEADER"}, function(data){
+        	var imageCarousel = "";
+        	$.each(data.data, function(index, value){
+        		imageCarousel += '<div class="item"><img src="'+fileServer+value.image+'" alt=""></div>';
+        	})
+        	$("#imageCarousel").html(imageCarousel);
+        })
+	
+	POST("AboutUsInformation?app=HOSPITALS", {}, function(data){
 		data = data.data
 		console.log(data);
 		var aboutUsMenus  = "";

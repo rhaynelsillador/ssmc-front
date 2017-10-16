@@ -69,29 +69,9 @@
       <%@ include file="CorporateServices1.jsp"%>
 	  <%@ include file="CorporateServices2.jsp"%>
 	  <%@ include file="branchesList.jsp"%>
+	  <%@ include file="Advertisement.jsp"%>
 
-      <div class="sec med-promo">
-        <div class="welcome-carousel owl-carousel" id="imageCarousel">
-          <div class="item"><img src="assets/img/promo-1.jpg" alt=""></div>
-          <div class="item"><img src="assets/img/promo-2.jpg" alt=""></div>
-          <div class="item"><img src="assets/img/promo-3.jpg" alt=""></div>
-        </div>
-        <%-- <div class="container">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="wow fadeInUp">
-                <h1>Need a medicine on asdasthe go?</h1>
-                <span>You have a partner withasdasd us in affordable and effective medicine <br /> Call us <span style="color: #f57e2b;">(02) 234-2345</span> and let us help you.</span>
-              </div>
-              </div>
-            <div class="col-md-6">
-              <div class="wow fadeInDown">
-                <img src="assets/img/medicine.png" style="width: 380px; "alt="">
-              </div>
-            </div>
-          </div>
-        </div> --%>
-      </div>
+      
 
       <%@ include file="ContactUsForm.jsp"%>
 
@@ -111,7 +91,7 @@
 	          $(".blue .nav li").removeClass("active");
 	        });
 
-	        POST("SystemImages", {"app":"BUSINESS", "page":"Corporate", "module":"HEADER"}, function(data){
+	        POST("SystemImages", {"app":"HOSPITALS", "page":"Hospital", "module":"HEADER"}, function(data){
 	        	var imageCarousel = "";
 	        	$.each(data.data, function(index, value){
 	        		imageCarousel += '<div class="item"><img src="'+fileServer+value.image+'" alt=""></div>';
@@ -120,7 +100,7 @@
 	        	initCarousel();
 	        })
 
-	        POST("HeadersInformation", {"app":"BUSINESS", "page":"Corporate"}, function(data){
+	        POST("HeadersInformation", {"app":"HOSPITALS", "page":"Hospital"}, function(data){
 	        	$("#headerInfo").html(data.data.content);
 	        });
     	});

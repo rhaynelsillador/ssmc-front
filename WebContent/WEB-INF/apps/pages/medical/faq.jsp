@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
   <%@ include file="../commons/Assets.jsp"%>
-  <%-- <link rel="stylesheet" href="assets/css/custom/corporate.css"> --%>
+  <link rel="stylesheet" href="assets/css/custom/corporate.css">
 
   <body>
   	<%@ include file="../commons/SSMCHealthClinicsHeader.jsp"%>
     <%@ include file="../commons/Preloader.jsp"%>
     <section id="faq">
       <div class="sec welcome welcome-common">
-        <div id="headerInfo"></div>
+      	<h1 id="headerTitle">FAQ Services</h1>
+        <span id="headerContent"></span>
         <div class="welcome-background" id="imageCarousel">
         </div>
       </div>
@@ -53,7 +54,9 @@
         })
 
         POST("HeadersInformation", {"app" : "CLINIC", "page" : "Faq"}, function(data){
-        	$("#headerInfo").html(data.data.content);
+        	if(data.data){
+        		$("#headerContent").html("<p>"+data.data.content+"</p>");
+        	}
         })
 
         POST("FaqInformation", {"app" : "CLINIC"}, function(data){

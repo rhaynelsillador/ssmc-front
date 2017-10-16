@@ -42,7 +42,7 @@ public class HeaderServices {
 	
 	public Header getCorporateHeader(){
 		try {
-			return headerDao.retrieve(App.BUSINESS, Page.Corporate);
+			return headerDao.retrieve(App.HOSPITALS, Page.Hospital);
 		} catch (Exception e) {
 		}return new Header();
 	}
@@ -56,7 +56,7 @@ public class HeaderServices {
 	
 	public Header getServicesHeader(){
 		try {
-			return headerDao.retrieve(App.BUSINESS, Page.Service);
+			return headerDao.retrieve(App.HOSPITALS, Page.Service);
 		} catch (Exception e) {
 		}
 		return new Header();
@@ -64,7 +64,7 @@ public class HeaderServices {
 	
 	public Header getClinicHeader(){
 		try {
-			return headerDao.retrieve(App.BUSINESS, Page.HospitalAndClinic);
+			return headerDao.retrieve(App.HOSPITALS, Page.HospitalAndClinic);
 		} catch (Exception e) {
 		}
 		return new Header();
