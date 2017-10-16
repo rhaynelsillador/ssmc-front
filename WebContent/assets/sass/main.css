@@ -999,7 +999,8 @@ html.ismobile .welcome .welcome-carousel {
   position: relative;
   display: block;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  border-left: #fff solid 12px; }
   .landing #clinics .image {
     background: url(../../assets/img/landing2.png) no-repeat;
     background-size: cover;

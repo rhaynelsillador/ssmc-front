@@ -22,8 +22,13 @@
                 <img src="assets/img/landing4.png" alt="">
               </div>
               <div>
-                <h2>Hospitals</h2>
-                <span id="businessContent"></span>
+                <h2>Hospitals Group</h2>
+                <!-- <span id="businessContent"> -->
+                <span>
+                  Affordable Quality Healthcare in a hospital setting.</br></br>
+                  <!-- SSMC - Paranaque City</br></br>
+                  Cruz - Rabe Maternity and General Hospital-Taguig City -->
+                </span>
               </div>
             </div>
             <div class="image"></div>
@@ -36,8 +41,9 @@
                 <img src="assets/img/landing3.png" alt="">
               </div>
               <div>
-                <h2>Clinics</h2>
-                <span id="clinicContent"></span>
+                <h2>Clinics Group</h2>
+                <!-- <span id="clinicContent"></span> -->
+                <span>Efficient Diagnostics and Screening  Healthcare Services for Institutional (APEs, Pre-employment, Clinic Manning, etc. ), HMOs and Individuals</span>
               </div>
             </div>
             <div class="image"></div>
