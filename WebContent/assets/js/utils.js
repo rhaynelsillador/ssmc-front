@@ -234,6 +234,7 @@ $(document).ready(function(e){
 		POST("AccountLogin", form, function(data){
 	  		btn.removeAttr("disabled");
 	  		if(data.status == "ERROR"){
+	  			$("#loginErrorMessage").removeClass("hidden");
 	  			$("#loginErrorMessage > div").html(data.message);
 	  		}else{
 	  			location.href = "UserProfile";
