@@ -32,6 +32,19 @@ html
     padding-top: 90px
 
 .preloader-img
+  width: 80px
+  height: 80px
+  position: absolute
+  left: 50%
+  top: 50%
+  margin-top: -40px
+  margin-left: -40px
+  animation: loadScale 1200ms ease-in-out
+
+  img
+    width: 100%
+    animation: fadeInOut 3000ms 1200ms ease-in-out infinite
+
   .animated
     animation-duration: 1800ms
     animation-delay: 1200ms
@@ -44,9 +57,7 @@ html
     margin-top: -40px
     margin-left: -40px
     animation: loadScale 1200ms ease-in-out
-  img
-    width: 100%
-    animation: fadeInOut 3000ms 1200ms ease-in-out infinite
+
 
 @keyframes loadScale
   0%
