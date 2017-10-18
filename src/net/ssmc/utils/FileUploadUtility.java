@@ -70,7 +70,7 @@ public class FileUploadUtility {
 		return map;
 	}
 	
-	protected String getSaltString() {
+	public static String getSaltString() {
         String SALTCHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890";
         StringBuilder salt = new StringBuilder();
         Random rnd = new Random();

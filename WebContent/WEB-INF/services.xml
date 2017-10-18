@@ -7,6 +7,8 @@
 	<bean id="properties" 			class="net.ssmc.utils.Properties"/>
 	<bean id="clinicServices" 		class="net.ssmc.services.ClinicServices" />
 	<bean id="cityServices" 		class="net.ssmc.services.CityServices" />
+	<bean id="examResultServices" 	class="net.ssmc.services.ExamResultServices" />
+	
 	
 	<bean id="gmailUtility" 		class="net.ssmc.utils.GmailUtility" init-method="init"/>
 	<bean id="contactUsServices" 	class="net.ssmc.services.ContactUsServices" />

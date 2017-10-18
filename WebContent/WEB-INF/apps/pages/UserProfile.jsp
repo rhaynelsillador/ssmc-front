@@ -69,35 +69,22 @@
             </div>
             <br>
             <h3>Test Results</h3>
-            <div class="user-container" >
+            <!-- <div class="user-container" >
             	<label>UNDER DEVELOPMENT</label>
-            </div>
-            <div class="user-container hidden" >
+            </div> -->
+            <div class="user-container" >
               <div class="table-container">
-                <table class="table table-striped">
+                <table class="table table-striped" id="accountTestResultTable">
                   <thead>
                     <tr>
                       <th>Test Name</th>
-                      <th>Date Taken</th>
+                      <th>Date Examined</th>
+                      <th>Date Released</th>
                       <th>Results</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td>Sample test</td>
-                      <td>10/10/2017 5:00 am</td>
-                      <td><a href="#" class="btn btn-primary"><i class="fa fa-download" aria-hidden="true"></i>&nbsp;Download</a></td>
-                    </tr>
-                    <tr>
-                      <td>Sample test1</td>
-                      <td>10/10/2017 5:00 am</td>
-                      <td><a href="#" class="btn btn-primary"><i class="fa fa-download" aria-hidden="true"></i>&nbsp;Download</a></td>
-                    </tr>
-                    <tr>
-                      <td>Sample test</td>
-                      <td>10/10/2017 5:00 am</td>
-                      <td><a href="#" class="btn btn-primary"><i class="fa fa-download" aria-hidden="true"></i>&nbsp;Download</a></td>
-                    </tr>
+                    
                   </tbody>
                 </table>
               </div>
@@ -135,7 +122,8 @@
 	          $(".blue .nav li").removeClass("active");
 	        });
 			
-	       
+	        loadTestResult();
+	        
 	        loginAccountInformationForm.submit(function(e){
 	        	var form = objectifyForm($( this ).serializeArray());
 	        	form.id = accountid;
@@ -157,16 +145,21 @@
 	        	e.preventDefault();
 	        })
       	});
-      	
-      /* 	function Solution(test){
-        	var temp=0;
-	        for (i = 0; i < test.length; i++) {
-	        	if((test[i] > 9 && test[i] < 100) || (test[i] < -9 && test[i] > -100))
-	        		temp += test[i];
-	        }
-	        return temp;
-        } */
 		
+      	var loadTestResult = function(){
+      		POST("AccountExamResult", {}, function(data){
+      			var data = data.data;
+      			var html = "";
+      			for (var i = 0; i < data.length; i++) {
+					console.log(data[i]);
+					html += '<tr><td>'+data[i].name+'</td><td>'+moment(data[i].dateExamined).format("YYYY-MM-DD HH:mm:ss")+'</td>'+
+						'<td>'+moment(data[i].dateEncoded).format("YYYY-MM-DD HH:mm:ss")+'</td>'+
+	                    '<td><a href="'+fileServer+"upload/"+data[i].result+'" class="btn btn-primary" target="_blank"><i class="fa fa-download" aria-hidden="true"></i>&nbsp;Download</a></td></tr>';
+				}
+      			$("#accountTestResultTable tbody").html(html);
+      		})
+      	}
+      	
     </script>
   </body>
 </html>

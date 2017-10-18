@@ -68,7 +68,7 @@ public class RegisteredAccountDaoImpl implements RegisteredAccountDao {
 
 	@Override
 	public void update(long id) throws Exception {
-		jdbcTemplate.update(UPDATELASTLOGIN, new Object[]{System.currentTimeMillis(), id});
+		jdbcTemplate.update(UPDATELASTLOGIN, new Object[]{new Timestamp(System.currentTimeMillis()), id});
 	}
 
 	@Override

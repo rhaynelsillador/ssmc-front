@@ -1,6 +1,7 @@
 package net.ssmc.controller;
 
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -15,8 +16,10 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import net.cms.ssmc.model.ContactInformation;
 import net.cms.ssmc.services.ContactInformationServices;
 import net.cms.ssmc.services.ImageServices;
+import net.ssmc.model.ExamResult;
 import net.ssmc.model.Image;
 import net.ssmc.model.RegisteredAccount;
+import net.ssmc.services.ExamResultServices;
 import net.ssmc.services.RegistrationServices;
 
 @RestController
@@ -28,6 +31,8 @@ public class SsmcRestApiController {
 	private HttpServletRequest httpServletRequest;
 	@Autowired
 	private ContactInformationServices contactInformationServices;
+	@Autowired
+	private ExamResultServices examResultServices;
 	
 	@RequestMapping(path="/AccountLogin", method = RequestMethod.POST, produces={"application/json"})
 	public ObjectNode accountLogin(@RequestBody RegisteredAccount registeredAccount){
@@ -65,6 +70,10 @@ public class SsmcRestApiController {
 		return contactInformationServices.getAllContactInformation();
 	}
 	
+	@RequestMapping(path="/AccountExamResult", method = {RequestMethod.POST, RequestMethod.GET}, produces={"application/json"})
+	public Map<String, List<ExamResult>> accountExamResult(){
+		return examResultServices.getAccountExamResult();
+	}
 	
 	
 }

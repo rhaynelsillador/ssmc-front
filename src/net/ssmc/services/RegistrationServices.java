@@ -31,7 +31,7 @@ public class RegistrationServices {
 	private static final String EMAILEXIST  		= "Email already registered.";
 	private static final String INVALIDUSERPASS		= "Invalid username and password!";
 	
-	private RegisteredAccount registeredAccount;
+
 	
 	public ObjectNode accountLogin(RegisteredAccount registeredAccount){
 		ObjectNode node = objectMapper.createObjectNode();
@@ -42,20 +42,15 @@ public class RegistrationServices {
 			node.put(MessageKey.CODE.getName(), Code.INVALIDEMAIL.getCode());
 		}
 		try {
-			this.registeredAccount = registeredAccountDao.findOne(registeredAccount.getEmail(), AES.encrypt(registeredAccount.getPassword()));
-			httpServletRequest.getSession().setAttribute("accountLoggedIn", registeredAccount);
+			RegisteredAccount loginAccount = registeredAccountDao.findOne(registeredAccount.getEmail(), AES.encrypt(registeredAccount.getPassword()));
+			System.out.println("loginAccount : "+loginAccount);
+			if(loginAccount != null){
+				httpServletRequest.getSession().setAttribute("accountLoggedIn", loginAccount);
+				registeredAccountDao.update(loginAccount.getId());
+			}
 			
-			new Thread(new Runnable() {
-				
-				@Override
-				public void run() {
-					try {
-						registeredAccountDao.update(registeredAccount.getId());
-					} catch (Exception e) {
-						e.printStackTrace();
-					}
-				}
-			}).start();
+			
+			
 			
 			node.put(MessageKey.STATUS.getName(), Status.SUCCESS.toString());
 		} catch (Exception e) {
