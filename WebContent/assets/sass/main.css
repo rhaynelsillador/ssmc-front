@@ -520,7 +520,7 @@ footer {
     display: block;
     margin: 25px auto 80px; }
   .welcome .btn {
-    width: 185px;
+    width: 1 85px;
     padding: 15px 5px;
     margin: 15px 15px 0px; }
   .welcome .btn-primary {
@@ -1041,7 +1041,7 @@ html.ismobile .welcome .welcome-carousel {
   display: block;
   width: 100%;
   height: 100%;
-  border-left: #fff solid 12px; }
+  border-left: #fff solid 6px; }
   .landing #clinics .image {
     background: url(../../assets/img/landing2.png) no-repeat;
     background-size: cover;
