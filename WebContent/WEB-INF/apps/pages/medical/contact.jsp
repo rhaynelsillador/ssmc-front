@@ -9,7 +9,8 @@
     <%@ include file="../commons/Preloader.jsp"%>
     <section>
       <div class="sec welcome welcome-common">
-        <div id="headerInfo"></div>
+        <h1 id="headerTitle">Contact Us</h1>
+        <span id="headerContent"></span>
         <div class="welcome-background" id="imageCarousel">
           <img src="assets/img/banner-contact.jpg" alt="">
         </div>
@@ -39,9 +40,15 @@
         	initCarousel();
         })
 
-        POST("HeadersInformation", {"app":"CLINIC", "page":"ContactUs"}, function(data){
-        	$("#headerInfo").html(data.data.content);
-        });
+        // POST("HeadersInformation", {"app":"CLINIC", "page":"ContactUs"}, function(data){
+        // 	$("#headerInfo").html(data.data.content);
+        // });
+
+        POST("HeadersInformation", {"app" : "CLINIC", "page" : "ContactUs"}, function(data){
+        	if(data.data){
+        		$("#headerContent").html("<p>"+data.data.content+"</p>");
+        	}
+        })
 
 
 
