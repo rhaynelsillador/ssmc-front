@@ -11,7 +11,6 @@
         <img src="assets/img/login-img.png" alt="">
       </div>
       <div class="modal-body">
-
       	<div class="login-right">
           <h3>Login</h3>
           <form class="mc-form" id="loginForm">
@@ -38,4 +37,3 @@
 
   </div>
 </div>
-

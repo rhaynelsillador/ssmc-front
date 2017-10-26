@@ -18,6 +18,7 @@
   </div>
   <div class="container">
     <div class="header-bot">
+      <a class="mobile-menu" href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
       <a class="logo pull-left" href="Welcome"><img src="assets/img/logo.png" alt=""></a>
       <div class="nav pull-right">
         <ul class="list-inline">
@@ -43,7 +44,7 @@
 	}else{
 		$("#logoutMenu").removeClass("hidden");
 		$("#loginUsername > span").html('${sessionScope.accountLoggedIn.email}');
-		
+
 	}
 	$(document).ready(function(){
     	POST("ContactInformationList", {}, function(data){

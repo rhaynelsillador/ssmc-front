@@ -47,7 +47,7 @@
 	}else{
 		$("#logoutMenu").removeClass("hidden");
 		$("#loginUsername > span").html('${sessionScope.accountLoggedIn.email}');
-		
+
 	}
     $(document).ready(function(){
     	POST("ContactInformationList", {}, function(data){
