@@ -9,8 +9,8 @@
   <body class="landing">
     <header>
       <div class="wow bounceInDown" data-wow-duration="1500ms" data-wow-delay="500ms">
-        <img class="logo-anim" src="assets/img/logo.png" alt="">
-        <img class="logo-anim2" src="assets/img/logo.png" alt="">
+        <img class="logo-anim" src="assets/img/logo_health.png" alt="">
+        <img class="logo-anim2" src="assets/img/logo_group.png" alt="">
       </div>
     </header>
     <section>
@@ -52,7 +52,7 @@
       </div>
     </section>
     <footer>
-      <span>&reg; 2017, South Super Highway Medical Center. km. 17, West Service Rd. Bgy. Marcelo, Parañaque City. Email: bestofcare@ssmciphil.com</span>
+      <span>&reg; 2017, South Super Highway Medical Center</span>
     </footer>
     <div id="preloader"></div>
 
