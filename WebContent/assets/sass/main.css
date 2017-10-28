@@ -542,7 +542,8 @@ footer {
   color: #fff;
   position: relative;
   border-radius: 5px;
-  overflow: hidden; }
+  overflow: hidden;
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.5); }
   .info-box .icon-info {
     width: 45px;
     margin: 50px 0px 20px; }
@@ -550,6 +551,61 @@ footer {
     margin: 0px;
     height: 153px;
     overflow: hidden; }
+
+.info-box.news {
+  background: linear-gradient(to bottom, #fffdfc 10%, #ffd9bf 100%) !important; }
+  .info-box.news h4 {
+    color: #f58435;
+    margin: 0px 0px 5px; }
+  .info-box.news .news-container {
+    height: 305px !important; }
+    .info-box.news .news-container > div {
+      width: 100%;
+      height: 100%; }
+    .info-box.news .news-container .news-box {
+      width: 100%;
+      height: 33.4%;
+      display: block;
+      padding: 10px;
+      overflow: hidden;
+      border-bottom: 1px solid #f58435; }
+      .info-box.news .news-container .news-box .news-img {
+        width: 30%;
+        display: inline-block;
+        overflow: hidden;
+        float: left;
+        position: relative;
+        border: 2px solid #fff;
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2); }
+        .info-box.news .news-container .news-box .news-img img {
+          width: 100%; }
+      .info-box.news .news-container .news-box .news-content {
+        width: 70%;
+        display: inline-block;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+        font-size: 12px; }
+        .info-box.news .news-container .news-box .news-content span {
+          position: absolute;
+          top: 0;
+          bottom: 15px;
+          color: #333;
+          left: 0;
+          right: 0;
+          font-size: 12px;
+          overflow: hidden;
+          text-align: left;
+          padding-left: 10px;
+          line-height: 15px; }
+          .info-box.news .news-container .news-box .news-content span strong {
+            display: block;
+            margin-bottom: 5px; }
+        .info-box.news .news-container .news-box .news-content a {
+          position: absolute;
+          bottom: -4px;
+          right: 0;
+          color: #f58435; }
 
 .info-bg {
   content: "";

@@ -50,6 +50,8 @@
   <script src="assets/js/wow.min.js"></script>
   <!-- Page loader -->
   <script src="assets/js/page-loader.min.js"></script>
+  <%-- ticker --%>
+  <script src="assets/js/jquery.easy-ticker.min.js"></script>
 
   <script src="assets/js/moment.min.js"></script>
   <!-- <script src="assets/js/jPages-master/js/highlight.pack.js"></script>
