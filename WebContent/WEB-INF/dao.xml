@@ -23,5 +23,6 @@
 	<bean id="headerDao" 			class="net.cms.ssmc.dao.impl.HeaderDaoImpl" />
 	<bean id="serviceDao" 			class="net.cms.ssmc.dao.impl.ServiceDaoImpl" />
 	<bean id="contactInformationDao" class="net.cms.ssmc.dao.impl.ContactInformationDaoImpl" />
+	<bean id="featuredBoxDao" 		class="net.cms.ssmc.dao.impl.FeaturedBoxDaoImpl" />
 	
 </beans>

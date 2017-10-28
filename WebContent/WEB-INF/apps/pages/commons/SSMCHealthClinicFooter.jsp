@@ -23,7 +23,7 @@
 	          <div class="footer-box">
 	            <h5>USEFUL LINKS</h5>
 	            <ul class="list-unstyled">
-	              <li><a href="Medical-About">About Us</a></li>
+	              <li><a href="Medical-About">ABOUT US</a></li>
 	              <li><a href="Medical-Services">SERVICES</a></li>
 	              <li><a href="Medical-Branches">HOSPITALS & CLINICS</a></li>
 	              <li><a href="Medical-Faq">FAQ</a></li>

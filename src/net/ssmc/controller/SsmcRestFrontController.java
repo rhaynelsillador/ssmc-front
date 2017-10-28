@@ -14,10 +14,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 import net.cms.ssmc.model.Advertisement;
 import net.cms.ssmc.model.Faq;
+import net.cms.ssmc.model.FeaturedBox;
 import net.cms.ssmc.model.Header;
 import net.cms.ssmc.services.AboutUsServices;
 import net.cms.ssmc.services.CorporateServices;
 import net.cms.ssmc.services.FaqServices;
+import net.cms.ssmc.services.FeaturedBoxServices;
 import net.cms.ssmc.services.HeaderServices;
 import net.cms.ssmc.services.ImageServices;
 import net.cms.ssmc.services.ServiceServices;
@@ -48,6 +50,8 @@ public class SsmcRestFrontController {
 	private ImageServices imageServices;
 	@Autowired
 	private FaqServices faqServices;
+	@Autowired
+	private FeaturedBoxServices featuredBoxServices;
 	
 	@RequestMapping(path="/MainHeaderInfo", method = RequestMethod.POST, produces={"application/json"})
 	public Map<String, Object> mainHeaderInfo(){
@@ -137,4 +141,11 @@ public class SsmcRestFrontController {
 	public List<Advertisement> advertisement(){
 		return imageServices.getAllAdvertiseImages();
 	}
+	
+	@RequestMapping(path="/FeaturedBoxes", method = {RequestMethod.POST, RequestMethod.GET}, produces={"application/json"})
+	public List<FeaturedBox> featuredBoxServices(@RequestBody FeaturedBox featuredBox){
+		return featuredBoxServices.getFeaturedBoxes(featuredBox.getPage());
+	}
 }
+
+

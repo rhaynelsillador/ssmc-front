@@ -25,87 +25,8 @@
           <div class="welcome-carousel owl-carousel owl-theme" id="imageCarousel">
           </div>
       </div>
-      <div class="sec info">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-4 wow bounceInUp">
-              <div class="info-box free-checkup">
-                <img src="assets/img/icon-info1.png" class="icon-info" alt="">
-                <h4>FREE CHECKUP</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dui </p>
-                <div class="info-bg">
-                  <img src="assets/img/bg-info1.jpg" alt="">
-                </div>
-              </div>
-
-            </div>
-            <div class="col-sm-4 wow bounceInUp">
-              <div class="info-box emergency-care">
-                <h4>EMERGENCY CARE</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dui </p>
-                <a href="#" class="btn">CONTACT US</a>
-                <div class="info-bg">
-                  <img src="assets/img/bg-info2.jpg" alt="">
-                </div>
-              </div>
-
-            </div>
-            <div class="col-sm-4 wow bounceInUp">
-              <div class="info-box news">
-                <%-- <img src="assets/img/icon-info2.png" class="icon-info" alt="">
-                <h4>QUALIFIED DOCTORS</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dui </p>
-                <div class="info-bg">
-                  <img src="assets/img/bg-info3.jpg" alt="">
-                </div> --%>
-                <h4 class="text-center">NEW & UPDATES</h4>
-
-
-                <div class="news-container">
-                	<div>
-                    <div class="news-box">
-                      <div class="news-img">
-                        <img src="assets/img/small1.jpg" alt="">
-                      </div>
-                      <div class="news-content">
-                        <span><strong class="news-title">Employee Seminar</strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
-                        <a href="#">Learn more</a>
-                      </div>
-                    </div><div class="news-box">
-                      <div class="news-img">
-                        <img src="assets/img/small1.jpg" alt="">
-                      </div>
-                      <div class="news-content">
-                        <span><strong class="news-title">Employee Seminar</strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
-                        <a href="#">Learn more</a>
-                      </div>
-                    </div><div class="news-box">
-                      <div class="news-img">
-                        <img src="assets/img/small1.jpg" alt="">
-                      </div>
-                      <div class="news-content">
-                        <span><strong class="news-title">Employee Seminar</strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
-                        <a href="#">Learn more</a>
-                      </div>
-                    </div><div class="news-box">
-                      <div class="news-img">
-                        <img src="assets/img/small1.jpg" alt="">
-                      </div>
-                      <div class="news-content">
-                        <span><strong class="news-title">Employee Seminar</strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
-                        <a href="#">Learn more</a>
-                      </div>
-                    </div>
-                	</div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-
-
+	
+	  <%@ include file="../medical/FeaturedBoxes.jsp"%>
       <%@ include file="../CorporateServices1.jsp"%>
 	  <%@ include file="../CorporateServices2.jsp"%>
 	  <%@ include file="../branchesList.jsp"%>
