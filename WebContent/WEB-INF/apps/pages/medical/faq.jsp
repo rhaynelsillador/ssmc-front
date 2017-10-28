@@ -31,7 +31,7 @@
         </div>
       </div>
     </section>
-    <%@ include file="../commons/CorporateFooter.jsp"%>
+    <%@ include file="../commons/SSMCHealthClinicFooter.jsp"%>
     <script type="text/javascript">
     	$("#menuFaq a").addClass("active");
       $(document).ready(function(){

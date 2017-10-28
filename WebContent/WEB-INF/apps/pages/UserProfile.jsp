@@ -95,7 +95,7 @@
 
 
     </section>
-    <%@ include file="commons/CorporateFooter.jsp"%>
+    <%@ include file="commons/SSMCHospitalsFooter.jsp"%>
     <script type="text/javascript">  
     	var loginAccountInformationForm = $('#loginAccountInformationForm');
     	var accountid = '';

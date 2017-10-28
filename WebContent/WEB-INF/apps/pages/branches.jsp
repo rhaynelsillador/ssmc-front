@@ -17,7 +17,7 @@
       <%@ include file="branchesList.jsp"%>
     </section>
 
-    <%@ include file="commons/CorporateFooter.jsp"%>
+    <%@ include file="commons/SSMCHospitalsFooter.jsp"%>
 
    <!--  <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script> -->
     <script type="text/javascript">

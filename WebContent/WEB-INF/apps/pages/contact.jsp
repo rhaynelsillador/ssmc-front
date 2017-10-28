@@ -18,7 +18,7 @@
       </div>
       <%@ include file="ContactUsForm.jsp"%>
     </section>
-    <%@ include file="commons/CorporateFooter.jsp"%>
+    <%@ include file="commons/SSMCHospitalsFooter.jsp"%>
 
     <script type="text/javascript">
       $("#menuContact a").addClass("active");

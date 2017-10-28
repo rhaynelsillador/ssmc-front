@@ -74,7 +74,7 @@
         </div>
       </div>
     </section>
-    <%@ include file="../commons/CorporateFooter.jsp"%>
+    <%@ include file="../commons/SSMCHealthClinicFooter.jsp"%>
 
     <script type="text/javascript">
     $("#menuAbout a").addClass("active");

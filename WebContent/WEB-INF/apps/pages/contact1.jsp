@@ -13,7 +13,7 @@
       </div>
       <%@ include file="commons/SSMCHospitalsHeader.jsp"%>
     </section>
-    <%@ include file="commons/CorporateFooter.jsp"%>
+    <%@ include file="commons/SSMCHospitalsFooter.jsp"%>
 
     <script  type="text/javascript" src="assets/js/jquery.min.js"></script>
     <script  type="text/javascript" src="assets/js/bootstrap.min.js"></script>

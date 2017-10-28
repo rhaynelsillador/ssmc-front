@@ -6,7 +6,7 @@
 	          <div class="footer-box">
 	            <img src="assets/img/logo.png" style="width: 200px;margin-bottom: 15px;" alt="">
 	            <br>
-	            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore mtesingsd ijid asdhhuds</span>
+	            <span class="motto-contact"></span>
 	        </div>
 	        </div>
 	        <div class="col-md-3">
@@ -23,10 +23,11 @@
 	          <div class="footer-box">
 	            <h5>USEFUL LINKS</h5>
 	            <ul class="list-unstyled">
-	              <li><a href="#">About Us</a></li>
-	              <li><a href="services.html">SERVICES</a></li>
-	              <li><a href="faq.html">FAQ</a></li>
-	              <li><a href="contact.html">CONTACT US</a></li>
+	              <li><a href="Medical-About">About Us</a></li>
+	              <li><a href="Medical-Services">SERVICES</a></li>
+	              <li><a href="Medical-Branches">HOSPITALS & CLINICS</a></li>
+	              <li><a href="Medical-Faq">FAQ</a></li>
+	              <li><a href="Medical-ContactUs">CONTACT US</a></li>
 	            </ul>
 	          </div>
 	        </div>
