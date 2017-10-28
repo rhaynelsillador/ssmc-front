@@ -25,7 +25,7 @@
           <li id="menuCorporate"><a href="SsmcHealthHospitals">HOME</a></li>
           <li id="menuAbout"><a href="About">ABOUT</a></li>
           <li id="menuAServices"><a href="Services">SERVICES</a></li>
-          <li id="menuBranches"><a href="Branches">HOSPITAS & CLINICS</a></li>
+          <li id="menuBranches"><a href="Branches">HOSPITALS & CLINICS</a></li>
           <li id="menuFaq"><a href="Faq">FAQ</a></li>
           <li id="menuContact"><a href="ContactUs">CONTACT US</a></li>
         </ul>
