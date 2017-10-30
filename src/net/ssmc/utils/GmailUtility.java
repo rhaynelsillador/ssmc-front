@@ -30,6 +30,7 @@ public class GmailUtility {
 	private String port;
 	private Session session;
 	
+	private static final String SUBJECT = "Inquiry";
 	
 	public void init(){
 		Properties properties = new Properties();
@@ -59,7 +60,7 @@ public class GmailUtility {
 					Message message = new MimeMessage(session);
 					message.setFrom(new InternetAddress(username));
 					message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(email.getEmail()));
-					message.setSubject(email.getSubject());
+					message.setSubject(SUBJECT);
 					message.setContent(email.getMessage(), "text/html");
 					Transport.send(message);
 					

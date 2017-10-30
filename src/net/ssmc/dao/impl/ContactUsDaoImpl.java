@@ -15,7 +15,7 @@ public class ContactUsDaoImpl implements ContactUsDao{
 	
 	private final String SQL 				= "SELECT * FROM CONTACTUS ";
 	private static final String SQLCOUNT 	= "SELECT COUNT(id) FROM CONTACTUS ";
-	private static final String INSERT 		= "INSERT INTO CONTACTUS (subject, message, email, dateadded) VALUES (?, ?, ?, ?)";
+	private static final String INSERT 		= "INSERT INTO CONTACTUS (subject, message, email, dateadded, status, userid) VALUES (?, ?, ?, ?, ?, ?)";
 	private static final String DELETEBYID = "DELETE FROM CONTACTUS WHERE id= ? ";
 	
 	@Autowired
@@ -32,7 +32,9 @@ public class ContactUsDaoImpl implements ContactUsDao{
 			contactUs.getSubject(),
 			contactUs.getMessage(),
 			contactUs.getEmail(),
-			contactUs.getDateAdded()
+			contactUs.getDateAdded(),
+			"UNREAD",
+			contactUs.getUserId()
 		});
 	}
 

@@ -10,6 +10,7 @@ public class ContactUs {
 	private Timestamp dateAdded;
 	private String subject;
 	private String name;
+	private long userId;
 	
 	public int getId() {
 		return id;
@@ -47,5 +48,17 @@ public class ContactUs {
 	public void setName(String name) {
 		this.name = name;
 	}
+	public long getUserId() {
+		return userId;
+	}
+	public void setUserId(long userId) {
+		this.userId = userId;
+	}
+	@Override
+	public String toString() {
+		return "ContactUs [id=" + id + ", email=" + email + ", message=" + message + ", dateAdded=" + dateAdded
+				+ ", subject=" + subject + ", name=" + name + ", userId=" + userId + "]";
+	}
+	
 	
 }
