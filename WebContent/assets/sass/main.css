@@ -1029,13 +1029,37 @@ html.ismobile .sec {
   z-index: 500;
   width: 100%;
   background: white; }
-  .landing header img {
-    width: 350px;
-    position: absolute;
-    margin: 20px auto;
-    opacity: 0;
-    left: 0;
-    right: 0; }
+  .landing header #logo_container {
+    position: relative;
+    height: 60px;
+    width: 330px;
+    margin: 0 auto;
+    margin-top: 18px; }
+    .landing header #logo_container span {
+      width: 100%;
+      position: absolute;
+      left: 0;
+      -webkit-transition: opacity 1s ease-in-out;
+      -moz-transition: opacity 1s ease-in-out;
+      -o-transition: opacity 1s ease-in-out;
+      transition: opacity 1s ease-in-out; }
+      .landing header #logo_container span img {
+        width: 100%; }
+    .landing header #logo_container span.logo-top {
+      animation-name: cf3FadeInOut;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      animation-duration: 10s;
+      animation-direction: alternate; }
+      .landing header #logo_container span.logo-top::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: #fff;
+        top: 0;
+        left: 0;
+        z-index: -1; }
 .landing section {
   position: relative;
   padding-top: 90px;
@@ -1153,12 +1177,6 @@ html.ismobile .sec {
     left: 50%;
     margin-left: -130px; }
 
-.logo-anim {
-  animation: logoFade 6200ms infinite ease-in-out; }
-
-.logo-anim2 {
-  animation: logoFade 6200ms 6200ms infinite ease-in-out; }
-
 html.ismobile .landing {
   padding-top: 0px; }
   html.ismobile .landing section {
@@ -1205,13 +1223,13 @@ html.ismobile .landing {
     html.ismobile .landing .landing-content span {
       display: none; }
 
-@keyframes logoFade {
+@keyframes cf3FadeInOut {
   0% {
+    opacity: 1; }
+  45% {
+    opacity: 1; }
+  55% {
     opacity: 0; }
-  15% {
-    opacity: 1; }
-  85% {
-    opacity: 1; }
   100% {
     opacity: 0; } }
 

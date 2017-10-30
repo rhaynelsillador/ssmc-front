@@ -9,8 +9,14 @@
   <body class="landing">
     <header>
       <div class="wow bounceInDown" data-wow-duration="1500ms" data-wow-delay="500ms">
-        <img class="logo-anim" src="assets/img/logo_health.png" alt="">
-        <img class="logo-anim2" src="assets/img/logo_group.png" alt="">
+        <div id="logo_container">
+          <span class="logo-bottom">
+            <img src="assets/img/logo_health.png" alt="" />
+          </span>
+          <span class="logo-top">
+            <img src="assets/img/logo_group.png" alt="" />
+          </span>
+        </div>
       </div>
     </header>
     <section>
