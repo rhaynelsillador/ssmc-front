@@ -15,6 +15,11 @@
                 <textarea class="form-control" name="message" value="" placeholder="Message" rows="7" cols="7"></textarea>
               </div>
               <div class="col-md-12">
+              	<div class="form-group" id="contactUsMessage">
+		          
+		      </div>
+              </div>
+              <div class="col-md-12">
                 <button type="submit" class="contact-submit" name="button"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
               </div>
             </div>
@@ -33,7 +38,19 @@
 			var btn = $( ".contact-form button");
 	  		btn.attr("disabled", "disabled");
 			POST("sendEmail", form, function(data){
-		  		btn.removeAttr("disabled");
+				if(data.status == "ERROR"){
+					btn.removeAttr("disabled");
+					$("#contactUsMessage").html('<div class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">'+
+						    '<a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>'+
+						    '<strong>Error!</strong> '+data.message+'.'+
+						'</div>')
+				}else{
+			  		$("#contactUsMessage").html('<div class="alert alert-success fade in alert-dismissable" style="margin-top:18px;">'+
+						    '<a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>'+
+						    '<strong>Success!</strong> '+data.message+'.'+
+						'</div>')
+				}
+		  		
 			})
 
 			console.log(form);
