@@ -28,6 +28,7 @@
           <li id="menuBranches"><a href="Branches">HOSPITALS & CLINICS</a></li>
           <li id="menuFaq"><a href="Faq">FAQ</a></li>
           <li id="menuContact"><a href="ContactUs">CONTACT US</a></li>
+          <li id="menuIndustrial"><a href="IndustrialMedicine">INDUSTRIAL MEDICINE</a></li>
         </ul>
       </div>
       <div class="clearfix"></div>

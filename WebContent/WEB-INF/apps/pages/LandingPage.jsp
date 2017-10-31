@@ -8,7 +8,7 @@
   </head>
   <body class="landing">
     <header>
-      <div class="wow bounceInDown" data-wow-duration="1500ms" data-wow-delay="500ms">
+      <div class="wow fadeInDown" data-wow-duration="1500ms" data-wow-delay="">
         <div id="logo_container">
           <span class="logo-bottom">
             <img src="assets/img/logo_health.png" alt="" />

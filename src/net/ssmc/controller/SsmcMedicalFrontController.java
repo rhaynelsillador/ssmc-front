@@ -48,4 +48,16 @@ public class SsmcMedicalFrontController {
 	public String medicalContact(ModelMap map){
 		return "pages/medical/contact";
 	}
+	
+	@AppicationAudit(module = Module.ALL, access = Access.ALL)
+	@RequestMapping(path="/Medical-IndustrialMedicine", method = RequestMethod.GET, produces="text/html")
+	public String medicalIndustrial(ModelMap map){
+		return "pages/medical/industrial";
+	}
+	
+	@AppicationAudit(module = Module.ALL, access = Access.ALL)
+	@RequestMapping(path="/Medical-News", method = RequestMethod.GET, produces="text/html")
+	public String medicalNews(ModelMap map){
+		return "pages/medical/news";
+	}
 }

@@ -52,6 +52,15 @@ public class SsmcFrontController {
 		return "pages/Registration";
 	}
 	
+	@RequestMapping(path="/IndustrialMedicine", method = RequestMethod.GET, produces="text/html")
+	public String industrial(ModelMap map){
+		return "pages/industrial";
+	}
+	@RequestMapping(path="/News", method = RequestMethod.GET, produces="text/html")
+	public String news(ModelMap map){
+		return "pages/news";
+	}
+	
 	@AppicationAudit(module = Module.LOGINREQUIRED, access = Access.RETRIEVE)
 	@RequestMapping(path="/UserProfile", method = RequestMethod.GET, produces="text/html")
 	public String userProfile(ModelMap map){
