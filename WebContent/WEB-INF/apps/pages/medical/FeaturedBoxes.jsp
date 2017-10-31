@@ -31,10 +31,11 @@
           <div class="info-bg">
             <img src="assets/img/bg-info3.jpg" alt="">
           </div> --%>
-          <h4 class="text-center">NEW & UPDATES</h4>
+          <!-- <h4 class="text-center">NEW & UPDATES</h4> -->
+          <h4>NO UPDATES</h4>
 
 
-          <div class="news-container">
+          <!-- <div class="news-container">
           	<div>
               <div class="news-box">
                 <div class="news-img">
@@ -70,7 +71,7 @@
                 </div>
               </div>
           	</div>
-          </div>
+          </div> -->
         </div>
 
       </div>
