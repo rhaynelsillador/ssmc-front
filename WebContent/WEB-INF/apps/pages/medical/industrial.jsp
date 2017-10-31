@@ -16,103 +16,8 @@
       <div class="sec">
         <div class="wow fadeInUp">
           <div class="container">
-            <div class="row">
-              <div class="col-xs-3">
-                <a href="#" class="partner">
-                  <span class="partner-img"><img src="../assets/img/partner1.PNG" alt=""></span>
-                  <span>Resorts World Manila</span>
-                </a>
-              </div>
-              <div class="col-xs-3">
-                <a href="#" class="partner">
-                  <span class="partner-img"><img src="../assets/img/partner1.PNG" alt=""></span>
-                  <span>Resorts World Manila</span>
-                </a>
-              </div>
-              <div class="col-xs-3">
-                <a href="#" class="partner">
-                  <span class="partner-img"><img src="../assets/img/partner1.PNG" alt=""></span>
-                  <span>Resorts World Manila</span>
-                </a>
-              </div>
-              <div class="col-xs-3">
-                <a href="#" class="partner">
-                  <span class="partner-img"><img src="../assets/img/partner1.PNG" alt=""></span>
-                  <span>Resorts World Manila</span>
-                </a>
-              </div>
-              <div class="col-xs-3">
-                <a href="#" class="partner">
-                  <span class="partner-img"><img src="../assets/img/partner1.PNG" alt=""></span>
-                  <span>Resorts World Manila</span>
-                </a>
-              </div>
-              <div class="col-xs-3">
-                <a href="#" class="partner">
-                  <span class="partner-img"><img src="../assets/img/partner1.PNG" alt=""></span>
-                  <span>Resorts World Manila</span>
-                </a>
-              </div>
-              <div class="col-xs-3">
-                <a href="#" class="partner">
-                  <span class="partner-img"><img src="../assets/img/partner1.PNG" alt=""></span>
-                  <span>Resorts World Manila</span>
-                </a>
-              </div>
-              <div class="col-xs-3">
-                <a href="#" class="partner">
-                  <span class="partner-img"><img src="../assets/img/partner1.PNG" alt=""></span>
-                  <span>Resorts World Manila</span>
-                </a>
-              </div>
-              <div class="col-xs-3">
-                <a href="#" class="partner">
-                  <span class="partner-img"><img src="../assets/img/partner1.PNG" alt=""></span>
-                  <span>Resorts World Manila</span>
-                </a>
-              </div>
-              <div class="col-xs-3">
-                <a href="#" class="partner">
-                  <span class="partner-img"><img src="../assets/img/partner1.PNG" alt=""></span>
-                  <span>Resorts World Manila</span>
-                </a>
-              </div>
-              <div class="col-xs-3">
-                <a href="#" class="partner">
-                  <span class="partner-img"><img src="../assets/img/partner1.PNG" alt=""></span>
-                  <span>Resorts World Manila</span>
-                </a>
-              </div>
-              <div class="col-xs-3">
-                <a href="#" class="partner">
-                  <span class="partner-img"><img src="../assets/img/partner1.PNG" alt=""></span>
-                  <span>Resorts World Manila</span>
-                </a>
-              </div>
-              <div class="col-xs-3">
-                <a href="#" class="partner">
-                  <span class="partner-img"><img src="../assets/img/partner1.PNG" alt=""></span>
-                  <span>Resorts World Manila</span>
-                </a>
-              </div>
-              <div class="col-xs-3">
-                <a href="#" class="partner">
-                  <span class="partner-img"><img src="../assets/img/partner1.PNG" alt=""></span>
-                  <span>Resorts World Manila</span>
-                </a>
-              </div>
-              <div class="col-xs-3">
-                <a href="#" class="partner">
-                  <span class="partner-img"><img src="../assets/img/partner1.PNG" alt=""></span>
-                  <span>Resorts World Manila</span>
-                </a>
-              </div>
-              <div class="col-xs-3">
-                <a href="#" class="partner">
-                  <span class="partner-img"><img src="../assets/img/partner1.PNG" alt=""></span>
-                  <span>Resorts World Manila</span>
-                </a>
-              </div>
+            <div class="row" id="partnerList">
+            
             </div>
           </div>
         </div>
@@ -130,55 +35,41 @@
           console.log("gg");
           $(".blue .nav li").removeClass("active");
         });
-
-      //   POST("SystemImages", {"app":"HOSPITALS", "page":"Faq", "module":"HEADER"}, function(data){
-      //   	var imageCarousel = "";
-      //   	$.each(data.data, function(index, value){
-      //   		imageCarousel += '<div class="item"><img src="'+fileServer+value.image+'" alt=""></div>';
-      //   	})
-      //   	$("#imageCarousel").html(imageCarousel);
-      //   	initCarousel();
-      //   })
-      //
-      //   POST("HeadersInformation", {"app" : "HOSPITALS", "page" : "Faq"}, function(data){
-      //   	if(data.data){
-      //   		$("#headerContent").html("<p>"+data.data.content+"</p>");
-      //   	}
-      //   })
-      //
-      //   POST("FaqInformation", {"app" : "HOSPITALS"}, function(data){
-      //   	console.log(data);
-      //   	var faqBodyTitle = "";
-      //   	var faqBodyContent = "";
-      //   	$.each(data, function(index, value){
-      //   		var isActive = "";
-      //   		if(index == 0){
-      //   			isActive = "active";
-      //   		}
-      //
-      //   		faqBodyTitle += '<li '+isActive+'><a href="#faq_'+index+'" class="side" data-toggle="tab"><aside></aside><h4>'+value.title+'</h4></a></li>';
-      //
-      //   		faqBodyContent += '<div id="faq_'+index+'" class="tab-pane '+isActive+'"><h3>'+value.title+'</h3><h6>QUESTION</h6><div class="question-container"><span>'+value.question+'</span>'+
-      //                 '<br><br><span class="question-ask"></span><br><span class="question-date"></span></div><br><h6>ANSWERS</h6>'+
-      //               	'<div class="answer-container"><span>'+value.answer+'</span>'+
-      //                 '<br><br><span class="answer-by"></span><br><span class="answer-position"></span></div></div>';
-      //   	});
-      //   	$("#faqBodyTitle").html(faqBodyTitle);
-      //   	$("#faqBodyContent").html(faqBodyContent);
-      //   })
-      //
-      // });
-
-      // function preloader() {
-      //   $("header,section,footer").hide()
-      //
-      //   $(window).load(function(){
-      //     $("header,section,footer").fadeIn();
-      //     setTimeout(function(){ $('#preloader').fadeOut('slow'); }, 500);
-      //     console.log("peace out");
-      //   });
-      //
-      // }
+		
+        POST("SystemImages", {"app":"CLINIC", "page":"Industrial", "module":"HEADER"}, function(data){
+           	var imageCarousel = "";
+           	$.each(data.data, function(index, value){
+           		imageCarousel += '<div class="item"><img src="'+fileServer+value.image+'" alt=""></div>';
+           	})
+           	$("#imageCarousel").html(imageCarousel);
+           	initCarousel();
+           })
+        
+      	POST("HeadersInformation", {"app" : "CLINIC", "page" : "Industrial"}, function(data){
+           	if(data.data){
+           		$("#headerContent").html("<p>"+data.data.content+"</p>");
+           	}
+       	})
+        
+      	POST("PartnerList", {}, function(data){
+     		var html = "";
+      		$.each(data, function(index, value){
+      			var logo = value.logo;
+      			if(value.logo == undefined || value.logo == ""){
+      				logo = "upload/default.png";;
+      			}
+      			console.log("logo", logo);
+      			html += '<div class="col-xs-3">';
+      			html += '<a href="'+value.url+'" class="partner" target="_blank">';
+   				html += '<span class="partner-img"><img src="'+fileServer+logo+'" alt=""></span>';
+				html += '<span>'+value.name+'</span>';
+				html += '</a>';
+				html += '</div>';
+      		})
+     		$("#partnerList").html(html);
+  	 	})
+      })
+        
     </script>
   </body>
 </html>

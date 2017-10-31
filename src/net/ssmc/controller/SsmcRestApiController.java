@@ -14,8 +14,10 @@ import org.springframework.web.bind.annotation.RestController;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import net.cms.ssmc.model.ContactInformation;
+import net.cms.ssmc.model.Partner;
 import net.cms.ssmc.services.ContactInformationServices;
 import net.cms.ssmc.services.ImageServices;
+import net.cms.ssmc.services.PartnerServices;
 import net.ssmc.model.ExamResult;
 import net.ssmc.model.Image;
 import net.ssmc.model.RegisteredAccount;
@@ -33,6 +35,8 @@ public class SsmcRestApiController {
 	private ContactInformationServices contactInformationServices;
 	@Autowired
 	private ExamResultServices examResultServices;
+	@Autowired
+	private PartnerServices partnerServices;
 	
 	@RequestMapping(path="/AccountLogin", method = RequestMethod.POST, produces={"application/json"})
 	public ObjectNode accountLogin(@RequestBody RegisteredAccount registeredAccount){
@@ -73,6 +77,12 @@ public class SsmcRestApiController {
 	@RequestMapping(path="/AccountExamResult", method = {RequestMethod.POST, RequestMethod.GET}, produces={"application/json"})
 	public Map<String, List<ExamResult>> accountExamResult(){
 		return examResultServices.getAccountExamResult();
+	}
+	
+	
+	@RequestMapping(path="/PartnerList", method = {RequestMethod.POST, RequestMethod.GET}, produces={"application/json"})
+	public List<Partner> getPartners(){
+		return partnerServices.getPartners();
 	}
 	
 	
