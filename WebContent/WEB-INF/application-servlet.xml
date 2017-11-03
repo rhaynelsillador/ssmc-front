@@ -7,7 +7,7 @@
     http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
 
 	<context:component-scan base-package="net.ssmc.controller" />
-	<context:property-placeholder location="classpath:ssmc.properties" />
+	<context:property-placeholder location="classpath:localhost.properties" />
 	<!-- <context:property-placeholder location="classpath:localhost.properties" /> -->
 	
 	<mvc:resources mapping="/assets/**" location="/assets/" />

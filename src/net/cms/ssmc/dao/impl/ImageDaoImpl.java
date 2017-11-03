@@ -9,6 +9,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import net.cms.ssmc.dao.ImageDao;
 import net.cms.ssmc.model.Advertisement;
 import net.cms.ssmc.model.Header;
+import net.cms.ssmc.model.NewsAndUpdatesImage;
 import net.ssmc.enums.App;
 import net.ssmc.enums.Module;
 import net.ssmc.enums.Page;
@@ -35,6 +36,12 @@ public class ImageDaoImpl implements ImageDao{
 	public List<Advertisement> retrieveImage(Module module) {
 		final String SQL = "SELECT * FROM IMAGES AS I WHERE I.type = ? AND SERVICEID=?";
 		return jdbcTemplate.query(SQL, new Object[]{module.toString(),0}, new BeanPropertyRowMapper<Advertisement>(Advertisement.class));
+	}
+
+	@Override
+	public List<NewsAndUpdatesImage> retrieveNewsAndUpdatesImage(long id, Module module) {
+		final String SQL = "SELECT * FROM IMAGES AS I WHERE I.type = ? AND SERVICEID=?";
+		return jdbcTemplate.query(SQL, new Object[]{module.toString(), id}, new BeanPropertyRowMapper<NewsAndUpdatesImage>(NewsAndUpdatesImage.class));
 	}
 	
 	

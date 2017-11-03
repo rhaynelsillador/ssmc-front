@@ -8,7 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import net.cms.ssmc.dao.ImageDao;
 import net.cms.ssmc.model.Advertisement;
+import net.cms.ssmc.model.NewsAndUpdatesImage;
 import net.ssmc.enums.Module;
+import net.ssmc.model.Image;
 import net.ssmc.model.form.Form;
 
 public class ImageServices {
@@ -18,7 +20,6 @@ public class ImageServices {
 	
 	
 	public Map<String, Object> getImages(Form form){
-		System.err.println(form);
 		Map<String, Object> response = new HashMap<>();
 		if(form.getApp() == null){
 			response.put("error", "Invalid App");
@@ -36,5 +37,9 @@ public class ImageServices {
 	
 	public List<Advertisement> getAllAdvertiseImages(){
 		return imageDao.retrieveImage(Module.ADVERTISEMENT);
+	}
+	
+	public List<NewsAndUpdatesImage> getNewsAndUpdatesImages(long id){
+		return imageDao.retrieveNewsAndUpdatesImage(id, Module.NEWSANDUPDATES);
 	}
 }

@@ -14,13 +14,15 @@ import org.springframework.web.bind.annotation.RestController;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import net.cms.ssmc.model.ContactInformation;
+import net.cms.ssmc.model.NewsAndUpdate;
 import net.cms.ssmc.model.Partner;
 import net.cms.ssmc.services.ContactInformationServices;
 import net.cms.ssmc.services.ImageServices;
+import net.cms.ssmc.services.NewsAndUpdatesServices;
 import net.cms.ssmc.services.PartnerServices;
 import net.ssmc.model.ExamResult;
-import net.ssmc.model.Image;
 import net.ssmc.model.RegisteredAccount;
+import net.ssmc.model.form.NewsForm;
 import net.ssmc.services.ExamResultServices;
 import net.ssmc.services.RegistrationServices;
 
@@ -37,6 +39,10 @@ public class SsmcRestApiController {
 	private ExamResultServices examResultServices;
 	@Autowired
 	private PartnerServices partnerServices;
+	@Autowired
+	private NewsAndUpdatesServices newsAndUpdatesServices;
+	@Autowired
+	private ImageServices imageServices;
 	
 	@RequestMapping(path="/AccountLogin", method = RequestMethod.POST, produces={"application/json"})
 	public ObjectNode accountLogin(@RequestBody RegisteredAccount registeredAccount){
@@ -79,11 +85,20 @@ public class SsmcRestApiController {
 		return examResultServices.getAccountExamResult();
 	}
 	
-	
 	@RequestMapping(path="/PartnerList", method = {RequestMethod.POST, RequestMethod.GET}, produces={"application/json"})
 	public List<Partner> getPartners(){
 		return partnerServices.getPartners();
 	}
 	
-	
+	@RequestMapping(path="/NewsAndUpdateCurrent", method = {RequestMethod.POST, RequestMethod.GET}, produces={"application/json"})
+	public NewsAndUpdate newsAndUpdateCurrent(@RequestBody NewsForm newsForm){
+		NewsAndUpdate newsAndUpdate = null;
+		try {
+			newsAndUpdate = newsAndUpdatesServices.getNewsAndUpdate(newsForm.getId(), newsForm.getButton());
+			newsAndUpdate.setImages(imageServices.getNewsAndUpdatesImages(newsAndUpdate.getId()));
+			return newsAndUpdate;
+		} catch (Exception e) {
+			return new NewsAndUpdate();
+		}
+	}
 }

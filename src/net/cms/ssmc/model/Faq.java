@@ -1,7 +1,6 @@
 package net.cms.ssmc.model;
 
 import java.sql.Timestamp;
-import java.util.Date;
 
 import net.ssmc.enums.App;
 

@@ -19,7 +19,8 @@
 	<bean id="headerServices" 		class="net.cms.ssmc.services.HeaderServices" />
 	<bean id="serviceServices" 		class="net.cms.ssmc.services.ServiceServices" />
 	<bean id="featuredBoxServices" 	class="net.cms.ssmc.services.FeaturedBoxServices" />
-	<bean id="partnerServices" 	class="net.cms.ssmc.services.PartnerServices" />
+	<bean id="partnerServices" 		class="net.cms.ssmc.services.PartnerServices" />
+	<bean id="newsAndUpdatesServices" class="net.cms.ssmc.services.NewsAndUpdatesServices" />
 	
 	<bean id="corporateServices" 	class="net.cms.ssmc.services.CorporateServices" />
 	<bean id="contactInformationServices" 	class="net.cms.ssmc.services.ContactInformationServices" />
