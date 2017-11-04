@@ -65,22 +65,7 @@
     	});
 
 
-      $('.news-container').easyTicker({
-        direction: 'up',
-        easing: 'swing',
-        speed: 'slow',
-        interval: 3000,
-        height: 'auto',
-        visible: 3,
-        mousePause: 1,
-        controls: {
-        up: '',
-        down: '',
-        toggle: '',
-        playText: 'Play',
-        stopText: 'Stop'
-        }
-      });
+      
 
     </script>
   </body>

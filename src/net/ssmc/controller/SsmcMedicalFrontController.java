@@ -60,4 +60,10 @@ public class SsmcMedicalFrontController {
 	public String medicalNews(ModelMap map){
 		return "pages/medical/news";
 	}
+	
+
+	@RequestMapping(path="/News2", method = RequestMethod.GET, produces="text/html")
+	public String News2(ModelMap map){
+		return "pages/medical/news";
+	}
 }

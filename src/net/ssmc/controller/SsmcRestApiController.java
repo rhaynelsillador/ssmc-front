@@ -101,4 +101,9 @@ public class SsmcRestApiController {
 			return new NewsAndUpdate();
 		}
 	}
+	
+	@RequestMapping(path="/NewsAndUpdatePublished", method = {RequestMethod.POST, RequestMethod.GET}, produces={"application/json"})
+	public List<NewsAndUpdate> newsAndUpdatePublished(){
+		return newsAndUpdatesServices.getPublishedNewsAndUpdats();
+	}
 }

@@ -61,6 +61,7 @@ public class SsmcFrontController {
 		return "pages/news";
 	}
 	
+	
 	@AppicationAudit(module = Module.LOGINREQUIRED, access = Access.RETRIEVE)
 	@RequestMapping(path="/UserProfile", method = RequestMethod.GET, produces="text/html")
 	public String userProfile(ModelMap map){

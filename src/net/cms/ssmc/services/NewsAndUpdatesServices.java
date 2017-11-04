@@ -1,5 +1,8 @@
 package net.cms.ssmc.services;
 
+import java.util.List;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
 import net.cms.ssmc.dao.NewsAndUpdateDao;
@@ -24,4 +27,7 @@ public class NewsAndUpdatesServices {
 		return null;
 	}
 	
+	public List<NewsAndUpdate> getPublishedNewsAndUpdats(){
+		return newsAndUpdateDao.findAll();
+	}
 }
