@@ -24,15 +24,13 @@ public class RegisteredAccountDaoImpl implements RegisteredAccountDao {
 		
 	private static final String FINDONEBYEMAIL = "SELECT * FROM registered_account WHERE EMAIL=? LIMIT 1";
 	private static final String FINDONEBYEMAILANPASS = "SELECT * FROM registered_account WHERE EMAIL=? AND PASSWORD = ? LIMIT 1";
-	private static final String INSERT = "INSERT INTO registered_account (email, password, number, datecreated, status, date) VALUES (?,?,?,?,?,?)";
+	private static final String INSERT = "INSERT INTO registered_account (email, password, number, datecreated, status, date, type=?, partnerid=?) VALUES (?,?,?,?,?,?,?,?)";
 	private static final String FINDONE = "SELECT * FROM registered_account WHERE ID=?";
 	private static final String UPDATELASTLOGIN = "UPDATE registered_account SET datelastlogin = ? WHERE ID=?";
 	private static final String UPDATEINFO = "UPDATE registered_account SET email = ?, number=?, firstName=?, lastName=?, middleName=?, birthday=?, gender=?, address=? WHERE ID=?";
 	
-	
 	@Override
 	public long create(RegisteredAccount account) throws Exception{
-		System.out.println(account.getNumber() + " :: " + account.getNumber());
 		GeneratedKeyHolder holder = new GeneratedKeyHolder();
 		jdbcTemplate.update(new PreparedStatementCreator() {
 		    @Override
@@ -44,6 +42,8 @@ public class RegisteredAccountDaoImpl implements RegisteredAccountDao {
 		        statement.setTimestamp(4, new Timestamp(System.currentTimeMillis()));
 		        statement.setBoolean(5, true);
 		        statement.setDate(6, new java.sql.Date(System.currentTimeMillis()));
+		        statement.setString(7, account.getType().toString());
+		        statement.setLong(8, 0);
 		        return statement;
 		    }
 		}, holder);

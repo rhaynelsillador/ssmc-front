@@ -8,6 +8,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import net.ssmc.dao.RegisteredAccountDao;
+import net.ssmc.enums.AccountType;
 import net.ssmc.enums.Code;
 import net.ssmc.enums.MessageKey;
 import net.ssmc.enums.Status;
@@ -43,15 +44,10 @@ public class RegistrationServices {
 		}
 		try {
 			RegisteredAccount loginAccount = registeredAccountDao.findOne(registeredAccount.getEmail(), AES.encrypt(registeredAccount.getPassword()));
-			System.out.println("loginAccount : "+loginAccount);
 			if(loginAccount != null){
 				httpServletRequest.getSession().setAttribute("accountLoggedIn", loginAccount);
 				registeredAccountDao.update(loginAccount.getId());
 			}
-			
-			
-			
-			
 			node.put(MessageKey.STATUS.getName(), Status.SUCCESS.toString());
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -96,6 +92,7 @@ public class RegistrationServices {
 			node = appUtils.passwordConfirmValidations(registeredAccount.getPassword(), registeredAccount.getPassword1());
 		}else{
 			try {
+				registeredAccount.setType(AccountType.PATIENT);
 				registeredAccountDao.create(registeredAccount);
 				node.put(MessageKey.STATUS.getName(), Status.SUCCESS.toString());
 				node.put(MessageKey.MESSAGE.getName(), REGISTRATIONSUCCESS);

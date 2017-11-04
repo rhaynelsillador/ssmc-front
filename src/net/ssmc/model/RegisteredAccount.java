@@ -2,8 +2,8 @@ package net.ssmc.model;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
-import java.util.Date;
 
+import net.ssmc.enums.AccountType;
 import net.ssmc.enums.Gender;
 
 public class RegisteredAccount implements Serializable{
@@ -26,6 +26,9 @@ public class RegisteredAccount implements Serializable{
 	private String birthday;
 	private Gender gender;
 	private String address;
+	private AccountType type;
+	private long partnerId;
+	private String partner;
 	
 	public long getId() {
 		return id;
@@ -113,6 +116,24 @@ public class RegisteredAccount implements Serializable{
 	}
 	public void setAddress(String address) {
 		this.address = address;
+	}
+	public AccountType getType() {
+		return type;
+	}
+	public void setType(AccountType type) {
+		this.type = type;
+	}
+	public long getPartnerId() {
+		return partnerId;
+	}
+	public void setPartnerId(long partnerId) {
+		this.partnerId = partnerId;
+	}
+	public String getPartner() {
+		return partner;
+	}
+	public void setPartner(String partner) {
+		this.partner = partner;
 	}
 	@Override
 	public String toString() {
