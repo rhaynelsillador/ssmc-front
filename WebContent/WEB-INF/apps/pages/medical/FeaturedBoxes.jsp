@@ -1,4 +1,4 @@
-<div class="sec info">
+<div class="sec info" id="featured-box-sec">
   <div class="container">
     <div class="row">
       <div class="col-sm-4 wow bounceInUp">
@@ -16,7 +16,7 @@
         <div class="info-box box-2">
           <h4></h4>
           <p></p>
-          <a href="#" class="btn">CONTACT US</a>
+          <a href="Medical-ContactUs" class="btn">CONTACT US</a>
           <div class="info-bg">
             <img src="assets/img/bg-info2.jpg" alt="">
           </div>
@@ -51,12 +51,17 @@
 			$.each(data, function(index, value){
 				html += '<div class="news-box">';
 				html += '<div class="news-img">';
-				html += '<img src="assets/img/small1.jpg" alt="">';
+				html += '<img id="news-update-image-'+value.id+'">';
 				html += '</div>';
 				html += '<div class="news-content">';
 				html += '<span><strong class="news-title">'+value.title+'</strong>'+value.news+'</span>';
 				html += '<a href="News2?news='+value.id+'&button=NEXT&news-title='+value.title+'">Learn more</a>';
 				html += '</div></div>';
+				POST("NewsAndUpdatePublishedImages/"+value.id, {}, function(imgData){
+					if(imgData.length >= 1){
+						$("#news-update-image-"+value.id).attr("src", fileServer+imgData[0].image);
+					}
+				})
 	    	})
 	    	if(html == ""){
 	    		$("#news-header").html("NO UPDATES");

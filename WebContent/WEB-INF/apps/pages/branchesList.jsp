@@ -42,8 +42,7 @@
              '<span>'+value.description+'</span>'+
              '<br>'+
              '<br>'+
-             '<span>Phone: '+value.phone+' '+
-             '<br>Email: '+value.email+'</span>'+
+            
            '</div>'+
            '<div class="branch-img">'+
              '<img src="'+fileServer+value.logo+'" style="width: 250px;" alt="">'+
@@ -63,47 +62,7 @@
 		var cityListContent = "";
 		var cityList = "";
 		var counter = 0;
-		/* $.each(data, function(key, value){
-			console.log(key);
-			var active = "";
-			if(counter == 0){
-				active = "active";
-			}
-
-			cityListContent += '<div id="'+key.split(" ").join("")+'" class="tab-pane '+active+'"><ul id="pagination_'+key.split(" ").join("")+'">';
-			cityList += '<li class="'+active+'"><a href="#'+key.split(" ").join("")+'" data-toggle="tab">'+key+'</a></li>';
-
-
-
-			$.each(value, function(index, details){
-				cityListContent +=  '<li><div class="branch-info">'+
-	              '<h4>'+details.name+'</h4>'+
-	              '<span>'+details.description+'</span>'+
-	              '<br>'+
-	              '<br>'+
-	              '<span>Phone: '+details.phone+' '+
-	              '<br>Email: '+details.email+'</span>'+
-	            '</div>'+
-	            '<div class="branch-img">'+
-	              '<img src="'+fileServer+details.logo+'" style="width: 250px;" alt="">'+
-	            '</div>'+
-	            '<div class="clearfix"></div>'+
-	            '<br>'+
-	            '<div class="map-container">'+
-	              '<div id="map" style="width:100%;height:300px"><iframe width="100%" height="300" frameborder="0" style="border:0" src="'+details.map+'" allowfullscreen></iframe></div>'+
-	          	'</div></li>';
-			})
-			cityListContent += '</ul></div><div class="pagination_holder_'+key.split(" ").join("")+'"></div> ';
-			counter++;
-
-
-			setTimeout(() => {
-				//initPagination("pagination_"+key.split(" ").join(""), 'pagination_holder_'+key.split(" ").join(""));
-			}, 2000);
-
-
-		}) */
-		//$('#clinicCities').html(cityList)
+	
 
     if ($("body").hasClass("home")) {
       $(".map-container").remove();

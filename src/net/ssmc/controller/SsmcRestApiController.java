@@ -6,6 +6,7 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -15,6 +16,7 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import net.cms.ssmc.model.ContactInformation;
 import net.cms.ssmc.model.NewsAndUpdate;
+import net.cms.ssmc.model.NewsAndUpdatesImage;
 import net.cms.ssmc.model.Partner;
 import net.cms.ssmc.services.ContactInformationServices;
 import net.cms.ssmc.services.ImageServices;
@@ -105,5 +107,10 @@ public class SsmcRestApiController {
 	@RequestMapping(path="/NewsAndUpdatePublished", method = {RequestMethod.POST, RequestMethod.GET}, produces={"application/json"})
 	public List<NewsAndUpdate> newsAndUpdatePublished(){
 		return newsAndUpdatesServices.getPublishedNewsAndUpdats();
+	}
+	
+	@RequestMapping(path="/NewsAndUpdatePublishedImages/{id}", method = {RequestMethod.POST, RequestMethod.GET}, produces={"application/json"})
+	public List<NewsAndUpdatesImage> newsAndUpdatePublishedImages(@PathVariable long id){
+		return imageServices.getNewsAndUpdatesImages(id);
 	}
 }

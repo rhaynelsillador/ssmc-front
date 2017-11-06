@@ -18,13 +18,12 @@ public class NewsAndUpdateDaoImpl implements NewsAndUpdateDao{
 	private static final String SQLFINDNEXTONE = "SELECT * FROM news_and_update WHERE ID > ? AND STATUS = 1 ORDER BY id ASC LIMIT 1";
 	private static final String SQLFINDONE = "SELECT * FROM news_and_update WHERE ID=? AND STATUS = 1 LIMIT 1";
 	private static final String FINDONE = "SELECT * FROM news_and_update WHERE STATUS = 1 ORDER BY id DESC LIMIT 1";
-	private static final String FINDALL = "SELECT * FROM news_and_update WHERE STATUS = 1 ORDER BY id DESC";
+	private static final String FINDALL = "SELECT * FROM news_and_update WHERE STATUS = 1 ORDER BY id DESC LIMIT 15";
 	
 	@Override
 	public NewsAndUpdate findOne() throws Exception {
 		return jdbcTemplate.queryForObject(FINDONE, new BeanPropertyRowMapper<NewsAndUpdate>(NewsAndUpdate.class));
 	}
-	
 	@Override
 	public NewsAndUpdate findOne(long id) throws Exception {
 		return jdbcTemplate.queryForObject(SQLFINDONE, new Object[]{id}, new BeanPropertyRowMapper<NewsAndUpdate>(NewsAndUpdate.class));
@@ -44,5 +43,4 @@ public class NewsAndUpdateDaoImpl implements NewsAndUpdateDao{
 	public List<NewsAndUpdate> findAll() {
 		return jdbcTemplate.query(FINDALL, new BeanPropertyRowMapper<NewsAndUpdate>(NewsAndUpdate.class));
 	}
-
 }

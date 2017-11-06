@@ -26,7 +26,6 @@
     </section>
     <%@ include file="commons/SSMCHospitalsFooter.jsp"%>
     <script type="text/javascript">
-    	$("#menuFaq a").addClass("active");
       	$(document).ready(function(){
 	        console.log("G!");
 	        // preloader();
