@@ -10,18 +10,22 @@
       <div class="sec">
         <%-- <div class="wow fadeInUp"> --%>
           <div class="container">
-            <div class="main-news-img" id="imageCarousel"></div>
+            <div class="main-news-img" >
+              <div id="imageCarousel" class="owl-carousel owl-theme"></div>
+            </div>
             <strong class="main-news-title"></strong>
             <br>
             <span class="main-news-date"></span>
             <br>
             <br>
             <p class="main-news-content"></p>
-            
-            <a href="" class="btn btn-danger pull-left" id="previousBtn">PREVIOUS</a>
-       		<a href="" class="btn btn-danger pull-right" id="nextBtn">NEXT</a>
+            <div class="news-btn-container">
+              <a href="" class="btn btn-primary pull-left" id="previousBtn">PREVIOUS</a>
+              <a href="" class="btn btn-primary pull-right" id="nextBtn">NEXT</a>
+              <div class="clearfix"></div>
+            </div>
           </div>
-       	
+
       </div>
     </section>
     <%@ include file="commons/SSMCHospitalsFooter.jsp"%>
@@ -39,7 +43,7 @@
       	var params = {
       		"id" : getUrlParameter("news")
       	}
-      	
+
       	POST("NewsAndUpdateCurrent", params, function(data){
       		if(data){
       			$(".main-news-title").html(data.title);
@@ -55,10 +59,10 @@
       			}else{
       				$("#imageCarousel").remove();
       			}
-      			
+
       		}
       	})
-      	
+
       	if(getUrlParameter("news")){
       		params.button = "PREVIOUS";
     		POST("NewsAndUpdateCurrent", params, function(data){
@@ -72,7 +76,7 @@
       	}else{
       		$("#previousBtn").remove();
       	}
-      	
+
 		params.button = "NEXT";
 		POST("NewsAndUpdateCurrent", params, function(data){
 			if(data.id != 0 || data.title != null){
@@ -81,7 +85,7 @@
 				$("#nextBtn").remove();
 			}
 		})
-		
+
       	function initNewsCarousel(){
       		$('#imageCarousel').owlCarousel({
                 loop:true,

@@ -38,3 +38,13 @@ html:not(.ismobile) #page-loader {
 #preloader{
   background: #3465aa;
 }
+
+.news-btn-container .btn {
+  background: #ee7f1f;
+  border-color: #d06b15;
+}
+
+.news-btn-container .btn.focus, .news-btn-container .btn:focus, .news-btn-container .btn:hover {
+  background: #f15911;
+  border-color: #f15911;
+}
