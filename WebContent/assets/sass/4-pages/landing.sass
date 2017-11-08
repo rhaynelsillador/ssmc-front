@@ -7,6 +7,7 @@
     position: absolute
     z-index: 500
     width: 100%
+    height: auto
     background: white
 
 
@@ -14,8 +15,7 @@
       position: relative
       height: 60px
       width: 330px
-      margin: 0 auto
-      margin-top: 18px
+      margin: 18px auto 25px
 
       span
         width: 100%
@@ -34,19 +34,14 @@
         animation-name: cf3FadeInOut
         animation-timing-function: ease-in-out
         animation-iteration-count: infinite
-        animation-duration: 5s
+        animation-duration: 8s
         animation-delay: 2s
         animation-direction: alternate
+        padding: 0px 60px
+        background: #fff
 
-        &::after
-          content: ""
-          width: 100%
-          height: 100%
-          position: absolute
-          background: #fff
-          top: 0
-          left: 0
-          z-index: -1
+      span.logo-bottom img
+        margin-top: 5px
 
 
     // img
@@ -118,6 +113,7 @@
     overflow: hidden
     height: 100%
     width: 100%
+    position: relative
 
   .corp-container
     width: 57%
@@ -191,68 +187,126 @@
     .landing-content
       left: 50%
       margin-left: -130px
+      padding-top: 75px!important
 
 html.ismobile
   .landing
     padding-top: 0px
 
-    section
-      padding-top: 80px
+    #logo_container span.logo-bottom img
+      width: 270px
+      margin-top: 12px
 
-    header img
-      width: 230px
+    section
+      padding-top: 103px
+
+      // img
+      //   width: 230px
+
+
 
     #clinics
-      &::after
-        content: ""
-        position: absolute
-        width: 100%
-        height: 100%
-        top: 0
-        left: 0
-        background: rgba(95, 42, 6, 0.2)
+      border: 0px
+      -webkit-transform: skewY(-10deg)
+      -moz-transform: skewY(-10deg)
+      -o-transform: skewY(-10deg)
+
 
       .image
         left: -35%
+        top: -10%
+        -webkit-transform: skewY(10deg)
+        -moz-transform: skewY(10deg)
+        -o-transform: skewY(10deg)
 
       .landing-content
-        left: 30vw
-        margin-left: -90px
-        bottom: 15px
+        top: 0
+        left: 0
+        right: 0
+        margin: 0px
+        text-align: right
+        padding-top: 75px!important
+        -webkit-transform: skewY(10deg)
+        -moz-transform: skewY(10deg)
+        -o-transform: skewY(10deg)
+
+        .landing-logo
+          left: initial
+          right: 20px
+          top: 0px
 
     .med-container
+      margin: 0
       width: 100%
-      margin-right: -50%
+      position: absolute
+      top: 50%
+      z-index: 1
 
     #hospitals
+      -webkit-transform: skew(0deg)
+      -moz-transform: skew(0deg)
+      -o-transform: skew(0deg)
+
       &::after
         content: ""
         position: absolute
         width: 100%
         height: 100%
-        top: 0
-        left: 0
-        background: rgba(8, 29, 53, 0.35)
+        top: 50%
+        background: #fff
+        -webkit-transform: skewY(-10deg)
+        -moz-transform: skewY(-10deg)
+        -o-transform: skewY(-10deg)
+        z-index: 1
 
       .image
         right: -35%
+        -webkit-transform: skew(0deg)
+        -moz-transform: skew(0deg)
+        -o-transform: skew(0deg)
 
       .landing-content
-        bottom: initial
-        top: 40px
-        right: 30vw
-        margin-right: -90px
+        right: 0
+        left: 0
+        top: 0
+        height: 50%
+        padding-top: 95px
+        text-align: left
+
 
     .corp-container
       width: 100%
-      margin-left: -50%
+      position: absolute
+      margin: 0
+      // z-index: 1
+      // top: -50%
 
     .landing-content
-      width: 180px
+      width: 100%
+      padding: 20px
+      -webkit-transform: skew(0deg)
+      -moz-transform: skew(0deg)
+      -o-transform: skew(0deg)
+
+      .landing-logo
+        margin: initial
+        width: 75px
+        position: absolute
+        left: 20px
+        top: 20px
+
+        img
+          width: 100%
+          margin: 0px
+
+      h2
+        margin: 5px 0px 5px
+        font-size: 26px
 
       span
-        display: none
-        // background: red
+        // display: none
+        display: block
+        line-height: 14px
 
 
 

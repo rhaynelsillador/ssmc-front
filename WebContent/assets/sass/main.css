@@ -1105,13 +1105,13 @@ html.ismobile .sec {
   position: absolute;
   z-index: 500;
   width: 100%;
+  height: auto;
   background: white; }
   .landing header #logo_container {
     position: relative;
     height: 60px;
     width: 330px;
-    margin: 0 auto;
-    margin-top: 18px; }
+    margin: 18px auto 25px; }
     .landing header #logo_container span {
       width: 100%;
       position: absolute;
@@ -1126,18 +1126,13 @@ html.ismobile .sec {
       animation-name: cf3FadeInOut;
       animation-timing-function: ease-in-out;
       animation-iteration-count: infinite;
-      animation-duration: 5s;
+      animation-duration: 8s;
       animation-delay: 2s;
-      animation-direction: alternate; }
-      .landing header #logo_container span.logo-top::after {
-        content: "";
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        background: #fff;
-        top: 0;
-        left: 0;
-        z-index: -1; }
+      animation-direction: alternate;
+      padding: 0px 60px;
+      background: #fff; }
+    .landing header #logo_container span.logo-bottom img {
+      margin-top: 5px; }
 .landing section {
   position: relative;
   padding-top: 90px;
@@ -1187,7 +1182,8 @@ html.ismobile .sec {
 .landing .landing-container {
   overflow: hidden;
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  position: relative; }
 .landing .corp-container {
   width: 57%;
   height: 100%;
@@ -1253,53 +1249,99 @@ html.ismobile .sec {
     -o-transform: skew(14deg); }
   .landing #clinics .landing-content {
     left: 50%;
-    margin-left: -130px; }
+    margin-left: -130px;
+    padding-top: 75px !important; }
 
 html.ismobile .landing {
   padding-top: 0px; }
+  html.ismobile .landing #logo_container span.logo-bottom img {
+    width: 270px;
+    margin-top: 12px; }
   html.ismobile .landing section {
-    padding-top: 80px; }
-  html.ismobile .landing header img {
-    width: 230px; }
-  html.ismobile .landing #clinics::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(95, 42, 6, 0.2); }
-  html.ismobile .landing #clinics .image {
-    left: -35%; }
-  html.ismobile .landing #clinics .landing-content {
-    left: 30vw;
-    margin-left: -90px;
-    bottom: 15px; }
+    padding-top: 103px; }
+  html.ismobile .landing #clinics {
+    border: 0px;
+    -webkit-transform: skewY(-10deg);
+    -moz-transform: skewY(-10deg);
+    -o-transform: skewY(-10deg); }
+    html.ismobile .landing #clinics .image {
+      left: -35%;
+      top: -10%;
+      -webkit-transform: skewY(10deg);
+      -moz-transform: skewY(10deg);
+      -o-transform: skewY(10deg); }
+    html.ismobile .landing #clinics .landing-content {
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: 0px;
+      text-align: right;
+      padding-top: 75px !important;
+      -webkit-transform: skewY(10deg);
+      -moz-transform: skewY(10deg);
+      -o-transform: skewY(10deg); }
+      html.ismobile .landing #clinics .landing-content .landing-logo {
+        left: initial;
+        right: 20px;
+        top: 0px; }
   html.ismobile .landing .med-container {
+    margin: 0;
     width: 100%;
-    margin-right: -50%; }
-  html.ismobile .landing #hospitals::after {
-    content: "";
     position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(8, 29, 53, 0.35); }
-  html.ismobile .landing #hospitals .image {
-    right: -35%; }
-  html.ismobile .landing #hospitals .landing-content {
-    bottom: initial;
-    top: 40px;
-    right: 30vw;
-    margin-right: -90px; }
+    top: 50%;
+    z-index: 1; }
+  html.ismobile .landing #hospitals {
+    -webkit-transform: skew(0deg);
+    -moz-transform: skew(0deg);
+    -o-transform: skew(0deg); }
+    html.ismobile .landing #hospitals::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 50%;
+      background: #fff;
+      -webkit-transform: skewY(-10deg);
+      -moz-transform: skewY(-10deg);
+      -o-transform: skewY(-10deg);
+      z-index: 1; }
+    html.ismobile .landing #hospitals .image {
+      right: -35%;
+      -webkit-transform: skew(0deg);
+      -moz-transform: skew(0deg);
+      -o-transform: skew(0deg); }
+    html.ismobile .landing #hospitals .landing-content {
+      right: 0;
+      left: 0;
+      top: 0;
+      height: 50%;
+      padding-top: 95px;
+      text-align: left; }
   html.ismobile .landing .corp-container {
     width: 100%;
-    margin-left: -50%; }
+    position: absolute;
+    margin: 0; }
   html.ismobile .landing .landing-content {
-    width: 180px; }
+    width: 100%;
+    padding: 20px;
+    -webkit-transform: skew(0deg);
+    -moz-transform: skew(0deg);
+    -o-transform: skew(0deg); }
+    html.ismobile .landing .landing-content .landing-logo {
+      margin: initial;
+      width: 75px;
+      position: absolute;
+      left: 20px;
+      top: 20px; }
+      html.ismobile .landing .landing-content .landing-logo img {
+        width: 100%;
+        margin: 0px; }
+    html.ismobile .landing .landing-content h2 {
+      margin: 5px 0px 5px;
+      font-size: 26px; }
     html.ismobile .landing .landing-content span {
-      display: none; }
+      display: block;
+      line-height: 14px; }
 
 @keyframes cf3FadeInOut {
   0% {

@@ -15,7 +15,7 @@
             <img src="assets/img/logo_health.png" alt="" />
           </span>
           <span class="logo-top">
-            <img src="assets/img/logo_group.png" alt="" />
+            <img src="assets/img/logo-ssmc.jpg" alt="" />
           </span>
         </div>
       </div>
@@ -38,7 +38,7 @@
                 </span>
               </div>
             </div>
-            
+
             <div class="image"></div>
           </a>
         </div>
