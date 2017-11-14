@@ -6,6 +6,7 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -30,6 +31,7 @@ import net.ssmc.services.CityServices;
 import net.ssmc.services.ClinicServices;
 
 @RestController
+@CrossOrigin
 public class SsmcRestFrontController {
 	
 	@Autowired
@@ -117,7 +119,7 @@ public class SsmcRestFrontController {
 	public Map<String, Object> headersInfo(@RequestBody Form form){
 		return headerServices.getHeaderInformation(form);
 	}
-	@RequestMapping(path="/ServicesInformation", method = {RequestMethod.POST, RequestMethod.GET}, produces={"application/json"})
+	@RequestMapping(path="/ServicesInformation", method = {RequestMethod.POST, RequestMethod.GET, RequestMethod.OPTIONS}, produces={"application/json"})
 	public Map<String, Object> servicesInformation(@RequestBody Form form){
 		return serviceServices.getServices(form);
 	}

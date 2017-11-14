@@ -27,8 +27,8 @@
       </div>
 	
 	  <%@ include file="../medical/FeaturedBoxes.jsp"%>
-      <%@ include file="../CorporateServices1.jsp"%>
-	  <%@ include file="../CorporateServices2.jsp"%>
+      <%@ include file="MedicalServices1.jsp"%>
+	  <%@ include file="MedicalServices2.jsp"%>
 	  <%@ include file="../branchesList.jsp"%>
 	  <%@ include file="../Advertisement.jsp"%>
 
