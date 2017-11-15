@@ -492,6 +492,9 @@ footer {
 .home .choose-content p {
   display: none; }
 
+#about .tab-about > div:not(:last-child) {
+  margin-bottom: 35px; }
+
 .welcome {
   position: relative;
   height: 700px;
@@ -1015,28 +1018,26 @@ footer {
   z-index: 601; }
 
 html.ismobile body {
-  padding-top: 90px; }
+  padding-top: 55px; }
 html.ismobile header {
   position: fixed;
   top: 0;
   z-index: 600;
-  width: 100%; }
+  width: 100%;
+  height: initial; }
 html.ismobile .mobile-menu {
-  display: block; }
-html.ismobile .header-top a {
-  width: 22px;
-  height: 22px;
-  overflow: hidden; }
+  display: block;
+  position: absolute;
+  right: 10px; }
+html.ismobile .header-top {
+  display: none; }
 html.ismobile .header-bot {
   text-align: center; }
   html.ismobile .header-bot .logo {
-    float: none !important;
     display: block;
-    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
-    z-index: 600;
     position: relative;
-    margin: 0px -15px;
-    background: #fff; }
+    text-align: left;
+    padding-left: 10px; }
   html.ismobile .header-bot .nav.pull-right {
     display: none;
     position: absolute;
@@ -1048,14 +1049,16 @@ html.ismobile .header-bot {
     html.ismobile .header-bot .nav.pull-right ul li {
       width: 100%;
       border-bottom: 1px solid #e8e8e8; }
-html.ismobile .welcome::after {
-  bottom: -110px; }
 html.ismobile .welcome .welcome-content {
-  padding: 0px 30px;
-  height: initial;
-  z-index: 150; }
-html.ismobile .welcome h1 {
-  font-size: 32px; }
+  padding: 40px 10px 10px; }
+  html.ismobile .welcome .welcome-content h3 {
+    font-size: 24px;
+    margin: 0px; }
+  html.ismobile .welcome .welcome-content h1 {
+    font-size: 32px;
+    margin: 8px 0px; }
+html.ismobile .welcome > span, html.ismobile .welcome .welcome-content div {
+  margin: 0px auto 10px; }
 html.ismobile .welcome .welcome-carousel {
   width: 200%; }
 html.ismobile section {
@@ -1098,6 +1101,8 @@ html.ismobile .sec {
   padding: 20px 15px; }
   html.ismobile .sec .container {
     padding: 0px; }
+html.ismobile .sec.welcome {
+  padding: 0px; }
 
 .landing header {
   text-align: center;

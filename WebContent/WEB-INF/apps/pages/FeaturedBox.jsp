@@ -1,7 +1,7 @@
 <div class="sec info" id="featured-box-sec">
   <div class="container">
     <div class="row">
-      <div class="col-sm-4 wow slideInUp">
+      <div class="col-sm-4 wow bounceInUp">
         <div class="info-box box-1">
           <img src="assets/img/icon-info1.png" class="icon-info" alt="">
           <h4></h4>
@@ -12,7 +12,7 @@
         </div>
 
       </div>
-      <div class="col-sm-4 wow slideInUp">
+      <div class="col-sm-4 wow bounceInUp">
         <div class="info-box box-2">
           <h4></h4>
           <p> </p>
@@ -43,8 +43,8 @@
 	    		$(".box-"+value.box+" > p").html(value.description);
 	    	})
 		})
-	
-	
+
+
 		POST("NewsAndUpdatePublished", {}, function(data){
 			var html = "";
 			$.each(data, function(index, value){
@@ -70,8 +70,8 @@
 	    	}
 		})
 	})
-	
-	
+
+
 	function ticker(){
 		$('.news-container').easyTicker({
 	        direction: 'up',

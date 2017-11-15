@@ -60,7 +60,8 @@
       </div>
     </section>
     <footer>
-      <span>&reg; 2017, South Super Highway Medical Center</span>
+      <%-- <span>&reg; 2017, South Super Highway Medical Center</span> --%>
+      <span>Health is happiness</span>
     </footer>
     <div id="preloader"></div>
 

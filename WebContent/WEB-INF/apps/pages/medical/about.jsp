@@ -19,16 +19,16 @@
           <div class="row text-center">
             <br>
             <div class="basic-tabination">
-              <div class="col-md-3">
+              <%-- <div class="col-md-3">
                 <ul class="nav nav-pills nav-stacked wow fadeInLeft" id="aboutUsMenus">
                   <li class="active"><a href="#about_1" data-toggle="tab">Introduction</a></li>
                   <li><a href="#about_2" data-toggle="tab">Mission & Vision</a></li>
                   <li><a href="#about_3" data-toggle="tab">Certifications</a></li>
                 </ul>
-              </div>
-              <div class="col-md-9">
+              </div> --%>
+              <%-- <div class="col-md-9"> --%>
                 <div class="tab-content tab-about wow fadeInRight" id="aboutUsContent">
-                  <div id="about_1" class="tab-pane active">
+                  <div id="about_1">
                       <h3>Introduction</h3>
                       <br>
                       <div class="about-img">
@@ -41,7 +41,7 @@
                     </div>
 
                   </div>
-                  <div id="about_2" class="tab-pane">
+                  <div id="about_2">
                       <h3>Mission & Vision</h3>
                       <br>
                       <div class="about-img">
@@ -54,7 +54,7 @@
                     </div>
 
                   </div>
-                  <div id="about_3" class="tab-pane">
+                  <div id="about_3">
                       <h3>Certifications</h3>
                       <br>
                       <div class="about-img">
@@ -68,7 +68,7 @@
 
                   </div>
                 </div>
-              </div>
+              <%-- </div> --%>
             </div>
           </div>
         </div>
@@ -116,7 +116,7 @@
                    '</div>';
     		  }else{
     			  aboutUsMenus += '<li><a href="#about_'+i+'" data-toggle="tab">'+data[i].name+'</a></li>';
-    			  aboutUsContent += '<div id="about_'+i+'" class="tab-pane">'+
+    			  aboutUsContent += '<div id="about_'+i+'">'+
 	                  '<h3>'+data[i].name+'</h3>'+
 	                  '<br>'+
 	                  '<div class="about-img">'+
