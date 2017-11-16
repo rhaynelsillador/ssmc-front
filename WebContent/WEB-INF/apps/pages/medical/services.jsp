@@ -12,25 +12,8 @@
         <div class="welcome-background" id="imageCarousel">
         </div>
       </div>
-      <%@ include file="../CorporateServices1.jsp"%>
-      <%@ include file="../CorporateServices2.jsp"%>
-      <!-- <div class="sec">
-        <div class="container">
-          <div class="row text-center">
-            <br>
-            <div class="big-tabination">
-              <div class="col-md-4">
-                <ul class="nav nav-pills nav-stacked wow fadeInRight" id="servicesDataTitle">
-                </ul>
-              </div>
-              <div class="col-md-8">
-                <div class="tab-content service-content wow fadeInLeft" id="servicesDataContent">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> -->
+      <%@ include file="../medical/MedicalServices1.jsp"%>
+	  <%@ include file="../medical/MedicalServices2.jsp"%>
     </section>
 
     <%@ include file="../commons/SSMCHealthClinicFooter.jsp"%>
@@ -47,7 +30,6 @@
 	        });
 
 	        POST("HeadersInformation", {"app":"CLINIC", "page":"Service"}, function(data){
-	        	console.log(data);
 	        	if(data.data){
 	        		$("#headerInfo").html(data.data.content);
 	        	}
@@ -59,46 +41,8 @@
 	        		imageCarousel += '<div class="item"><img src="'+fileServer+value.image+'" alt=""></div>';
 	        	})
 	        	$("#imageCarousel").html(imageCarousel);
-	        	//initCarousel();
 	        })
-
-	        POST("ServicesInformation", {"app": "CLINIC"}, function(data){
-	        	data = data.data;
-	        	var servicesDataTitle = "";
-	        	var servicesDataContent = "";
-	        	$.each(data, function(index, value){
-	        		var isActive = "";
-	        		if(index == 0){
-	        			isActive = "active";
-	        		}
-	        		servicesDataTitle += '<li class="'+isActive+'">'+
-		            	'<a href="#service_'+index+'" class="side" data-toggle="tab">'+
-	                    '<aside></aside>'+
-	                    '<h4>'+value.title+'</h4>'+
-	                    '<span>'+value.content+'</span>'+
-	                  '</a>'+
-	                 '</li>';
-
-	        		servicesDataContent += '<div id="service_'+index+'" class="tab-pane '+isActive+'">'+
-	                    '<img src="'+fileServer+value.image+'" alt="">'+
-	                    '<div>'+value.content2+'</div>'+
-	                    '</div>';
-	        	})
-	        	$("#servicesDataTitle").html(servicesDataTitle);
-	        	$("#servicesDataContent").html(servicesDataContent);
-	        });
       	});
-
-        // function preloader() {
-        //   $("header,section,footer").hide()
-        //
-        //   $(window).load(function(){
-        //     $("header,section,footer").fadeIn();
-        //     setTimeout(function(){ $('#preloader').fadeOut('slow'); }, 500);
-        //     console.log("peace out");
-        //   });
-        //
-        // }
     </script>
   </body>
 </html>

@@ -17,6 +17,7 @@ import net.cms.ssmc.model.Advertisement;
 import net.cms.ssmc.model.Faq;
 import net.cms.ssmc.model.FeaturedBox;
 import net.cms.ssmc.model.Header;
+import net.cms.ssmc.model.NewsAndUpdatesImage;
 import net.cms.ssmc.services.AboutUsServices;
 import net.cms.ssmc.services.CorporateServices;
 import net.cms.ssmc.services.FaqServices;
@@ -133,6 +134,13 @@ public class SsmcRestFrontController {
 	public Map<String, Object> imageServices(@RequestBody Form form){
 		return imageServices.getImages(form);
 	}
+	
+	@RequestMapping(path="/ImagesByModuleId", method = {RequestMethod.POST, RequestMethod.GET}, produces={"application/json"})
+	public List<NewsAndUpdatesImage> iagesByModuleId(@RequestBody Form form){
+		return imageServices.imagesByModuleId(form.getNum(), form.getModule());
+	}
+	
+	
 	
 	@RequestMapping(path="/ClinicsAndHospitalList", method = {RequestMethod.POST, RequestMethod.GET}, produces={"application/json"})
 	public Map<String, List<Clinic>> clinicsAndHospitalList(){

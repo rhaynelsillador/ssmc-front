@@ -27,8 +27,8 @@
       </div>
 	
 	  <%@ include file="../medical/FeaturedBoxes.jsp"%>
-      <%@ include file="MedicalServices1.jsp"%>
-	  <%@ include file="MedicalServices2.jsp"%>
+      <%@ include file="../medical/MedicalServices1.jsp"%>
+	  <%@ include file="../medical/MedicalServices2.jsp"%>
 	  <%@ include file="../branchesList.jsp"%>
 	  <%@ include file="../Advertisement.jsp"%>
 
@@ -60,7 +60,9 @@
 	        })
 
 	        POST("HeadersInformation", {"app":"CLINIC", "page":"Medical"}, function(data){
-	        	$("#headerInfo").html(data.data.content);
+	        	if(data.data){
+	        		$("#headerInfo").html(data.data.content);
+	        	}
 	        });
     	});
 

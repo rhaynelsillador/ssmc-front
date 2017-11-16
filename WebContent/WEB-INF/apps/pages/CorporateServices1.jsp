@@ -33,25 +33,48 @@
 		data = data.data;
 		var corporateServicesTitle1 = "";
 		var corporateServicesContent1 = "";
+		var defaultServices;
 		$.each(data, function(index, value){
-			var isActive = "";
+			var isActive = "", isloaded = false;
 			if(index == 0){
 				isActive = "active";
+				defaultServices = value.id;
+				isloaded = true;
 			}
 			corporateServicesTitle1 += '<li class="'+isActive+'">'+
-				'<a href="#service_'+index+'" class="side" data-toggle="tab">'+
+				'<a href="#service_'+index+'" class="side service1-tab" data-toggle="tab" data-isLoaded="'+isloaded+'" data-id="'+value.id+'">'+
 	            '<aside></aside>'+
 	            '<h5>'+value.name+'</h5>'+
 	            '<span>'+value.content+'</span>'+
 	          	'</a>'+
 	         '</li>';
-	
+	         
 	         corporateServicesContent1 += '<div id="service_'+index+'" class="tab-pane '+isActive+'">'+
-	            '<img src="'+fileServer+value.image+'" alt="">'+
-	            '<div>'+value.content2+'</div>'+
-	            '</div>';
+	         '<div class="welcome-carousel owl-carousel" id="service_images_'+value.id+'"></div></div>';
+	         
 		})
 		$("#corporateServicesTitle1").html(corporateServicesTitle1);
 		$("#corporateServicesContent1").html(corporateServicesContent1);
+		if(defaultServices){
+			retrieveImagesService1(defaultServices);
+		}
+		$(".service1-tab").click(function(e){
+			var tabData = $(this).data();
+			if(tabData.isloaded == false){
+				$(this).data("isloaded", true);
+				retrieveImagesService1(tabData.id)
+			}
+		})
 	});
+	
+	function retrieveImagesService1(id){
+		POST("ImagesByModuleId", {"num" : id, "module":"SERVICE"}, function(data){
+			var imageCarousel = "";
+        	$.each(data, function(index, value){
+        		imageCarousel += '<div class="item"><img src="'+fileServer+value.image+'" alt=""></div>';
+        	})
+        	$("#service_images_"+id).html(imageCarousel);
+        	initAdsCarousel("service_images_"+id);
+		});
+	}
 </script>

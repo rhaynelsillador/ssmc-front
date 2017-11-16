@@ -1,5 +1,5 @@
-//var fileServer = 'http://localhost/FileServer/';
-var fileServer = 'http://ssmcgroup.ph/FileServer/';
+var fileServer = 'http://localhost/FileServer/';
+//var fileServer = 'http://ssmcgroup.ph/FileServer/';
 
 function objectifyForm(formArray) {
   var returnArray = {};
@@ -272,3 +272,14 @@ var getUrlParameter = function getUrlParameter(sParam) {
         }
     }
 };
+
+var initAdsCarousel = function(id){
+	$("#"+id).owlCarousel({
+        loop:true,
+        nav:true,
+        items:1,
+        autoplay:true,
+        autoplayTimeout:5000,
+        // autoplayHoverPause:true
+    });
+}

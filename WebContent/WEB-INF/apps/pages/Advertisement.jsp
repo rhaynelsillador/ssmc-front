@@ -12,19 +12,9 @@
         		imageCarousel += '<div class="item"><img src="'+fileServer+value.image+'" alt=""></div>';
         	})
         	$("#advertisementImageCarousel").html(imageCarousel);
-        	initAdsCarousel();
+        	initAdsCarousel("advertisementImageCarousel");
         })
 	})
 	
-	var initAdsCarousel = function(){
-		$("#advertisementImageCarousel1").owlCarousel({
-	        loop:true,
-	        nav:true,
-	        items:1,
-	        autoplay:true,
-	        autoplayTimeout:5000,
-	        // autoplayHoverPause:true
-	    });
-	}
 
 </script>

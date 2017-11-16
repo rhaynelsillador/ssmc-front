@@ -27,11 +27,11 @@ public class ServiceDaoImpl implements ServiceDao {
 	
 	@Override
 	public List<Service> retrieveAllWithImages(App app, int num, int limit, Module module) {
-		String SQLWITHIMAGES = "SELECT S.*, I.image as image FROM SERVICE AS S LEFT JOIN IMAGES AS I ON S.id = I.serviceid WHERE S.type = ? AND I.type=? and S.num = ? AND I.status = ?";
+		String SQLWITHIMAGES = "SELECT * FROM SERVICE AS S WHERE S.type = ? AND S.num = ?";
 		if(limit > 0){
 			SQLWITHIMAGES += " LIMIT "+limit;
 		}
-		return jdbcTemplate.query(SQLWITHIMAGES, new Object[]{app.toString(), module.toString(), num, true}, new BeanPropertyRowMapper<Service>(Service.class));
+		return jdbcTemplate.query(SQLWITHIMAGES, new Object[]{app.toString(), num}, new BeanPropertyRowMapper<Service>(Service.class));
 	}	
 
 }

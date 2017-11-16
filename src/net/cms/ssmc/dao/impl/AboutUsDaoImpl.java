@@ -13,7 +13,7 @@ import net.ssmc.enums.Module;
 
 public class AboutUsDaoImpl implements AboutUsDao {
 
-	private static final String QUERY		= "SELECT A.*, I.image FROM ABOUTUS AS A INNER JOIN IMAGES AS I ON A.id = I.serviceid WHERE A.type = ? AND I.type = ?";
+	private static final String QUERY		= "SELECT A.*, I.image FROM ABOUTUS AS A INNER JOIN IMAGES AS I ON A.id = I.serviceid WHERE A.type = ? AND I.type = ? ORDER BY sorter ASC";
 	
 	@Autowired
 	private JdbcTemplate jdbcTemplate;

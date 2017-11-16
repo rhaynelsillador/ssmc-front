@@ -36,7 +36,6 @@
         <div class="tab-content">
            <div id="service_0_2" class="tab-pane active">
             <div class="service-img">
-              <img src="" alt="">
             </div>
             <span class="service-circle"></span>
             <div class="service-content">
@@ -129,18 +128,47 @@
 
 <script>
 
-	POST("ServicesInformation", {"app": "MEDICAL", "num":2, "limit" : 6}, function(data){
+	POST("ServicesInformation", {"app": "CLINIC", "num":2, "limit" : 6}, function(data){
+		var defaultServices;
 		$.each(data.data, function(index, value){
+			var isActive = "", isloaded = false;
+			if(index == 0){
+				defaultServices = value.id;
+				isloaded = true;
+			}
 			$("#service"+index+"_2").parent().removeClass("hidden");
 			$("#service"+index+"_2 h5").html(value.title);
 			$("#service"+index+"_2 span").html(value.content);
-
 			$("#service_"+index+"_2 .service-content h4").html(value.title);
 			$("#service_"+index+"_2 .service-content span").html(value.content2);
-
-			$("#service_"+index+"_2 .service-img img").attr("src", fileServer+value.image);
-
+			$("#service"+index+"_2").attr("data-isloaded", isloaded);
+			$("#service"+index+"_2").attr("data-id", value.id);
+			$("#service"+index+"_2").attr("data-index", index);
+			
+			$("#service"+index+"_2").click(function(e){
+				var tabData = $(this).data();
+				console.log(tabData);
+				if(tabData.isloaded == false){
+					$(this).data("isloaded", true);
+					retrieveImagesService2(tabData.index, tabData.id)
+				}
+			})
 		})
+		console.log("defaultServices : ", defaultServices);
+		if(defaultServices){
+			$("#service"+0+"_2").click();
+		}
 	})
 
+	function retrieveImagesService2(index, id){
+		POST("ImagesByModuleId", {"num" : id, "module":"SERVICE"}, function(data){
+			console.log("service 2 : ", data);
+			var imageCarousel = "";
+        	$.each(data, function(index, value){
+        		imageCarousel += '<div class="item"><img src="'+fileServer+value.image+'" alt=""></div>';
+        	})
+        	$("#service_"+index+"_2 .service-img").html(imageCarousel);
+        	initAdsCarousel("service_"+index+"_2 .service-img");
+		});
+	}
 </script>

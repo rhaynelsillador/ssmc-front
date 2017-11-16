@@ -12,6 +12,7 @@ public class AboutUs {
 	private Timestamp dateAdded;
 	private Timestamp dateUpdated;
 	private App type;
+	private int sorter;
 	private String image;
 	
 	public int getId() {
@@ -58,6 +59,12 @@ public class AboutUs {
 	}
 	public void setImage(String image) {
 		this.image = image;
+	}
+	public int getSorter() {
+		return sorter;
+	}
+	public void setSorter(int sorter) {
+		this.sorter = sorter;
 	}
 	@Override
 	public String toString() {

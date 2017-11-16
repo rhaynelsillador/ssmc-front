@@ -18,6 +18,7 @@ public class Service {
 	private Timestamp dateAdded;
 	private Timestamp dateUpdated;
 	private String image;
+	private int sorter;
 	
 	public int getId() {
 		return id;
@@ -79,5 +80,16 @@ public class Service {
 	public void setImage(String image) {
 		this.image = image;
 	}
-	
+	public int getSorter() {
+		return sorter;
+	}
+	public void setSorter(int sorter) {
+		this.sorter = sorter;
+	}
+	@Override
+	public String toString() {
+		return "Service [id=" + id + ", name=" + name + ", title=" + title + ", content=" + content + ", content2="
+				+ content2 + ", status=" + status + ", type=" + type + ", dateAdded=" + dateAdded + ", dateUpdated="
+				+ dateUpdated + ", image=" + image + ", sorter=" + sorter + "]";
+	}
 }

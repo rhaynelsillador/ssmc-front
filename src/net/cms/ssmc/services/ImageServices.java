@@ -10,7 +10,6 @@ import net.cms.ssmc.dao.ImageDao;
 import net.cms.ssmc.model.Advertisement;
 import net.cms.ssmc.model.NewsAndUpdatesImage;
 import net.ssmc.enums.Module;
-import net.ssmc.model.Image;
 import net.ssmc.model.form.Form;
 
 public class ImageServices {
@@ -37,6 +36,10 @@ public class ImageServices {
 	
 	public List<Advertisement> getAllAdvertiseImages(){
 		return imageDao.retrieveImage(Module.ADVERTISEMENT);
+	}
+	
+	public List<NewsAndUpdatesImage> imagesByModuleId(long id, Module module){
+		return imageDao.retrieveNewsAndUpdatesImage(id, module);
 	}
 	
 	public List<NewsAndUpdatesImage> getNewsAndUpdatesImages(long id){
