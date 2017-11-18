@@ -1070,13 +1070,16 @@ html.ismobile .welcome .welcome-content {
   html.ismobile .welcome .welcome-content h3 {
     font-size: 24px;
     margin: 0px; }
-  html.ismobile .welcome .welcome-content h1 {
-    font-size: 32px;
-    margin: 8px 0px; }
+html.ismobile .welcome h1 {
+  font-size: 32px;
+  margin: 8px 0px; }
 html.ismobile .welcome > span, html.ismobile .welcome .welcome-content div {
   margin: 0px auto 10px; }
 html.ismobile .welcome .welcome-carousel {
   width: 120%; }
+html.ismobile .welcome-common {
+  min-height: 260px;
+  padding: 20px 0px 40px; }
 html.ismobile section {
   padding-top: 0px; }
 html.ismobile .modal {
@@ -1143,6 +1146,8 @@ html.ismobile .med-promo {
   height: auto; }
 html.ismobile .info {
   margin: 0px; }
+html.ismobile .about-img {
+  height: initial; }
 
 .landing header {
   text-align: center;

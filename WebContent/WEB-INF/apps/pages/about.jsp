@@ -15,22 +15,22 @@
       </div>
       <div class="sec branch">
         <div class="container">
-          <div class="row text-center">
+          <div class=" text-center">
             <br>
             <div class="basic-tabination">
-              <div class="col-md-3">
+              <%-- <div class="col-md-3">
                 <ul class="nav nav-pills nav-stacked wow fadeInLeft" id="aboutUsMenus">
                   <li class="active"><a href="#about_1" data-toggle="tab">Introduction</a></li>
                   <li><a href="#about_2" data-toggle="tab">Mission & Vision</a></li>
                   <li><a href="#about_3" data-toggle="tab">Certifications</a></li>
                 </ul>
-              </div>
-              <div class="col-md-9">
+              </div> --%>
+              <%-- <div class="col-md-9"> --%>
                 <div class="tab-content tab-about wow fadeInRight" id="aboutUsContent">
-                  
+
 
                 </div>
-              </div>
+              <%-- </div> --%>
             </div>
           </div>
         </div>
@@ -55,7 +55,7 @@
 	 	$("#aboutUsHeaderTitle").html(data.title);
 	 	$("#aboutUsHeaderContent").html(data.content);
 	})
-	
+
 	POST("SystemImages", {"app":"HOSPITALS", "page":"About", "module":"HEADER"}, function(data){
         	var imageCarousel = "";
         	$.each(data.data, function(index, value){
@@ -63,7 +63,7 @@
         	})
         	$("#imageCarousel").html(imageCarousel);
         })
-	
+
 	POST("AboutUsInformation?app=HOSPITALS", {}, function(data){
 		data = data.data
 		console.log(data);
