@@ -928,6 +928,9 @@ footer {
       background: #132c4e;
       border-color: #132c4e; }
 
+.btn-branches {
+  display: none; }
+
 @media (min-width: 768px) and (max-width: 992px) {
   .big-tabination .side {
     padding: 10px 10px 10px 45px;
@@ -1032,7 +1035,8 @@ html.ismobile header {
   top: 0;
   z-index: 600;
   width: 100%;
-  height: initial; }
+  height: initial;
+  box-shadow: none; }
 html.ismobile .mobile-menu {
   display: block;
   position: absolute;
@@ -1040,7 +1044,10 @@ html.ismobile .mobile-menu {
 html.ismobile .header-top {
   display: none; }
 html.ismobile .header-bot {
-  text-align: center; }
+  text-align: center;
+  background: #fff;
+  box-shadow: 0px 1px 1px black;
+  margin: 0px -15px; }
   html.ismobile .header-bot .logo {
     display: block;
     position: relative;
@@ -1049,11 +1056,12 @@ html.ismobile .header-bot {
   html.ismobile .header-bot .nav.pull-right {
     display: none;
     position: absolute;
-    z-index: 500;
+    z-index: -1;
     background: #fff;
     height: 100vh;
     width: 100%;
-    left: 0; }
+    left: 0;
+    padding-top: 57px; }
     html.ismobile .header-bot .nav.pull-right ul li {
       width: 100%;
       border-bottom: 1px solid #e8e8e8; }
@@ -1068,7 +1076,7 @@ html.ismobile .welcome .welcome-content {
 html.ismobile .welcome > span, html.ismobile .welcome .welcome-content div {
   margin: 0px auto 10px; }
 html.ismobile .welcome .welcome-carousel {
-  width: 200%; }
+  width: 120%; }
 html.ismobile section {
   padding-top: 0px; }
 html.ismobile .modal {
@@ -1110,7 +1118,31 @@ html.ismobile .sec {
   html.ismobile .sec .container {
     padding: 0px; }
 html.ismobile .sec.welcome {
-  padding: 0px; }
+  padding: 0px 0px 40px;
+  height: initial; }
+html.ismobile .basic-tabination ul {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  z-index: 30;
+  background: #fff;
+  overflow-y: scroll;
+  padding-top: 70px;
+  transition: left 300ms ease-in-out; }
+html.ismobile .basic-tabination ul.tab-open {
+  left: 0; }
+html.ismobile .branch .branch-info, html.ismobile .branch .branch-img {
+  width: 100%; }
+html.ismobile .btn-branches {
+  display: block;
+  width: 200px;
+  margin: auto; }
+html.ismobile .med-promo {
+  height: auto; }
+html.ismobile .info {
+  margin: 0px; }
 
 .landing header {
   text-align: center;

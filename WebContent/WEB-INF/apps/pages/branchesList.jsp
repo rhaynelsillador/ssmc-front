@@ -3,14 +3,15 @@
     <div class="row text-center">
       <span class="header-span">Find <strong>SSMC</strong></span>
       <h3>CLINICS AND HOSPITALS</h3>
+      <a href="#" class="btn btn-primary btn-branches">More Branches</a>
       <br>
       <div class="basic-tabination">
         <div class="col-md-3">
           <ul class="nav nav-pills nav-stacked wow fadeInLeft" id="clinicCities">
-            <li class="active"><a href="#loc_1" data-toggle="tab">Quezon City</a></li>
-            <li><a href="#loc_2" data-toggle="tab">Makati City</a></li>
-            <li><a href="#loc_3" data-toggle="tab">Mandaluyong City</a></li>
-            <li><a href="#loc_3" data-toggle="tab">Taguig City</a></li>
+            <%-- <li class="active"><a href="#loc_1" data-toggle="tab"></a></li>
+            <li><a href="#loc_2" data-toggle="tab"></a></li>
+            <li><a href="#loc_3" data-toggle="tab"></a></li>
+            <li><a href="#loc_3" data-toggle="tab"></a></li> --%>
           </ul>
         </div>
         <div class="col-md-9">
@@ -42,7 +43,7 @@
              '<span>'+value.description+'</span>'+
              '<br>'+
              '<br>'+
-            
+
            '</div>'+
            '<div class="branch-img">'+
              '<img src="'+fileServer+value.logo+'" style="width: 250px;" alt="">'+
@@ -62,11 +63,15 @@
 		var cityListContent = "";
 		var cityList = "";
 		var counter = 0;
-	
+
 
     if ($("body").hasClass("home")) {
       $(".map-container").remove();
     }
+
+    $( ".ismobile .basic-tabination .nav li a" ).click(function() {
+      $("#clinicCities").removeClass("tab-open");
+    });
 
 	})
 
@@ -82,6 +87,13 @@
 			});
 	    });
 	}
+
+  $( ".btn-branches" ).click(function() {
+    $("#clinicCities").addClass("tab-open");
+    event.preventDefault();
+  });
+
+
 
 
 
