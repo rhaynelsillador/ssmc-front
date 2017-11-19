@@ -3,19 +3,11 @@
     <div class="row">
       <div class="col-sm-4 wow bounceInUp">
         <div class="box-flip">
-          <div class="info-box">
-            <img src="assets/img/icon-info1.png" class="icon-info" alt="">
+          <div class="info-box box-1">
             <h4></h4>
             <p></p>
-            <%-- <div class="info-bg">
-              <img src="assets/img/bg-info1.jpg" alt="">
-            </div> --%>
             <div class="info-carousel">
               <div class="owl-carousel owl-theme">
-                <div class="item"><img src="assets/img/bg-info1.jpg" alt=""></div>
-                <div class="item"><img src="assets/img/bg-info2.jpg" alt=""></div>
-                <div class="item"><img src="assets/img/bg-info1.jpg" alt=""></div>
-                <div class="item"><img src="assets/img/bg-info2.jpg" alt=""></div>
               </div>
             </div>
           </div>
@@ -23,19 +15,11 @@
       </div>
       <div class="col-sm-4 wow bounceInUp">
         <div class="box-flip">
-          <div class="info-box">
+          <div class="info-box box-2">
             <h4></h4>
             <p></p>
-            <a href="Medical-ContactUs" class="btn">CONTACT US</a>
-            <%-- <div class="info-bg">
-              <img src="assets/img/bg-info2.jpg" alt="">
-            </div> --%>
             <div class="info-carousel">
               <div class="owl-carousel owl-theme">
-                <div class="item"><img src="assets/img/bg-info1.jpg" alt=""></div>
-                <div class="item"><img src="assets/img/bg-info2.jpg" alt=""></div>
-                <div class="item"><img src="assets/img/bg-info1.jpg" alt=""></div>
-                <div class="item"><img src="assets/img/bg-info2.jpg" alt=""></div>
               </div>
             </div>
           </div>
@@ -62,6 +46,19 @@
 			$.each(data, function(index, value){
 	    		$(".box-"+value.box+" > h4").html(value.name.toUpperCase());
 	    		$(".box-"+value.box+" > p").html(value.description);
+	    		POST("ImagesByModuleId", {"num":value.id, "module":"FEATUREDBOX"}, function(imgData){
+	    			console.log("CLINICCLINIC ", imgData);
+	    			var html = "";
+	    			$.each(imgData, function(index1, value1){
+	    				html += '<div class="item"><img src="'+fileServer+value1.image+'" alt=""></div>';
+	    			})
+	    			$(".box-"+value.box).find(".owl-carousel").html(html)
+	    			console.log()
+	    			if(data.length-1 == index){
+	    				initOwlTicker();
+	    			}
+	    		})
+	    		
 	    	})
 		})
 
@@ -111,13 +108,15 @@
 	      });
 	}
 
-  $('.info-carousel .owl-carousel').owlCarousel({
-    loop:true,
-    nav:true,
-    items:1,
-    autoplay:true,
-    autoplayTimeout:5000,
-  })
+  	function initOwlTicker(){
+  		$('.info-carousel .owl-carousel').owlCarousel({
+  		    loop:true,
+  		    nav:true,
+  		    items:1,
+  		    autoplay:true,
+  		    autoplayTimeout:5000,
+  		  })
+  	}
 
 
 </script>
