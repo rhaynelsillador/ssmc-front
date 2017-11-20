@@ -163,9 +163,6 @@ $(document).on("click", ".approved-fn", function(e){
 		"module" : $this.data("module"),
 		"moduleId" : $this.data("moduleid"),
 	}
-
-	console.log($this.data("reload"));
-
 	POST("approved", form, function(data){
 		$this.remove();
 		if($this.data("reload") == true){
@@ -215,8 +212,6 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 
 $(document).ready(function(e){
 	$(".mc-form .form-control").blur(function() {
-        console.log("ftgyh");
-        console.log($(this).val());
         if($(this).val() == ''){
           $(this).removeClass("mc-filled");
         }else {
@@ -229,8 +224,6 @@ $(document).ready(function(e){
 		var form = objectifyForm($( this ).serializeArray());
 		var btn = $( "#loginForm button");
   		btn.attr("disabled", "disabled");
-
-  		console.log(form);
 
 		POST("AccountLogin", form, function(data){
 	  		btn.removeAttr("disabled");

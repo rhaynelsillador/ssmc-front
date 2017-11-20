@@ -21,6 +21,7 @@
 	<bean id="featuredBoxServices" 	class="net.cms.ssmc.services.FeaturedBoxServices" />
 	<bean id="partnerServices" 		class="net.cms.ssmc.services.PartnerServices" />
 	<bean id="newsAndUpdatesServices" class="net.cms.ssmc.services.NewsAndUpdatesServices" />
+	<bean id="doctorsDirectoryServices" class="net.cms.ssmc.services.DoctorsDirectoryServices" />
 	
 	<bean id="corporateServices" 	class="net.cms.ssmc.services.CorporateServices" />
 	<bean id="contactInformationServices" 	class="net.cms.ssmc.services.ContactInformationServices" />

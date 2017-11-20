@@ -22,33 +22,22 @@
     <script type="text/javascript">
     	$("#menuBranches a").addClass("active");
       	$(document).ready(function(){
-	        console.log("G!");
-          // preloader();
           wow = new WOW({offset: 300});
           wow.init();
 
 	        $(".blue .nav li a").click(function(){
-	          console.log("gg");
 	          $(".blue .nav li").removeClass("active");
 	        });
 
 	        POST("HeadersInformation", {"app" : "CLINIC", "page" : "HospitalAndClinic"}, function(data){
 	        	data = data.data;
-	        	$("#headerTitle").html(data.title);
-	        	$("#headerContent").html(data.content);
+	        	if(data){
+	        		$("#headerTitle").html(data.title);
+		        	$("#headerContent").html(data.content);
+	        	}
+	        	
 	        })
       	});
-
-        // function preloader() {
-        //   $("header,section,footer").hide()
-        //
-        //   $(window).load(function(){
-        //     $("header,section,footer").fadeIn();
-        //     setTimeout(function(){ $('#preloader').fadeOut('slow'); }, 500);
-        //     console.log("peace out");
-        //   });
-        //
-        // }
     </script>
   </body>
 </html>

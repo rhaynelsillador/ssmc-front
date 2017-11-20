@@ -4,7 +4,7 @@
   <%-- <link rel="stylesheet" href="assets/css/custom/corporate.css"> --%>
 
   <body>
-  	<%@ include file="../commons/SSMCHospitalsHeader.jsp"%>
+  	<%@ include file="../commons/SSMCHealthClinicsHeader.jsp"%>
     <%@ include file="../commons/Preloader.jsp"%>
     <section id="faq">
       <div class="sec welcome welcome-common">
@@ -23,7 +23,7 @@
         </div>
       </div>
     </section>
-    <%@ include file="../commons/SSMCHospitalsFooter.jsp"%>
+    <%@ include file="../commons/SSMCHealthClinicFooter.jsp"%>
     <script type="text/javascript">
     	$("#menuIndustrial a").addClass("active");
       $(document).ready(function(){

@@ -16,6 +16,7 @@
 	
 	
 	
+	
 	<!-- CMS DAO BEAN -->
 	<bean id="faqDao" 				class="net.cms.ssmc.dao.impl.FaqDaoImpl" />
 	<bean id="imageDao" 			class="net.cms.ssmc.dao.impl.ImageDaoImpl" />
@@ -26,5 +27,6 @@
 	<bean id="featuredBoxDao" 		class="net.cms.ssmc.dao.impl.FeaturedBoxDaoImpl" />
 	<bean id="partnerDao" 			class="net.cms.ssmc.dao.impl.PartnerDaoImpl" />
 	<bean id="newsAndUpdateDao" 	class="net.cms.ssmc.dao.impl.NewsAndUpdateDaoImpl" />
-	
+	<bean id="directoryDao" 		class="net.cms.ssmc.dao.impl.DirectoryDaoImpl" />
+	<bean id="doctorDao" 			class="net.cms.ssmc.dao.impl.DoctorDaoImpl" />
 </beans>
