@@ -39,13 +39,14 @@
 			var html = "";
 			$.each(data.data, function(index, value){
 				console.log(value);
-				
+
 				html += '<div class="item">'+
 	                '<h5>Medical Technologist</h5>'+
 	                value.content2+
 	              	'</div>';
 			})
 			$("#careers").html(html);
+      $("#careers").mCustomScrollbar();
 		})
 
 

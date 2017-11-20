@@ -4,6 +4,7 @@
 @import url(1-tools/animate.css);
 @import url(1-tools/hover-min.css);
 @import url(1-tools/owl.carousel.min.css);
+@import url(1-tools/jquery.mCustomScrollbar.min.css);
 body {
   background: #fff;
   /*min-height: 10000px; */ }
@@ -933,8 +934,8 @@ footer {
 
 .career-container #careers {
   height: 285px;
-  overflow-y: scroll;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  margin-right: -15px; }
   .career-container #careers .item h5 {
     font-weight: 600; }
   .career-container #careers ul {
@@ -966,6 +967,8 @@ footer {
   .career-container .career-notes a {
     color: #fff;
     text-decoration: underline; }
+.career-container .mCSB_inside > .mCSB_container {
+  margin-right: 15px; }
 
 @media (min-width: 768px) and (max-width: 992px) {
   .big-tabination .side {

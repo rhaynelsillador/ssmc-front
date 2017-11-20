@@ -18,5 +18,7 @@
   <script src="assets/js/page-loader.min.js"></script>
   <%-- ticker --%>
   <script src="assets/js/jquery.easy-ticker.min.js"></script>
+  <%-- custom scroll --%>
+  <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
   <script src="assets/js/moment.min.js"></script>
 </head>
