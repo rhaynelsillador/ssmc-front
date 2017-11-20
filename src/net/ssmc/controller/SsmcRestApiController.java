@@ -113,4 +113,5 @@ public class SsmcRestApiController {
 	public List<NewsAndUpdatesImage> newsAndUpdatePublishedImages(@PathVariable long id){
 		return imageServices.getNewsAndUpdatesImages(id);
 	}
+	
 }

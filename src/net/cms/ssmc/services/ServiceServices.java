@@ -34,5 +34,10 @@ public class ServiceServices {
 		response.put("data", serviceDao.retrieveAllWithImages(form.getApp(), form.getNum(),form.getLimit(), Module.SERVICE));
 		return response;
 	}
+
+	public Map<String, Object> featuredBoxServices() {
+		
+		return null;
+	}
 	
 }
