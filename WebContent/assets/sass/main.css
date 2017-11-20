@@ -932,13 +932,18 @@ footer {
   display: none; }
 
 .career-container #careers {
-  height: 210px;
+  height: 285px;
   overflow-y: scroll;
   margin-bottom: 10px; }
+  .career-container #careers .item h5 {
+    font-weight: 600; }
   .career-container #careers ul {
     list-style: none;
     padding-left: 16px;
-    text-align: left; }
+    text-align: left;
+    border-top: 2px solid #FFF;
+    padding-top: 10px;
+    margin-bottom: 25px; }
     .career-container #careers ul li {
       position: relative; }
       .career-container #careers ul li::after {
@@ -949,7 +954,8 @@ footer {
         left: -16px; }
 .career-container .career-notes {
   border-top: 2px solid #fff;
-  padding-top: 10px; }
+  padding-top: 10px;
+  display: none; }
   .career-container .career-notes h5 {
     text-align: left;
     font-weight: 600;
