@@ -3,12 +3,79 @@
     <div class="row">
       <div class="col-sm-4 wow bounceInUp">
         <div class="info-box box-1">
-          <img src="assets/img/icon-info1.png" class="icon-info" alt="">
+          <%-- <img src="assets/img/icon-info1.png" class="icon-info" alt="">
           <h4></h4>
           <p></p>
-          <%-- <div class="info-bg">
+          <div class="info-bg">
             <img src="assets/img/bg-info1.jpg" alt="">
           </div> --%>
+          <h4>Careers</h4>
+          <div class="career-container">
+            <div id="careers">
+              <div class="item">
+                <h5>Medical Technologist</h5>
+                <ul>
+                  <li>Must be a Registered Medical Technologist</li>
+                  <li>With average communication, typing, analytical and interpersonal skills</li>
+                  <li>Have a high sense of urgency</li>
+                  <li>Must be computer literate</li>
+                  <li>Willing to be assigned in other branches / satellite clinics ( Outside Metro Manila )</li>
+                  <li>Must be flexible and willing to work on extended hours</li>
+                  <li>Female/Male</li>
+                  <li>Fresh Graduates are welcome to apply</li>
+                </ul>
+              </div>
+              <div class="item">
+                <h5>Medical Technologist</h5>
+                <ul>
+                  <li>Must be a Registered Medical Technologist</li>
+                  <li>With average communication, typing, analytical and interpersonal skills</li>
+                  <li>Have a high sense of urgency</li>
+                  <li>Must be computer literate</li>
+                  <li>Willing to be assigned in other branches / satellite clinics ( Outside Metro Manila )</li>
+                  <li>Must be flexible and willing to work on extended hours</li>
+                  <li>Female/Male</li>
+                  <li>Fresh Graduates are welcome to apply</li>
+                </ul>
+              </div>
+              <div class="item">
+                <h5>Medical Technologist</h5>
+                <ul>
+                  <li>Must be a Registered Medical Technologist</li>
+                  <li>With average communication, typing, analytical and interpersonal skills</li>
+                  <li>Have a high sense of urgency</li>
+                  <li>Must be computer literate</li>
+                  <li>Willing to be assigned in other branches / satellite clinics ( Outside Metro Manila )</li>
+                  <li>Must be flexible and willing to work on extended hours</li>
+                  <li>Female/Male</li>
+                  <li>Fresh Graduates are welcome to apply</li>
+                </ul>
+              </div>
+              <div class="item">
+                <h5>Medical Technologist</h5>
+                <ul>
+                  <li>Must be a Registered Medical Technologist</li>
+                  <li>With average communication, typing, analytical and interpersonal skills</li>
+                  <li>Have a high sense of urgency</li>
+                  <li>Must be computer literate</li>
+                  <li>Willing to be assigned in other branches / satellite clinics ( Outside Metro Manila )</li>
+                  <li>Must be flexible and willing to work on extended hours</li>
+                  <li>Female/Male</li>
+                  <li>Fresh Graduates are welcome to apply</li>
+                </ul>
+              </div>
+            </div>
+            <div class="career-notes">
+              <h5>Email your applications to:</h5>
+              <span>
+                <a href="mailto:bestofcare@ssmciphil.com">bestofcare@ssmciphil.com</a> or<br>
+                <a href="mailto:jun@ssmciphil.com">jun@ssmciphil.com</a>
+              </span>
+
+              <%-- <h5>Eligibility Note:</h5> --%>
+              <%-- <span>It is illicit to employ a person who does not have permission to live and work in the Philippines. Unless the advert states  otherwise, please ensure you have this permission before applying. </span> --%>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -36,13 +103,14 @@
 
 <script>
 	$(document).ready(function(){
-		POST("FeaturedBoxes", {"page":"Hospital"}, function(data){
-			console.log("FeaturedBoxes L ", data);
-			$.each(data, function(index, value){
-	    		$(".box-"+value.box+" > h4").html(value.name.toUpperCase());
-	    		$(".box-"+value.box+" > p").html(value.description);
-	    	})
-		})
+    // initOwlTicker();
+		// POST("FeaturedBoxes", {"page":"Hospital"}, function(data){
+		// 	console.log("FeaturedBoxes L ", data);
+		// 	$.each(data, function(index, value){
+	  //   		$(".box-"+value.box+" > h4").html(value.name.toUpperCase());
+	  //   		$(".box-"+value.box+" > p").html(value.description);
+	  //   	})
+		// })
 
 
 		POST("NewsAndUpdatePublished", {}, function(data){
@@ -90,5 +158,7 @@
 	        }
 	      });
 	}
+
+
 
 </script>

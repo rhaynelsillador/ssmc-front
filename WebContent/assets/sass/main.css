@@ -931,6 +931,36 @@ footer {
 .btn-branches {
   display: none; }
 
+.career-container #careers {
+  height: 210px;
+  overflow-y: scroll;
+  margin-bottom: 10px; }
+  .career-container #careers ul {
+    list-style: none;
+    padding-left: 16px;
+    text-align: left; }
+    .career-container #careers ul li {
+      position: relative; }
+      .career-container #careers ul li::after {
+        font-family: FontAwesome;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -16px; }
+.career-container .career-notes {
+  border-top: 2px solid #fff;
+  padding-top: 10px; }
+  .career-container .career-notes h5 {
+    text-align: left;
+    font-weight: 600;
+    margin: 3px 0px; }
+  .career-container .career-notes span {
+    text-align: left;
+    display: block; }
+  .career-container .career-notes a {
+    color: #fff;
+    text-decoration: underline; }
+
 @media (min-width: 768px) and (max-width: 992px) {
   .big-tabination .side {
     padding: 10px 10px 10px 45px;
