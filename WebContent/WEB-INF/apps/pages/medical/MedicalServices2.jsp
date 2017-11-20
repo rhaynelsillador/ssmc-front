@@ -135,6 +135,7 @@
 			if(index == 0){
 				defaultServices = value.id;
 				isloaded = true;
+				retrieveImagesService2(index, value.id)
 			}
 			$("#service"+index+"_2").parent().removeClass("hidden");
 			$("#service"+index+"_2 h5").html(value.title);
@@ -147,17 +148,12 @@
 			
 			$("#service"+index+"_2").click(function(e){
 				var tabData = $(this).data();
-				console.log(tabData);
 				if(tabData.isloaded == false){
 					$(this).data("isloaded", true);
 					retrieveImagesService2(tabData.index, tabData.id)
 				}
 			})
 		})
-		console.log("defaultServices : ", defaultServices);
-		if(defaultServices){
-			$("#service"+0+"_2").click();
-		}
 	})
 
 	function retrieveImagesService2(index, id){

@@ -16,7 +16,7 @@
       </div>
       <div class="sec branch">
         <div class="container">
-          <div class="row text-center">
+          <div class="text-center">
             <br>
             <div class="basic-tabination">
               <%-- <div class="col-md-3">

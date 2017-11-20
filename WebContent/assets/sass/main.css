@@ -543,6 +543,8 @@ footer {
   text-align: center;
   padding: 20px;
   background: rgba(56, 102, 156, 0.85);
+  background: url(../../assets/img/bg-info1.png) no-repeat rgba(56, 102, 156, 0.85) center center;
+  background-size: cover;
   height: 365px;
   color: #fff;
   position: relative;
@@ -612,19 +614,6 @@ footer {
           right: 0;
           color: #f58435; }
 
-.info-bg {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0px;
-  left: 0px;
-  overflow: hidden;
-  z-index: -1; }
-  .info-bg img {
-    width: 100%;
-    height: 100%; }
-
 .info-box .btn {
   color: #fff;
   border: 2px solid #fff;
@@ -636,8 +625,27 @@ footer {
   width: 120px;
   margin: auto; }
 
+.info-carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  transform: scaleX(-1);
+  opacity: 0;
+  transition: all 0ms 250ms ease-in-out; }
+
+.box-flip .info-box {
+  transition: transform 500ms ease-in-out; }
+.box-flip:hover .info-box {
+  transform: rotateY(-180deg); }
+.box-flip:hover .info-carousel {
+  opacity: 1; }
+
 .info .col-sm-4:nth-child(even) .info-box {
   background: rgba(127, 178, 184, 0.85);
+  background: url(../../assets/img/bg-info2.png) no-repeat #92bdc2 center center;
+  background-size: cover;
   padding-top: 40px; }
 
 .choose .choose-content img {
@@ -920,6 +928,9 @@ footer {
       background: #132c4e;
       border-color: #132c4e; }
 
+.btn-branches {
+  display: none; }
+
 @media (min-width: 768px) and (max-width: 992px) {
   .big-tabination .side {
     padding: 10px 10px 10px 45px;
@@ -1024,7 +1035,8 @@ html.ismobile header {
   top: 0;
   z-index: 600;
   width: 100%;
-  height: initial; }
+  height: initial;
+  box-shadow: none; }
 html.ismobile .mobile-menu {
   display: block;
   position: absolute;
@@ -1032,7 +1044,10 @@ html.ismobile .mobile-menu {
 html.ismobile .header-top {
   display: none; }
 html.ismobile .header-bot {
-  text-align: center; }
+  text-align: center;
+  background: #fff;
+  box-shadow: 0px 1px 1px black;
+  margin: 0px -15px; }
   html.ismobile .header-bot .logo {
     display: block;
     position: relative;
@@ -1041,11 +1056,12 @@ html.ismobile .header-bot {
   html.ismobile .header-bot .nav.pull-right {
     display: none;
     position: absolute;
-    z-index: 500;
+    z-index: -1;
     background: #fff;
     height: 100vh;
     width: 100%;
-    left: 0; }
+    left: 0;
+    padding-top: 57px; }
     html.ismobile .header-bot .nav.pull-right ul li {
       width: 100%;
       border-bottom: 1px solid #e8e8e8; }
@@ -1054,13 +1070,16 @@ html.ismobile .welcome .welcome-content {
   html.ismobile .welcome .welcome-content h3 {
     font-size: 24px;
     margin: 0px; }
-  html.ismobile .welcome .welcome-content h1 {
-    font-size: 32px;
-    margin: 8px 0px; }
+html.ismobile .welcome h1 {
+  font-size: 32px;
+  margin: 8px 0px; }
 html.ismobile .welcome > span, html.ismobile .welcome .welcome-content div {
   margin: 0px auto 10px; }
 html.ismobile .welcome .welcome-carousel {
-  width: 200%; }
+  width: 120%; }
+html.ismobile .welcome-common {
+  min-height: 260px;
+  padding: 20px 0px 40px; }
 html.ismobile section {
   padding-top: 0px; }
 html.ismobile .modal {
@@ -1102,7 +1121,33 @@ html.ismobile .sec {
   html.ismobile .sec .container {
     padding: 0px; }
 html.ismobile .sec.welcome {
-  padding: 0px; }
+  padding: 0px 0px 40px;
+  height: initial; }
+html.ismobile .basic-tabination ul {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  z-index: 30;
+  background: #fff;
+  overflow-y: scroll;
+  padding-top: 70px;
+  transition: left 300ms ease-in-out; }
+html.ismobile .basic-tabination ul.tab-open {
+  left: 0; }
+html.ismobile .branch .branch-info, html.ismobile .branch .branch-img {
+  width: 100%; }
+html.ismobile .btn-branches {
+  display: block;
+  width: 200px;
+  margin: auto; }
+html.ismobile .med-promo {
+  height: auto; }
+html.ismobile .info {
+  margin: 0px; }
+html.ismobile .about-img {
+  height: initial; }
 
 .landing header {
   text-align: center;
