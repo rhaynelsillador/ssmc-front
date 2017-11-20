@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-sm-4 wow bounceInUp">
         <div class="info-box">
-          <h4>Careers</h4>
+          <h4>CAREERS</h4>
           <div class="career-container">
             <div id="careers"></div>
           </div>
@@ -12,12 +12,24 @@
       </div>
       <div class="col-sm-4 wow bounceInUp">
         <div class="info-box box-2">
-          <h4></h4>
-          <p> </p>
-          <a href="ContactUs" class="btn">CONTACT US</a>
-          <%-- <div class="info-bg">
-            <img src="assets/img/bg-info2.jpg" alt="">
-          </div> --%>
+          <h4>DOCTOR'S DIRECTORY</h4>
+          <br>
+          <div class="form-group">
+            <label for="sel1">Select list:</label>
+            <select class="form-control" id="sel1">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="usr">Search:</label>
+            <input type="text" class="form-control" id="usr">
+          </div>
+
+          <a href="ContactUs" class="btn">FIND</a>
+
         </div>
 
       </div>
