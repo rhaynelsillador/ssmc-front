@@ -502,6 +502,46 @@
 .btn-branches
   display: none
 
+.career-container
+  // margin: -10px
+
+  #careers
+    height: 210px
+    overflow-y: scroll
+    margin-bottom: 10px
+
+    ul
+      list-style: none
+      padding-left: 16px
+      text-align: left
+
+      li
+        position: relative
+
+        &::after
+          font-family: FontAwesome
+          content: "\f05d"
+          position: absolute
+          top: 0
+          left: -16px
+
+  .career-notes
+    border-top: 2px solid #fff
+    padding-top: 10px
+
+    h5
+      text-align: left
+      font-weight: 600
+      margin: 3px 0px
+
+    span
+      text-align: left
+      display: block
+
+    a
+      color: #fff
+      text-decoration: underline
+
 @media (min-width: 768px) and (max-width: 992px)
   .big-tabination .side
     padding: 10px 10px 10px 45px
