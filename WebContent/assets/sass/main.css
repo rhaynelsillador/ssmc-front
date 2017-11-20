@@ -544,7 +544,7 @@ footer {
   text-align: center;
   padding: 20px;
   background: rgba(56, 102, 156, 0.85);
-  background: url(../../assets/img/bg-info1.png) no-repeat rgba(56, 102, 156, 0.85) center center;
+  background: url(../../assets/img/bg-info1.png) no-repeat #38669c center center;
   background-size: cover;
   height: 365px;
   color: #fff;
@@ -646,8 +646,7 @@ footer {
 .info .col-sm-4:nth-child(even) .info-box {
   background: rgba(127, 178, 184, 0.85);
   background: url(../../assets/img/bg-info2.png) no-repeat #92bdc2 center center;
-  background-size: cover;
-  padding-top: 40px; }
+  background-size: cover; }
 
 .choose .choose-content img {
   width: 100%; }
@@ -969,6 +968,12 @@ footer {
     text-decoration: underline; }
 .career-container .mCSB_inside > .mCSB_container {
   margin-right: 15px; }
+
+.choose-content > div {
+  height: 355px;
+  overflow: hidden; }
+  .choose-content > div .owl-carousel::after {
+    display: none; }
 
 @media (min-width: 768px) and (max-width: 992px) {
   .big-tabination .side {
