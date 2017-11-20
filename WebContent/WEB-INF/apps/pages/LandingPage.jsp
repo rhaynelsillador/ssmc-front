@@ -61,7 +61,7 @@
     </section>
     <footer>
       <%-- <span>&reg; 2017, South Super Highway Medical Center</span> --%>
-      <span>Health is happiness</span>
+      <span>PREVENTIVE AND HEALING</span>
     </footer>
     <div id="preloader"></div>
 
