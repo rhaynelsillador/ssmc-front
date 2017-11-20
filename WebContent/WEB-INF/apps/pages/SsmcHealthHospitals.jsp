@@ -40,7 +40,8 @@
     </section>
 
     <%@ include file="commons/SSMCHospitalsFooter.jsp"%>
-
+	<%@ include file="FeaturedBoxModal.jsp"%>
+	
 
 
     <script type="text/javascript">

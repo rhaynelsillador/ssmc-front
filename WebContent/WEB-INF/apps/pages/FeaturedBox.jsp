@@ -10,29 +10,24 @@
         </div>
 
       </div>
-      <div class="col-sm-4 wow bounceInUp">
-        <div class="info-box box-2">
-          <h4>DOCTOR'S DIRECTORY</h4>
-          <br>
-          <div class="form-group">
-            <label for="sel1">Select list:</label>
-            <select class="form-control" id="sel1">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="usr">Search:</label>
-            <input type="text" class="form-control" id="usr">
-          </div>
-
-          <a href="ContactUs" class="btn">FIND</a>
-
-        </div>
-
-      </div>
+      	<div class="col-sm-4 wow bounceInUp">
+        	<div class="info-box box-2">
+          		<h4>DOCTOR'S DIRECTORY</h4>
+          		<br>
+          		<form id="doctorsDirectoryForm">
+	          		<div class="form-group">
+			            <label for="sel1">Select list:</label>
+			            <select class="form-control" id="directoryId" name="directoryId"></select>
+		          	</div>
+		          	<div class="form-group">
+			            <label for="usr">Search:</label>
+			            <input type="text" class="form-control" id="name" name="name">
+		          	</div>
+	
+	          		<button type="submit" class="btn">FIND</button>
+				</form>
+        	</div>
+      	</div>
       <div class="col-sm-4 wow bounceInUp">
         <div class="info-box news">
          <h4 class="text-center" id="news-header">NEW & UPDATES</h4>
@@ -46,19 +41,25 @@
 
 <script>
 	$(document).ready(function(){
+		
+		POST("DirectoryServices", {}, function(data){
+			var html = '';
+			$.each(data, function(index, value){
+				html += '<option value="'+value.id+'">'+value.name+'</option>';
+			})
+			$("#directoryId").html(html);
+		})
+		
 		POST("ServicesInformation", {"app":"HOSPITALS", "num":3}, function(data){
-			console.log("FeaturedBoxes ServicesInformation ", data);
 			var html = "";
 			$.each(data.data, function(index, value){
-				console.log(value);
-
 				html += '<div class="item">'+
 	                '<h5>Medical Technologist</h5>'+
 	                value.content2+
 	              	'</div>';
 			})
 			$("#careers").html(html);
-      $("#careers").mCustomScrollbar();
+      		$("#careers").mCustomScrollbar();
 		})
 
 
@@ -86,9 +87,33 @@
 	    		ticker();
 	    	}
 		})
+		
+		$("#doctorsDirectoryForm").submit(function(e){
+			e.preventDefault();
+			$("#featuredBoxModal").modal("show");
+			var form = objectifyForm($( this ).serializeArray());
+			POST("DoctorsList", form, function(data){
+				var html = "";
+				$.each(data, function(index, value){
+					var schedule = '<td>'+value.day+'</td><td>'+value.time+'</td>';
+					if(value.day == "" || value.day == undefined){
+						schedule = '<td colspan="2">'+value.other+'</td>';
+					}
+					html += '<tr><td>'+value.name+'</td>'+schedule+'<td>'+value.branch+'</td></tr><tr> ';
+				})
+				if(html!=""){
+					$("#doctorsListTable > tbody").html(html);
+				}else{
+					$("#doctorsListTable").html('<caption>No doctor/s found!.</caption>');
+				}
+			})
+		});
 	})
-
-
+	
+	$('#featuredBoxModal').on('hidden.bs.modal', function (e) {
+		$("#doctorsListTable").html('<caption>No doctor/s found!.</caption>');
+	})
+	
 	function ticker(){
 		$('.news-container').easyTicker({
 	        direction: 'up',

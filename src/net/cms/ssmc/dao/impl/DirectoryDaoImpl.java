@@ -21,7 +21,7 @@ public class DirectoryDaoImpl implements DirectoryDao {
 	private final static String SQLCREATE 	= "INSERT INTO DIRECTORY (name, status) VALUES (?,?)";
 	private final static String SQLCOUNT 	= "SELECT COUNT(ID) FROM DIRECTORY";
 	private final static String SQLDELETE 	= "DELETE FROM DIRECTORY WHERE ID = ?";
-	private final static String FINDALL 	= "SELECT * FROM DIRECTORY";
+	private final static String FINDALL 	= "SELECT * FROM DIRECTORY WHERE STATUS=?";
 	private final static String FINDONE 	= "SELECT * FROM DIRECTORY WHERE ID = ?";
 	private final static String UPDATE	 	= "UPDATE DIRECTORY SET NAME=?, status=? WHERE ID = ?";
 	
@@ -56,7 +56,7 @@ public class DirectoryDaoImpl implements DirectoryDao {
 
 	@Override
 	public List<Directory> findAll() {
-		return jdbcTemplate.query(FINDALL, new BeanPropertyRowMapper<Directory>(Directory.class));
+		return jdbcTemplate.query(FINDALL, new Object[]{true}, new BeanPropertyRowMapper<Directory>(Directory.class));
 	}
 	
 	@Override

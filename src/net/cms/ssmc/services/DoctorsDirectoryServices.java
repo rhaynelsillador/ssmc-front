@@ -20,11 +20,16 @@ public class DoctorsDirectoryServices {
 		return directoryDao.findAll();
 	}
 	
-	public Directory getDirectory(long id){
-		return directoryDao.findOne(id);
+	public List<Doctor> findAllDoctors(){
+		return doctorDao.findAll();
 	}
 	
-	public Doctor getDoctor(long id){
-		return doctorDao.findOne(id);
+	public List<Doctor> findAllDoctors(long directoryId, String name){
+//		long directory = 0;
+//		if(!directoryId.isEmpty()){
+//			directory = Long.parseLong(directoryId);
+//		}
+		return doctorDao.findAll(directoryId, name);
 	}
+	
 }

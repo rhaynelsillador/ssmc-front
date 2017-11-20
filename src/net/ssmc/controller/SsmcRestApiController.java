@@ -3,6 +3,7 @@ package net.ssmc.controller;
 import java.util.List;
 import java.util.Map;
 
+import javax.print.Doc;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,15 +11,19 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import net.cms.ssmc.model.ContactInformation;
+import net.cms.ssmc.model.Directory;
+import net.cms.ssmc.model.Doctor;
 import net.cms.ssmc.model.NewsAndUpdate;
 import net.cms.ssmc.model.NewsAndUpdatesImage;
 import net.cms.ssmc.model.Partner;
 import net.cms.ssmc.services.ContactInformationServices;
+import net.cms.ssmc.services.DoctorsDirectoryServices;
 import net.cms.ssmc.services.ImageServices;
 import net.cms.ssmc.services.NewsAndUpdatesServices;
 import net.cms.ssmc.services.PartnerServices;
@@ -45,6 +50,8 @@ public class SsmcRestApiController {
 	private NewsAndUpdatesServices newsAndUpdatesServices;
 	@Autowired
 	private ImageServices imageServices;
+	@Autowired
+	private DoctorsDirectoryServices doctorsDirectoryServices;
 	
 	@RequestMapping(path="/AccountLogin", method = RequestMethod.POST, produces={"application/json"})
 	public ObjectNode accountLogin(@RequestBody RegisteredAccount registeredAccount){
@@ -112,6 +119,17 @@ public class SsmcRestApiController {
 	@RequestMapping(path="/NewsAndUpdatePublishedImages/{id}", method = {RequestMethod.POST, RequestMethod.GET}, produces={"application/json"})
 	public List<NewsAndUpdatesImage> newsAndUpdatePublishedImages(@PathVariable long id){
 		return imageServices.getNewsAndUpdatesImages(id);
+	}
+	
+	@RequestMapping(path="/DirectoryServices", method = {RequestMethod.POST, RequestMethod.GET}, produces={"application/json"})
+	public List<Directory> directoryServices(){
+		return doctorsDirectoryServices.findAllDirectories();
+	}
+	
+	@RequestMapping(path="/DoctorsList", method = {RequestMethod.POST, RequestMethod.GET}, produces={"application/json"})
+	public List<Doctor> doctorsList(@RequestBody Doctor doctor){
+		System.out.println(doctor);
+		return doctorsDirectoryServices.findAllDoctors(doctor.getDirectoryId(), doctor.getName());
 	}
 	
 }
