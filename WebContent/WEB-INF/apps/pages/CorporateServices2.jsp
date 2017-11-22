@@ -35,7 +35,7 @@
       <div class="service-center wow fadeInUpBig">
         <div class="tab-content">
            <div id="service_0_2" class="tab-pane active">
-            <div class="service-img">
+            <div class="service-img owl-carousel">
             </div>
             <span class="service-circle"></span>
             <div class="service-content">
@@ -44,7 +44,7 @@
             </div>
           </div>
           <div id="service_1_2" class="tab-pane">
-            <div class="service-img">
+            <div class="service-img owl-carousel">
               <img src="" alt="">
             </div>
             <span class="service-circle"></span>
@@ -54,7 +54,7 @@
             </div>
           </div>
           <div id="service_2_2" class="tab-pane">
-            <div class="service-img">
+            <div class="service-img owl-carousel">
               <img src="" alt="">
             </div>
             <span class="service-circle"></span>
@@ -64,7 +64,7 @@
             </div>
           </div>
           <div id="service_3_2" class="tab-pane">
-            <div class="service-img">
+            <div class="service-img owl-carousel">
               <img src="" alt="">
             </div>
             <span class="service-circle"></span>
@@ -74,7 +74,7 @@
             </div>
           </div>
           <div id="service_4_2" class="tab-pane">
-            <div class="service-img">
+            <div class="service-img owl-carousel">
               <img src="" alt="">
             </div>
             <span class="service-circle"></span>
@@ -84,7 +84,7 @@
             </div>
           </div>
           <div id="service_5_2" class="tab-pane">
-            <div class="service-img">
+            <div class="service-img owl-carousel">
               <img src="" alt="">
             </div>
             <span class="service-circle"></span>
@@ -144,7 +144,7 @@
 			$("#service"+index+"_2").attr("data-isloaded", isloaded);
 			$("#service"+index+"_2").attr("data-id", value.id);
 			$("#service"+index+"_2").attr("data-index", index);
-			
+
 			$("#service"+index+"_2").click(function(e){
 				var tabData = $(this).data();
 				console.log(tabData);

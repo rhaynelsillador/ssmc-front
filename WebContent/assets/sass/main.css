@@ -635,6 +635,8 @@ footer {
   transform: scaleX(-1);
   opacity: 0;
   transition: all 0ms 250ms ease-in-out; }
+  .info-carousel img {
+    min-height: 365px; }
 
 .box-flip .info-box {
   transition: transform 500ms ease-in-out; }
@@ -742,11 +744,13 @@ footer {
     overflow: hidden; }
     .service-center .service-img img {
       width: 100%;
+      min-height: 240px;
       animation: slide-up 500ms ease-in-out; }
   .service-center .service-circle {
     content: "";
     width: 56px;
     height: 56px;
+    z-index: 1;
     position: absolute;
     left: 0;
     right: 0;
