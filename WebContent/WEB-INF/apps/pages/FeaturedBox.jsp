@@ -16,11 +16,11 @@
           		<br>
           		<form id="doctorsDirectoryForm">
 	          		<div class="form-group">
-			            <label for="sel1">Select list:</label>
+			            <label for="sel1">Directory :</label>
 			            <select class="form-control" id="directoryId" name="directoryId"></select>
 		          	</div>
 		          	<div class="form-group">
-			            <label for="usr">Search:</label>
+			            <label for="usr">Doctor's Name :</label>
 			            <input type="text" class="form-control" id="name" name="name">
 		          	</div>
 	
