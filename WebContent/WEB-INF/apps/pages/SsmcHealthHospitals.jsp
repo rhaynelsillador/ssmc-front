@@ -45,7 +45,7 @@
 
 
     <script type="text/javascript">
-    		
+    	$("#menuCorporate a").addClass("active");
      	$(document).ready(function(){
 	        // preloader();
           wow = new WOW({offset: 300});

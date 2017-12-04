@@ -2,7 +2,7 @@
   <div class="header-top">
     <div class="container">
       <div class="pull-left">
-        <a href="#" class="phone-contact"><span class="h-icon"><i class="fa fa-fw fa-phone" aria-hidden="true"></i></span></a>&nbsp;&nbsp;
+        <a href="#" class="clinic-contact-contact"><span class="h-icon"><i class="fa fa-fw fa-phone" aria-hidden="true"></i></span></a>&nbsp;&nbsp;
         <a href="#" class="email-contact"><span class="h-icon" style="font-size: 10px;"><i class="fa fa-fw fa-envelope" aria-hidden="true"></i></span></a>&nbsp;&nbsp;
         <a href="#" data-toggle="modal" data-target="#login_modal" id="loginMenu" class="hidden"><span class="h-icon"><i class="fa fa-fw fa-sign-in" aria-hidden="true"></i></span>Login</a>&nbsp;&nbsp;
         <a href="Registration" id="registrationMenu" class="hidden"><span class="h-icon"><i class="fa fa-fw fa-pencil" aria-hidden="true"></i></span>Register</a>&nbsp;&nbsp;
