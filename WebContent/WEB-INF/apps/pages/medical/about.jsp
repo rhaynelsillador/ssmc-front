@@ -8,9 +8,8 @@
     <section id="about">
       <div class="sec welcome welcome-common">
         <h1 id="aboutUsHeaderTitle">About us</h1>
-        <span id="aboutUsHeaderContent"></span>
-        <div class="welcome-background">
-          <img src="assets/img/banner-about.jpg" alt="">
+        <span id="headerInfo"></span>
+        <div class="welcome-background" id="imageCarousel">
         </div>
 
       </div>
@@ -44,8 +43,23 @@
       
       POST("HeadersInformation", {"app":"CLINIC", "page":"About"}, function(data){
       	console.log(data);
-      	$("#aboutUsHeaderContent").html(data.content);
+      	$("#headerInfo").html(data.data.content);
       });
+
+      POST("SystemImages", {"app":"CLINIC", "page":"About", "module":"HEADER"}, function(data){
+      	var imageCarousel = "";
+      	$.each(data.data, function(index, value){
+      		imageCarousel += '<div class="item"><img src="'+fileServer+value.image+'" alt=""></div>';
+      	})
+      	$("#imageCarousel").html(imageCarousel);
+      	initCarousel();
+      })
+      
+      
+      /* POST("HeadersInformation", {"app":"CLINIC", "page":"About"}, function(data){
+      	console.log(data);
+      	$("#aboutUsHeaderContent").html(data.content);
+      }); */
 
 	/* POST("AboutUsHeaderInfo", {}, function(data){
 	 	$("#aboutUsHeaderTitle").html(data.title);

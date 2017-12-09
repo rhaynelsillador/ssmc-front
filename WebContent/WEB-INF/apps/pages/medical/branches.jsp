@@ -8,7 +8,7 @@
     <section>
       <div class="sec welcome welcome-common">
         <h1 id="headerTitle">Hospitals and Clinics</h1>
-        <span id="headerContent">We have the most advance medical <br /> technology and innovations</span>
+        <span id="headerContent"></span>
         <div class="welcome-background">
           <img src="assets/img/banner-branch.jpg" alt="">
         </div>
@@ -32,7 +32,7 @@
 	        POST("HeadersInformation", {"app" : "CLINIC", "page" : "HospitalAndClinic"}, function(data){
 	        	data = data.data;
 	        	if(data){
-	        		$("#headerTitle").html(data.title);
+	        		//$("#headerTitle").html(data.title);
 		        	$("#headerContent").html(data.content);
 	        	}
 	        	

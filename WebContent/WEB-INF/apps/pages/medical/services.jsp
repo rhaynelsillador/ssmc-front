@@ -12,7 +12,7 @@
         <div class="welcome-background" id="imageCarousel">
         </div>
       </div>
-      <%@ include file="../medical/MedicalServices1.jsp"%>
+      <%-- <%@ include file="../medical/MedicalServices1.jsp"%> --%>
 	  <%@ include file="../medical/MedicalServices2.jsp"%>
     </section>
 

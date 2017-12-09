@@ -8,7 +8,7 @@
     <section id="about">
       <div class="sec welcome welcome-common">
         <h1 id="aboutUsHeaderTitle">About us</h1>
-        <span id="aboutUsHeaderContent"></span>
+        <span id="headerInfo"></span>
         <div class="welcome-background" id="imageCarousel">
         </div>
 
@@ -39,18 +39,22 @@
           $(".blue .nav li").removeClass("active");
         });
       });
+      
+      POST("HeadersInformation", {"app":"HOSPITALS", "page":"About"}, function(data){
+        	console.log(data);
+        	$("#headerInfo").html(data.data.content);
+        });
+      
+      POST("SystemImages", {"app":"HOSPITALS", "page":"About", "module":"HEADER"}, function(data){
+        	var imageCarousel = "";
+        	$.each(data.data, function(index, value){
+        		imageCarousel += '<div class="item"><img src="'+fileServer+value.image+'" alt=""></div>';
+        	})
+        	$("#imageCarousel").html(imageCarousel);
+        	initCarousel();
+        })
 
-	/* POST("AboutUsHeaderInfo", {}, function(data){
-	 	$("#aboutUsHeaderTitle").html(data.title);
-	 	$("#aboutUsHeaderContent").html(data.content);
-	}) */
-	
-	POST("HeadersInformation", {"app":"HOSPITALS", "page":"About"}, function(data){
-      	console.log(data);
-      	$("#aboutUsHeaderContent").html(data.content);
-      });
-
-	POST("SystemImages", {"app":"HOSPITALS", "page":"About", "module":"HEADER"}, function(data){
+	POST("	", {"app":"HOSPITALS", "page":"About", "module":"HEADER"}, function(data){
         	var imageCarousel = "";
         	$.each(data.data, function(index, value){
         		imageCarousel += '<div class="item"><img src="'+fileServer+value.image+'" alt=""></div>';
@@ -97,17 +101,6 @@
    		$("#aboutUsMenus").html(aboutUsMenus);
    		$("#aboutUsContent").html(aboutUsContent);
 	})
-
-  // function preloader() {
-  //   $("header,section,footer").hide()
-  //
-  //   $(window).load(function(){
-  //     $("header,section,footer").fadeIn();
-  //     setTimeout(function(){ $('#preloader').fadeOut('slow'); }, 500);
-  //     console.log("peace out");
-  //   });
-  //
-  // }
 
     </script>
   </body>
