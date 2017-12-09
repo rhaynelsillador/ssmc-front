@@ -8,7 +8,7 @@
     <section id="about">
       <div class="sec welcome welcome-common">
         <h1 id="aboutUsHeaderTitle">About us</h1>
-        <span id="aboutUsHeaderContent">We have the most advance medical <br /> technology and innovations</span>
+        <span id="aboutUsHeaderContent"></span>
         <div class="welcome-background" id="imageCarousel">
         </div>
 
@@ -40,10 +40,15 @@
         });
       });
 
-	POST("AboutUsHeaderInfo", {}, function(data){
+	/* POST("AboutUsHeaderInfo", {}, function(data){
 	 	$("#aboutUsHeaderTitle").html(data.title);
 	 	$("#aboutUsHeaderContent").html(data.content);
-	})
+	}) */
+	
+	POST("HeadersInformation", {"app":"HOSPITALS", "page":"About"}, function(data){
+      	console.log(data);
+      	$("#aboutUsHeaderContent").html(data.content);
+      });
 
 	POST("SystemImages", {"app":"HOSPITALS", "page":"About", "module":"HEADER"}, function(data){
         	var imageCarousel = "";

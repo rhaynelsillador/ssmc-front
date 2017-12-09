@@ -8,7 +8,7 @@
     <section id="about">
       <div class="sec welcome welcome-common">
         <h1 id="aboutUsHeaderTitle">About us</h1>
-        <span id="aboutUsHeaderContent">We have the most advance medical <br /> technology and innovations</span>
+        <span id="aboutUsHeaderContent"></span>
         <div class="welcome-background">
           <img src="assets/img/banner-about.jpg" alt="">
         </div>
@@ -40,11 +40,17 @@
           $(".blue .nav li").removeClass("active");
         });
       });
+      
+      
+      POST("HeadersInformation", {"app":"CLINIC", "page":"About"}, function(data){
+      	console.log(data);
+      	$("#aboutUsHeaderContent").html(data.content);
+      });
 
-	POST("AboutUsHeaderInfo", {}, function(data){
+	/* POST("AboutUsHeaderInfo", {}, function(data){
 	 	$("#aboutUsHeaderTitle").html(data.title);
 	 	$("#aboutUsHeaderContent").html(data.content);
-	})
+	}) */
 
 	POST("AboutUsInformation?app=CLINIC", {}, function(data){
 		data = data.data
