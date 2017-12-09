@@ -8,7 +8,7 @@
     <section>
       <div class="sec welcome welcome-common">
         <h1>Service</h1>
-        <div id="headerInfo"></div>
+        <span id="headerContent"></span>
         <div class="welcome-background" id="imageCarousel">
         </div>
       </div>
@@ -31,7 +31,7 @@
 
 	        POST("HeadersInformation", {"app":"HOSPITALS", "page":"Service"}, function(data){
 	        	console.log(data);
-	        	$("#headerInfo").html(data.data.content);
+	        	$("#headerContent").html(data.data.content);
 	        });
 
 	        POST("SystemImages", {"app":"HOSPITALS", "page":"Service", "module":"HEADER"}, function(data){

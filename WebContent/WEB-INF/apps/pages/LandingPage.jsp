@@ -29,12 +29,9 @@
                 <img src="assets/img/landing4.png" alt="">
               </div>
               <div>
-                <h2>Hospitals Group</h2>
-                <!-- <span id="businessContent"> -->
-                <span>
-                  Affordable Quality Healthcare in a hospital setting.</br></br>
-                  <!-- SSMC - Paranaque City</br></br>
-                  Cruz - Rabe Maternity and General Hospital-Taguig City -->
+                <h2 id="hospitalsTitle">Hospitals Group</h2>
+                <span id="hospitalsContent"><!-- <span>
+                  Affordable Quality Healthcare in a hospital setting.</br></br> -->
                 </span>
               </div>
             </div>
@@ -49,9 +46,9 @@
                 <img src="assets/img/landing3.png" alt="">
               </div>
               <div>
-                <h2>Clinics Group</h2>
-                <!-- <span id="clinicContent"></span> -->
-                <span>Efficient Diagnostics and Screening  Healthcare Services for Institutional (APEs, Pre-employment, Clinic Manning, etc. ), HMOs and Individuals</span>
+                <h2 id="clinicTitle">Clinics Group</h2>
+                <span id="clinicContent"></span>
+                <!-- <span>Efficient Diagnostics and Screening  Healthcare Services for Institutional (APEs, Pre-employment, Clinic Manning, etc. ), HMOs and Individuals</span> -->
               </div>
             </div>
             <div class="image"></div>
@@ -81,8 +78,8 @@
         POST("MainHeaderInfo", {}, function(data){
         	console.log("MainHeaderInfo : ", data);
         	for (var i = 0; i < data.info.length; i++) {
-				console.log(data.info[i]);
-				/* $("#"+data.info[i].type.toLowerCase()+"Title").html(data.info[i].title); */
+				console.log(data.info[i], data.info[i].type.toLowerCase()+"Content");
+				$("#"+data.info[i].type.toLowerCase()+"Title").html(data.info[i].title);
 				$("#"+data.info[i].type.toLowerCase()+"Content").html(data.info[i].content);
 			}
         })

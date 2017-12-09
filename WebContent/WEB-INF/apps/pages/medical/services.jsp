@@ -8,7 +8,7 @@
     <section>
       <div class="sec welcome welcome-common">
         <h1>Service</h1>
-        <div id="headerInfo"></div>
+        <span id="headerContent"></span>
         <div class="welcome-background" id="imageCarousel">
         </div>
       </div>
@@ -20,18 +20,15 @@
     <script type="text/javascript">
     	$("#menuAServices a").addClass("active");
     	$(document).ready(function(){
-	        console.log("G!");
-          // preloader();
           wow = new WOW({offset: 300});
           wow.init();
 	        $(".blue .nav li a").click(function(){
-	          console.log("gg");
 	          $(".blue .nav li").removeClass("active");
 	        });
 
 	        POST("HeadersInformation", {"app":"CLINIC", "page":"Service"}, function(data){
 	        	if(data.data){
-	        		$("#headerInfo").html(data.data.content);
+	        		$("#headerContent").html(data.data.content);
 	        	}
 	        });
 
