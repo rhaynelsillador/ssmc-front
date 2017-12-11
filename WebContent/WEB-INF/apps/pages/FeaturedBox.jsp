@@ -84,7 +84,10 @@
 	    		$("#news-header").html("NO UPDATES");
 	    	}else{
 	    		$(".news-container").html("<div>"+html+"</div>");
-	    		ticker();
+	    		if(data.length > 3){
+	    			ticker();
+	    		}
+	    		
 	    	}
 		})
 		

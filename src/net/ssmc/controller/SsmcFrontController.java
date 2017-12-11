@@ -60,8 +60,14 @@ public class SsmcFrontController {
 	public String news(ModelMap map){
 		return "pages/news";
 	}
-	
-	
+	@RequestMapping(path="/Careers", method = RequestMethod.GET, produces="text/html")
+	public String careers(ModelMap map){
+		return "pages/Careers";
+	}
+	@RequestMapping(path="/HMO", method = RequestMethod.GET, produces="text/html")
+	public String hmo(ModelMap map){
+		return "pages/HMO";
+	}
 	@AppicationAudit(module = Module.LOGINREQUIRED, access = Access.RETRIEVE)
 	@RequestMapping(path="/UserProfile", method = RequestMethod.GET, produces="text/html")
 	public String userProfile(ModelMap map){

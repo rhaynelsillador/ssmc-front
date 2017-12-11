@@ -26,6 +26,7 @@
           <li id="menuAbout"><a href="About">ABOUT</a></li>
           <li id="menuAServices"><a href="Services">SERVICES</a></li>
           <li id="menuBranches"><a href="Branches">HOSPITALS & CLINICS</a></li>
+          <li id="menuCareers"><a href="Careers">CAREERS</a></li>
           <li id="menuFaq"><a href="Faq">FAQ</a></li>
           <li id="menuContact"><a href="ContactUs">CONTACT US</a></li>
           <li id="menuIndustrial"><a href="IndustrialMedicine">INDUSTRIAL MEDICINE</a></li>
