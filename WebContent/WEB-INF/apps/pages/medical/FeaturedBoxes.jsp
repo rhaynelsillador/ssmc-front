@@ -1,7 +1,7 @@
 <div class="sec info" id="featured-box-sec">
   <div class="container">
     <div class="row">
-      <div class="col-sm-4 wow bounceInUp">
+      <div class="col-sm-4">
         <div class="box-flip">
           <div class="info-box box-1">
             <h4></h4>
@@ -13,7 +13,7 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-4 wow bounceInUp">
+      <div class="col-sm-4">
         <div class="box-flip">
           <div class="info-box box-2">
             <h4></h4>
@@ -26,7 +26,7 @@
         </div>
 
       </div>
-      <div class="col-sm-4 wow bounceInUp">
+      <div class="col-sm-4">
         <div class="info-box news">
          <h4 class="text-center" id="news-header">NEW & UPDATES</h4>
 
@@ -58,7 +58,7 @@
 	    				initOwlTicker();
 	    			}
 	    		})
-	    		
+
 	    	})
 		})
 

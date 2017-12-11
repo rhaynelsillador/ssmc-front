@@ -1,7 +1,7 @@
 <div class="sec info" id="featured-box-sec">
   <div class="container">
     <div class="row">
-      <div class="col-sm-4 wow bounceInUp">
+      <div class="col-sm-4">
         <div class="info-box">
           <h4>CAREERS</h4>
           <div class="career-container">
@@ -10,7 +10,7 @@
         </div>
 
       </div>
-      	<div class="col-sm-4 wow bounceInUp">
+      	<div class="col-sm-4">
         	<div class="info-box box-2">
           		<h4>DOCTOR'S DIRECTORY</h4>
           		<br>
@@ -23,12 +23,12 @@
 			            <label for="usr">Doctor's Name :</label>
 			            <input type="text" class="form-control" id="name" name="name">
 		          	</div>
-	
+
 	          		<button type="submit" class="btn">FIND</button>
 				</form>
         	</div>
       	</div>
-      <div class="col-sm-4 wow bounceInUp">
+      <div class="col-sm-4">
         <div class="info-box news">
          <h4 class="text-center" id="news-header">NEW & UPDATES</h4>
           <div class="news-container">
@@ -41,7 +41,7 @@
 
 <script>
 	$(document).ready(function(){
-		
+
 		POST("DirectoryServices", {}, function(data){
 			var html = '';
 			$.each(data, function(index, value){
@@ -49,7 +49,7 @@
 			})
 			$("#directoryId").html(html);
 		})
-		
+
 		POST("ServicesInformation", {"app":"HOSPITALS", "num":3}, function(data){
 			var html = "";
 			$.each(data.data, function(index, value){
@@ -87,10 +87,10 @@
 	    		if(data.length > 3){
 	    			ticker();
 	    		}
-	    		
+
 	    	}
 		})
-		
+
 		$("#doctorsDirectoryForm").submit(function(e){
 			e.preventDefault();
 			$("#featuredBoxModal").modal("show");
@@ -112,11 +112,11 @@
 			})
 		});
 	})
-	
+
 	$('#featuredBoxModal').on('hidden.bs.modal', function (e) {
 		$("#doctorsListTable").html('<caption>No doctor/s found!.</caption>');
 	})
-	
+
 	function ticker(){
 		$('.news-container').easyTicker({
 	        direction: 'up',
