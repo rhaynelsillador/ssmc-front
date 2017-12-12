@@ -607,6 +607,66 @@
     height: 50px
     font-size: 12px
 
+.service-inner
+  .nav
+    position: relative
+
+    &::after
+      content: ""
+      position: absolute
+      right: 1px
+      top: 0
+      min-height: 375px
+      height: 100%
+      width: 1px
+      display: block
+      background: #cecece
+
+    li
+      a
+        border: 0px
+        box-shadow: none
+        padding: 0px
+        text-align: left
+        font-weight: 600
+        position: relative
+        padding: 7px 15px
+        height: initial
+        margin: 0px
+        border-radius: 0px
+
+        h5
+          margin: 0px
+        //
+        // aside,span
+        //   display: none
+
+    li.active a
+      background: transparent
+      border: 0px
+      box-shadow: none
+
+      h5
+        color: #81c4d0
+
+      &::after
+        content: ""
+        position: absolute
+        right: 0px
+        top: 0px
+        height: 100%
+        width: 3px
+        background: #f58334
+        z-index: 1
+
+    li + li
+      margin-top: 2px
+
+  .choose-content > div
+    height: initial
+
+
+
 @keyframes slide-up
   from
     transform: translateY(100%)

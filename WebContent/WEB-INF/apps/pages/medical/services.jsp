@@ -5,7 +5,7 @@
   <body>
     <%@ include file="../commons/SSMCHealthClinicsHeader.jsp"%>
     <%@ include file="../commons/Preloader.jsp"%>
-    <section>
+    <section class="service-inner">
       <div class="sec welcome welcome-common">
         <h1>Service</h1>
         <span id="headerContent"></span>
@@ -21,21 +21,25 @@
 		      <h3>WE PROVIDE THE BEST SERVICE</h3>
 		      <br>
 		      <div class="big-tabination">
-		        <div class="col-md-4 col-sm-5">
+		        <div class="col-md-3 col-sm-4">
 		          <ul class="nav nav-pills nav-stacked wow fadeInRight" id="corporateServicesTitle1">
 		          </ul>
 		        </div>
-		        <div class="col-md-8 col-sm-7">
+		        <div class="col-md-9 col-sm-8">
 		          <div class="tab-content choose-content wow fadeInLeft"  id="corporateServicesContent1"></div>
 		        </div>
 		      </div>
 		    </div>
+        <div class="clearfix"></div>
+        <br>
 	    	<a href="Medical-Services?page=0" class="btn btn-warning" id="previousBtn">Previous</a>
 	    	<a href="Medical-Services?page=1" class="btn btn-warning" id="nextBtn">Next</a>
+        <div class="clearfix"></div>
+        <br>
 		  </div>
 		</div>
-		
-		
+
+
     </section>
 
     <%@ include file="../commons/SSMCHealthClinicFooter.jsp"%>
@@ -44,7 +48,7 @@
     	$(document).ready(function(){
        	  wow = new WOW({offset: 300});
           wow.init();
-          
+
 	        $(".blue .nav li a").click(function(){
 	          $(".blue .nav li").removeClass("active");
 	        });
@@ -62,20 +66,20 @@
 	        	})
 	        	$("#imageCarousel").html(imageCarousel);
 	        })
-	        	        
+
 	        var page = getUrlParameter("page") ? getUrlParameter("page") : 0;
-	        
+
 	        if(page <= 0){
 	        	$("#previousBtn").attr("disabled", true);
 	        }else{
 	        	$("#previousBtn").attr("href", "Medical-Services?page="+(parseInt(page)-1));
 	        }
-	        
+
 	        $("#nextBtn").attr("href", "Medical-Services?page="+(parseInt(page)+1));
-	        	        
-	        POST("ServicesInformation", {"app": "CLINIC", "num":2, "limit" : 5, "pageNum" : page}, function(data){
+
+	        POST("ServicesInformation", {"app": "CLINIC", "num":2, "limit" : 15, "pageNum" : page}, function(data){
 	    		data = data.data;
-	    		if(data.length <= 5){
+	    		if(data.length <= 15){
 	    			$("#nextBtn").attr("disabled", "disabled");
 	    		}
 	    		var corporateServicesTitle1 = "";
@@ -90,15 +94,15 @@
 	    			}
 	    			corporateServicesTitle1 += '<li class="'+isActive+'">'+
 	    				'<a href="#service_'+index+'" class="side service1-tab" data-toggle="tab" data-isLoaded="'+isloaded+'" data-id="'+value.id+'">'+
-	    	            '<aside></aside>'+
+	    	            // '<aside></aside>'+
 	    	            '<h5>'+value.name+'</h5>'+
-	    	            '<span>'+value.content+'</span>'+
+	    	            // '<span>'+value.content+'</span>'+
 	    	          	'</a>'+
 	    	         '</li>';
-	    	         
+
 	    	         corporateServicesContent1 += '<div id="service_'+index+'" class="tab-pane '+isActive+'">'+
-	    	         '<div class="welcome-carousel owl-carousel" id="service_images_'+value.id+'"></div></div>';
-	    	         
+	    	         '<div class="welcome-carousel owl-carousel" id="service_images_'+value.id+'"></div><div class="clearfix"></div><br><div>'+value.content2+'</div></div>';
+
 	    		})
 	    		$("#corporateServicesTitle1").html(corporateServicesTitle1);
 	    		$("#corporateServicesContent1").html(corporateServicesContent1);
@@ -113,7 +117,7 @@
 	    			}
 	    		})
 	    	});
-	    	
+
 	    	function retrieveImagesService1(id){
 	    		POST("ImagesByModuleId", {"num" : id, "module":"SERVICE"}, function(data){
 	    			var imageCarousel = "";
@@ -124,7 +128,7 @@
 	            	initAdsCarousel("service_images_"+id);
 	    		});
 	    	}
-	        
+
       	});
     </script>
   </body>

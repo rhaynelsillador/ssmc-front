@@ -171,8 +171,9 @@ body {
 .header-bot .nav ul {
   list-style: none;
   margin-bottom: 0px; }
-  .header-bot .nav ul li a {
+  .header-bot .nav ul li {
     padding: 0px 3px;
+    padding: 0px;
     display: block;
     height: 56px;
     line-height: 56px;
@@ -180,7 +181,7 @@ body {
     font-weight: 300;
     font-size: 12px;
     letter-spacing: 0px; }
-    .header-bot .nav ul li a.active {
+    .header-bot .nav ul li.active {
       color: #f79856;
       font-weight: 900; }
 
@@ -1040,6 +1041,51 @@ footer {
     display: block;
     height: 50px;
     font-size: 12px; } }
+.service-inner .nav {
+  position: relative; }
+  .service-inner .nav::after {
+    content: "";
+    position: absolute;
+    right: 1px;
+    top: 0;
+    min-height: 375px;
+    height: 100%;
+    width: 1px;
+    display: block;
+    background: #cecece; }
+  .service-inner .nav li a {
+    border: 0px;
+    box-shadow: none;
+    padding: 0px;
+    text-align: left;
+    font-weight: 600;
+    position: relative;
+    padding: 7px 15px;
+    height: initial;
+    margin: 0px;
+    border-radius: 0px; }
+    .service-inner .nav li a h5 {
+      margin: 0px; }
+  .service-inner .nav li.active a {
+    background: transparent;
+    border: 0px;
+    box-shadow: none; }
+    .service-inner .nav li.active a h5 {
+      color: #81c4d0; }
+    .service-inner .nav li.active a::after {
+      content: "";
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      height: 100%;
+      width: 3px;
+      background: #f58334;
+      z-index: 1; }
+  .service-inner .nav li + li {
+    margin-top: 2px; }
+.service-inner .choose-content > div {
+  height: initial; }
+
 @keyframes slide-up {
   from {
     transform: translateY(100%);
