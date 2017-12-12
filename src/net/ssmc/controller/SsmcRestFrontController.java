@@ -101,6 +101,11 @@ public class SsmcRestFrontController {
 		return clinicServices.getClinicsAndHospitals();
 	}
 	
+	@RequestMapping(path="/HMOList", method = {RequestMethod.POST, RequestMethod.GET}, produces={"application/json"})
+	public Map<String, List<Clinic>> hmoList(){
+		return clinicServices.getHMOList();
+	}
+	
 	@RequestMapping(path="/Cities", method = {RequestMethod.POST, RequestMethod.GET}, produces={"application/json"})
 	public List<City> cities(){
 		return cityServices.getAllCities();

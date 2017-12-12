@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
-  <%@ include file="commons/Assets.jsp"%>
-  <link rel="stylesheet" href="assets/css/custom/corporate.css">
+  <%@ include file="../commons/Assets.jsp"%>
   <body>
-    <%@ include file="commons/SSMCHospitalsHeader.jsp"%>
-    <%@ include file="commons/Preloader.jsp"%>
+    <%@ include file="../commons/SSMCHealthClinicsHeader.jsp"%>
+    <%@ include file="../commons/Preloader.jsp"%>
     <section>
       <div class="sec welcome welcome-common">
         <h1>Health Maintenance Organizations</h1>
@@ -35,7 +34,7 @@
 	</div>
     </section>
 
-    <%@ include file="commons/SSMCHospitalsFooter.jsp"%>
+    <%@ include file="../commons/SSMCHealthClinicFooter.jsp"%>
     <script type="text/javascript">
     	$(document).ready(function(){
           wow = new WOW({offset: 300});
@@ -44,14 +43,14 @@
 	          $(".blue .nav li").removeClass("active");
 	        });
 
-	        POST("HeadersInformation", {"app":"HOSPITALS", "page":"HMO"}, function(data){
+	        POST("HeadersInformation", {"app":"CLINIC", "page":"HMO"}, function(data){
 	        	if(data.data){
 	        		$("#headerContent").html(data.data.content);
 	        	}
 	        	
 	        });
 
-	        POST("SystemImages", {"app":"HOSPITALS", "page":"HMO", "module":"HEADER"}, function(data){
+	        POST("SystemImages", {"app":"CLINIC", "page":"HMO", "module":"HEADER"}, function(data){
 	        	var imageCarousel = "";
 	        	$.each(data.data, function(index, value){
 	        		imageCarousel += '<div class="item"><img src="'+fileServer+value.image+'" alt=""></div>';

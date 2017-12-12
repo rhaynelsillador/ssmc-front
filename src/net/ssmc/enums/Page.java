@@ -12,6 +12,6 @@ public enum Page {
 	HospitalAndClinic,
 	Industrial,
 	Careers,
-	HMO
+	HMO, Branches
 	
 }

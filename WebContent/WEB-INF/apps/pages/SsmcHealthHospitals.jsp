@@ -19,7 +19,7 @@
 		  <h1>SSMC Hospitals</h1>
           <div id="headerInfo"></div>
           <br>
-          <a href="#featured-box-sec" class="btn btn-default hvr-grow">EXPLORE NOW</a>
+          <a href="HMO" class="btn btn-default hvr-grow"> SSMC HMO </a>
           <a href="ContactUs" class="btn btn-primary hvr-grow">CONTACT US</a>
         </div>
           <div class="welcome-carousel owl-carousel owl-theme" id="imageCarousel">

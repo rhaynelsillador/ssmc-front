@@ -61,7 +61,18 @@ public class SsmcMedicalFrontController {
 		return "pages/medical/news";
 	}
 	
-
+	@AppicationAudit(module = Module.ALL, access = Access.ALL)
+	@RequestMapping(path="/Medical-HMO", method = RequestMethod.GET, produces="text/html")
+	public String medicalHMO(ModelMap map){
+		return "pages/medical/HMO";
+	}
+	
+	@AppicationAudit(module = Module.ALL, access = Access.ALL)
+	@RequestMapping(path="/Medical-Careers", method = RequestMethod.GET, produces="text/html")
+	public String medicalCareers(ModelMap map){
+		return "pages/medical/Careers";
+	}
+	
 	@RequestMapping(path="/News2", method = RequestMethod.GET, produces="text/html")
 	public String News2(ModelMap map){
 		return "pages/medical/news";
