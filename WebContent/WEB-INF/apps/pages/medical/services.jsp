@@ -75,6 +75,9 @@
 	        	        
 	        POST("ServicesInformation", {"app": "CLINIC", "num":2, "limit" : 5, "pageNum" : page}, function(data){
 	    		data = data.data;
+	    		if(data.length <= 5){
+	    			$("#nextBtn").attr("disabled", "disabled");
+	    		}
 	    		var corporateServicesTitle1 = "";
 	    		var corporateServicesContent1 = "";
 	    		var defaultServices;
