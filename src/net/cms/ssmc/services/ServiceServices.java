@@ -30,8 +30,8 @@ public class ServiceServices {
 			response.put("error", "Invalid App");
 			return response;
 		}
-		System.out.println(form);
-		response.put("data", serviceDao.retrieveAllWithImages(form.getApp(), form.getNum(),form.getLimit(), Module.SERVICE));
+		System.err.println(form);
+		response.put("data", serviceDao.retrieveAllWithImages(form.getApp(), form.getNum(),form.getLimit(), Module.SERVICE, form.getPageNum()));
 		return response;
 	}
 

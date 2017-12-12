@@ -17,8 +17,7 @@
     </section>
 
     <%@ include file="../commons/SSMCHealthClinicFooter.jsp"%>
-
-   <!--  <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script> -->
+	
     <script type="text/javascript">
     	$("#menuBranches a").addClass("active");
       	$(document).ready(function(){

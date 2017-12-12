@@ -26,10 +26,10 @@ public class ServiceDaoImpl implements ServiceDao {
 	}
 	
 	@Override
-	public List<Service> retrieveAllWithImages(App app, int num, int limit, Module module) {
+	public List<Service> retrieveAllWithImages(App app, int num, int limit, Module module, int page) {
 		String SQLWITHIMAGES = "SELECT * FROM SERVICE AS S WHERE S.type = ? AND S.num = ?";
 		if(limit > 0){
-			SQLWITHIMAGES += " LIMIT "+limit;
+			SQLWITHIMAGES += " LIMIT "+(limit*page)+", " + limit;
 		}
 		return jdbcTemplate.query(SQLWITHIMAGES, new Object[]{app.toString(), num}, new BeanPropertyRowMapper<Service>(Service.class));
 	}	

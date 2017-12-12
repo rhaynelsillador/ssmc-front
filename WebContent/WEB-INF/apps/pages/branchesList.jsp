@@ -49,10 +49,13 @@
              '<img src="'+fileServer+value.logo+'" style="width: 250px;" alt="">'+
            '</div>'+
            '<div class="clearfix"></div>'+
-           '<br>'+
-           '<div class="map-container">'+
-             '<div id="map" style="width:100%;height:300px"><iframe width="100%" height="300" frameborder="0" style="border:0" src="'+value.map+'" allowfullscreen></iframe></div>'+
-         	'</div></div>';
+           '<br>';
+           if(value.map && value.map != ""){
+        	   clinicCitiesContent += '<div class="map-container">'+
+	               	'<div id="map" style="width:100%;height:300px"><iframe width="100%" height="300" frameborder="0" style="border:0" src="'+value.map+'" allowfullscreen></iframe></div>'+
+	           		'</div></div>';
+           }
+           
 			 clinicCitiesContent += '</div>';
 		});
 

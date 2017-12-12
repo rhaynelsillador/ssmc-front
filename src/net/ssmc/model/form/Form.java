@@ -11,6 +11,7 @@ public class Form {
 	private Module module;
 	private int num;
 	private int limit;
+	private int pageNum;
 	
 	public App getApp() {
 		return app;
@@ -42,9 +43,16 @@ public class Form {
 	public void setLimit(int limit) {
 		this.limit = limit;
 	}
+	public int getPageNum() {
+		return pageNum;
+	}
+	public void setPageNum(int pageNum) {
+		this.pageNum = pageNum;
+	}
 	@Override
 	public String toString() {
-		return "Form [app=" + app + ", page=" + page + ", module=" + module + ", num=" + num + ", limit=" + limit + "]";
+		return "Form [app=" + app + ", page=" + page + ", module=" + module + ", num=" + num + ", limit=" + limit
+				+ ", pageNum=" + pageNum + "]";
 	}
-		
+	
 }
