@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <%@ include file="../commons/Assets.jsp"%>
-  <body>
+  <body class="inner-page">
   	<%@ include file="../commons/SSMCHealthClinicsHeader.jsp"%>
     <%@ include file="../commons/Preloader.jsp"%>
     <section id="faq">

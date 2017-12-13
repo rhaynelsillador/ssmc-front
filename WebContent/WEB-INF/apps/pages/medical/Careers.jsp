@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <%@ include file="../commons/Assets.jsp"%>
-  <body>
+  <body class="inner-page">
     <%@ include file="../commons/SSMCHealthClinicsHeader.jsp"%>
     <%@ include file="../commons/Preloader.jsp"%>
     <section>
@@ -24,7 +24,7 @@
 		        </div>
 		        <div class="col-md-8 col-sm-7">
 		          <div class="tab-content choose-content wow fadeInLeft"  id="corporateServicesContent1">
-		            
+
 		          </div>
 		        </div>
 		      </div>
@@ -47,7 +47,7 @@
 	        	if(data.data){
 	        		$("#headerContent").html(data.data.content);
 	        	}
-	        	
+
 	        });
 
 	        POST("SystemImages", {"app":"HOSPITALS", "page":"Careers", "module":"HEADER"}, function(data){
@@ -58,7 +58,7 @@
 	        	$("#imageCarousel").html(imageCarousel);
 	        	initCarousel();
 	        })
-	        
+
 	        POST("ServicesInformation", {"app": "HOSPITALS", "num":3, "limit" : 4}, function(data){
 	    		data = data.data;
 	    		var corporateServicesTitle1 = "";
@@ -71,9 +71,9 @@
 	    				defaultServices = value.id;
 	    				isloaded = true;
 	    			}
-	    			
+
 	    			console.log(value.content2);
-	    			
+
 	    			corporateServicesTitle1 += '<li class="'+isActive+'">'+
 	    				'<a href="#service_'+index+'" class="side service1-tab" data-toggle="tab" data-isLoaded="'+isloaded+'" data-id="'+value.id+'">'+
 	    	            '<aside></aside>'+
@@ -81,10 +81,10 @@
 	    	            '<span>'+value.content2+'</span>'+
 	    	          	'</a>'+
 	    	         '</li>';
-	    	         
+
 	    	         corporateServicesContent1 += '<div id="service_'+index+'" class="tab-pane '+isActive+'">'+
 	    	         '<div><div class="welcome-carousel owl-carousel" id="service_images_'+value.id+'"></div></div><span>'+value.content2+'</span></div>';
-	    	         
+
 	    		})
 	    		$("#corporateServicesTitle1").html(corporateServicesTitle1);
 	    		$("#corporateServicesContent1").html(corporateServicesContent1);
@@ -100,7 +100,7 @@
 	    		})
 	    	});
       	});
-    	
+
     	function retrieveImagesService1(id){
     		POST("ImagesByModuleId", {"num" : id, "module":"SERVICE"}, function(data){
     			var imageCarousel = "";

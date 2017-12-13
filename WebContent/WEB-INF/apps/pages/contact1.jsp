@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <%@ include file="commons/Assets.jsp"%>
-  <body>
+  <body class="inner-page">
     <%@ include file="commons/SSMCHospitalsHeader.jsp"%>
     <section>
       <div class="sec welcome">

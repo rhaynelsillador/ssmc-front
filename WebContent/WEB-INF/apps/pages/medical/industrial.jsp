@@ -3,7 +3,7 @@
   <%@ include file="../commons/Assets.jsp"%>
   <%-- <link rel="stylesheet" href="assets/css/custom/corporate.css"> --%>
 
-  <body>
+  <body class="inner-page">
   	<%@ include file="../commons/SSMCHealthClinicsHeader.jsp"%>
     <%@ include file="../commons/Preloader.jsp"%>
     <section id="faq">
@@ -17,7 +17,7 @@
         <div class="wow fadeInUp">
           <div class="container">
             <div class="row" id="partnerList">
-            
+
             </div>
           </div>
         </div>
@@ -35,7 +35,7 @@
           console.log("gg");
           $(".blue .nav li").removeClass("active");
         });
-		
+
         POST("SystemImages", {"app":"CLINIC", "page":"Industrial", "module":"HEADER"}, function(data){
            	var imageCarousel = "";
            	$.each(data.data, function(index, value){
@@ -44,13 +44,13 @@
            	$("#imageCarousel").html(imageCarousel);
            	initCarousel();
            })
-        
+
       	POST("HeadersInformation", {"app" : "CLINIC", "page" : "Industrial"}, function(data){
            	if(data.data){
            		$("#headerContent").html("<p>"+data.data.content+"</p>");
            	}
        	})
-        
+
       	POST("PartnerList", {}, function(data){
      		var html = "";
       		$.each(data, function(index, value){
@@ -69,7 +69,7 @@
      		$("#partnerList").html(html);
   	 	})
       })
-        
+
     </script>
   </body>
 </html>

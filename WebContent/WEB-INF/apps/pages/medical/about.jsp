@@ -2,7 +2,7 @@
 <html>
   <%@ include file="../commons/Assets.jsp"%>
   <%-- <link rel="stylesheet" href="assets/css/custom/corporate.css"> --%>
-  <body>
+  <body class="inner-page">
     <%@ include file="../commons/SSMCHealthClinicsHeader.jsp"%>
     <%@ include file="../commons/Preloader.jsp"%>
     <section id="about">
@@ -39,8 +39,8 @@
           $(".blue .nav li").removeClass("active");
         });
       });
-      
-      
+
+
       POST("HeadersInformation", {"app":"CLINIC", "page":"About"}, function(data){
       	console.log(data);
       	$("#headerInfo").html(data.data.content);
@@ -54,8 +54,8 @@
       	$("#imageCarousel").html(imageCarousel);
       	initCarousel();
       })
-      
-      
+
+
       /* POST("HeadersInformation", {"app":"CLINIC", "page":"About"}, function(data){
       	console.log(data);
       	$("#aboutUsHeaderContent").html(data.content);

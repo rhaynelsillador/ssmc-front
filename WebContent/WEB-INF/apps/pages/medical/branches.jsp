@@ -2,7 +2,7 @@
 <html>
   <%@ include file="../commons/Assets.jsp"%>
   <%-- <link rel="stylesheet" href="assets/css/custom/corporate.css"> --%>
-  <body>
+  <body class="inner-page">
     <%@ include file="../commons/SSMCHealthClinicsHeader.jsp"%>
     <%@ include file="../commons/Preloader.jsp"%>
     <section>
@@ -17,7 +17,7 @@
     </section>
 
     <%@ include file="../commons/SSMCHealthClinicFooter.jsp"%>
-	
+
     <script type="text/javascript">
     	$("#menuBranches a").addClass("active");
       	$(document).ready(function(){
@@ -34,7 +34,7 @@
 	        		//$("#headerTitle").html(data.title);
 		        	$("#headerContent").html(data.content);
 	        	}
-	        	
+
 	        })
       	});
     </script>

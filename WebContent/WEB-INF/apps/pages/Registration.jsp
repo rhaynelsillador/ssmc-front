@@ -6,7 +6,7 @@
   <%-- Owl Carousel --%>
   <link rel="stylesheet" href="assets/css/vendor/owl.carousel.min.css">
 
-  <body>
+  <body class="inner-page">
     <%@ include file="commons/Preloader.jsp"%>
     <div class="reg-bg">
       <div class="welcome-carousel owl-carousel owl-theme">
@@ -68,7 +68,7 @@
 	            autoplayTimeout:5000,
 	            autoplayHoverPause: true,
 	        });
-	        
+
       	});
 
       	$(".mc-form .form-control").blur(function() {
@@ -81,9 +81,9 @@
 	        }
 
       	});
-	
-      	
-      	
+
+
+
       	$("#registrationForm").submit(function(e){
 			var form = objectifyForm($( this ).serializeArray());
 			var btn = $( "#registrationForm button");

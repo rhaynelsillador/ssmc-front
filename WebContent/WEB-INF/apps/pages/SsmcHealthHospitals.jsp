@@ -16,7 +16,7 @@
       <div class="sec welcome">
         <div class="welcome-content wow fadeIn">
           <h3>Welcome to</h3>
-		  <h1>SSMC Hospitals</h1>
+    		  <h1>SSMC Hospitals</h1>
           <div id="headerInfo"></div>
           <br>
           <a href="HMO" class="btn btn-default hvr-grow"> SSMC HMO </a>
@@ -25,10 +25,10 @@
           <div class="welcome-carousel owl-carousel owl-theme" id="imageCarousel">
           </div>
       </div>
-      
+
 
 	  <%@ include file="FeaturedBox.jsp"%>
-      <%@ include file="CorporateServices1.jsp"%>
+      <%-- <%@ include file="CorporateServices1.jsp"%> --%>
 	  <%@ include file="CorporateServices2.jsp"%>
 	  <%@ include file="branchesList.jsp"%>
 	  <%@ include file="Advertisement.jsp"%>
@@ -41,7 +41,7 @@
 
     <%@ include file="commons/SSMCHospitalsFooter.jsp"%>
 	<%@ include file="FeaturedBoxModal.jsp"%>
-	
+
 
 
     <script type="text/javascript">

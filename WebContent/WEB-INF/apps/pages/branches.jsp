@@ -2,7 +2,7 @@
 <html>
   <%@ include file="commons/Assets.jsp"%>
   <link rel="stylesheet" href="assets/css/custom/corporate.css">
-  <body>
+  <body class="inner-page">
     <%@ include file="commons/SSMCHospitalsHeader.jsp"%>
     <%@ include file="commons/Preloader.jsp"%>
     <section>
@@ -27,12 +27,12 @@
           // preloader();
           wow = new WOW({offset: 300});
           wow.init();
-			
+
 	        $(".blue .nav li a").click(function(){
 	          console.log("gg");
 	          $(".blue .nav li").removeClass("active");
 	        });
-			
+
 	        POST("SystemImages", {"app":"HOSPITALS", "page":"HospitalAndClinic", "module":"HEADER"}, function(data){
 	        	var imageCarousel = "";
 	        	$.each(data.data, function(index, value){
@@ -41,7 +41,7 @@
 	        	$("#imageCarousel").html(imageCarousel);
 	        	//initCarousel();
 	        })
-	        
+
 	        POST("HeadersInformation", {"app" : "HOSPITALS", "page" : "HospitalAndClinic"}, function(data){
 	        	if(data.data){
 	        		data = data.data;

@@ -3,7 +3,7 @@
   <%@ include file="commons/Assets.jsp"%>
   <link rel="stylesheet" href="assets/css/custom/corporate.css">
 
-  <body>
+  <body class="inner-page">
   	<%@ include file="commons/SSMCHospitalsHeader.jsp"%>
     <%@ include file="commons/Preloader.jsp"%>
     <section id="user_profile">
@@ -84,7 +84,7 @@
                     </tr>
                   </thead>
                   <tbody>
-                    
+
                   </tbody>
                 </table>
               </div>
@@ -96,7 +96,7 @@
 
     </section>
     <%@ include file="commons/SSMCHospitalsFooter.jsp"%>
-    <script type="text/javascript">  
+    <script type="text/javascript">
     	var loginAccountInformationForm = $('#loginAccountInformationForm');
     	var accountid = '';
     	POST("LoginAccountInformation", {}, function(data){
@@ -108,10 +108,10 @@
   					accountid = value;
   				}else
 	  				$("#"+index).val(value);
-    			
+
     		})
       	});
-    	
+
       	$(document).ready(function(){
 	        console.log("G!");
 	        // preloader();
@@ -121,9 +121,9 @@
 	          console.log("gg");
 	          $(".blue .nav li").removeClass("active");
 	        });
-			
+
 	        loadTestResult();
-	        
+
 	        loginAccountInformationForm.submit(function(e){
 	        	var form = objectifyForm($( this ).serializeArray());
 	        	form.id = accountid;
@@ -145,7 +145,7 @@
 	        	e.preventDefault();
 	        })
       	});
-		
+
       	var loadTestResult = function(){
       		POST("AccountExamResult", {}, function(data){
       			var data = data.data;
@@ -159,7 +159,7 @@
       			$("#accountTestResultTable tbody").html(html);
       		})
       	}
-      	
+
     </script>
   </body>
 </html>

@@ -122,6 +122,11 @@
         </li>
       </ul>
     </div>
+    <div class="clearfix"></div>
+    <br>
+    <div class="text-center">
+      <a href="Services" class="btn btn-primary">MORE SERVICES</a>
+    </div>
   </div>
 </div>
 

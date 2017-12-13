@@ -2,7 +2,7 @@
 <html>
   <%@ include file="../commons/Assets.jsp"%>
   <%-- <link rel="stylesheet" href="assets/css/custom/corporate.css"> --%>
-  <body>
+  <body class="inner-page">
     <%@ include file="../commons/SSMCHealthClinicsHeader.jsp"%>
     <%@ include file="../commons/Preloader.jsp"%>
     <section class="service-inner">

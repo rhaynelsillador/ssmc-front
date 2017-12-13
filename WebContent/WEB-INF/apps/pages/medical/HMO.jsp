@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <%@ include file="../commons/Assets.jsp"%>
-  <body>
+  <body class="inner-page">
     <%@ include file="../commons/SSMCHealthClinicsHeader.jsp"%>
     <%@ include file="../commons/Preloader.jsp"%>
     <section>
@@ -25,7 +25,7 @@
 	        </div>
 	        <div class="col-md-9">
 	          <div class="tab-content tab-about wow fadeInRight" id="clinicCitiesContent">
-	
+
 	          </div>
 	        </div>
 	      </div>
@@ -47,7 +47,7 @@
 	        	if(data.data){
 	        		$("#headerContent").html(data.data.content);
 	        	}
-	        	
+
 	        });
 
 	        POST("SystemImages", {"app":"CLINIC", "page":"HMO", "module":"HEADER"}, function(data){
@@ -58,7 +58,7 @@
 	        	$("#imageCarousel").html(imageCarousel);
 	        	initCarousel();
 	        })
-	        
+
 	       POST("HMOList", {}, function(data){
 				var clinics = "";
 				var clinicCitiesContent="";
@@ -76,7 +76,7 @@
 		             '<span>'+value.description+'</span>'+
 		             '<br>'+
 		             '<br>'+
-		
+
 		           '</div>'+
 		           '<div class="branch-img">'+
 		             '<img src="'+fileServer+value.logo+'" style="width: 250px;" alt="">'+
@@ -87,28 +87,28 @@
 		        	   clinicCitiesContent += '<div class="map-container">'+
 			             '<div id="map" style="width:100%;height:300px"><iframe width="100%" height="300" frameborder="0" style="border:0" src="'+value.map+'" allowfullscreen></iframe></div>'+
 				         	'</div></div>';
-							 
+
 		           }
 		           clinicCitiesContent += '</div></div>';
 				});
-		
+
 				$("#clinicCities").html(clinics);
 				$('#clinicCitiesContent').html(clinicCitiesContent)
-		
-		
+
+
 				var cityListContent = "";
 				var cityList = "";
 				var counter = 0;
-		
-		
+
+
 		    if ($("body").hasClass("home")) {
 		      $(".map-container").remove();
 		    }
-		
+
 		    $( ".ismobile .basic-tabination .nav li a" ).click(function() {
 		      $("#clinicCities").removeClass("tab-open");
 		    });
-		
+
 			})
       	});
     </script>
