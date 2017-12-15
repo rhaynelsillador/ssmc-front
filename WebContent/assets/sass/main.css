@@ -1270,6 +1270,9 @@ html.ismobile .info {
 html.ismobile .about-img {
   height: initial; }
 
+.home .nav-service {
+  display: none; }
+
 .landing header {
   text-align: center;
   color: #4a4a4a;
