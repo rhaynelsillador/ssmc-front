@@ -28,7 +28,7 @@
       </div>
       <div class="col-sm-4">
         <div class="info-box news">
-         <h4 class="text-center" id="news-header">NEW & UPDATES</h4>
+         <h4 class="text-center" id="news-header">NEWS & UPDATES</h4>
 
           <div class="news-container">
           </div>
@@ -47,7 +47,6 @@
 	    		$(".box-"+value.box+" > h4").html(value.name.toUpperCase());
 	    		$(".box-"+value.box+" > p").html(value.description);
 	    		POST("ImagesByModuleId", {"num":value.id, "module":"FEATUREDBOX"}, function(imgData){
-	    			console.log("CLINICCLINIC ", imgData);
 	    			var html = "";
 	    			$.each(imgData, function(index1, value1){
 	    				html += '<div class="item"><img src="'+fileServer+value1.image+'" alt=""></div>';

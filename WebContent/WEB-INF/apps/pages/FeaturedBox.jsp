@@ -30,7 +30,7 @@
       	</div>
       <div class="col-sm-4">
         <div class="info-box news">
-         <h4 class="text-center" id="news-header">NEW & UPDATES</h4>
+         <h4 class="text-center" id="news-header">NEWS & UPDATES</h4>
           <div class="news-container">
           </div>
         </div>

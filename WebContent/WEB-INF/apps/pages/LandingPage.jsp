@@ -46,7 +46,7 @@
                 <img src="assets/img/landing3.png" alt="">
               </div>
               <div>
-                <h2 id="clinicTitle">Clinics Group</h2>
+                <h2 id="clinicTitle">Clinics</h2>
                 <span id="clinicContent"></span>
                 <!-- <span>Efficient Diagnostics and Screening  Healthcare Services for Institutional (APEs, Pre-employment, Clinic Manning, etc. ), HMOs and Individuals</span> -->
               </div>

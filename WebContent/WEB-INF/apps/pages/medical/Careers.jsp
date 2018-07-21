@@ -43,14 +43,14 @@
 	          $(".blue .nav li").removeClass("active");
 	        });
 
-	        POST("HeadersInformation", {"app":"HOSPITALS", "page":"Careers"}, function(data){
+	        POST("HeadersInformation", {"app":"CLINIC", "page":"Careers"}, function(data){
 	        	if(data.data){
 	        		$("#headerContent").html(data.data.content);
 	        	}
 
 	        });
 
-	        POST("SystemImages", {"app":"HOSPITALS", "page":"Careers", "module":"HEADER"}, function(data){
+	        POST("SystemImages", {"app":"CLINIC", "page":"Careers", "module":"HEADER"}, function(data){
 	        	var imageCarousel = "";
 	        	$.each(data.data, function(index, value){
 	        		imageCarousel += '<div class="item"><img src="'+fileServer+value.image+'" alt=""></div>';

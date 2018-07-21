@@ -7,7 +7,7 @@
     <%@ include file="../commons/Preloader.jsp"%>
     <section class="service-inner">
       <div class="sec welcome welcome-common">
-        <h1>Service</h1>
+        <h1>Services</h1>
         <span id="headerContent"></span>
         <div class="welcome-background" id="imageCarousel">
         </div>
